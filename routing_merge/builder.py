@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -19,6 +20,8 @@ ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_SOURCES = ROOT / "sources.yaml"
 DEFAULT_OUTPUT_DIR = ROOT / "dist"
 DEFAULT_REPORT = DEFAULT_OUTPUT_DIR / "build-report.json"
+DEFAULT_EXPANDED_RULES = DEFAULT_OUTPUT_DIR / "expanded-rules.yaml"
+ADBLOCK_RULE_URL = "https://raw.githubusercontent.com/paulgeorge66/adblock-rule-merge/main/dist/reject.list"
 
 CIDR_V4_RE = re.compile(r"^\d+\.\d+\.\d+\.\d+/\d+$")
 CIDR_V6_RE = re.compile(r"^[0-9a-fA-F:]+/\d+$")
@@ -88,8 +91,11 @@ def fetch_text(url: str, retries: int = 3) -> str:
     curl = shutil.which("curl") or shutil.which("curl.exe")
     if curl:
         try:
+            curl_command = [curl, "-L", "--fail", "--retry", "3", "--retry-delay", "2", url]
+            if os.name == "nt":
+                curl_command.insert(1, "--ssl-no-revoke")
             result = subprocess.run(
-                [curl, "-L", "--fail", "--retry", "3", "--retry-delay", "2", url],
+                curl_command,
                 check=True,
                 capture_output=True,
                 timeout=90,
@@ -275,10 +281,66 @@ def render_text(rules: Iterable[ParsedRule]) -> str:
     return "\n".join(lines) + ("\n" if lines else "")
 
 
-def write_outputs(sections: dict[str, list[ParsedRule]], report: dict, output_dir: Path, report_path: Path) -> None:
+def render_expanded_rule(raw_line: str, action: str) -> str | None:
+    line = raw_line.strip()
+    if not line or line.startswith("#"):
+        return None
+    parts = [part.strip() for part in line.split(",") if part.strip()]
+    if len(parts) < 2:
+        return None
+    no_resolve = "no-resolve" in parts[2:]
+    rule = f"{parts[0]},{parts[1]},{action}"
+    if no_resolve and parts[0] in {"IP-CIDR", "IP-CIDR6"}:
+        return f"{rule},no-resolve"
+    return rule
+
+
+def render_expanded_rules_yaml(sections: dict[str, list[ParsedRule]], adblock_text: str) -> str:
+    lines: list[str] = []
+    seen: set[str] = set()
+
+    def add_rule(rule: str | None) -> None:
+        if not rule or rule in seen:
+            return
+        seen.add(rule)
+        lines.append(f"  - {rule}")
+
+    for raw_line in adblock_text.splitlines():
+        add_rule(render_expanded_rule(raw_line, "REJECT"))
+
+    for section, action in [
+        ("top-proxy", "PROXY"),
+        ("top-direct", "DIRECT"),
+        ("apple-proxy", "PROXY"),
+        ("apple-direct", "DIRECT"),
+        ("direct", "DIRECT"),
+        ("proxy", "PROXY"),
+    ]:
+        for rule in sections.get(section, []):
+            add_rule(render_expanded_rule(rule.render(), action))
+
+    add_rule("MATCH,PROXY")
+    return "\n".join(lines) + "\n"
+
+
+def write_outputs(
+    sections: dict[str, list[ParsedRule]],
+    report: dict,
+    output_dir: Path,
+    report_path: Path,
+    expanded_rules_path: Path,
+) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     for section, rules in sections.items():
         (output_dir / f"{section}.list").write_text(render_text(rules), encoding="utf-8", newline="\n")
+    adblock_text = fetch_text(ADBLOCK_RULE_URL)
+    expanded_rules_text = render_expanded_rules_yaml(sections, adblock_text)
+    expanded_rules_path.write_text(expanded_rules_text, encoding="utf-8", newline="\n")
+    report["expanded_rules"] = {
+        "path": str(expanded_rules_path.relative_to(ROOT)),
+        "source": ADBLOCK_RULE_URL,
+        "rules": expanded_rules_text.count("\n"),
+    }
     report_path.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
@@ -287,11 +349,12 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--sources", type=Path, default=DEFAULT_SOURCES)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     parser.add_argument("--report", type=Path, default=DEFAULT_REPORT)
+    parser.add_argument("--expanded-rules", type=Path, default=DEFAULT_EXPANDED_RULES)
     args = parser.parse_args(argv)
 
     config = load_sources(args.sources)
     sections, report = build_sections(config)
-    write_outputs(sections, report, args.output_dir, args.report)
+    write_outputs(sections, report, args.output_dir, args.report, args.expanded_rules)
     print(f"Wrote {args.output_dir}")
     print(f"Wrote {args.report}")
     print(f"Total rules: {report['total_rules']}")

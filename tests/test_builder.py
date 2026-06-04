@@ -5,6 +5,7 @@ from routing_merge.builder import (
     dedupe_rules,
     normalize_rule_line,
     prune_shadowed_rules,
+    render_expanded_rules_yaml,
     render_text,
 )
 
@@ -36,6 +37,24 @@ class BuilderTests(unittest.TestCase):
             ]
         )
         self.assertEqual(text, "DOMAIN-SUFFIX,example.com\nIP-CIDR,1.2.3.0/24,no-resolve\n")
+
+    def test_render_expanded_rules_yaml_uses_worker_order(self):
+        sections = {
+            "top-proxy": [ParsedRule("DOMAIN-SUFFIX", "proxy.example.com", "a", "top-proxy", 1)],
+            "top-direct": [ParsedRule("DOMAIN-SUFFIX", "direct.example.com", "b", "top-direct", 2)],
+            "direct": [ParsedRule("IP-CIDR", "10.0.0.0/8", "c", "direct", 3, True)],
+            "proxy": [],
+        }
+        text = render_expanded_rules_yaml(sections, "DOMAIN-SUFFIX,ads.example.com\n")
+
+        self.assertEqual(
+            text,
+            "  - DOMAIN-SUFFIX,ads.example.com,REJECT\n"
+            "  - DOMAIN-SUFFIX,proxy.example.com,PROXY\n"
+            "  - DOMAIN-SUFFIX,direct.example.com,DIRECT\n"
+            "  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve\n"
+            "  - MATCH,PROXY\n",
+        )
 
 
 if __name__ == "__main__":
