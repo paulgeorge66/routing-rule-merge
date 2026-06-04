@@ -179,8 +179,7 @@
   },
   "total_rules": 145720,
   "expanded_rules": {
-    "path": "dist/expanded-rules.yaml",
-    "source": "https://raw.githubusercontent.com/paulgeorge66/adblock-rule-merge/main/dist/reject.list",
-    "rules": 451938
+    "path": "dist/routing-expanded-rules.yaml",
+    "rules": 145721
   }
 }

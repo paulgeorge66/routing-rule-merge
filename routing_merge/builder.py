@@ -20,8 +20,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_SOURCES = ROOT / "sources.yaml"
 DEFAULT_OUTPUT_DIR = ROOT / "dist"
 DEFAULT_REPORT = DEFAULT_OUTPUT_DIR / "build-report.json"
-DEFAULT_EXPANDED_RULES = DEFAULT_OUTPUT_DIR / "expanded-rules.yaml"
-ADBLOCK_RULE_URL = "https://raw.githubusercontent.com/paulgeorge66/adblock-rule-merge/main/dist/reject.list"
+DEFAULT_EXPANDED_RULES = DEFAULT_OUTPUT_DIR / "routing-expanded-rules.yaml"
 
 CIDR_V4_RE = re.compile(r"^\d+\.\d+\.\d+\.\d+/\d+$")
 CIDR_V6_RE = re.compile(r"^[0-9a-fA-F:]+/\d+$")
@@ -295,7 +294,7 @@ def render_expanded_rule(raw_line: str, action: str) -> str | None:
     return rule
 
 
-def render_expanded_rules_yaml(sections: dict[str, list[ParsedRule]], adblock_text: str) -> str:
+def render_expanded_rules_yaml(sections: dict[str, list[ParsedRule]]) -> str:
     lines: list[str] = []
     seen: set[str] = set()
 
@@ -304,9 +303,6 @@ def render_expanded_rules_yaml(sections: dict[str, list[ParsedRule]], adblock_te
             return
         seen.add(rule)
         lines.append(f"  - {rule}")
-
-    for raw_line in adblock_text.splitlines():
-        add_rule(render_expanded_rule(raw_line, "REJECT"))
 
     for section, action in [
         ("top-proxy", "PROXY"),
@@ -333,12 +329,10 @@ def write_outputs(
     output_dir.mkdir(parents=True, exist_ok=True)
     for section, rules in sections.items():
         (output_dir / f"{section}.list").write_text(render_text(rules), encoding="utf-8", newline="\n")
-    adblock_text = fetch_text(ADBLOCK_RULE_URL)
-    expanded_rules_text = render_expanded_rules_yaml(sections, adblock_text)
+    expanded_rules_text = render_expanded_rules_yaml(sections)
     expanded_rules_path.write_text(expanded_rules_text, encoding="utf-8", newline="\n")
     report["expanded_rules"] = {
         "path": str(expanded_rules_path.relative_to(ROOT)),
-        "source": ADBLOCK_RULE_URL,
         "rules": expanded_rules_text.count("\n"),
     }
     report_path.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")

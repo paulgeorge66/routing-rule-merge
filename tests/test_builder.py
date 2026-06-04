@@ -45,11 +45,10 @@ class BuilderTests(unittest.TestCase):
             "direct": [ParsedRule("IP-CIDR", "10.0.0.0/8", "c", "direct", 3, True)],
             "proxy": [],
         }
-        text = render_expanded_rules_yaml(sections, "DOMAIN-SUFFIX,ads.example.com\n")
+        text = render_expanded_rules_yaml(sections)
 
         self.assertEqual(
             text,
-            "  - DOMAIN-SUFFIX,ads.example.com,REJECT\n"
             "  - DOMAIN-SUFFIX,proxy.example.com,PROXY\n"
             "  - DOMAIN-SUFFIX,direct.example.com,DIRECT\n"
             "  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve\n"

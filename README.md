@@ -23,6 +23,12 @@ DOMAIN,api.example.com
 IP-CIDR,10.0.0.0/8,no-resolve
 ```
 
+需要直接放进 Clash `rules:` 时，可以引用 routing 展开片段：
+
+```text
+https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/routing-expanded-rules.yaml
+```
+
 ## 输出文件
 
 ```text
@@ -32,6 +38,7 @@ dist/apple-proxy.list
 dist/apple-direct.list
 dist/direct.list
 dist/proxy.list
+dist/routing-expanded-rules.yaml
 dist/build-report.json
 ```
 
@@ -200,7 +207,7 @@ function main(config) {
 - 提取纯域名、`+.example.com` 和 CIDR 行
 - 规范化为 `DOMAIN`、`DOMAIN-SUFFIX`、`DOMAIN-KEYWORD`、`PROCESS-NAME`、`IP-ASN`、`IP-CIDR`、`IP-CIDR6`
 - 移除重复规则和被前置规则覆盖的规则
-- 按 section 输出多个 rule-provider 文件
+- 按 section 输出多个 rule-provider 文件，并输出 routing 展开片段
 - 输出构建报告和各来源解析数量
 
 ## 本地构建
@@ -228,7 +235,7 @@ python -m routing_merge.builder
 
 [.github/workflows/build.yml](.github/workflows/build.yml) 会在 push、pull request、手动触发和每日定时任务时运行。
 
-CI 会安装依赖、运行测试、构建 `dist/*.list`，并在生成文件变化时自动提交更新。
+CI 会安装依赖、运行测试、构建 `dist/*.list` 和 `dist/routing-expanded-rules.yaml`，并在生成文件变化时自动提交更新。
 
 ## 许可证
 
