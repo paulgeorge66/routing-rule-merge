@@ -181,6 +181,6 @@
   "expanded_rules": {
     "path": "dist/expanded-rules.yaml",
     "source": "https://raw.githubusercontent.com/paulgeorge66/adblock-rule-merge/main/dist/reject.list",
-    "rules": 465252
+    "rules": 451938
   }
 }
