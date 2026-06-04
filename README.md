@@ -1,12 +1,29 @@
 # Routing Rule Merge
 
-公开分流规则合并器。项目会从多个公开上游规则源拉取数据，按当前 VPS 分流模型拆分成可用于 Mihomo/Clash 的 rule-provider 文本文件。
+面向 Mihomo/Clash 的分流规则合并项目。仓库会定时拉取多个公开规则源，按用途拆分为多个 classical rule-provider 文本文件，方便在配置或订阅转换流程中引用。
 
-这个项目只做非去广告分流规则整理，不包含代理节点、私人订阅模板、服务器发布脚本、个人订阅链接或服务器自访问域名/IP。去广告规则请使用独立项目 [`paulgeorge66/adblock-rule-merge`](https://github.com/paulgeorge66/adblock-rule-merge)。
+本项目只整理分流规则，不包含代理节点、订阅内容或客户端配置模板。去广告规则请使用独立项目 [`paulgeorge66/adblock-rule-merge`](https://github.com/paulgeorge66/adblock-rule-merge)。
+
+## 订阅链接
+
+```text
+https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/top-proxy.list
+https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/top-direct.list
+https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/apple-proxy.list
+https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/apple-direct.list
+https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/direct.list
+https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/proxy.list
+```
+
+所有 `.list` 文件使用 Mihomo/Clash classical rule-provider 文本格式，每行一条规则：
+
+```text
+DOMAIN-SUFFIX,example.com
+DOMAIN,api.example.com
+IP-CIDR,10.0.0.0/8,no-resolve
+```
 
 ## 输出文件
-
-默认构建会生成：
 
 ```text
 dist/top-proxy.list
@@ -18,28 +35,18 @@ dist/proxy.list
 dist/build-report.json
 ```
 
-持续更新的订阅链接：
+各文件用途：
 
-```text
-https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/top-proxy.list
-https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/top-direct.list
-https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/apple-proxy.list
-https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/apple-direct.list
-https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/direct.list
-https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/proxy.list
-```
+| 文件 | 建议动作 | 说明 |
+| --- | --- | --- |
+| `top-proxy.list` | `PROXY` | 需要优先代理的补充规则 |
+| `top-direct.list` | `DIRECT` | 需要优先直连的补充规则 |
+| `apple-proxy.list` | `PROXY` | Apple 媒体和相关代理规则 |
+| `apple-direct.list` | `DIRECT` | Apple 常规直连规则 |
+| `direct.list` | `DIRECT` | 通用直连规则 |
+| `proxy.list` | `PROXY` | 通用代理规则 |
 
-所有 `.list` 文件使用纯文本 classical rule-provider 格式，每行一条两段式规则，CIDR 规则会保留 `no-resolve`：
-
-```text
-DOMAIN-SUFFIX,example.com
-DOMAIN,api.example.com
-IP-CIDR,10.0.0.0/8,no-resolve
-```
-
-## 推荐引用顺序
-
-如果同时使用本项目和去广告项目，建议在 Mihomo/Clash 配置中按下面顺序挂载。`top-*` 放在最前面，用于保留高优先级 override；去广告规则随后生效；Apple、直连、代理规则再按分流模型依次匹配。
+## Mihomo/Clash 引用示例
 
 ```yaml
 rule-providers:
@@ -56,13 +63,6 @@ rule-providers:
     format: text
     url: https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/top-direct.list
     path: ./ruleset/routing-top-direct.list
-    interval: 86400
-  adblock:
-    type: http
-    behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/paulgeorge66/adblock-rule-merge/main/dist/reject.list
-    path: ./ruleset/adblock.list
     interval: 86400
   routing-apple-proxy:
     type: http
@@ -96,7 +96,6 @@ rule-providers:
 rules:
   - RULE-SET,routing-top-proxy,PROXY
   - RULE-SET,routing-top-direct,DIRECT
-  - RULE-SET,adblock,REJECT
   - RULE-SET,routing-apple-proxy,PROXY
   - RULE-SET,routing-apple-direct,DIRECT
   - RULE-SET,routing-direct,DIRECT
@@ -104,9 +103,23 @@ rules:
   - MATCH,PROXY
 ```
 
+如果同时使用去广告规则，可以按自己的需求插入：
+
+```yaml
+rules:
+  - RULE-SET,routing-top-proxy,PROXY
+  - RULE-SET,routing-top-direct,DIRECT
+  - RULE-SET,routing-apple-proxy,PROXY
+  - RULE-SET,routing-apple-direct,DIRECT
+  - RULE-SET,routing-direct,DIRECT
+  - RULE-SET,routing-proxy,PROXY
+  - RULE-SET,adblock,REJECT
+  - MATCH,PROXY
+```
+
 ## Clash 覆写脚本示例
 
-如果客户端支持 JavaScript 覆写脚本，可以用下面的方式自动加入 rule-provider，并把规则插到 `MATCH` / `FINAL` 前面：
+适用于支持 JavaScript 覆写脚本的客户端。脚本会添加本项目的 rule-provider，并把分流规则插入到 `MATCH` / `FINAL` 之前。
 
 ```javascript
 function main(config) {
@@ -116,7 +129,6 @@ function main(config) {
     var providers = {
         "routing-top-proxy": "https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/top-proxy.list",
         "routing-top-direct": "https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/top-direct.list",
-        "adblock": "https://raw.githubusercontent.com/paulgeorge66/adblock-rule-merge/main/dist/reject.list",
         "routing-apple-proxy": "https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/apple-proxy.list",
         "routing-apple-direct": "https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/apple-direct.list",
         "routing-direct": "https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/direct.list",
@@ -134,17 +146,16 @@ function main(config) {
         };
     });
 
-    var newRules = [
+    var rules = [
         "RULE-SET,routing-top-proxy,PROXY",
         "RULE-SET,routing-top-direct,DIRECT",
-        "RULE-SET,adblock,REJECT",
         "RULE-SET,routing-apple-proxy,PROXY",
         "RULE-SET,routing-apple-direct,DIRECT",
         "RULE-SET,routing-direct,DIRECT",
         "RULE-SET,routing-proxy,PROXY",
     ];
 
-    var upperRules = config.rules.map(function (rule) {
+    var existing = config.rules.map(function (rule) {
         return String(rule).toUpperCase().trim();
     });
     var insertIndex = config.rules.findIndex(function (rule) {
@@ -153,8 +164,8 @@ function main(config) {
     });
     if (insertIndex === -1) insertIndex = config.rules.length;
 
-    newRules.forEach(function (rule) {
-        if (upperRules.indexOf(rule.toUpperCase()) === -1) {
+    rules.forEach(function (rule) {
+        if (existing.indexOf(rule.toUpperCase()) === -1) {
             config.rules.splice(insertIndex, 0, rule);
             insertIndex++;
         }
@@ -166,7 +177,7 @@ function main(config) {
 
 ## 规则来源
 
-来源配置在 [sources.yaml](sources.yaml)。初始来源来自当前 VPS 分流构建模型中的非去广告公开来源，去掉了 `REJECT` 段和个人服务器 override。
+来源配置在 [sources.yaml](sources.yaml)。本项目使用公开上游规则和少量通用补充规则。
 
 | 名称 | 来源网站 | 原始规则 URL |
 | --- | --- | --- |
@@ -177,26 +188,19 @@ function main(config) {
 | BlackMatrix7 TestFlight | [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script) | <https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TestFlight/TestFlight.yaml> |
 | BlackMatrix7 SystemOTA | [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script) | <https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SystemOTA/SystemOTA.yaml> |
 | BlackMatrix7 Apple | [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script) | <https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml> |
-| Loyalsoldier private/direct/applications/lancidr/cncidr/proxy/telegramcidr | [Loyalsoldier/clash-rules](https://github.com/Loyalsoldier/clash-rules) | <https://github.com/Loyalsoldier/clash-rules/tree/release> |
+| Loyalsoldier clash-rules | [Loyalsoldier/clash-rules](https://github.com/Loyalsoldier/clash-rules) | <https://github.com/Loyalsoldier/clash-rules/tree/release> |
 | BlackMatrix7 Telegram/OpenAI/Google/YouTube/GitHub | [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script) | <https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash> |
 
-请在公开分发生成文件前自行确认各上游项目的许可证和使用条款。
+请自行确认各上游项目的许可证和使用条款。
 
 ## 构建逻辑
 
-- 拉取 [sources.yaml](sources.yaml) 中配置的公开规则源
+- 拉取 [sources.yaml](sources.yaml) 中的公开规则源
 - 提取 Clash/Mihomo `payload` 条目
 - 提取纯域名、`+.example.com` 和 CIDR 行
-- 规范化为以下规则类型：
-  - `DOMAIN`
-  - `DOMAIN-SUFFIX`
-  - `DOMAIN-KEYWORD`
-  - `PROCESS-NAME`
-  - `IP-ASN`
-  - `IP-CIDR`
-  - `IP-CIDR6`
-- 移除完全重复的规则
-- 移除已被更高优先级前置 section 覆盖的规则
+- 规范化为 `DOMAIN`、`DOMAIN-SUFFIX`、`DOMAIN-KEYWORD`、`PROCESS-NAME`、`IP-ASN`、`IP-CIDR`、`IP-CIDR6`
+- 移除重复规则和被前置规则覆盖的规则
+- 按 section 输出多个 rule-provider 文件
 - 输出构建报告和各来源解析数量
 
 ## 本地构建
@@ -224,13 +228,8 @@ python -m routing_merge.builder
 
 [.github/workflows/build.yml](.github/workflows/build.yml) 会在 push、pull request、手动触发和每日定时任务时运行。
 
-CI 会执行：
-
-1. 安装依赖
-2. 运行测试
-3. 构建 `dist/*.list`
-4. 如果生成文件发生变化，自动提交更新 `dist/*.list` 和 `dist/build-report.json`
+CI 会安装依赖、运行测试、构建 `dist/*.list`，并在生成文件变化时自动提交更新。
 
 ## 许可证
 
-本仓库代码使用 MIT License。生成规则文件会包含来自上游规则项目的数据，公开分发时请遵守对应上游项目的许可证和使用条款。
+本仓库代码使用 MIT License。生成规则文件包含上游规则项目的数据，使用时请遵守对应上游项目的许可证和使用条款。
