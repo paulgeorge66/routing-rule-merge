@@ -1,0 +1,222 @@
+source_order:
+  - top-proxy
+  - top-direct
+  - apple-proxy
+  - apple-direct
+  - direct
+  - proxy
+
+sources:
+  # Public local overrides from the VPS routing model. Server self-access
+  # domains/IPs are intentionally omitted from this public repository.
+  - name: claude_dependencies
+    section: top-proxy
+    parser: inline
+    rules:
+      - DOMAIN-SUFFIX,featuregates.org
+      - DOMAIN-SUFFIX,statsig.anthropic.com
+      - DOMAIN-SUFFIX,statsig.com
+      - DOMAIN-SUFFIX,statsigcdn.com
+      - DOMAIN-SUFFIX,statsigapi.net
+
+  - name: google_play_downloads
+    section: top-proxy
+    parser: inline
+    rules:
+      - DOMAIN-SUFFIX,play.google.com
+      - DOMAIN-SUFFIX,android.clients.google.com
+      - DOMAIN-SUFFIX,android.googleapis.com
+      - DOMAIN-SUFFIX,play.googleapis.com
+      - DOMAIN-SUFFIX,play-fe.googleapis.com
+      - DOMAIN-SUFFIX,play-lh.googleusercontent.com
+      - DOMAIN-SUFFIX,play-apps-features.googleusercontent.com
+      - DOMAIN-SUFFIX,gvt1.com
+      - DOMAIN-SUFFIX,gvt2.com
+      - DOMAIN-SUFFIX,gvt3.com
+      - DOMAIN-SUFFIX,dl.google.com
+      - DOMAIN-SUFFIX,ggpht.com
+      - DOMAIN-SUFFIX,googleusercontent.com
+      - DOMAIN-SUFFIX,googleapis.cn
+      - DOMAIN,fonts.gstatic.com
+      - DOMAIN,fonts.googleapis.com
+      - DOMAIN,www.gstatic.com
+      - DOMAIN-SUFFIX,gstatic.com
+
+  - name: microsoft_store_update
+    section: top-direct
+    parser: inline
+    rules:
+      - DOMAIN,ctldl.windowsupdate.com
+      - DOMAIN,definitionupdates.microsoft.com
+      - DOMAIN,adl.windows.com
+      - DOMAIN,tsfe.trafficshaping.dsp.mp.microsoft.com
+      - DOMAIN-SUFFIX,windowsupdate.com
+      - DOMAIN-SUFFIX,update.microsoft.com
+      - DOMAIN-SUFFIX,delivery.mp.microsoft.com
+      - DOMAIN-SUFFIX,dl.delivery.mp.microsoft.com
+      - DOMAIN-SUFFIX,prod.do.dsp.mp.microsoft.com
+      - DOMAIN-SUFFIX,api.cdp.microsoft.com
+      - DOMAIN,storeedgefd.dsx.mp.microsoft.com
+      - DOMAIN,livetileedge.dsx.mp.microsoft.com
+      - DOMAIN,storecatalogrevocation.storequality.microsoft.com
+      - DOMAIN,img-prod-cms-rt-microsoft-com.akamaized.net
+      - DOMAIN,img-s-msn-com.akamaized.net
+      - DOMAIN,share.microsoft.com
+      - DOMAIN-SUFFIX,displaycatalog.mp.microsoft.com
+      - DOMAIN-SUFFIX,wns.windows.com
+      - DOMAIN-SUFFIX,microsoftstore.com
+      - DOMAIN-SUFFIX,microsoftstore.com.hk
+      - DOMAIN-SUFFIX,microsoftuwp.com
+      - DOMAIN,licensing.mp.microsoft.com
+
+  - name: private_ranges
+    section: top-direct
+    parser: inline
+    rules:
+      - IP-CIDR,0.0.0.0/8,no-resolve
+      - IP-CIDR,10.0.0.0/8,no-resolve
+      - IP-CIDR,127.0.0.0/8,no-resolve
+      - IP-CIDR,169.254.0.0/16,no-resolve
+      - IP-CIDR,172.16.0.0/12,no-resolve
+      - IP-CIDR,192.168.0.0/16,no-resolve
+      - IP-CIDR,198.18.0.0/16,no-resolve
+      - IP-CIDR6,::1/128,no-resolve
+      - IP-CIDR6,fc00::/7,no-resolve
+      - IP-CIDR6,fe80::/10,no-resolve
+
+  - name: apple_media_overrides
+    section: top-proxy
+    parser: inline
+    rules:
+      - DOMAIN,np-edge.itunes.apple.com
+      - DOMAIN,play-edge.itunes.apple.com
+      - DOMAIN,tv.applemusic.com
+      - DOMAIN,uts-api.itunes.apple.com
+      - DOMAIN-SUFFIX,tv.apple.com
+      - PROCESS-NAME,TV
+      - DOMAIN-SUFFIX,itsliveradio.apple.com
+      - DOMAIN-SUFFIX,aodp-ssl.apple.com
+      - DOMAIN-SUFFIX,video-ssl.itunes.apple.com
+      - DOMAIN-SUFFIX,hls-amt.itunes.apple.com
+      - DOMAIN-SUFFIX,hls.itunes.apple.com
+      - DOMAIN-SUFFIX,mvod.itunes.apple.com
+      - DOMAIN-SUFFIX,audio-ssl.itunes.apple.com
+      - DOMAIN-SUFFIX,streamingaudio.itunes.apple.com
+      - DOMAIN-SUFFIX,blobstore.apple.com
+      - DOMAIN-SUFFIX,audio.itunes.apple.com
+      - DOMAIN-SUFFIX,amazonaws.com
+
+  - name: apple_direct_overrides
+    section: top-direct
+    parser: inline
+    rules:
+      - DOMAIN-SUFFIX,music.apple.com
+      - DOMAIN-SUFFIX,aod.itunes.apple.com
+      - DOMAIN-SUFFIX,apple.com
+      - DOMAIN-SUFFIX,apple.com.cn
+      - DOMAIN-SUFFIX,icloud.com
+      - DOMAIN-SUFFIX,icloud.com.cn
+      - DOMAIN-SUFFIX,icloud-content.com
+      - DOMAIN-SUFFIX,me.com
+      - DOMAIN-SUFFIX,itunes.apple.com
+      - DOMAIN-SUFFIX,mzstatic.com
+      - DOMAIN-SUFFIX,aaplimg.com
+      - DOMAIN-SUFFIX,apple-dns.net
+      - DOMAIN-SUFFIX,cdn-apple.com
+      - DOMAIN-SUFFIX,apple-mapkit.com
+      - DOMAIN-SUFFIX,apple.news
+
+  - name: bm7_appletv
+    section: apple-proxy
+    parser: classical_payload
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleTV/AppleTV.yaml
+
+  - name: bm7_appleproxy
+    section: apple-proxy
+    parser: classical_payload
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleProxy/AppleProxy.yaml
+
+  - name: bm7_applemedia
+    section: apple-proxy
+    parser: classical_payload
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleMedia/AppleMedia.yaml
+
+  - name: bm7_appstore
+    section: apple-direct
+    parser: classical_payload
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppStore/AppStore.yaml
+
+  - name: bm7_testflight
+    section: apple-direct
+    parser: classical_payload
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TestFlight/TestFlight.yaml
+
+  - name: bm7_systemota
+    section: apple-direct
+    parser: classical_payload
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SystemOTA/SystemOTA.yaml
+
+  - name: bm7_apple
+    section: apple-direct
+    parser: classical_payload
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml
+
+  - name: loyal_private
+    section: direct
+    parser: domain_payload
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt
+
+  - name: loyal_direct
+    section: direct
+    parser: domain_payload
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
+
+  - name: loyal_applications
+    section: direct
+    parser: classical_payload
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt
+
+  - name: loyal_lancidr
+    section: direct
+    parser: cidr_payload
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt
+
+  - name: loyal_cncidr
+    section: direct
+    parser: cidr_payload
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
+
+  - name: bm7_telegram
+    section: proxy
+    parser: classical_payload
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml
+
+  - name: loyal_telegramcidr
+    section: proxy
+    parser: cidr_payload
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt
+
+  - name: bm7_openai
+    section: proxy
+    parser: classical_payload
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml
+
+  - name: bm7_google
+    section: proxy
+    parser: classical_payload
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml
+
+  - name: bm7_youtube
+    section: proxy
+    parser: classical_payload
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml
+
+  - name: bm7_github
+    section: proxy
+    parser: classical_payload
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml
+
+  - name: loyal_proxy
+    section: proxy
+    parser: domain_payload
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
