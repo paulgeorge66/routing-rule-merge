@@ -124638,6 +124638,7 @@
   - DOMAIN-SUFFIX,claude.ai,PROXY
   - DOMAIN-SUFFIX,claude.com,PROXY
   - DOMAIN-SUFFIX,claudemcpclient.com,PROXY
+  - DOMAIN-SUFFIX,claudemcpcontent.com,PROXY
   - DOMAIN-SUFFIX,claudeusercontent.com,PROXY
   - DOMAIN-SUFFIX,clawhub.ai,PROXY
   - DOMAIN-SUFFIX,clck.ru,PROXY
@@ -140679,6 +140680,7 @@
   - DOMAIN-SUFFIX,sustainthesound.com,PROXY
   - DOMAIN-SUFFIX,suxib.com,PROXY
   - DOMAIN-SUFFIX,suxiebu.com,PROXY
+  - DOMAIN-SUFFIX,suyingtv.com,PROXY
   - DOMAIN-SUFFIX,suzuri.jp,PROXY
   - DOMAIN-SUFFIX,svaboda.org,PROXY
   - DOMAIN-SUFFIX,svc.ms,PROXY
@@ -143909,6 +143911,7 @@
   - DOMAIN-SUFFIX,wp-themes.com,PROXY
   - DOMAIN-SUFFIX,wp.com,PROXY
   - DOMAIN-SUFFIX,wpewebkit.org,PROXY
+  - DOMAIN-SUFFIX,wplace.live,PROXY
   - DOMAIN-SUFFIX,wpoforum.com,PROXY
   - DOMAIN-SUFFIX,wpvip.com,PROXY
   - DOMAIN-SUFFIX,wrds-www.wharton.upenn.edu,PROXY
@@ -144062,6 +144065,7 @@
   - DOMAIN-SUFFIX,www.moztw.org,PROXY
   - DOMAIN-SUFFIX,www.oxid.it,PROXY
   - DOMAIN-SUFFIX,www.powerpointninja.com,PROXY
+  - DOMAIN-SUFFIX,www.quora.com.cdn.cloudflare.net,PROXY
   - DOMAIN-SUFFIX,www.s4miniarchive.com,PROXY
   - DOMAIN-SUFFIX,www.sb,PROXY
   - DOMAIN-SUFFIX,www.tablesgenerator.com,PROXY
