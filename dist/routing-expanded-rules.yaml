@@ -1424,6 +1424,7 @@
   - DOMAIN-SUFFIX,0x5.me,DIRECT
   - DOMAIN-SUFFIX,0x9.me,DIRECT
   - DOMAIN-SUFFIX,0xaa55.com,DIRECT
+  - DOMAIN-SUFFIX,0xffff.one,DIRECT
   - DOMAIN-SUFFIX,0xffffff.org,DIRECT
   - DOMAIN-SUFFIX,0xiao.com,DIRECT
   - DOMAIN-SUFFIX,0xjqlun2.work,DIRECT
@@ -6119,6 +6120,7 @@
   - DOMAIN-SUFFIX,51yugou.com,DIRECT
   - DOMAIN-SUFFIX,51yund.com,DIRECT
   - DOMAIN-SUFFIX,51yundong.me,DIRECT
+  - DOMAIN-SUFFIX,51yunzhi.com,DIRECT
   - DOMAIN-SUFFIX,51ywx.com,DIRECT
   - DOMAIN-SUFFIX,51yxcyy.com,DIRECT
   - DOMAIN-SUFFIX,51yxky.com,DIRECT
@@ -19565,6 +19567,7 @@
   - DOMAIN-SUFFIX,catchyrime.com,DIRECT
   - DOMAIN-SUFFIX,catering-shizuoka.com,DIRECT
   - DOMAIN-SUFFIX,catfish-cms.com,DIRECT
+  - DOMAIN-SUFFIX,catfk.com,DIRECT
   - DOMAIN-SUFFIX,catguo.com,DIRECT
   - DOMAIN-SUFFIX,cathassist.org,DIRECT
   - DOMAIN-SUFFIX,cathayagroup.com,DIRECT
@@ -23098,6 +23101,7 @@
   - DOMAIN-SUFFIX,chualamdimsum.com,DIRECT
   - DOMAIN-SUFFIX,chuan-s.com,DIRECT
   - DOMAIN-SUFFIX,chuanboyi.com,DIRECT
+  - DOMAIN-SUFFIX,chuanboyu.com,DIRECT
   - DOMAIN-SUFFIX,chuandaizc.com,DIRECT
   - DOMAIN-SUFFIX,chuandasolar.com,DIRECT
   - DOMAIN-SUFFIX,chuandong.com,DIRECT
@@ -29387,6 +29391,7 @@
   - DOMAIN-SUFFIX,dgjx.net,DIRECT
   - DOMAIN-SUFFIX,dgjxmk.com,DIRECT
   - DOMAIN-SUFFIX,dgjy.net,DIRECT
+  - DOMAIN-SUFFIX,dgkfa.com,DIRECT
   - DOMAIN-SUFFIX,dgkj888.com,DIRECT
   - DOMAIN-SUFFIX,dglpool.com,DIRECT
   - DOMAIN-SUFFIX,dglyjx.com,DIRECT
@@ -32877,6 +32882,7 @@
   - DOMAIN-SUFFIX,ego-robotics.com,DIRECT
   - DOMAIN-SUFFIX,egoint.com,DIRECT
   - DOMAIN-SUFFIX,egongzheng.com,DIRECT
+  - DOMAIN-SUFFIX,egonlin.com,DIRECT
   - DOMAIN-SUFFIX,egooad.com,DIRECT
   - DOMAIN-SUFFIX,egood995.com,DIRECT
   - DOMAIN-SUFFIX,egoonet.com,DIRECT
@@ -43623,6 +43629,7 @@
   - DOMAIN-SUFFIX,h5anli.com,DIRECT
   - DOMAIN-SUFFIX,h5app.com,DIRECT
   - DOMAIN-SUFFIX,h5avu.com,DIRECT
+  - DOMAIN-SUFFIX,h5cmpassport.com,DIRECT
   - DOMAIN-SUFFIX,h5cn.com,DIRECT
   - DOMAIN-SUFFIX,h5data.com,DIRECT
   - DOMAIN-SUFFIX,h5designer.com,DIRECT
@@ -46604,6 +46611,7 @@
   - DOMAIN-SUFFIX,hjenglish.com,DIRECT
   - DOMAIN-SUFFIX,hjg365.com,DIRECT
   - DOMAIN-SUFFIX,hjgcd.com,DIRECT
+  - DOMAIN-SUFFIX,hjgroup-sdq.com,DIRECT
   - DOMAIN-SUFFIX,hjgrp.com,DIRECT
   - DOMAIN-SUFFIX,hjgtjt.com,DIRECT
   - DOMAIN-SUFFIX,hjhrcloud.com,DIRECT
@@ -51478,6 +51486,7 @@
   - DOMAIN-SUFFIX,ihqfo.org,DIRECT
   - DOMAIN-SUFFIX,ihr360.com,DIRECT
   - DOMAIN-SUFFIX,ihrscloud.com,DIRECT
+  - DOMAIN-SUFFIX,ihsiao.com,DIRECT
   - DOMAIN-SUFFIX,ihst8.com,DIRECT
   - DOMAIN-SUFFIX,ihstatic.com,DIRECT
   - DOMAIN-SUFFIX,ihtcboy.com,DIRECT
@@ -59786,6 +59795,7 @@
   - DOMAIN-SUFFIX,ksydx.com,DIRECT
   - DOMAIN-SUFFIX,ksyiqiwan.com,DIRECT
   - DOMAIN-SUFFIX,ksyll.com,DIRECT
+  - DOMAIN-SUFFIX,ksymsbz.com,DIRECT
   - DOMAIN-SUFFIX,ksyna.com,DIRECT
   - DOMAIN-SUFFIX,ksyun.com,DIRECT
   - DOMAIN-SUFFIX,ksyun.net,DIRECT
@@ -65369,6 +65379,7 @@
   - DOMAIN-SUFFIX,marco-bj.com,DIRECT
   - DOMAIN-SUFFIX,marcopolochina.com,DIRECT
   - DOMAIN-SUFFIX,marginalk.com,DIRECT
+  - DOMAIN-SUFFIX,maria23.com,DIRECT
   - DOMAIN-SUFFIX,mariedalgar.com,DIRECT
   - DOMAIN-SUFFIX,marimekko-hots.com,DIRECT
   - DOMAIN-SUFFIX,marine-dancer.com,DIRECT
@@ -65737,12 +65748,14 @@
   - DOMAIN-SUFFIX,mcyz.com,DIRECT
   - DOMAIN-SUFFIX,mczhihui.com,DIRECT
   - DOMAIN-SUFFIX,mczmb.org,DIRECT
+  - DOMAIN-SUFFIX,mczsok.com,DIRECT
   - DOMAIN-SUFFIX,mczwlt.net,DIRECT
   - DOMAIN-SUFFIX,mczyz.com,DIRECT
   - DOMAIN-SUFFIX,mczz.net,DIRECT
   - DOMAIN-SUFFIX,md-hmjt.com,DIRECT
   - DOMAIN-SUFFIX,md-pms.com,DIRECT
   - DOMAIN-SUFFIX,md5ma.com,DIRECT
+  - DOMAIN-SUFFIX,mdaehx.com,DIRECT
   - DOMAIN-SUFFIX,mdapp.tv,DIRECT
   - DOMAIN-SUFFIX,mdbchina.com,DIRECT
   - DOMAIN-SUFFIX,mdbimg.com,DIRECT
@@ -66875,6 +66888,7 @@
   - DOMAIN-SUFFIX,minecraftxz.com,DIRECT
   - DOMAIN-SUFFIX,minecraftzw.com,DIRECT
   - DOMAIN-SUFFIX,minegoods.com,DIRECT
+  - DOMAIN-SUFFIX,mineharmony.cc,DIRECT
   - DOMAIN-SUFFIX,minei.com,DIRECT
   - DOMAIN-SUFFIX,mineplugin.org,DIRECT
   - DOMAIN-SUFFIX,minerhome.com,DIRECT
@@ -73963,6 +73977,7 @@
   - DOMAIN-SUFFIX,pinkertech.com,DIRECT
   - DOMAIN-SUFFIX,pinkoichina.com,DIRECT
   - DOMAIN-SUFFIX,pinkou.com,DIRECT
+  - DOMAIN-SUFFIX,pinkr.com,DIRECT
   - DOMAIN-SUFFIX,pinla.com,DIRECT
   - DOMAIN-SUFFIX,pinlyu.com,DIRECT
   - DOMAIN-SUFFIX,pinmanduo.com,DIRECT
@@ -80404,6 +80419,7 @@
   - DOMAIN-SUFFIX,scmccboss.com,DIRECT
   - DOMAIN-SUFFIX,scmchem.com,DIRECT
   - DOMAIN-SUFFIX,scmfair.com,DIRECT
+  - DOMAIN-SUFFIX,scmggzbh.com,DIRECT
   - DOMAIN-SUFFIX,scmor.com,DIRECT
   - DOMAIN-SUFFIX,scmroad.com,DIRECT
   - DOMAIN-SUFFIX,scmsky.com,DIRECT
@@ -86118,6 +86134,7 @@
   - DOMAIN-SUFFIX,stdout.pub,DIRECT
   - DOMAIN-SUFFIX,ste56.com,DIRECT
   - DOMAIN-SUFFIX,stea2008.com,DIRECT
+  - DOMAIN-SUFFIX,steam-run.com,DIRECT
   - DOMAIN-SUFFIX,steam.com,DIRECT
   - DOMAIN-SUFFIX,steam302.xyz,DIRECT
   - DOMAIN-SUFFIX,steambig.com,DIRECT
@@ -87328,6 +87345,7 @@
   - DOMAIN-SUFFIX,syhzdj.net,DIRECT
   - DOMAIN-SUFFIX,syhzx.com,DIRECT
   - DOMAIN-SUFFIX,syhzzf.com,DIRECT
+  - DOMAIN-SUFFIX,syiban.com,DIRECT
   - DOMAIN-SUFFIX,syiptv.com,DIRECT
   - DOMAIN-SUFFIX,syitgz.com,DIRECT
   - DOMAIN-SUFFIX,syjcly.com,DIRECT
@@ -93674,6 +93692,7 @@
   - DOMAIN-SUFFIX,uucqrdmk.com,DIRECT
   - DOMAIN-SUFFIX,uueasy.com,DIRECT
   - DOMAIN-SUFFIX,uuedutech.com,DIRECT
+  - DOMAIN-SUFFIX,uufaka.com,DIRECT
   - DOMAIN-SUFFIX,uufund.com,DIRECT
   - DOMAIN-SUFFIX,uufuns.com,DIRECT
   - DOMAIN-SUFFIX,uugai.com,DIRECT
@@ -95154,6 +95173,7 @@
   - DOMAIN-SUFFIX,walvax.com,DIRECT
   - DOMAIN-SUFFIX,wamawama.com,DIRECT
   - DOMAIN-SUFFIX,wamila.com,DIRECT
+  - DOMAIN-SUFFIX,wamoyu.com,DIRECT
   - DOMAIN-SUFFIX,wan-ka.com,DIRECT
   - DOMAIN-SUFFIX,wan.cc,DIRECT
   - DOMAIN-SUFFIX,wan.com,DIRECT
@@ -99021,6 +99041,7 @@
   - DOMAIN-SUFFIX,wya1.com,DIRECT
   - DOMAIN-SUFFIX,wybgs.com,DIRECT
   - DOMAIN-SUFFIX,wybosch.com,DIRECT
+  - DOMAIN-SUFFIX,wybuddhist.com,DIRECT
   - DOMAIN-SUFFIX,wybzdwss.com,DIRECT
   - DOMAIN-SUFFIX,wycad.com,DIRECT
   - DOMAIN-SUFFIX,wycfw.com,DIRECT
@@ -100835,6 +100856,7 @@
   - DOMAIN-SUFFIX,ximitools.com,DIRECT
   - DOMAIN-SUFFIX,ximiyouxi.com,DIRECT
   - DOMAIN-SUFFIX,ximmerse.com,DIRECT
+  - DOMAIN-SUFFIX,ximofood.com,DIRECT
   - DOMAIN-SUFFIX,ximogo.com,DIRECT
   - DOMAIN-SUFFIX,ximuw.com,DIRECT
   - DOMAIN-SUFFIX,xin-health.com,DIRECT
@@ -103136,6 +103158,7 @@
   - DOMAIN-SUFFIX,xxymdy.com,DIRECT
   - DOMAIN-SUFFIX,xxymw.com,DIRECT
   - DOMAIN-SUFFIX,xxyo.com,DIRECT
+  - DOMAIN-SUFFIX,xxyoil.com,DIRECT
   - DOMAIN-SUFFIX,xxys2023.com,DIRECT
   - DOMAIN-SUFFIX,xxyw.com,DIRECT
   - DOMAIN-SUFFIX,xxyx.ltd,DIRECT
@@ -108769,6 +108792,7 @@
   - DOMAIN-SUFFIX,zchospital.com,DIRECT
   - DOMAIN-SUFFIX,zchrgroup.com,DIRECT
   - DOMAIN-SUFFIX,zcict.com,DIRECT
+  - DOMAIN-SUFFIX,zcidclink.com,DIRECT
   - DOMAIN-SUFFIX,zcimg.com,DIRECT
   - DOMAIN-SUFFIX,zcinfo.net,DIRECT
   - DOMAIN-SUFFIX,zciv.com,DIRECT

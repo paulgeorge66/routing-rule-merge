@@ -88,7 +88,7 @@
       "section": "direct",
       "parser": "domain_payload",
       "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt",
-      "parsed_rules": 113021
+      "parsed_rules": 113045
     },
     "loyal_applications": {
       "section": "direct",
@@ -169,17 +169,17 @@
       "output_rules": 82
     },
     "direct": {
-      "input_rules": 119052,
-      "output_rules": 118999
+      "input_rules": 119076,
+      "output_rules": 119023
     },
     "proxy": {
       "input_rules": 27592,
       "output_rules": 26478
     }
   },
-  "total_rules": 145686,
+  "total_rules": 145710,
   "expanded_rules": {
     "path": "dist/routing-expanded-rules.yaml",
-    "rules": 145687
+    "rules": 145711
   }
 }
