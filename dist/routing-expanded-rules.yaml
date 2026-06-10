@@ -52107,7 +52107,6 @@
   - DOMAIN-SUFFIX,infomorning.com,DIRECT
   - DOMAIN-SUFFIX,infong.net,DIRECT
   - DOMAIN-SUFFIX,infoobs.com,DIRECT
-  - DOMAIN-SUFFIX,infoq.com,DIRECT
   - DOMAIN-SUFFIX,infoqstatic.com,DIRECT
   - DOMAIN-SUFFIX,inforbus.com,DIRECT
   - DOMAIN-SUFFIX,inforeenviro.com,DIRECT
@@ -52454,7 +52453,6 @@
   - DOMAIN-SUFFIX,iouluo.com,DIRECT
   - DOMAIN-SUFFIX,ioxqm.com,DIRECT
   - DOMAIN-SUFFIX,ioxunyun.com,DIRECT
-  - DOMAIN-SUFFIX,ip-cdn.com,DIRECT
   - DOMAIN-SUFFIX,ip-guard.net,DIRECT
   - DOMAIN-SUFFIX,ip-hercules.com,DIRECT
   - DOMAIN-SUFFIX,ip-soc.com,DIRECT
@@ -131425,6 +131423,7 @@
   - DOMAIN-SUFFIX,infocert.it,PROXY
   - DOMAIN-SUFFIX,infoglobo.com.br,PROXY
   - DOMAIN-SUFFIX,infolinker.com.tw,PROXY
+  - DOMAIN-SUFFIX,infoq.com,PROXY
   - DOMAIN-SUFFIX,infoq.jp,PROXY
   - DOMAIN-SUFFIX,informs.org,PROXY
   - DOMAIN-SUFFIX,infosec.exchange,PROXY
@@ -136202,6 +136201,7 @@
   - DOMAIN-SUFFIX,nxta.org,PROXY
   - DOMAIN-SUFFIX,nxtdig.com.hk,PROXY
   - DOMAIN-SUFFIX,nxtdig.com.tw,PROXY
+  - DOMAIN-SUFFIX,nxtv.jp,PROXY
   - DOMAIN-SUFFIX,nyaa.eu,PROXY
   - DOMAIN-SUFFIX,nyaa.net,PROXY
   - DOMAIN-SUFFIX,nyaa.si,PROXY
@@ -142303,6 +142303,9 @@
   - DOMAIN-SUFFIX,underhentai.net,PROXY
   - DOMAIN-SUFFIX,underlords.com,PROXY
   - DOMAIN-SUFFIX,underwoodammo.com,PROXY
+  - DOMAIN-SUFFIX,unext-info.jp,PROXY
+  - DOMAIN-SUFFIX,unext.co.jp,PROXY
+  - DOMAIN-SUFFIX,unext.jp,PROXY
   - DOMAIN-SUFFIX,unfiltered.news,PROXY
   - DOMAIN-SUFFIX,unholyknight.com,PROXY
   - DOMAIN-SUFFIX,unidraw.io,PROXY
