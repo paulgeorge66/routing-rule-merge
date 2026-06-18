@@ -120649,6 +120649,7 @@
   - DOMAIN-SUFFIX,appbridge.it,PROXY
   - DOMAIN-SUFFIX,appcenter.ms,PROXY
   - DOMAIN-SUFFIX,appcloud.com,PROXY
+  - DOMAIN-SUFFIX,appconsent.io,PROXY
   - DOMAIN-SUFFIX,appdomain.cloud,PROXY
   - DOMAIN-SUFFIX,appdynamics.co.uk,PROXY
   - DOMAIN-SUFFIX,appdynamics.com,PROXY
@@ -121529,6 +121530,7 @@
   - DOMAIN-SUFFIX,awwcn.xyz,PROXY
   - DOMAIN-SUFFIX,awxcdn.com,PROXY
   - DOMAIN-SUFFIX,axbdoll.com.tw,PROXY
+  - DOMAIN-SUFFIX,axept.io,PROXY
   - DOMAIN-SUFFIX,axios.com,PROXY
   - DOMAIN-SUFFIX,axureformac.com,PROXY
   - DOMAIN-SUFFIX,ayabank.com,PROXY
@@ -123863,6 +123865,7 @@
   - DOMAIN-SUFFIX,cdjp.org,PROXY
   - DOMAIN-SUFFIX,cdkworkshop.com,PROXY
   - DOMAIN-SUFFIX,cdmatech.com,PROXY
+  - DOMAIN-SUFFIX,cdn-cookieyes.com,PROXY
   - DOMAIN-SUFFIX,cdn-spotify-experiments.conductrics.com,PROXY
   - DOMAIN-SUFFIX,cdn-telegram.org,PROXY
   - DOMAIN-SUFFIX,cdn-terapeak.com,PROXY
@@ -124597,6 +124600,7 @@
   - DOMAIN-SUFFIX,conquerwithcharacter.com,PROXY
   - DOMAIN-SUFFIX,conscrypt.com,PROXY
   - DOMAIN-SUFFIX,conscrypt.org,PROXY
+  - DOMAIN-SUFFIX,consentmanager.net,PROXY
   - DOMAIN-SUFFIX,consentpro.com,PROXY
   - DOMAIN-SUFFIX,constructware.com,PROXY
   - DOMAIN-SUFFIX,consul.io,PROXY
@@ -124606,9 +124610,11 @@
   - DOMAIN-SUFFIX,contentful.com,PROXY
   - DOMAIN-SUFFIX,contest.com,PROXY
   - DOMAIN-SUFFIX,convrgencegame.com,PROXY
+  - DOMAIN-SUFFIX,cookiebot.com,PROXY
   - DOMAIN-SUFFIX,cookiechoices.org,PROXY
   - DOMAIN-SUFFIX,cookielaw.org,PROXY
   - DOMAIN-SUFFIX,cookiepro.com,PROXY
+  - DOMAIN-SUFFIX,cookieyes.com,PROXY
   - DOMAIN-SUFFIX,cool-comics.com,PROXY
   - DOMAIN-SUFFIX,cool18.com,PROXY
   - DOMAIN-SUFFIX,cool3c.com,PROXY
@@ -140383,6 +140389,7 @@
   - DOMAIN-SUFFIX,supercell.com,PROXY
   - DOMAIN-SUFFIX,supercell.helpshift.com,PROXY
   - DOMAIN-SUFFIX,supercell.net,PROXY
+  - DOMAIN-SUFFIX,supercell.zendesk.com,PROXY
   - DOMAIN-SUFFIX,supercellcreators.com,PROXY
   - DOMAIN-SUFFIX,supercellgames.com,PROXY
   - DOMAIN-SUFFIX,supercellid.com,PROXY
@@ -140791,6 +140798,7 @@
   - DOMAIN-SUFFIX,teraperk.com,PROXY
   - DOMAIN-SUFFIX,terk.nl,PROXY
   - DOMAIN-SUFFIX,termius.com,PROXY
+  - DOMAIN-SUFFIX,termly.io,PROXY
   - DOMAIN-SUFFIX,termux.com,PROXY
   - DOMAIN-SUFFIX,termux.dev,PROXY
   - DOMAIN-SUFFIX,termux.org,PROXY
@@ -141487,6 +141495,7 @@
   - DOMAIN-SUFFIX,truenas.com,PROXY
   - DOMAIN-SUFFIX,trunest.com,PROXY
   - DOMAIN-SUFFIX,trust-provider.com,PROXY
+  - DOMAIN-SUFFIX,trustarc.com,PROXY
   - DOMAIN-SUFFIX,trustcor.ca,PROXY
   - DOMAIN-SUFFIX,trustcor.com,PROXY
   - DOMAIN-SUFFIX,trustdoc.ch,PROXY
