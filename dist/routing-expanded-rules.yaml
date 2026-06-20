@@ -14159,6 +14159,7 @@
   - DOMAIN-SUFFIX,azuiblc.com,DIRECT
   - DOMAIN-SUFFIX,azure-wave.com,DIRECT
   - DOMAIN-SUFFIX,azure.cc,DIRECT
+  - DOMAIN-SUFFIX,azureflame.cloud,DIRECT
   - DOMAIN-SUFFIX,azureflying.com,DIRECT
   - DOMAIN-SUFFIX,azuremigrate.download.prss.microsoft.com,DIRECT
   - DOMAIN-SUFFIX,azuremigratetest.download.prss.microsoft.com,DIRECT
@@ -16766,6 +16767,7 @@
   - DOMAIN-SUFFIX,bjartmuseum.com,DIRECT
   - DOMAIN-SUFFIX,bjatv.com,DIRECT
   - DOMAIN-SUFFIX,bjbaidianfeng.com,DIRECT
+  - DOMAIN-SUFFIX,bjbaifan.com,DIRECT
   - DOMAIN-SUFFIX,bjbalb.com,DIRECT
   - DOMAIN-SUFFIX,bjbaodao.net,DIRECT
   - DOMAIN-SUFFIX,bjbb.com,DIRECT
@@ -19210,6 +19212,7 @@
   - DOMAIN-SUFFIX,cangfengzhe.com,DIRECT
   - DOMAIN-SUFFIX,canghaiip.com,DIRECT
   - DOMAIN-SUFFIX,canghaimachine.com,DIRECT
+  - DOMAIN-SUFFIX,cangjggame.com,DIRECT
   - DOMAIN-SUFFIX,canglanghospital.com,DIRECT
   - DOMAIN-SUFFIX,cangmang.xyz,DIRECT
   - DOMAIN-SUFFIX,cangoonline.com,DIRECT
@@ -20846,6 +20849,7 @@
   - DOMAIN-SUFFIX,chachengji.com,DIRECT
   - DOMAIN-SUFFIX,chacihai.com,DIRECT
   - DOMAIN-SUFFIX,chacuo.net,DIRECT
+  - DOMAIN-SUFFIX,chadaodao.com,DIRECT
   - DOMAIN-SUFFIX,chadianhua.net,DIRECT
   - DOMAIN-SUFFIX,chadoc.com,DIRECT
   - DOMAIN-SUFFIX,chaej.com,DIRECT
@@ -34867,6 +34871,7 @@
   - DOMAIN-SUFFIX,feiersmart.com,DIRECT
   - DOMAIN-SUFFIX,feifandesign.com,DIRECT
   - DOMAIN-SUFFIX,feifanindustry.com,DIRECT
+  - DOMAIN-SUFFIX,feifanmi.com,DIRECT
   - DOMAIN-SUFFIX,feifantxt.com,DIRECT
   - DOMAIN-SUFFIX,feifantxt.net,DIRECT
   - DOMAIN-SUFFIX,feifdx.com,DIRECT
@@ -75829,6 +75834,7 @@
   - DOMAIN-SUFFIX,qingnianlvxing.com,DIRECT
   - DOMAIN-SUFFIX,qingniantuzhai.com,DIRECT
   - DOMAIN-SUFFIX,qingnianwang.com,DIRECT
+  - DOMAIN-SUFFIX,qingning88.com,DIRECT
   - DOMAIN-SUFFIX,qingpanduola.com,DIRECT
   - DOMAIN-SUFFIX,qingpin.vip,DIRECT
   - DOMAIN-SUFFIX,qingping.co,DIRECT
@@ -92934,6 +92940,7 @@
   - DOMAIN-SUFFIX,uniow.com,DIRECT
   - DOMAIN-SUFFIX,unipack-tech.com,DIRECT
   - DOMAIN-SUFFIX,uniproud.com,DIRECT
+  - DOMAIN-SUFFIX,unisapps.com,DIRECT
   - DOMAIN-SUFFIX,uniscope.com,DIRECT
   - DOMAIN-SUFFIX,unisdigital.com,DIRECT
   - DOMAIN-SUFFIX,unisedu.com,DIRECT
@@ -93176,7 +93183,6 @@
   - DOMAIN-SUFFIX,urumqimtr.com,DIRECT
   - DOMAIN-SUFFIX,us-ex.com,DIRECT
   - DOMAIN-SUFFIX,us-qianzheng.com,DIRECT
-  - DOMAIN-SUFFIX,us.ci,DIRECT
   - DOMAIN-SUFFIX,us0.me,DIRECT
   - DOMAIN-SUFFIX,usa-gam.com,DIRECT
   - DOMAIN-SUFFIX,usa-idc.com,DIRECT
@@ -119339,6 +119345,7 @@
   - DOMAIN-SUFFIX,9nation.com.au,PROXY
   - DOMAIN-SUFFIX,9news.com.au,PROXY
   - DOMAIN-SUFFIX,9now.com.au,PROXY
+  - DOMAIN-SUFFIX,9oju31.launches.appsflyersdk.com,PROXY
   - DOMAIN-SUFFIX,9tak-nav.buzz,PROXY
   - DOMAIN-SUFFIX,9to5google.com,PROXY
   - DOMAIN-SUFFIX,9to5mac.com,PROXY
@@ -120590,6 +120597,7 @@
   - DOMAIN-SUFFIX,api-extractor.com,PROXY
   - DOMAIN-SUFFIX,api-p.videomarket.jp,PROXY
   - DOMAIN-SUFFIX,api.ai,PROXY
+  - DOMAIN-SUFFIX,api.moomoobull.com,PROXY
   - DOMAIN-SUFFIX,api.news,PROXY
   - DOMAIN-SUFFIX,api.palworldgame.com,PROXY
   - DOMAIN-SUFFIX,api.statsig.com,PROXY
@@ -123949,6 +123957,7 @@
   - DOMAIN-SUFFIX,cfna.com,PROXY
   - DOMAIN-SUFFIX,cfr.org,PROXY
   - DOMAIN-SUFFIX,cfwives.com,PROXY
+  - DOMAIN-SUFFIX,cg.play-analytics.com,PROXY
   - DOMAIN-SUFFIX,cgdepot.org,PROXY
   - DOMAIN-SUFFIX,ch9.ms,PROXY
   - DOMAIN-SUFFIX,chainid.network,PROXY
@@ -128264,12 +128273,25 @@
   - DOMAIN-SUFFIX,futhead.com,PROXY
   - DOMAIN-SUFFIX,futpromos.com,PROXY
   - DOMAIN-SUFFIX,futu.cn,PROXY
+  - DOMAIN-SUFFIX,futu.com,PROXY
   - DOMAIN-SUFFIX,futu.link,PROXY
+  - DOMAIN-SUFFIX,futu0.com,PROXY
+  - DOMAIN-SUFFIX,futu1.com,PROXY
+  - DOMAIN-SUFFIX,futu2.com,PROXY
+  - DOMAIN-SUFFIX,futu3.com,PROXY
+  - DOMAIN-SUFFIX,futu4.com,PROXY
+  - DOMAIN-SUFFIX,futu6.com,PROXY
+  - DOMAIN-SUFFIX,futu7.com,PROXY
+  - DOMAIN-SUFFIX,futu8.com,PROXY
+  - DOMAIN-SUFFIX,futu9.com,PROXY
+  - DOMAIN-SUFFIX,futubull.cn,PROXY
+  - DOMAIN-SUFFIX,futuchain.com,PROXY
   - DOMAIN-SUFFIX,futuhk.com,PROXY
   - DOMAIN-SUFFIX,futuhk1.com,PROXY
   - DOMAIN-SUFFIX,futuhk2.com,PROXY
   - DOMAIN-SUFFIX,futuhkapp.com,PROXY
   - DOMAIN-SUFFIX,futuholdings.com,PROXY
+  - DOMAIN-SUFFIX,futuinc.com,PROXY
   - DOMAIN-SUFFIX,futunited.com,PROXY
   - DOMAIN-SUFFIX,futuoa.com,PROXY
   - DOMAIN-SUFFIX,future-cs.ru,PROXY
@@ -132904,6 +132926,7 @@
   - DOMAIN-SUFFIX,longmabook.com,PROXY
   - DOMAIN-SUFFIX,longmabookcn.com,PROXY
   - DOMAIN-SUFFIX,longman.ch,PROXY
+  - DOMAIN-SUFFIX,longportapp.cn,PROXY
   - DOMAIN-SUFFIX,longportapp.com,PROXY
   - DOMAIN-SUFFIX,longtailvideo.com,PROXY
   - DOMAIN-SUFFIX,longtermly.net,PROXY
@@ -138846,6 +138869,7 @@
   - DOMAIN-SUFFIX,scholarpedia.org,PROXY
   - DOMAIN-SUFFIX,schwab.co.uk,PROXY
   - DOMAIN-SUFFIX,schwab.com,PROXY
+  - DOMAIN-SUFFIX,schwab.com.cn,PROXY
   - DOMAIN-SUFFIX,schwab.com.hk,PROXY
   - DOMAIN-SUFFIX,schwab.com.sg,PROXY
   - DOMAIN-SUFFIX,schwabassetmanagement.com,PROXY
@@ -139219,6 +139243,7 @@
   - DOMAIN-SUFFIX,sg1lib.org,PROXY
   - DOMAIN-SUFFIX,sgcheck.ru,PROXY
   - DOMAIN-SUFFIX,sgp1.fun,PROXY
+  - DOMAIN-SUFFIX,sgqt0j.launches.appsflyersdk.com,PROXY
   - DOMAIN-SUFFIX,sgr.com.br,PROXY
   - DOMAIN-SUFFIX,sgspe.de,PROXY
   - DOMAIN-SUFFIX,sgspt.buzz,PROXY
@@ -139374,6 +139399,7 @@
   - DOMAIN-SUFFIX,shops-disney.com,PROXY
   - DOMAIN-SUFFIX,shopspeedtv.com,PROXY
   - DOMAIN-SUFFIX,shoptraivip.com,PROXY
+  - DOMAIN-SUFFIX,shortconn.im.qcloud.com,PROXY
   - DOMAIN-SUFFIX,shorturl.at,PROXY
   - DOMAIN-SUFFIX,shotgridsoftware.com,PROXY
   - DOMAIN-SUFFIX,shotgridstudio.com,PROXY
@@ -141145,6 +141171,7 @@
   - DOMAIN-SUFFIX,tiffany-towers.com,PROXY
   - DOMAIN-SUFFIX,tig-ol-bitties.live,PROXY
   - DOMAIN-SUFFIX,tigerbbs.cn,PROXY
+  - DOMAIN-SUFFIX,tigerbrokers.nz,PROXY
   - DOMAIN-SUFFIX,tigervpn.com,PROXY
   - DOMAIN-SUFFIX,tiktok-minis.com,PROXY
   - DOMAIN-SUFFIX,tiktok-row.net,PROXY
@@ -141408,6 +141435,7 @@
   - DOMAIN-SUFFIX,tracker.gg,PROXY
   - DOMAIN-SUFFIX,tracker.network,PROXY
   - DOMAIN-SUFFIX,tracking-location.com,PROXY
+  - DOMAIN-SUFFIX,tradeup.com,PROXY
   - DOMAIN-SUFFIX,tradevip1.com,PROXY
   - DOMAIN-SUFFIX,tradingview.com,PROXY
   - DOMAIN-SUFFIX,trae.ai,PROXY
@@ -145191,6 +145219,7 @@
   - DOMAIN-SUFFIX,zhengjian.org,PROXY
   - DOMAIN-SUFFIX,zhengwunet.org,PROXY
   - DOMAIN-SUFFIX,zhenxiang.biz,PROXY
+  - DOMAIN-SUFFIX,zhijianfengyi.cn,PROXY
   - DOMAIN-SUFFIX,zhimeishe888.com,PROXY
   - DOMAIN-SUFFIX,zhizhu.top,PROXY
   - DOMAIN-SUFFIX,zhongguo.ca,PROXY
