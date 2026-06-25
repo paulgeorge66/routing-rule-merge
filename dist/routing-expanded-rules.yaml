@@ -128386,6 +128386,7 @@
   - DOMAIN-SUFFIX,gerritcodereview.com,PROXY
   - DOMAIN-SUFFIX,gesoten.com,PROXY
   - DOMAIN-SUFFIX,get.app,PROXY
+  - DOMAIN-SUFFIX,get.dappcdn.com,PROXY
   - DOMAIN-SUFFIX,get.dev,PROXY
   - DOMAIN-SUFFIX,get.how,PROXY
   - DOMAIN-SUFFIX,get.new,PROXY
