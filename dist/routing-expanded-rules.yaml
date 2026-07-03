@@ -124261,6 +124261,7 @@
   - DOMAIN-SUFFIX,coova.org,PROXY
   - DOMAIN-SUFFIX,copilot-proxy.githubusercontent.com,PROXY
   - DOMAIN-SUFFIX,copilot-workspace.githubnext.com,PROXY
+  - DOMAIN-SUFFIX,copilot.com,PROXY
   - DOMAIN-SUFFIX,copilotprodattachments.blob.core.windows.net,PROXY
   - DOMAIN-SUFFIX,copro.pw,PROXY
   - DOMAIN-SUFFIX,copy-manga.com,PROXY
@@ -135773,6 +135774,7 @@
   - DOMAIN-SUFFIX,open.firstory.me,PROXY
   - DOMAIN-SUFFIX,openai.com,PROXY
   - DOMAIN-SUFFIX,openaiapi-site.azureedge.net,PROXY
+  - DOMAIN-SUFFIX,openaiassets.blob.core.windows.net,PROXY
   - DOMAIN-SUFFIX,openaicom.imgix.net,PROXY
   - DOMAIN-SUFFIX,openamt.com,PROXY
   - DOMAIN-SUFFIX,openapiplatform.com,PROXY
@@ -142978,6 +142980,7 @@
   - DOMAIN-SUFFIX,webpkgcache.com,PROXY
   - DOMAIN-SUFFIX,webrtc.org,PROXY
   - DOMAIN-SUFFIX,websdr.org,PROXY
+  - DOMAIN-SUFFIX,webshare.io,PROXY
   - DOMAIN-SUFFIX,website.new,PROXY
   - DOMAIN-SUFFIX,webtoons.com,PROXY
   - DOMAIN-SUFFIX,webtoonscorp.com,PROXY
