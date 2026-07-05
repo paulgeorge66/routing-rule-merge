@@ -12582,6 +12582,7 @@
   - DOMAIN-SUFFIX,anqingzhiyun.com,DIRECT
   - DOMAIN-SUFFIX,anqn.com,DIRECT
   - DOMAIN-SUFFIX,anqu.com,DIRECT
+  - DOMAIN-SUFFIX,anquan,DIRECT
   - DOMAIN-SUFFIX,anquan.info,DIRECT
   - DOMAIN-SUFFIX,anquan.org,DIRECT
   - DOMAIN-SUFFIX,anquanbao.com,DIRECT
@@ -32937,7 +32938,6 @@
   - DOMAIN-SUFFIX,embryochina.com,DIRECT
   - DOMAIN-SUFFIX,embsky.com,DIRECT
   - DOMAIN-SUFFIX,emby.men,DIRECT
-  - DOMAIN-SUFFIX,emby.yun,DIRECT
   - DOMAIN-SUFFIX,embyvip.org,DIRECT
   - DOMAIN-SUFFIX,emcbj.com,DIRECT
   - DOMAIN-SUFFIX,emcdir.com,DIRECT
@@ -33123,6 +33123,7 @@
   - DOMAIN-SUFFIX,enterdesk.com,DIRECT
   - DOMAIN-SUFFIX,enterdesk.net,DIRECT
   - DOMAIN-SUFFIX,enthalpy.space,DIRECT
+  - DOMAIN-SUFFIX,entitlements-edge.itunes.apple.com,DIRECT
   - DOMAIN-SUFFIX,entive.com,DIRECT
   - DOMAIN-SUFFIX,entstudy.com,DIRECT
   - DOMAIN-SUFFIX,entts.com,DIRECT
@@ -36020,6 +36021,7 @@
   - DOMAIN-SUFFIX,fphs.cc,DIRECT
   - DOMAIN-SUFFIX,fphs5.com,DIRECT
   - DOMAIN-SUFFIX,fpi-inc.com,DIRECT
+  - DOMAIN-SUFFIX,fpinit.itunes.apple.com,DIRECT
   - DOMAIN-SUFFIX,fpliu.com,DIRECT
   - DOMAIN-SUFFIX,fpsace.com,DIRECT
   - DOMAIN-SUFFIX,fpsjk.com,DIRECT
@@ -82534,6 +82536,7 @@
   - DOMAIN-SUFFIX,shouhuisoft.com,DIRECT
   - DOMAIN-SUFFIX,shouhuojiyun.com,DIRECT
   - DOMAIN-SUFFIX,shouhuola.com,DIRECT
+  - DOMAIN-SUFFIX,shouji,DIRECT
   - DOMAIN-SUFFIX,shouji.com,DIRECT
   - DOMAIN-SUFFIX,shouji.racing,DIRECT
   - DOMAIN-SUFFIX,shouji10086.com,DIRECT
@@ -83441,6 +83444,7 @@
   - DOMAIN-SUFFIX,simwe.com,DIRECT
   - DOMAIN-SUFFIX,simxhs.com,DIRECT
   - DOMAIN-SUFFIX,sin0sites.com,DIRECT
+  - DOMAIN-SUFFIX,sina,DIRECT
   - DOMAIN-SUFFIX,sina-cf.com,DIRECT
   - DOMAIN-SUFFIX,sina.com,DIRECT
   - DOMAIN-SUFFIX,sina.lt,DIRECT
@@ -95383,6 +95387,7 @@
   - DOMAIN-SUFFIX,weibang.vip,DIRECT
   - DOMAIN-SUFFIX,weibangong.com,DIRECT
   - DOMAIN-SUFFIX,weibanzhushou.com,DIRECT
+  - DOMAIN-SUFFIX,weibo,DIRECT
   - DOMAIN-SUFFIX,weibo.com,DIRECT
   - DOMAIN-SUFFIX,weibo.tv,DIRECT
   - DOMAIN-SUFFIX,weibocdn.com,DIRECT
@@ -100119,6 +100124,7 @@
   - DOMAIN-SUFFIX,xihazsww.com,DIRECT
   - DOMAIN-SUFFIX,xihegp.com,DIRECT
   - DOMAIN-SUFFIX,xiherencai.com,DIRECT
+  - DOMAIN-SUFFIX,xihuan,DIRECT
   - DOMAIN-SUFFIX,xihuan.me,DIRECT
   - DOMAIN-SUFFIX,xihusgh.com,DIRECT
   - DOMAIN-SUFFIX,xiimoon.com,DIRECT
@@ -101412,6 +101418,7 @@
   - DOMAIN-SUFFIX,xn--91-y60d638c.xyz,DIRECT
   - DOMAIN-SUFFIX,xn--9et52u,DIRECT
   - DOMAIN-SUFFIX,xn--9kr72kqwe.com,DIRECT
+  - DOMAIN-SUFFIX,xn--9krt00a,DIRECT
   - DOMAIN-SUFFIX,xn--9myo55bi8l.com,DIRECT
   - DOMAIN-SUFFIX,xn--9pr56vfna007k.com,DIRECT
   - DOMAIN-SUFFIX,xn--9pry86bq5ex68c.org,DIRECT
@@ -106722,6 +106729,7 @@
   - DOMAIN-SUFFIX,yumingyouhui.com,DIRECT
   - DOMAIN-SUFFIX,yummy.tech,DIRECT
   - DOMAIN-SUFFIX,yumstone.com,DIRECT
+  - DOMAIN-SUFFIX,yun,DIRECT
   - DOMAIN-SUFFIX,yun-ac.com,DIRECT
   - DOMAIN-SUFFIX,yun-dns.com,DIRECT
   - DOMAIN-SUFFIX,yun-gu.com,DIRECT
@@ -120304,6 +120312,7 @@
   - DOMAIN-SUFFIX,apple-pay.wang,PROXY
   - DOMAIN-SUFFIX,apple-store.net,PROXY
   - DOMAIN-SUFFIX,apple-store.wang,PROXY
+  - DOMAIN-SUFFIX,apple-studies.com,PROXY
   - DOMAIN-SUFFIX,apple-tv-plus-press.apple.com,PROXY
   - DOMAIN-SUFFIX,apple-usa.net,PROXY
   - DOMAIN-SUFFIX,apple-watch.com.ru,PROXY
@@ -120792,6 +120801,7 @@
   - DOMAIN-SUFFIX,atlassian-dev.net,PROXY
   - DOMAIN-SUFFIX,atlassian.com,PROXY
   - DOMAIN-SUFFIX,atlassian.net,PROXY
+  - DOMAIN-SUFFIX,atmeta.com,PROXY
   - DOMAIN-SUFFIX,atnext.com,PROXY
   - DOMAIN-SUFFIX,atokara.jp,PROXY
   - DOMAIN-SUFFIX,atom.io,PROXY
@@ -121173,6 +121183,7 @@
   - DOMAIN-SUFFIX,azirevpn.com,PROXY
   - DOMAIN-SUFFIX,aznude.com,PROXY
   - DOMAIN-SUFFIX,azure,PROXY
+  - DOMAIN-SUFFIX,azure-api.net,PROXY
   - DOMAIN-SUFFIX,azure-devices-int.net,PROXY
   - DOMAIN-SUFFIX,azure-devices.net,PROXY
   - DOMAIN-SUFFIX,azure-dns.com,PROXY
@@ -121212,6 +121223,7 @@
   - DOMAIN-SUFFIX,azureserviceprofiler.com,PROXY
   - DOMAIN-SUFFIX,azuresmartspaces.net,PROXY
   - DOMAIN-SUFFIX,azurestackvalidation.com,PROXY
+  - DOMAIN-SUFFIX,azurestaticapps.net,PROXY
   - DOMAIN-SUFFIX,azurewebsites.net,PROXY
   - DOMAIN-SUFFIX,b-cdn.net,PROXY
   - DOMAIN-SUFFIX,b-eroland.net,PROXY
@@ -130689,7 +130701,6 @@
   - DOMAIN-SUFFIX,infraworks.com,PROXY
   - DOMAIN-SUFFIX,infura.io,PROXY
   - DOMAIN-SUFFIX,ingads.com,PROXY
-  - DOMAIN-SUFFIX,ingest.apple-studies.com,PROXY
   - DOMAIN-SUFFIX,ingka.com,PROXY
   - DOMAIN-SUFFIX,ingka.dev,PROXY
   - DOMAIN-SUFFIX,ingkacentres.com,PROXY
