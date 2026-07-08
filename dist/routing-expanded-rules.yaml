@@ -91854,6 +91854,7 @@
   - DOMAIN-SUFFIX,twty.vip,DIRECT
   - DOMAIN-SUFFIX,twwtn.com,DIRECT
   - DOMAIN-SUFFIX,twyuxin.com,DIRECT
+  - DOMAIN-SUFFIX,twyxh.com,DIRECT
   - DOMAIN-SUFFIX,twyxi.com,DIRECT
   - DOMAIN-SUFFIX,twzilla.com,DIRECT
   - DOMAIN-SUFFIX,twzui6.com,DIRECT
@@ -112115,6 +112116,7 @@
   - DOMAIN-SUFFIX,zwzyzx.com,DIRECT
   - DOMAIN-SUFFIX,zx-tour.com,DIRECT
   - DOMAIN-SUFFIX,zx-xcx.com,DIRECT
+  - DOMAIN-SUFFIX,zx.com,DIRECT
   - DOMAIN-SUFFIX,zx0093.com,DIRECT
   - DOMAIN-SUFFIX,zx017.com,DIRECT
   - DOMAIN-SUFFIX,zx017.net,DIRECT
@@ -127467,6 +127469,8 @@
   - DOMAIN-SUFFIX,flowgpt.com,PROXY
   - DOMAIN-SUFFIX,flowhongkong.net,PROXY
   - DOMAIN-SUFFIX,flowtype.org,PROXY
+  - DOMAIN-SUFFIX,flowwow-images.com,PROXY
+  - DOMAIN-SUFFIX,flowwow.com,PROXY
   - DOMAIN-SUFFIX,fluffychat.im,PROXY
   - DOMAIN-SUFFIX,fluidfxapp.com,PROXY
   - DOMAIN-SUFFIX,fluidpreview.com,PROXY
@@ -127969,6 +127973,8 @@
   - DOMAIN-SUFFIX,funkyimg.com,PROXY
   - DOMAIN-SUFFIX,funnyfacebook.org,PROXY
   - DOMAIN-SUFFIX,funnyordie.com,PROXY
+  - DOMAIN-SUFFIX,funpay.com,PROXY
+  - DOMAIN-SUFFIX,funpay.ru,PROXY
   - DOMAIN-SUFFIX,funshemale.com,PROXY
   - DOMAIN-SUFFIX,fuq.com,PROXY
   - DOMAIN-SUFFIX,fuqqt.com,PROXY
@@ -138979,6 +138985,7 @@
   - DOMAIN-SUFFIX,sforce.com,PROXY
   - DOMAIN-SUFFIX,sfshibao.com,PROXY
   - DOMAIN-SUFFIX,sftuk.org,PROXY
+  - DOMAIN-SUFFIX,sfunpay.com,PROXY
   - DOMAIN-SUFFIX,sfx.ms,PROXY
   - DOMAIN-SUFFIX,sg120.me,PROXY
   - DOMAIN-SUFFIX,sg1lib.org,PROXY
@@ -140940,6 +140947,7 @@
   - DOMAIN-SUFFIX,tilda.ws,PROXY
   - DOMAIN-SUFFIX,tildaapi.com,PROXY
   - DOMAIN-SUFFIX,tildacdn.com,PROXY
+  - DOMAIN-SUFFIX,tildacdn.net,PROXY
   - DOMAIN-SUFFIX,tiltbrush.com,PROXY
   - DOMAIN-SUFFIX,timdir.com,PROXY
   - DOMAIN-SUFFIX,time-a-b.nist.gov,PROXY
