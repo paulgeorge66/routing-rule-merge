@@ -112615,6 +112615,8 @@
   - PROCESS-NAME,frps.exe,DIRECT
   - PROCESS-NAME,hysteria,DIRECT
   - PROCESS-NAME,hysteria.exe,DIRECT
+  - PROCESS-NAME,io.tailscale.ipn.macos.network-extension,DIRECT
+  - PROCESS-NAME,io.tailscale.ipn.macsys.network-extension,DIRECT
   - PROCESS-NAME,leaf,DIRECT
   - PROCESS-NAME,leaf.exe,DIRECT
   - PROCESS-NAME,naive,DIRECT
