@@ -2825,6 +2825,7 @@ DOMAIN-SUFFIX,azuredns-prd.info
 DOMAIN-SUFFIX,azuredns-prd.org
 DOMAIN-SUFFIX,azureedge-test.net
 DOMAIN-SUFFIX,azureedge.net
+DOMAIN-SUFFIX,azureedge.us
 DOMAIN-SUFFIX,azurefd.net
 DOMAIN-SUFFIX,azureiotcentral.com
 DOMAIN-SUFFIX,azureiotsolutions.com
@@ -5890,6 +5891,7 @@ DOMAIN-SUFFIX,coova.com
 DOMAIN-SUFFIX,coova.net
 DOMAIN-SUFFIX,coova.org
 DOMAIN-SUFFIX,copilot-proxy.githubusercontent.com
+DOMAIN-SUFFIX,copilot-stg.com
 DOMAIN-SUFFIX,copilot-workspace.githubnext.com
 DOMAIN-SUFFIX,copilot.com
 DOMAIN-SUFFIX,copilotprodattachments.blob.core.windows.net
@@ -14996,6 +14998,7 @@ DOMAIN-SUFFIX,mgstage.com
 DOMAIN-SUFFIX,mh4u.org
 DOMAIN-SUFFIX,mhcb.ru
 DOMAIN-SUFFIX,mhcbr.ru
+DOMAIN-SUFFIX,mhgui.com
 DOMAIN-SUFFIX,mhhanman.xyz
 DOMAIN-SUFFIX,mhqwe.xyz
 DOMAIN-SUFFIX,mhradio.org
@@ -21497,6 +21500,7 @@ DOMAIN-SUFFIX,starfieldtech.com
 DOMAIN-SUFFIX,starfox.com
 DOMAIN-SUFFIX,stargazer-games.com
 DOMAIN-SUFFIX,stark-verlag.ch
+DOMAIN-SUFFIX,starlink.com
 DOMAIN-SUFFIX,starott.com
 DOMAIN-SUFFIX,starp2p.com
 DOMAIN-SUFFIX,starplus.com
@@ -22159,7 +22163,6 @@ DOMAIN-SUFFIX,terobox.com
 DOMAIN-SUFFIX,terraform.io
 DOMAIN-SUFFIX,terragraph.com
 DOMAIN-SUFFIX,terrapeak.com
-DOMAIN-SUFFIX,tesla-cdn.thron.com
 DOMAIN-SUFFIX,tesla.com
 DOMAIN-SUFFIX,tesla.services
 DOMAIN-SUFFIX,teslaenergy.services
