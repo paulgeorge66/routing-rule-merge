@@ -67842,6 +67842,7 @@
   - DOMAIN-SUFFIX,mychunyan.net,DIRECT
   - DOMAIN-SUFFIX,myckjr.com,DIRECT
   - DOMAIN-SUFFIX,mycleanmymac.com,DIRECT
+  - DOMAIN-SUFFIX,mycloudnas.com,DIRECT
   - DOMAIN-SUFFIX,mycloudstudy.com,DIRECT
   - DOMAIN-SUFFIX,myclub2.com,DIRECT
   - DOMAIN-SUFFIX,mycnc.org,DIRECT
@@ -137398,6 +137399,7 @@
   - DOMAIN-SUFFIX,qmp4.com,PROXY
   - DOMAIN-SUFFIX,qmttqg3k.me,PROXY
   - DOMAIN-SUFFIX,qnap.com,PROXY
+  - DOMAIN-SUFFIX,qnapsupport.net,PROXY
   - DOMAIN-SUFFIX,qobuz.com,PROXY
   - DOMAIN-SUFFIX,qombol.com,PROXY
   - DOMAIN-SUFFIX,qoo-app.com,PROXY
