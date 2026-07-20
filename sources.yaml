@@ -69,6 +69,12 @@ sources:
       - DOMAIN-SUFFIX,microsoftuwp.com
       - DOMAIN,licensing.mp.microsoft.com
 
+  - name: custom_direct_overrides
+    section: top-direct
+    parser: inline
+    rules:
+      - DOMAIN-SUFFIX,univ.ciciec.com
+
   - name: bm7_onedrive
     section: top-proxy
     parser: classical_payload
