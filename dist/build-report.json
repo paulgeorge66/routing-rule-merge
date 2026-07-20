@@ -18,6 +18,18 @@
       "url": null,
       "parsed_rules": 22
     },
+    "bm7_onedrive": {
+      "section": "top-proxy",
+      "parser": "classical_payload",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.yaml",
+      "parsed_rules": 18
+    },
+    "bm7_microsoft": {
+      "section": "top-direct",
+      "parser": "classical_payload",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml",
+      "parsed_rules": 670
+    },
     "private_ranges": {
       "section": "top-direct",
       "parser": "inline",
@@ -153,12 +165,12 @@
   },
   "sections": {
     "top-proxy": {
-      "input_rules": 40,
-      "output_rules": 38
+      "input_rules": 58,
+      "output_rules": 55
     },
     "top-direct": {
-      "input_rules": 47,
-      "output_rules": 46
+      "input_rules": 717,
+      "output_rules": 689
     },
     "apple-proxy": {
       "input_rules": 100,
@@ -166,20 +178,20 @@
     },
     "apple-direct": {
       "input_rules": 116,
-      "output_rules": 82
+      "output_rules": 52
     },
     "direct": {
       "input_rules": 118133,
-      "output_rules": 118055
+      "output_rules": 118044
     },
     "proxy": {
       "input_rules": 27890,
-      "output_rules": 26760
+      "output_rules": 26320
     }
   },
-  "total_rules": 145024,
+  "total_rules": 145203,
   "expanded_rules": {
     "path": "dist/routing-expanded-rules.yaml",
-    "rules": 145025
+    "rules": 145204
   }
 }
