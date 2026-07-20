@@ -22,7 +22,7 @@
       "section": "top-direct",
       "parser": "inline",
       "url": null,
-      "parsed_rules": 1
+      "parsed_rules": 3
     },
     "bm7_onedrive": {
       "section": "top-proxy",
@@ -175,8 +175,8 @@
       "output_rules": 55
     },
     "top-direct": {
-      "input_rules": 718,
-      "output_rules": 690
+      "input_rules": 720,
+      "output_rules": 692
     },
     "apple-proxy": {
       "input_rules": 100,
@@ -192,7 +192,7 @@
     },
     "proxy": {
       "input_rules": 27890,
-      "output_rules": 26320
+      "output_rules": 26318
     }
   },
   "total_rules": 145204,

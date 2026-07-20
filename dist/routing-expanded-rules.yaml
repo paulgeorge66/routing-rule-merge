@@ -57,6 +57,8 @@
   - DOMAIN,img-s-msn-com.akamaized.net,DIRECT
   - DOMAIN,vsmarketplacebadge.apphb.com,DIRECT
   - DOMAIN-SUFFIX,1drv.ms,DIRECT
+  - DOMAIN-SUFFIX,1password.com,DIRECT
+  - DOMAIN-SUFFIX,1password.community,DIRECT
   - DOMAIN-SUFFIX,21vbc.com,DIRECT
   - DOMAIN-SUFFIX,21vbluecloud.com,DIRECT
   - DOMAIN-SUFFIX,21vbluecloud.net,DIRECT
@@ -119057,8 +119059,6 @@
   - DOMAIN-SUFFIX,1monsterbeatsbydreus.com,PROXY
   - DOMAIN-SUFFIX,1password.ca,PROXY
   - DOMAIN-SUFFIX,1password.co,PROXY
-  - DOMAIN-SUFFIX,1password.com,PROXY
-  - DOMAIN-SUFFIX,1password.community,PROXY
   - DOMAIN-SUFFIX,1password.drift.click,PROXY
   - DOMAIN-SUFFIX,1password.eu,PROXY
   - DOMAIN-SUFFIX,1password.io,PROXY
