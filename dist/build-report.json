@@ -18,6 +18,12 @@
       "url": null,
       "parsed_rules": 22
     },
+    "custom_direct_overrides": {
+      "section": "top-direct",
+      "parser": "inline",
+      "url": null,
+      "parsed_rules": 1
+    },
     "bm7_onedrive": {
       "section": "top-proxy",
       "parser": "classical_payload",
@@ -169,8 +175,8 @@
       "output_rules": 55
     },
     "top-direct": {
-      "input_rules": 717,
-      "output_rules": 689
+      "input_rules": 718,
+      "output_rules": 690
     },
     "apple-proxy": {
       "input_rules": 100,
@@ -189,9 +195,9 @@
       "output_rules": 26320
     }
   },
-  "total_rules": 145203,
+  "total_rules": 145204,
   "expanded_rules": {
     "path": "dist/routing-expanded-rules.yaml",
-    "rules": 145204
+    "rules": 145205
   }
 }
