@@ -74,6 +74,8 @@ sources:
     parser: inline
     rules:
       - DOMAIN-SUFFIX,univ.ciciec.com
+      - DOMAIN-SUFFIX,1password.com
+      - DOMAIN-SUFFIX,1password.community
 
   - name: bm7_onedrive
     section: top-proxy
