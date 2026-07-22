@@ -20473,6 +20473,7 @@
   - DOMAIN-SUFFIX,cd-zc.com,DIRECT
   - DOMAIN-SUFFIX,cd00c44f211031.beer,DIRECT
   - DOMAIN-SUFFIX,cd120.com,DIRECT
+  - DOMAIN-SUFFIX,cd120.info,DIRECT
   - DOMAIN-SUFFIX,cd12371.com,DIRECT
   - DOMAIN-SUFFIX,cd1958.com,DIRECT
   - DOMAIN-SUFFIX,cd20.net,DIRECT
@@ -67571,6 +67572,7 @@
   - DOMAIN-SUFFIX,moe321.com,DIRECT
   - DOMAIN-SUFFIX,moeclub.org,DIRECT
   - DOMAIN-SUFFIX,moedot.net,DIRECT
+  - DOMAIN-SUFFIX,moedu.com,DIRECT
   - DOMAIN-SUFFIX,moeelf.com,DIRECT
   - DOMAIN-SUFFIX,moefactory.com,DIRECT
   - DOMAIN-SUFFIX,moefantasy.com,DIRECT
@@ -91731,6 +91733,7 @@
   - DOMAIN-SUFFIX,tsingpost.com,DIRECT
   - DOMAIN-SUFFIX,tsingshang.com,DIRECT
   - DOMAIN-SUFFIX,tsingtek.com,DIRECT
+  - DOMAIN-SUFFIX,tsingtengms.com,DIRECT
   - DOMAIN-SUFFIX,tsingtoo.com,DIRECT
   - DOMAIN-SUFFIX,tsingtuo.com,DIRECT
   - DOMAIN-SUFFIX,tsingyangroup.com,DIRECT
@@ -99385,6 +99388,7 @@
   - DOMAIN-SUFFIX,xcxymw.com,DIRECT
   - DOMAIN-SUFFIX,xcxzww.com,DIRECT
   - DOMAIN-SUFFIX,xcyg.net,DIRECT
+  - DOMAIN-SUFFIX,xcz.im,DIRECT
   - DOMAIN-SUFFIX,xczhmzb.com,DIRECT
   - DOMAIN-SUFFIX,xczhsh.com,DIRECT
   - DOMAIN-SUFFIX,xczim.com,DIRECT
@@ -145066,6 +145070,7 @@
   - DOMAIN-SUFFIX,zenit.ru,PROXY
   - DOMAIN-SUFFIX,zenmate.com,PROXY
   - DOMAIN-SUFFIX,zenmate.com.ru,PROXY
+  - DOMAIN-SUFFIX,zenmux.ai,PROXY
   - DOMAIN-SUFFIX,zenodo.org,PROXY
   - DOMAIN-SUFFIX,zeplin.dev,PROXY
   - DOMAIN-SUFFIX,zeplin.io,PROXY
