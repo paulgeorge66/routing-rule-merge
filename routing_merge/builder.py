@@ -52,6 +52,15 @@ SECTION_PRIORITY = {
     "direct": 30,
 }
 
+# These two sections are large enough (tens to hundreds of thousands of rules)
+# that mihomo's linear "classical" rule-provider scan becomes a real per-connection
+# cost. Splitting them by rule type lets mihomo use its trie-based "domain" and
+# "ipcidr" rule-provider behaviors instead. The remaining sections stay well under
+# a thousand rules each, so a single classical file is not worth the extra files.
+SPLIT_BEHAVIOR_SECTIONS = {"direct", "proxy"}
+DOMAIN_TYPES = {"DOMAIN", "DOMAIN-SUFFIX"}
+CIDR_TYPES = {"IP-CIDR", "IP-CIDR6"}
+
 
 @dataclass(frozen=True)
 class ParsedRule:
@@ -280,6 +289,37 @@ def render_text(rules: Iterable[ParsedRule]) -> str:
     return "\n".join(lines) + ("\n" if lines else "")
 
 
+def split_rules_by_behavior(
+    rules: Iterable[ParsedRule],
+) -> tuple[list[ParsedRule], list[ParsedRule], list[ParsedRule]]:
+    domains: list[ParsedRule] = []
+    cidrs: list[ParsedRule] = []
+    misc: list[ParsedRule] = []
+    for rule in rules:
+        if rule.rule_type in DOMAIN_TYPES:
+            domains.append(rule)
+        elif rule.rule_type in CIDR_TYPES:
+            cidrs.append(rule)
+        else:
+            misc.append(rule)
+    return domains, cidrs, misc
+
+
+def render_domain_behavior_text(rules: Iterable[ParsedRule]) -> str:
+    lines = []
+    for rule in rules:
+        if rule.rule_type == "DOMAIN-SUFFIX":
+            lines.append(f"+.{rule.value}")
+        else:
+            lines.append(rule.value)
+    return "\n".join(lines) + ("\n" if lines else "")
+
+
+def render_ipcidr_behavior_text(rules: Iterable[ParsedRule]) -> str:
+    lines = [rule.value for rule in rules]
+    return "\n".join(lines) + ("\n" if lines else "")
+
+
 def render_expanded_rule(raw_line: str, action: str) -> str | None:
     line = raw_line.strip()
     if not line or line.startswith("#"):
@@ -327,8 +367,29 @@ def write_outputs(
     expanded_rules_path: Path,
 ) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
+    behavior_report: dict[str, dict] = {}
     for section, rules in sections.items():
-        (output_dir / f"{section}.list").write_text(render_text(rules), encoding="utf-8", newline="\n")
+        if section not in SPLIT_BEHAVIOR_SECTIONS:
+            (output_dir / f"{section}.list").write_text(render_text(rules), encoding="utf-8", newline="\n")
+            continue
+
+        domains, cidrs, misc = split_rules_by_behavior(rules)
+        (output_dir / f"{section}-domains.list").write_text(
+            render_domain_behavior_text(domains), encoding="utf-8", newline="\n"
+        )
+        (output_dir / f"{section}-cidr.list").write_text(
+            render_ipcidr_behavior_text(cidrs), encoding="utf-8", newline="\n"
+        )
+        (output_dir / f"{section}-misc.list").write_text(
+            render_text(misc), encoding="utf-8", newline="\n"
+        )
+        behavior_report[section] = {
+            "domains": len(domains),
+            "cidr": len(cidrs),
+            "misc": len(misc),
+        }
+    if behavior_report:
+        report["behavior_split"] = behavior_report
     expanded_rules_text = render_expanded_rules_yaml(sections)
     expanded_rules_path.write_text(expanded_rules_text, encoding="utf-8", newline="\n")
     report["expanded_rules"] = {

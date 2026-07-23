@@ -5,8 +5,11 @@ from routing_merge.builder import (
     dedupe_rules,
     normalize_rule_line,
     prune_shadowed_rules,
+    render_domain_behavior_text,
     render_expanded_rules_yaml,
+    render_ipcidr_behavior_text,
     render_text,
+    split_rules_by_behavior,
 )
 
 
@@ -54,6 +57,37 @@ class BuilderTests(unittest.TestCase):
             "  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve\n"
             "  - MATCH,PROXY\n",
         )
+
+    def test_split_rules_by_behavior_groups_by_type(self):
+        rules = [
+            ParsedRule("DOMAIN-SUFFIX", "example.com", "a", "direct", 1),
+            ParsedRule("DOMAIN", "api.example.com", "b", "direct", 2),
+            ParsedRule("IP-CIDR", "1.2.3.0/24", "c", "direct", 3, True),
+            ParsedRule("IP-CIDR6", "::1/128", "d", "direct", 4, True),
+            ParsedRule("PROCESS-NAME", "curl", "e", "direct", 5),
+        ]
+        domains, cidrs, misc = split_rules_by_behavior(rules)
+        self.assertEqual([r.value for r in domains], ["example.com", "api.example.com"])
+        self.assertEqual([r.value for r in cidrs], ["1.2.3.0/24", "::1/128"])
+        self.assertEqual([r.value for r in misc], ["curl"])
+
+    def test_render_domain_behavior_text_uses_plus_prefix_for_suffix(self):
+        text = render_domain_behavior_text(
+            [
+                ParsedRule("DOMAIN-SUFFIX", "example.com", "a", "direct", 1),
+                ParsedRule("DOMAIN", "exact.example.com", "b", "direct", 2),
+            ]
+        )
+        self.assertEqual(text, "+.example.com\nexact.example.com\n")
+
+    def test_render_ipcidr_behavior_text_drops_no_resolve_suffix(self):
+        text = render_ipcidr_behavior_text(
+            [
+                ParsedRule("IP-CIDR", "10.0.0.0/8", "a", "direct", 1, True),
+                ParsedRule("IP-CIDR6", "fc00::/7", "b", "direct", 2, True),
+            ]
+        )
+        self.assertEqual(text, "10.0.0.0/8\nfc00::/7\n")
 
 
 if __name__ == "__main__":

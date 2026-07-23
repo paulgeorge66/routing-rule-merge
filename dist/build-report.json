@@ -12,18 +12,6 @@
       "url": null,
       "parsed_rules": 18
     },
-    "microsoft_store_update": {
-      "section": "top-direct",
-      "parser": "inline",
-      "url": null,
-      "parsed_rules": 22
-    },
-    "custom_direct_overrides": {
-      "section": "top-direct",
-      "parser": "inline",
-      "url": null,
-      "parsed_rules": 3
-    },
     "bm7_onedrive": {
       "section": "top-proxy",
       "parser": "classical_payload",
@@ -41,18 +29,6 @@
       "parser": "inline",
       "url": null,
       "parsed_rules": 10
-    },
-    "apple_media_overrides": {
-      "section": "top-proxy",
-      "parser": "inline",
-      "url": null,
-      "parsed_rules": 17
-    },
-    "apple_direct_overrides": {
-      "section": "top-direct",
-      "parser": "inline",
-      "url": null,
-      "parsed_rules": 15
     },
     "bm7_appletv": {
       "section": "apple-proxy",
@@ -95,6 +71,18 @@
       "parser": "classical_payload",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml",
       "parsed_rules": 33
+    },
+    "bm7_icloud": {
+      "section": "apple-direct",
+      "parser": "classical_payload",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/iCloud/iCloud.yaml",
+      "parsed_rules": 61
+    },
+    "loyal_apple": {
+      "section": "apple-direct",
+      "parser": "domain_payload",
+      "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/apple.txt",
+      "parsed_rules": 164
     },
     "loyal_private": {
       "section": "direct",
@@ -166,38 +154,50 @@
       "section": "proxy",
       "parser": "domain_payload",
       "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt",
-      "parsed_rules": 26894
+      "parsed_rules": 26895
     }
   },
   "sections": {
     "top-proxy": {
-      "input_rules": 58,
-      "output_rules": 55
+      "input_rules": 41,
+      "output_rules": 38
     },
     "top-direct": {
-      "input_rules": 720,
-      "output_rules": 692
+      "input_rules": 680,
+      "output_rules": 667
     },
     "apple-proxy": {
       "input_rules": 100,
-      "output_rules": 43
+      "output_rules": 80
     },
     "apple-direct": {
-      "input_rules": 116,
-      "output_rules": 52
+      "input_rules": 341,
+      "output_rules": 284
     },
     "direct": {
       "input_rules": 118194,
-      "output_rules": 118105
+      "output_rules": 117961
     },
     "proxy": {
-      "input_rules": 27902,
-      "output_rules": 26330
+      "input_rules": 27903,
+      "output_rules": 26293
     }
   },
-  "total_rules": 145277,
+  "total_rules": 145323,
+  "behavior_split": {
+    "direct": {
+      "domains": 112038,
+      "cidr": 5827,
+      "misc": 96
+    },
+    "proxy": {
+      "domains": 26244,
+      "cidr": 25,
+      "misc": 24
+    }
+  },
   "expanded_rules": {
-    "path": "dist/routing-expanded-rules.yaml",
-    "rules": 145278
+    "path": "dist\\routing-expanded-rules.yaml",
+    "rules": 145324
   }
 }

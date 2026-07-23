@@ -11,17 +11,28 @@ https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/top-
 https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/top-direct.list
 https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/apple-proxy.list
 https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/apple-direct.list
-https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/direct.list
-https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/proxy.list
 ```
 
-所有 `.list` 文件使用 Mihomo/Clash classical rule-provider 文本格式，每行一条规则：
+以上四个文件都在千条规则以内，使用 Mihomo/Clash classical rule-provider 文本格式，每行一条规则：
 
 ```text
 DOMAIN-SUFFIX,example.com
 DOMAIN,api.example.com
 IP-CIDR,10.0.0.0/8,no-resolve
 ```
+
+`direct`/`proxy` 两个 section 是十万级规模（Loyalsoldier 的 direct.txt/proxy.txt 占大头），全部用 classical behavior 会导致 Mihomo 每次连接都线性扫描一遍，所以按规则类型拆开：
+
+```text
+https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/direct-domains.list
+https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/direct-cidr.list
+https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/direct-misc.list
+https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/proxy-domains.list
+https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/proxy-cidr.list
+https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/proxy-misc.list
+```
+
+`-domains.list` 给 `behavior: domain` 用（`DOMAIN-SUFFIX` 转成 `+.` 前缀），`-cidr.list` 给 `behavior: ipcidr` 用（`no-resolve` 统一放在引用处的 `RULE-SET` 参数上，不再逐条写），`-misc.list` 是剩下的 `PROCESS-NAME`/`IP-ASN`/`DOMAIN-KEYWORD`，继续用 `behavior: classical`。
 
 需要直接放进 Clash `rules:` 时，可以引用 routing 展开片段：
 
@@ -36,22 +47,30 @@ dist/top-proxy.list
 dist/top-direct.list
 dist/apple-proxy.list
 dist/apple-direct.list
-dist/direct.list
-dist/proxy.list
+dist/direct-domains.list
+dist/direct-cidr.list
+dist/direct-misc.list
+dist/proxy-domains.list
+dist/proxy-cidr.list
+dist/proxy-misc.list
 dist/routing-expanded-rules.yaml
 dist/build-report.json
 ```
 
 各文件用途：
 
-| 文件 | 建议动作 | 说明 |
-| --- | --- | --- |
-| `top-proxy.list` | `PROXY` | 需要优先代理的补充规则 |
-| `top-direct.list` | `DIRECT` | 需要优先直连的补充规则 |
-| `apple-proxy.list` | `PROXY` | Apple 媒体和相关代理规则 |
-| `apple-direct.list` | `DIRECT` | Apple 常规直连规则 |
-| `direct.list` | `DIRECT` | 通用直连规则 |
-| `proxy.list` | `PROXY` | 通用代理规则 |
+| 文件 | 建议动作 | behavior | 说明 |
+| --- | --- | --- | --- |
+| `top-proxy.list` | `PROXY` | classical | 需要优先代理的补充规则 |
+| `top-direct.list` | `DIRECT` | classical | 需要优先直连的补充规则 |
+| `apple-proxy.list` | `PROXY` | classical | Apple 媒体和相关代理规则 |
+| `apple-direct.list` | `DIRECT` | classical | Apple 常规直连规则 |
+| `direct-domains.list` | `DIRECT` | domain | 通用直连域名规则 |
+| `direct-cidr.list` | `DIRECT` | ipcidr | 通用直连 IP-CIDR 规则(引用时加 `,no-resolve`) |
+| `direct-misc.list` | `DIRECT` | classical | 通用直连里的 PROCESS-NAME 等杂项 |
+| `proxy-domains.list` | `PROXY` | domain | 通用代理域名规则 |
+| `proxy-cidr.list` | `PROXY` | ipcidr | 通用代理 IP-CIDR 规则(引用时加 `,no-resolve`) |
+| `proxy-misc.list` | `PROXY` | classical | 通用代理里的 DOMAIN-KEYWORD/IP-ASN/PROCESS-NAME 等杂项 |
 
 ## Mihomo/Clash 引用示例
 
@@ -85,19 +104,47 @@ rule-providers:
     url: https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/apple-direct.list
     path: ./ruleset/routing-apple-direct.list
     interval: 86400
-  routing-direct:
+  routing-direct-domains:
     type: http
-    behavior: classical
+    behavior: domain
     format: text
-    url: https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/direct.list
-    path: ./ruleset/routing-direct.list
+    url: https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/direct-domains.list
+    path: ./ruleset/routing-direct-domains.list
     interval: 86400
-  routing-proxy:
+  routing-direct-cidr:
+    type: http
+    behavior: ipcidr
+    format: text
+    url: https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/direct-cidr.list
+    path: ./ruleset/routing-direct-cidr.list
+    interval: 86400
+  routing-direct-misc:
     type: http
     behavior: classical
     format: text
-    url: https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/proxy.list
-    path: ./ruleset/routing-proxy.list
+    url: https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/direct-misc.list
+    path: ./ruleset/routing-direct-misc.list
+    interval: 86400
+  routing-proxy-domains:
+    type: http
+    behavior: domain
+    format: text
+    url: https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/proxy-domains.list
+    path: ./ruleset/routing-proxy-domains.list
+    interval: 86400
+  routing-proxy-cidr:
+    type: http
+    behavior: ipcidr
+    format: text
+    url: https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/proxy-cidr.list
+    path: ./ruleset/routing-proxy-cidr.list
+    interval: 86400
+  routing-proxy-misc:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/proxy-misc.list
+    path: ./ruleset/routing-proxy-misc.list
     interval: 86400
 
 rules:
@@ -105,22 +152,31 @@ rules:
   - RULE-SET,routing-top-direct,DIRECT
   - RULE-SET,routing-apple-proxy,PROXY
   - RULE-SET,routing-apple-direct,DIRECT
-  - RULE-SET,routing-direct,DIRECT
-  - RULE-SET,routing-proxy,PROXY
+  - RULE-SET,routing-direct-domains,DIRECT
+  - RULE-SET,routing-direct-cidr,DIRECT,no-resolve
+  - RULE-SET,routing-direct-misc,DIRECT
+  - RULE-SET,routing-proxy-domains,PROXY
+  - RULE-SET,routing-proxy-cidr,PROXY,no-resolve
+  - RULE-SET,routing-proxy-misc,PROXY
   - MATCH,PROXY
 ```
 
-如果同时使用去广告规则，可以按自己的需求插入：
+如果同时使用去广告规则（见 [`paulgeorge66/adblock-rule-merge`](https://github.com/paulgeorge66/adblock-rule-merge)），可以按自己的需求插入，注意去广告规则要放在最前面：
 
 ```yaml
 rules:
+  - RULE-SET,adblock-domains,REJECT
+  - RULE-SET,adblock-misc,REJECT
   - RULE-SET,routing-top-proxy,PROXY
   - RULE-SET,routing-top-direct,DIRECT
   - RULE-SET,routing-apple-proxy,PROXY
   - RULE-SET,routing-apple-direct,DIRECT
-  - RULE-SET,routing-direct,DIRECT
-  - RULE-SET,routing-proxy,PROXY
-  - RULE-SET,adblock,REJECT
+  - RULE-SET,routing-direct-domains,DIRECT
+  - RULE-SET,routing-direct-cidr,DIRECT,no-resolve
+  - RULE-SET,routing-direct-misc,DIRECT
+  - RULE-SET,routing-proxy-domains,PROXY
+  - RULE-SET,routing-proxy-cidr,PROXY,no-resolve
+  - RULE-SET,routing-proxy-misc,PROXY
   - MATCH,PROXY
 ```
 
@@ -134,20 +190,24 @@ function main(config) {
     config.rules = config.rules || [];
 
     var providers = {
-        "routing-top-proxy": "https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/top-proxy.list",
-        "routing-top-direct": "https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/top-direct.list",
-        "routing-apple-proxy": "https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/apple-proxy.list",
-        "routing-apple-direct": "https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/apple-direct.list",
-        "routing-direct": "https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/direct.list",
-        "routing-proxy": "https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/proxy.list",
+        "routing-top-proxy": { behavior: "classical", url: "https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/top-proxy.list" },
+        "routing-top-direct": { behavior: "classical", url: "https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/top-direct.list" },
+        "routing-apple-proxy": { behavior: "classical", url: "https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/apple-proxy.list" },
+        "routing-apple-direct": { behavior: "classical", url: "https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/apple-direct.list" },
+        "routing-direct-domains": { behavior: "domain", url: "https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/direct-domains.list" },
+        "routing-direct-cidr": { behavior: "ipcidr", url: "https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/direct-cidr.list" },
+        "routing-direct-misc": { behavior: "classical", url: "https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/direct-misc.list" },
+        "routing-proxy-domains": { behavior: "domain", url: "https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/proxy-domains.list" },
+        "routing-proxy-cidr": { behavior: "ipcidr", url: "https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/proxy-cidr.list" },
+        "routing-proxy-misc": { behavior: "classical", url: "https://raw.githubusercontent.com/paulgeorge66/routing-rule-merge/main/dist/proxy-misc.list" },
     };
 
     Object.keys(providers).forEach(function (name) {
         config["rule-providers"][name] = {
             type: "http",
-            behavior: "classical",
+            behavior: providers[name].behavior,
             format: "text",
-            url: providers[name],
+            url: providers[name].url,
             path: "./ruleset/" + name + ".list",
             interval: 86400,
         };
@@ -158,8 +218,12 @@ function main(config) {
         "RULE-SET,routing-top-direct,DIRECT",
         "RULE-SET,routing-apple-proxy,PROXY",
         "RULE-SET,routing-apple-direct,DIRECT",
-        "RULE-SET,routing-direct,DIRECT",
-        "RULE-SET,routing-proxy,PROXY",
+        "RULE-SET,routing-direct-domains,DIRECT",
+        "RULE-SET,routing-direct-cidr,DIRECT,no-resolve",
+        "RULE-SET,routing-direct-misc,DIRECT",
+        "RULE-SET,routing-proxy-domains,PROXY",
+        "RULE-SET,routing-proxy-cidr,PROXY,no-resolve",
+        "RULE-SET,routing-proxy-misc,PROXY",
     ];
 
     var existing = config.rules.map(function (rule) {
@@ -186,6 +250,8 @@ function main(config) {
 
 来源配置在 [sources.yaml](sources.yaml)。本项目使用公开上游规则和少量通用补充规则。
 
+Apple 相关的路由完全交给上游（`bm7_appletv`/`bm7_appleproxy`/`bm7_applemedia`/`bm7_appstore`/`bm7_testflight`/`bm7_systemota`/`bm7_apple`/`bm7_icloud`/`loyal_apple`），不再保留任何自定义 Apple 覆盖规则。这意味着 `apple.com`、`apple-mapkit.com` 等裸域名的直连/代理判定完全由上游决定，上游数据变化会直接改变最终行为。
+
 | 名称 | 来源网站 | 原始规则 URL |
 | --- | --- | --- |
 | BlackMatrix7 AppleTV | [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script) | <https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleTV/AppleTV.yaml> |
@@ -195,6 +261,8 @@ function main(config) {
 | BlackMatrix7 TestFlight | [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script) | <https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TestFlight/TestFlight.yaml> |
 | BlackMatrix7 SystemOTA | [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script) | <https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SystemOTA/SystemOTA.yaml> |
 | BlackMatrix7 Apple | [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script) | <https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml> |
+| BlackMatrix7 iCloud | [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script) | <https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/iCloud/iCloud.yaml> |
+| Loyalsoldier apple.txt | [Loyalsoldier/clash-rules](https://github.com/Loyalsoldier/clash-rules)(源自 [felixonmars/dnsmasq-china-list](https://github.com/felixonmars/dnsmasq-china-list)) | <https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/apple.txt> |
 | Loyalsoldier clash-rules | [Loyalsoldier/clash-rules](https://github.com/Loyalsoldier/clash-rules) | <https://github.com/Loyalsoldier/clash-rules/tree/release> |
 | BlackMatrix7 Telegram/OpenAI/Google/YouTube/GitHub | [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script) | <https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash> |
 
