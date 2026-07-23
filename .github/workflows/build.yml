@@ -40,12 +40,30 @@ jobs:
       - name: Build rule providers
         run: python -m routing_merge.builder
 
+      - name: Download mihomo
+        run: |
+          url=$(curl -sL -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/repos/MetaCubeX/mihomo/releases/latest \
+            | jq -r '.assets[] | select(.name | test("^mihomo-linux-amd64-compatible-v[0-9.]+\\.gz$")) | .browser_download_url')
+          if [ -z "$url" ]; then echo "could not resolve mihomo release asset"; exit 1; fi
+          curl -sL -o mihomo.gz "$url"
+          gunzip mihomo.gz
+          chmod +x mihomo
+          ./mihomo -v
+
+      - name: Convert domain/ipcidr rules to mrs
+        run: |
+          ./mihomo convert-ruleset domain text dist/direct-domains.list dist/direct-domains.mrs
+          ./mihomo convert-ruleset domain text dist/proxy-domains.list dist/proxy-domains.mrs
+          ./mihomo convert-ruleset ipcidr text dist/direct-cidr.list dist/direct-cidr.mrs
+          ./mihomo convert-ruleset ipcidr text dist/proxy-cidr.list dist/proxy-cidr.mrs
+
       - name: Commit generated rules
         if: github.event_name != 'pull_request'
         run: |
           git config user.name "kamisu"
           git config user.email "152141084+paulgeorge66@users.noreply.github.com"
-          git add dist/*.list dist/*.yaml dist/build-report.json
+          git add dist/*.list dist/*.yaml dist/*.mrs dist/build-report.json
           if git diff --cached --quiet; then
             echo "No generated rule changes."
           else
