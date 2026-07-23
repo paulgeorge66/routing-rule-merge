@@ -197,7 +197,7 @@
     }
   },
   "expanded_rules": {
-    "path": "dist\\routing-expanded-rules.yaml",
+    "path": "dist/routing-expanded-rules.yaml",
     "rules": 145324
   }
 }
