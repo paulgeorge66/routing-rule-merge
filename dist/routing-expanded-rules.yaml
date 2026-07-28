@@ -128961,6 +128961,7 @@
   - DOMAIN-SUFFIX,githubnext.com,PROXY
   - DOMAIN-SUFFIX,githubpreview.dev,PROXY
   - DOMAIN-SUFFIX,githubstatus.com,PROXY
+  - DOMAIN-SUFFIX,githubsupport.com,PROXY
   - DOMAIN-SUFFIX,githubuniverse.com,PROXY
   - DOMAIN-SUFFIX,githubusercontent.com,PROXY
   - DOMAIN-SUFFIX,gitlab-assets.oss-cn-hongkong.aliyuncs.com,PROXY
@@ -141499,6 +141500,7 @@
   - DOMAIN-SUFFIX,truyentranh86.com,PROXY
   - DOMAIN-SUFFIX,truyenwk.com,PROXY
   - DOMAIN-SUFFIX,try.rw,PROXY
+  - DOMAIN-SUFFIX,tryai.dev,PROXY
   - DOMAIN-SUFFIX,tryalias.com,PROXY
   - DOMAIN-SUFFIX,tryboobs.com,PROXY
   - DOMAIN-SUFFIX,trycloudflare.com,PROXY
