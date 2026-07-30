@@ -94,7 +94,7 @@
       "section": "direct",
       "parser": "domain_payload",
       "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt",
-      "parsed_rules": 112132
+      "parsed_rules": 111814
     },
     "loyal_applications": {
       "section": "direct",
@@ -112,7 +112,7 @@
       "section": "direct",
       "parser": "cidr_payload",
       "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt",
-      "parsed_rules": 5806
+      "parsed_rules": 5822
     },
     "bm7_telegram": {
       "section": "proxy",
@@ -175,19 +175,19 @@
       "output_rules": 284
     },
     "direct": {
-      "input_rules": 118184,
-      "output_rules": 117951
+      "input_rules": 117882,
+      "output_rules": 117650
     },
     "proxy": {
       "input_rules": 27915,
       "output_rules": 26305
     }
   },
-  "total_rules": 145325,
+  "total_rules": 145024,
   "behavior_split": {
     "direct": {
-      "domains": 112039,
-      "cidr": 5816,
+      "domains": 111722,
+      "cidr": 5832,
       "misc": 96
     },
     "proxy": {
@@ -198,6 +198,6 @@
   },
   "expanded_rules": {
     "path": "dist/routing-expanded-rules.yaml",
-    "rules": 145326
+    "rules": 145025
   }
 }
