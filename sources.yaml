@@ -9,16 +9,6 @@ source_order:
 sources:
   # Public local overrides from the VPS routing model. Server self-access
   # domains/IPs are intentionally omitted from this public repository.
-  - name: claude_dependencies
-    section: top-proxy
-    parser: inline
-    rules:
-      - DOMAIN-SUFFIX,featuregates.org
-      - DOMAIN-SUFFIX,statsig.anthropic.com
-      - DOMAIN-SUFFIX,statsig.com
-      - DOMAIN-SUFFIX,statsigcdn.com
-      - DOMAIN-SUFFIX,statsigapi.net
-
   - name: google_play_downloads
     section: top-proxy
     parser: inline

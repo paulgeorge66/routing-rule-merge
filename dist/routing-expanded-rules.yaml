@@ -3,7 +3,6 @@
   - DOMAIN-SUFFIX,android.clients.google.com,PROXY
   - DOMAIN-SUFFIX,android.googleapis.com,PROXY
   - DOMAIN-SUFFIX,dl.google.com,PROXY
-  - DOMAIN-SUFFIX,featuregates.org,PROXY
   - DOMAIN-SUFFIX,ggpht.com,PROXY
   - DOMAIN-SUFFIX,googleapis.cn,PROXY
   - DOMAIN-SUFFIX,googleusercontent.com,PROXY
@@ -26,10 +25,6 @@
   - DOMAIN-SUFFIX,sharepointonline.com,PROXY
   - DOMAIN-SUFFIX,skydrive.wns.windows.com,PROXY
   - DOMAIN-SUFFIX,spoprod-a.akamaihd.net,PROXY
-  - DOMAIN-SUFFIX,statsig.anthropic.com,PROXY
-  - DOMAIN-SUFFIX,statsig.com,PROXY
-  - DOMAIN-SUFFIX,statsigapi.net,PROXY
-  - DOMAIN-SUFFIX,statsigcdn.com,PROXY
   - DOMAIN-SUFFIX,storage.live.com,PROXY
   - DOMAIN-SUFFIX,storage.msn.com,PROXY
   - DOMAIN-KEYWORD,1drv,PROXY
@@ -127384,6 +127379,7 @@
   - DOMAIN-SUFFIX,feacebook.com,PROXY
   - DOMAIN-SUFFIX,feanonlinear.com,PROXY
   - DOMAIN-SUFFIX,featurecam.com,PROXY
+  - DOMAIN-SUFFIX,featuregates.org,PROXY
   - DOMAIN-SUFFIX,fecbbok.com,PROXY
   - DOMAIN-SUFFIX,fecbooc.com,PROXY
   - DOMAIN-SUFFIX,fecbook.com,PROXY
