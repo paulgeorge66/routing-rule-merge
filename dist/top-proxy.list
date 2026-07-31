@@ -3,7 +3,6 @@ DOMAIN-SUFFIX,1drv.com
 DOMAIN-SUFFIX,android.clients.google.com
 DOMAIN-SUFFIX,android.googleapis.com
 DOMAIN-SUFFIX,dl.google.com
-DOMAIN-SUFFIX,featuregates.org
 DOMAIN-SUFFIX,ggpht.com
 DOMAIN-SUFFIX,googleapis.cn
 DOMAIN-SUFFIX,googleusercontent.com
@@ -17,19 +16,13 @@ DOMAIN-SUFFIX,oneclient.sfx.ms
 DOMAIN-SUFFIX,onedrive.com
 DOMAIN-SUFFIX,onedrive.live.com
 DOMAIN-SUFFIX,photos.live.com
-DOMAIN-SUFFIX,play-apps-features.googleusercontent.com
 DOMAIN-SUFFIX,play-fe.googleapis.com
-DOMAIN-SUFFIX,play-lh.googleusercontent.com
 DOMAIN-SUFFIX,play.google.com
 DOMAIN-SUFFIX,play.googleapis.com
 DOMAIN-SUFFIX,sharepoint.com
 DOMAIN-SUFFIX,sharepointonline.com
 DOMAIN-SUFFIX,skydrive.wns.windows.com
 DOMAIN-SUFFIX,spoprod-a.akamaihd.net
-DOMAIN-SUFFIX,statsig.anthropic.com
-DOMAIN-SUFFIX,statsig.com
-DOMAIN-SUFFIX,statsigapi.net
-DOMAIN-SUFFIX,statsigcdn.com
 DOMAIN-SUFFIX,storage.live.com
 DOMAIN-SUFFIX,storage.msn.com
 DOMAIN-KEYWORD,1drv

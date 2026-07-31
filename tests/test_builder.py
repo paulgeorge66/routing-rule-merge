@@ -10,6 +10,7 @@ from routing_merge.builder import (
     render_ipcidr_behavior_text,
     render_text,
     split_rules_by_behavior,
+    validate_source_count,
 )
 
 
@@ -22,15 +23,40 @@ class BuilderTests(unittest.TestCase):
         rule = normalize_rule_line("IP-CIDR,10.0.0.0/8,no-resolve", "test", "direct", 1)
         self.assertEqual(rule.render(), "IP-CIDR,10.0.0.0/8,no-resolve")
 
-    def test_dedupe_prefers_more_specific_rule_type(self):
+    def test_dedupe_prefers_suffix_to_preserve_subdomain_coverage(self):
         suffix = ParsedRule("DOMAIN-SUFFIX", "example.com", "a", "direct", 1)
         exact = ParsedRule("DOMAIN", "example.com", "b", "direct", 2)
-        self.assertEqual(dedupe_rules([suffix, exact])[0].rule_type, "DOMAIN")
+        self.assertEqual(dedupe_rules([suffix, exact])[0].rule_type, "DOMAIN-SUFFIX")
 
     def test_prune_removes_domain_shadowed_by_suffix_baseline(self):
         baseline = [ParsedRule("DOMAIN-SUFFIX", "example.com", "a", "top-proxy", 1)]
         rules = [ParsedRule("DOMAIN", "api.example.com", "b", "direct", 2)]
         self.assertEqual(prune_shadowed_rules(rules, baseline), [])
+
+    def test_prune_removes_child_suffix_shadowed_by_parent(self):
+        rules = [
+            ParsedRule("DOMAIN-SUFFIX", "example.com", "a", "direct", 1),
+            ParsedRule("DOMAIN-SUFFIX", "ads.example.com", "b", "direct", 2),
+        ]
+        self.assertEqual([rule.value for rule in prune_shadowed_rules(rules)], ["example.com"])
+
+    def test_prune_does_not_remove_broader_keyword_rule(self):
+        rules = [
+            ParsedRule("DOMAIN-SUFFIX", "tracker", "a", "direct", 1),
+            ParsedRule("DOMAIN-KEYWORD", "tracker", "b", "direct", 2),
+        ]
+        self.assertEqual(len(prune_shadowed_rules(rules)), 2)
+
+    def test_source_guard_rejects_too_few_rules(self):
+        with self.assertRaisesRegex(RuntimeError, "minimum is 2"):
+            validate_source_count({"name": "fixture", "min_rules": 2}, 1)
+
+    def test_source_guard_rejects_large_drop(self):
+        with self.assertRaisesRegex(RuntimeError, "dropped from 100 to 60"):
+            validate_source_count({"name": "fixture", "max_drop_ratio": 0.35}, 60, 100)
+
+    def test_source_guard_accepts_normal_variation(self):
+        validate_source_count({"name": "fixture", "min_rules": 5, "max_drop_ratio": 0.35}, 80, 100)
 
     def test_render_text_uses_two_part_rule_provider_format(self):
         text = render_text(

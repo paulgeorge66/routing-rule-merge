@@ -1,11 +1,5 @@
 {
   "sources": {
-    "claude_dependencies": {
-      "section": "top-proxy",
-      "parser": "inline",
-      "url": null,
-      "parsed_rules": 5
-    },
     "google_play_downloads": {
       "section": "top-proxy",
       "parser": "inline",
@@ -94,7 +88,7 @@
       "section": "direct",
       "parser": "domain_payload",
       "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt",
-      "parsed_rules": 111814
+      "parsed_rules": 111854
     },
     "loyal_applications": {
       "section": "direct",
@@ -154,50 +148,80 @@
       "section": "proxy",
       "parser": "domain_payload",
       "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt",
-      "parsed_rules": 26907
+      "parsed_rules": 26931
     }
   },
   "sections": {
     "top-proxy": {
-      "input_rules": 41,
-      "output_rules": 38
+      "input_rules": 36,
+      "deduped_rules": 35,
+      "output_rules": 31,
+      "shadowed_rules": {
+        "same_action": 4,
+        "opposite_action": 0
+      }
     },
     "top-direct": {
       "input_rules": 680,
-      "output_rules": 667
+      "deduped_rules": 678,
+      "output_rules": 667,
+      "shadowed_rules": {
+        "same_action": 0,
+        "opposite_action": 11
+      }
     },
     "apple-proxy": {
       "input_rules": 100,
-      "output_rules": 80
+      "deduped_rules": 81,
+      "output_rules": 80,
+      "shadowed_rules": {
+        "same_action": 1,
+        "opposite_action": 0
+      }
     },
     "apple-direct": {
       "input_rules": 341,
-      "output_rules": 284
+      "deduped_rules": 323,
+      "output_rules": 233,
+      "shadowed_rules": {
+        "same_action": 84,
+        "opposite_action": 6
+      }
     },
     "direct": {
-      "input_rules": 117882,
-      "output_rules": 117650
+      "input_rules": 117922,
+      "deduped_rules": 117865,
+      "output_rules": 117427,
+      "shadowed_rules": {
+        "same_action": 397,
+        "opposite_action": 41
+      }
     },
     "proxy": {
-      "input_rules": 27915,
-      "output_rules": 26305
+      "input_rules": 27939,
+      "deduped_rules": 27046,
+      "output_rules": 25577,
+      "shadowed_rules": {
+        "same_action": 718,
+        "opposite_action": 751
+      }
     }
   },
-  "total_rules": 145024,
+  "total_rules": 144015,
   "behavior_split": {
     "direct": {
-      "domains": 111722,
+      "domains": 111499,
       "cidr": 5832,
       "misc": 96
     },
     "proxy": {
-      "domains": 26256,
+      "domains": 25528,
       "cidr": 25,
       "misc": 24
     }
   },
   "expanded_rules": {
     "path": "dist/routing-expanded-rules.yaml",
-    "rules": 145025
+    "rules": 144016
   }
 }

@@ -9,16 +9,6 @@ source_order:
 sources:
   # Public local overrides from the VPS routing model. Server self-access
   # domains/IPs are intentionally omitted from this public repository.
-  - name: claude_dependencies
-    section: top-proxy
-    parser: inline
-    rules:
-      - DOMAIN-SUFFIX,featuregates.org
-      - DOMAIN-SUFFIX,statsig.anthropic.com
-      - DOMAIN-SUFFIX,statsig.com
-      - DOMAIN-SUFFIX,statsigcdn.com
-      - DOMAIN-SUFFIX,statsigapi.net
-
   - name: google_play_downloads
     section: top-proxy
     parser: inline
@@ -46,11 +36,13 @@ sources:
     section: top-proxy
     parser: classical_payload
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.yaml
+    min_rules: 10
 
   - name: bm7_microsoft
     section: top-direct
     parser: classical_payload
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml
+    min_rules: 500
 
   - name: private_ranges
     section: top-direct
@@ -121,6 +113,7 @@ sources:
     section: direct
     parser: domain_payload
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
+    min_rules: 80000
 
   - name: loyal_applications
     section: direct
@@ -136,6 +129,7 @@ sources:
     section: direct
     parser: cidr_payload
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
+    min_rules: 4000
 
   - name: bm7_telegram
     section: proxy
@@ -171,3 +165,4 @@ sources:
     section: proxy
     parser: domain_payload
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
+    min_rules: 20000
