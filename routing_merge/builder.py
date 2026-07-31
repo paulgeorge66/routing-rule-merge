@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import os
 import re
 import shutil
@@ -35,8 +36,8 @@ TYPE_ORDER = {
     "IP-CIDR6": 7,
 }
 TYPE_PRIORITY = {
-    "DOMAIN": 7,
-    "DOMAIN-SUFFIX": 6,
+    "DOMAIN-SUFFIX": 7,
+    "DOMAIN": 6,
     "DOMAIN-KEYWORD": 5,
     "PROCESS-NAME": 4,
     "IP-ASN": 3,
@@ -50,6 +51,14 @@ SECTION_PRIORITY = {
     "apple-direct": 50,
     "proxy": 40,
     "direct": 30,
+}
+SECTION_ACTION = {
+    "top-proxy": "PROXY",
+    "top-direct": "DIRECT",
+    "apple-proxy": "PROXY",
+    "apple-direct": "DIRECT",
+    "proxy": "PROXY",
+    "direct": "DIRECT",
 }
 
 # These two sections are large enough (tens to hundreds of thousands of rules)
@@ -122,6 +131,39 @@ def load_sources(path: Path) -> dict:
     if not isinstance(data.get("source_order"), list):
         raise ValueError(f"{path} must contain source_order")
     return data
+
+
+def load_previous_source_counts(report_path: Path) -> dict[str, int]:
+    if not report_path.exists():
+        return {}
+    try:
+        report = json.loads(report_path.read_text(encoding="utf-8"))
+        return {
+            name: int(details["parsed_rules"])
+            for name, details in report.get("sources", {}).items()
+            if isinstance(details, dict) and isinstance(details.get("parsed_rules"), int)
+        }
+    except (OSError, ValueError, TypeError):
+        return {}
+
+
+def validate_source_count(source: dict, parsed_count: int, previous_count: int | None = None) -> None:
+    name = source["name"]
+    min_rules = int(source.get("min_rules", 1))
+    if parsed_count < min_rules:
+        raise RuntimeError(f"source {name} produced {parsed_count} rules; minimum is {min_rules}")
+
+    if previous_count is None or previous_count <= 0:
+        return
+    max_drop_ratio = float(source.get("max_drop_ratio", 0.35))
+    if not 0 <= max_drop_ratio < 1:
+        raise ValueError(f"source {name} max_drop_ratio must be between 0 and 1")
+    minimum_from_previous = math.ceil(previous_count * (1 - max_drop_ratio))
+    if parsed_count < minimum_from_previous:
+        raise RuntimeError(
+            f"source {name} dropped from {previous_count} to {parsed_count} rules; "
+            f"maximum allowed drop is {max_drop_ratio:.0%}"
+        )
 
 
 def extract_payload_lines(text: str) -> list[str]:
@@ -227,34 +269,66 @@ def dedupe_rules(rules: Iterable[ParsedRule]) -> list[ParsedRule]:
     )
 
 
-def prune_shadowed_rules(rules: Iterable[ParsedRule], baseline_rules: Iterable[ParsedRule] | None = None) -> list[ParsedRule]:
+def prune_shadowed_rules_with_stats(
+    rules: Iterable[ParsedRule],
+    baseline_rules: Iterable[ParsedRule] | None = None,
+) -> tuple[list[ParsedRule], dict[str, int]]:
     baseline = list(baseline_rules or [])
-    reference = list(rules) + baseline
-    baseline_keys = {(rule.rule_type, rule.value.lower()) for rule in baseline}
-    exact_domains = {rule.value.lower() for rule in reference if rule.rule_type == "DOMAIN"}
-    suffixes = {rule.value.lower() for rule in reference if rule.rule_type == "DOMAIN-SUFFIX"}
-    suffix_actionless = suffixes
+    current = list(rules)
+    reference = current + baseline
+    baseline_exact = {(rule.rule_type, rule.value.lower()): rule for rule in baseline}
+    suffix_rules = {
+        rule.value.lower(): rule
+        for rule in reversed(reference)
+        if rule.rule_type == "DOMAIN-SUFFIX"
+    }
     pruned: list[ParsedRule] = []
+    stats = {"same_action": 0, "opposite_action": 0}
 
-    for rule in rules:
+    for rule in current:
         value = rule.value.lower()
-        if (rule.rule_type, value) in baseline_keys:
-            continue
-        if rule.rule_type == "DOMAIN" and any(value == suffix or value.endswith(f".{suffix}") for suffix in suffix_actionless):
-            continue
-        if rule.rule_type == "DOMAIN-KEYWORD" and (value in exact_domains or value in suffixes):
+        shadower = baseline_exact.get((rule.rule_type, value))
+        if shadower is None and rule.rule_type == "DOMAIN":
+            labels = value.split(".")
+            shadower = next(
+                (suffix_rules[suffix] for index in range(len(labels)) if (suffix := ".".join(labels[index:])) in suffix_rules),
+                None,
+            )
+        if shadower is None and rule.rule_type == "DOMAIN-SUFFIX":
+            labels = value.split(".")
+            shadower = next(
+                (suffix_rules[suffix] for index in range(1, len(labels)) if (suffix := ".".join(labels[index:])) in suffix_rules),
+                None,
+            )
+        if shadower is not None:
+            key = (
+                "same_action"
+                if SECTION_ACTION.get(rule.section) == SECTION_ACTION.get(shadower.section)
+                else "opposite_action"
+            )
+            stats[key] += 1
             continue
         pruned.append(rule)
+    return pruned, stats
+
+
+def prune_shadowed_rules(rules: Iterable[ParsedRule], baseline_rules: Iterable[ParsedRule] | None = None) -> list[ParsedRule]:
+    pruned, _ = prune_shadowed_rules_with_stats(rules, baseline_rules)
     return pruned
 
 
-def build_sections(config: dict) -> tuple[dict[str, list[ParsedRule]], dict]:
+def build_sections(
+    config: dict,
+    previous_source_counts: dict[str, int] | None = None,
+) -> tuple[dict[str, list[ParsedRule]], dict]:
     section_order = config["source_order"]
     by_section: dict[str, list[ParsedRule]] = {section: [] for section in section_order}
     source_report: dict[str, dict] = {}
+    previous_source_counts = previous_source_counts or {}
 
     for index, source in enumerate(config["sources"], start=1):
         parsed = parse_source(source, index)
+        validate_source_count(source, len(parsed), previous_source_counts.get(source["name"]))
         by_section[source["section"]].extend(parsed)
         source_report[source["name"]] = {
             "section": source["section"],
@@ -268,12 +342,14 @@ def build_sections(config: dict) -> tuple[dict[str, list[ParsedRule]], dict]:
     section_report: dict[str, dict] = {}
     for section in section_order:
         deduped = dedupe_rules(by_section[section])
-        pruned = prune_shadowed_rules(deduped, baseline_rules=cumulative)
+        pruned, shadowed = prune_shadowed_rules_with_stats(deduped, baseline_rules=cumulative)
         rendered_sections[section] = pruned
         cumulative.extend(pruned)
         section_report[section] = {
             "input_rules": len(by_section[section]),
+            "deduped_rules": len(deduped),
             "output_rules": len(pruned),
+            "shadowed_rules": shadowed,
         }
 
     report = {
@@ -408,7 +484,8 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     config = load_sources(args.sources)
-    sections, report = build_sections(config)
+    previous_source_counts = load_previous_source_counts(args.report)
+    sections, report = build_sections(config, previous_source_counts)
     write_outputs(sections, report, args.output_dir, args.report, args.expanded_rules)
     print(f"Wrote {args.output_dir}")
     print(f"Wrote {args.report}")

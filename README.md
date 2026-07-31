@@ -275,8 +275,10 @@ Apple 相关的路由完全交给上游（`bm7_appletv`/`bm7_appleproxy`/`bm7_ap
 - 提取纯域名、`+.example.com` 和 CIDR 行
 - 规范化为 `DOMAIN`、`DOMAIN-SUFFIX`、`DOMAIN-KEYWORD`、`PROCESS-NAME`、`IP-ASN`、`IP-CIDR`、`IP-CIDR6`
 - 移除重复规则和被前置规则覆盖的规则
+- 保留覆盖范围更广的 `DOMAIN-SUFFIX`，并移除已被父域后缀覆盖的子规则
+- 检查关键来源的最低数量和相对上次构建的异常跌幅
 - 按 section 输出多个 rule-provider 文件，并输出 routing 展开片段
-- 输出构建报告和各来源解析数量
+- 输出构建报告、各来源解析数量，以及同动作/跨动作覆盖统计
 
 ## 本地构建
 
