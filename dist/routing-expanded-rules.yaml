@@ -119204,6 +119204,7 @@
   - DOMAIN-SUFFIX,acrobat.com,PROXY
   - DOMAIN-SUFFIX,actalis.com,PROXY
   - DOMAIN-SUFFIX,actalis.it,PROXY
+  - DOMAIN-SUFFIX,actifio.com,PROXY
   - DOMAIN-SUFFIX,activelearnprimary.co.uk,PROXY
   - DOMAIN-SUFFIX,activelearnprimary.com.au,PROXY
   - DOMAIN-SUFFIX,activematter.game,PROXY
@@ -131266,7 +131267,10 @@
   - DOMAIN-SUFFIX,jetbrains.ai,PROXY
   - DOMAIN-SUFFIX,jetbrains.cloud,PROXY
   - DOMAIN-SUFFIX,jetbrains.com,PROXY
+  - DOMAIN-SUFFIX,jetbrains.dev,PROXY
   - DOMAIN-SUFFIX,jetbrains.net,PROXY
+  - DOMAIN-SUFFIX,jetbrains.org,PROXY
+  - DOMAIN-SUFFIX,jetbrains.ru,PROXY
   - DOMAIN-SUFFIX,jetbrains.space,PROXY
   - DOMAIN-SUFFIX,jetbrains.team,PROXY
   - DOMAIN-SUFFIX,jetfuelapp.com,PROXY
@@ -131816,6 +131820,8 @@
   - DOMAIN-SUFFIX,korona.com,PROXY
   - DOMAIN-SUFFIX,koshelek.app,PROXY
   - DOMAIN-SUFFIX,kostenlosepornoclips.com,PROXY
+  - DOMAIN-SUFFIX,kotl.in,PROXY
+  - DOMAIN-SUFFIX,kotlinconf.com,PROXY
   - DOMAIN-SUFFIX,kotlinlang.org,PROXY
   - DOMAIN-SUFFIX,koubaibu.jp,PROXY
   - DOMAIN-SUFFIX,koukoku.jp,PROXY
@@ -131842,6 +131848,7 @@
   - DOMAIN-SUFFIX,kspcoin.com,PROXY
   - DOMAIN-SUFFIX,ksyp10.com,PROXY
   - DOMAIN-SUFFIX,ktech.team,PROXY
+  - DOMAIN-SUFFIX,ktor.io,PROXY
   - DOMAIN-SUFFIX,ktvu.com,PROXY
   - DOMAIN-SUFFIX,ktzhk.com,PROXY
   - DOMAIN-SUFFIX,ku77.xyz,PROXY
@@ -133969,6 +133976,7 @@
   - DOMAIN-SUFFIX,myhulu.com,PROXY
   - DOMAIN-SUFFIX,myiphide.com,PROXY
   - DOMAIN-SUFFIX,myipod.net,PROXY
+  - DOMAIN-SUFFIX,myjetbrains.com,PROXY
   - DOMAIN-SUFFIX,myjkwd.com,PROXY
   - DOMAIN-SUFFIX,myjs.tw,PROXY
   - DOMAIN-SUFFIX,mykomica.org,PROXY
@@ -134793,6 +134801,7 @@
   - DOMAIN-SUFFIX,ntdtvla.com,PROXY
   - DOMAIN-SUFFIX,ntdvideo.tw,PROXY
   - DOMAIN-SUFFIX,ntdvn.com,PROXY
+  - DOMAIN-SUFFIX,nthlink.com,PROXY
   - DOMAIN-SUFFIX,ntl.fyi,PROXY
   - DOMAIN-SUFFIX,ntnews.com.au,PROXY
   - DOMAIN-SUFFIX,ntp-c.colorado.edu,PROXY
@@ -135301,6 +135310,7 @@
   - DOMAIN-SUFFIX,openweave.io,PROXY
   - DOMAIN-SUFFIX,openwebster.com,PROXY
   - DOMAIN-SUFFIX,openwrt.org,PROXY
+  - DOMAIN-SUFFIX,openxla.org,PROXY
   - DOMAIN-SUFFIX,opera.com,PROXY
   - DOMAIN-SUFFIX,opinionjournal.com,PROXY
   - DOMAIN-SUFFIX,oppai-doga.info,PROXY
@@ -139562,6 +139572,7 @@
   - DOMAIN-SUFFIX,talkatone.com,PROXY
   - DOMAIN-SUFFIX,talkboxapp.com,PROXY
   - DOMAIN-SUFFIX,talkcc.com,PROXY
+  - DOMAIN-SUFFIX,talkingkotlin.com,PROXY
   - DOMAIN-SUFFIX,talkonly.net,PROXY
   - DOMAIN-SUFFIX,talksport.com,PROXY
   - DOMAIN-SUFFIX,tamilsexvideos.cc,PROXY
