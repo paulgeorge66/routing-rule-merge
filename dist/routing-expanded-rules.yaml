@@ -112771,7 +112771,7 @@
   - IP-CIDR,103.250.124.0/22,DIRECT,no-resolve
   - IP-CIDR,103.250.192.0/22,DIRECT,no-resolve
   - IP-CIDR,103.250.216.0/22,DIRECT,no-resolve
-  - IP-CIDR,103.250.248.0/21,DIRECT,no-resolve
+  - IP-CIDR,103.250.248.0/22,DIRECT,no-resolve
   - IP-CIDR,103.250.32.0/22,DIRECT,no-resolve
   - IP-CIDR,103.251.124.0/22,DIRECT,no-resolve
   - IP-CIDR,103.251.160.0/22,DIRECT,no-resolve
@@ -112986,6 +112986,7 @@
   - IP-CIDR,103.8.32.0/22,DIRECT,no-resolve
   - IP-CIDR,103.8.52.0/22,DIRECT,no-resolve
   - IP-CIDR,103.8.68.0/22,DIRECT,no-resolve
+  - IP-CIDR,103.81.120.0/24,DIRECT,no-resolve
   - IP-CIDR,103.81.123.0/24,DIRECT,no-resolve
   - IP-CIDR,103.81.200.0/22,DIRECT,no-resolve
   - IP-CIDR,103.81.4.0/22,DIRECT,no-resolve
@@ -113527,7 +113528,9 @@
   - IP-CIDR,117.134.128.0/18,DIRECT,no-resolve
   - IP-CIDR,117.134.205.0/24,DIRECT,no-resolve
   - IP-CIDR,117.134.206.0/23,DIRECT,no-resolve
-  - IP-CIDR,117.134.208.0/20,DIRECT,no-resolve
+  - IP-CIDR,117.134.208.0/21,DIRECT,no-resolve
+  - IP-CIDR,117.134.216.0/22,DIRECT,no-resolve
+  - IP-CIDR,117.134.220.0/23,DIRECT,no-resolve
   - IP-CIDR,117.134.224.0/19,DIRECT,no-resolve
   - IP-CIDR,117.135.0.0/16,DIRECT,no-resolve
   - IP-CIDR,117.136.0.0/13,DIRECT,no-resolve
@@ -114363,7 +114366,6 @@
   - IP-CIDR,153.34.0.0/15,DIRECT,no-resolve
   - IP-CIDR,153.36.0.0/15,DIRECT,no-resolve
   - IP-CIDR,153.99.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,154.72.42.0/24,DIRECT,no-resolve
   - IP-CIDR,154.72.44.0/24,DIRECT,no-resolve
   - IP-CIDR,154.72.47.0/24,DIRECT,no-resolve
   - IP-CIDR,154.8.128.0/17,DIRECT,no-resolve
@@ -114885,6 +114887,7 @@
   - IP-CIDR,203.2.64.0/21,DIRECT,no-resolve
   - IP-CIDR,203.202.236.0/23,DIRECT,no-resolve
   - IP-CIDR,203.205.88.0/22,DIRECT,no-resolve
+  - IP-CIDR,203.205.92.0/23,DIRECT,no-resolve
   - IP-CIDR,203.205.95.0/24,DIRECT,no-resolve
   - IP-CIDR,203.207.104.0/22,DIRECT,no-resolve
   - IP-CIDR,203.207.112.0/20,DIRECT,no-resolve
@@ -116677,7 +116680,8 @@
   - IP-CIDR6,2403:600::/32,DIRECT,no-resolve
   - IP-CIDR6,2403:6740::/48,DIRECT,no-resolve
   - IP-CIDR6,2403:6a00::/32,DIRECT,no-resolve
-  - IP-CIDR6,2403:7580::/32,DIRECT,no-resolve
+  - IP-CIDR6,2403:7580:10::/46,DIRECT,no-resolve
+  - IP-CIDR6,2403:7580::/44,DIRECT,no-resolve
   - IP-CIDR6,2403:8080:101::/48,DIRECT,no-resolve
   - IP-CIDR6,2403:8c00::/32,DIRECT,no-resolve
   - IP-CIDR6,2403:9b00:2000::/48,DIRECT,no-resolve
