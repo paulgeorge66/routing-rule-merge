@@ -119452,6 +119452,7 @@
   - DOMAIN-SUFFIX,api.moomoobull.com,PROXY
   - DOMAIN-SUFFIX,api.news,PROXY
   - DOMAIN-SUFFIX,api.palworldgame.com,PROXY
+  - DOMAIN-SUFFIX,api.shuaiapi.com,PROXY
   - DOMAIN-SUFFIX,api.statsig.com,PROXY
   - DOMAIN-SUFFIX,apiary.io,PROXY
   - DOMAIN-SUFFIX,apiauto.ru,PROXY
@@ -141891,6 +141892,7 @@
   - DOMAIN-SUFFIX,x3guide.com,PROXY
   - DOMAIN-SUFFIX,x3vid.com,PROXY
   - DOMAIN-SUFFIX,x6av.com,PROXY
+  - DOMAIN-SUFFIX,x86.fr,PROXY
   - DOMAIN-SUFFIX,x99av.com,PROXY
   - DOMAIN-SUFFIX,xandr.com,PROXY
   - DOMAIN-SUFFIX,xanimeporn.com,PROXY
