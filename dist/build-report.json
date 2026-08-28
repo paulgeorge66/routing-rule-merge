@@ -76,7 +76,7 @@
       "section": "apple-direct",
       "parser": "domain_payload",
       "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/apple.txt",
-      "parsed_rules": 164
+      "parsed_rules": 165
     },
     "loyal_private": {
       "section": "direct",
@@ -88,7 +88,7 @@
       "section": "direct",
       "parser": "domain_payload",
       "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt",
-      "parsed_rules": 111558
+      "parsed_rules": 112014
     },
     "loyal_applications": {
       "section": "direct",
@@ -148,7 +148,7 @@
       "section": "proxy",
       "parser": "domain_payload",
       "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt",
-      "parsed_rules": 27066
+      "parsed_rules": 27068
     }
   },
   "sections": {
@@ -180,48 +180,48 @@
       }
     },
     "apple-direct": {
-      "input_rules": 341,
-      "deduped_rules": 323,
-      "output_rules": 233,
+      "input_rules": 342,
+      "deduped_rules": 324,
+      "output_rules": 234,
       "shadowed_rules": {
         "same_action": 84,
         "opposite_action": 6
       }
     },
     "direct": {
-      "input_rules": 117188,
-      "deduped_rules": 117132,
-      "output_rules": 116695,
+      "input_rules": 117644,
+      "deduped_rules": 117587,
+      "output_rules": 117149,
       "shadowed_rules": {
-        "same_action": 396,
+        "same_action": 397,
         "opposite_action": 41
       }
     },
     "proxy": {
-      "input_rules": 28074,
-      "deduped_rules": 27181,
-      "output_rules": 25705,
+      "input_rules": 28076,
+      "deduped_rules": 27183,
+      "output_rules": 25707,
       "shadowed_rules": {
         "same_action": 722,
         "opposite_action": 754
       }
     }
   },
-  "total_rules": 143411,
+  "total_rules": 143868,
   "behavior_split": {
     "direct": {
-      "domains": 111205,
+      "domains": 111659,
       "cidr": 5394,
       "misc": 96
     },
     "proxy": {
-      "domains": 25656,
+      "domains": 25658,
       "cidr": 25,
       "misc": 24
     }
   },
   "expanded_rules": {
     "path": "dist/routing-expanded-rules.yaml",
-    "rules": 143412
+    "rules": 143869
   }
 }
