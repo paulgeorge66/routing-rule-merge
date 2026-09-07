@@ -148,7 +148,7 @@
       "section": "proxy",
       "parser": "domain_payload",
       "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt",
-      "parsed_rules": 27085
+      "parsed_rules": 27086
     }
   },
   "sections": {
@@ -198,11 +198,11 @@
       }
     },
     "proxy": {
-      "input_rules": 28093,
-      "deduped_rules": 27200,
+      "input_rules": 28094,
+      "deduped_rules": 27201,
       "output_rules": 25725,
       "shadowed_rules": {
-        "same_action": 722,
+        "same_action": 723,
         "opposite_action": 753
       }
     }
