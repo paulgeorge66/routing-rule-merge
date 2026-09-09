@@ -105681,6 +105681,7 @@
   - DOMAIN-SUFFIX,yuanpanguoji.com,DIRECT
   - DOMAIN-SUFFIX,yuanqiao.net,DIRECT
   - DOMAIN-SUFFIX,yuanqiao.pw,DIRECT
+  - DOMAIN-SUFFIX,yuanqidesk.com,DIRECT
   - DOMAIN-SUFFIX,yuanqilt.com,DIRECT
   - DOMAIN-SUFFIX,yuanqingsh.com,DIRECT
   - DOMAIN-SUFFIX,yuanqisenlin.com,DIRECT
@@ -137851,6 +137852,7 @@
   - DOMAIN-SUFFIX,nodequality.com,PROXY
   - DOMAIN-SUFFIX,nodereal.io,PROXY
   - DOMAIN-SUFFIX,nodeseek.com,PROXY
+  - DOMAIN-SUFFIX,nodeseek.org,PROXY
   - DOMAIN-SUFFIX,nodesource.com,PROXY
   - DOMAIN-SUFFIX,noisullifb.com,PROXY
   - DOMAIN-SUFFIX,nokiantyres.com,PROXY
