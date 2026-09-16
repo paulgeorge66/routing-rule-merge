@@ -138642,6 +138642,7 @@
   - DOMAIN-SUFFIX,ozonstatus.ru,PROXY
   - DOMAIN-SUFFIX,ozonusercontent.com,PROXY
   - DOMAIN-SUFFIX,ozvoice.org,PROXY
+  - DOMAIN-SUFFIX,p16-tiktok-dm-sticker-sign-sg.ibyteimg.com,PROXY
   - DOMAIN-SUFFIX,pa9pal.com,PROXY
   - DOMAIN-SUFFIX,paaypal.com,PROXY
   - DOMAIN-SUFFIX,pachosting.com,PROXY
@@ -142489,6 +142490,9 @@
   - DOMAIN-SUFFIX,stripchat.com,PROXY
   - DOMAIN-SUFFIX,stripe-terminal-local-reader.net,PROXY
   - DOMAIN-SUFFIX,stripe.com,PROXY
+  - DOMAIN-SUFFIX,stripe.dev,PROXY
+  - DOMAIN-SUFFIX,stripe.events,PROXY
+  - DOMAIN-SUFFIX,stripe.global,PROXY
   - DOMAIN-SUFFIX,stripe.network,PROXY
   - DOMAIN-SUFFIX,stripecdn.com,PROXY
   - DOMAIN-SUFFIX,stripparadise.com,PROXY
