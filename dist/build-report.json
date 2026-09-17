@@ -106,7 +106,7 @@
       "section": "direct",
       "parser": "cidr_payload",
       "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt",
-      "parsed_rules": 9647
+      "parsed_rules": 9741
     },
     "bm7_telegram": {
       "section": "proxy",
@@ -189,9 +189,9 @@
       }
     },
     "direct": {
-      "input_rules": 121053,
-      "deduped_rules": 120998,
-      "output_rules": 120559,
+      "input_rules": 121147,
+      "deduped_rules": 121092,
+      "output_rules": 120653,
       "shadowed_rules": {
         "same_action": 398,
         "opposite_action": 41
@@ -207,11 +207,11 @@
       }
     }
   },
-  "total_rules": 147302,
+  "total_rules": 147396,
   "behavior_split": {
     "direct": {
       "domains": 110806,
-      "cidr": 9657,
+      "cidr": 9751,
       "misc": 96
     },
     "proxy": {
@@ -222,6 +222,6 @@
   },
   "expanded_rules": {
     "path": "dist/routing-expanded-rules.yaml",
-    "rules": 147303
+    "rules": 147397
   }
 }
