@@ -148,7 +148,7 @@
       "section": "proxy",
       "parser": "domain_payload",
       "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt",
-      "parsed_rules": 27102
+      "parsed_rules": 27108
     }
   },
   "sections": {
@@ -198,16 +198,16 @@
       }
     },
     "proxy": {
-      "input_rules": 28110,
-      "deduped_rules": 27217,
-      "output_rules": 25740,
+      "input_rules": 28116,
+      "deduped_rules": 27223,
+      "output_rules": 25744,
       "shadowed_rules": {
-        "same_action": 724,
+        "same_action": 726,
         "opposite_action": 753
       }
     }
   },
-  "total_rules": 147468,
+  "total_rules": 147472,
   "behavior_split": {
     "direct": {
       "domains": 110998,
@@ -215,13 +215,13 @@
       "misc": 96
     },
     "proxy": {
-      "domains": 25691,
+      "domains": 25695,
       "cidr": 25,
       "misc": 24
     }
   },
   "expanded_rules": {
     "path": "dist/routing-expanded-rules.yaml",
-    "rules": 147469
+    "rules": 147473
   }
 }
