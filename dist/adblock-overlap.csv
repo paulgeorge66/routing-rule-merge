@@ -78,10 +78,15 @@ proxy,"DOMAIN-SUFFIX,bestsrv.de",PROXY,"DOMAIN-SUFFIX,bestsrv.de",REJECT
 proxy,"DOMAIN-SUFFIX,bimbim.com",PROXY,"DOMAIN-SUFFIX,bimbim.com",REJECT
 proxy,"DOMAIN-SUFFIX,bizographics.com",PROXY,"DOMAIN-SUFFIX,bizographics.com",REJECT
 proxy,"DOMAIN-SUFFIX,blogcatalog.com",PROXY,"DOMAIN-SUFFIX,blogcatalog.com",REJECT
+proxy,"DOMAIN-SUFFIX,bloglines.com",PROXY,"DOMAIN-SUFFIX,bloglines.com",REJECT
+proxy,"DOMAIN-SUFFIX,bloglovin.com",PROXY,"DOMAIN-SUFFIX,bloglovin.com",REJECT
 proxy,"DOMAIN-SUFFIX,blogspot.ba",PROXY,"DOMAIN-SUFFIX,blogspot.ba",REJECT
 proxy,"DOMAIN-SUFFIX,blogspot.bg",PROXY,"DOMAIN-SUFFIX,blogspot.bg",REJECT
 proxy,"DOMAIN-SUFFIX,blogspot.lu",PROXY,"DOMAIN-SUFFIX,blogspot.lu",REJECT
+proxy,"DOMAIN-SUFFIX,blogspot.sk",PROXY,"DOMAIN-SUFFIX,blogspot.sk",REJECT
+proxy,"DOMAIN-SUFFIX,blogspot.tw",PROXY,"DOMAIN-SUFFIX,blogspot.tw",REJECT
 proxy,"DOMAIN-SUFFIX,bluffyporn.com",PROXY,"DOMAIN-SUFFIX,bluffyporn.com",REJECT
+proxy,"DOMAIN-SUFFIX,bntrace.com",PROXY,"DOMAIN-SUFFIX,bntrace.com",REJECT
 proxy,"DOMAIN-SUFFIX,bongacams.com",PROXY,"DOMAIN-SUFFIX,bongacams.com",REJECT
 proxy,"DOMAIN-SUFFIX,bronto.com",PROXY,"DOMAIN-SUFFIX,bronto.com",REJECT
 proxy,"DOMAIN-SUFFIX,bugsnag.com",PROXY,"DOMAIN-SUFFIX,bugsnag.com",REJECT
@@ -101,6 +106,7 @@ proxy,"DOMAIN-SUFFIX,cuntempire.com",PROXY,"DOMAIN-SUFFIX,cuntempire.com",REJECT
 proxy,"DOMAIN-SUFFIX,cuntwars.com",PROXY,"DOMAIN-SUFFIX,cuntwars.com",REJECT
 proxy,"DOMAIN-SUFFIX,daftsex.com",PROXY,"DOMAIN-SUFFIX,daftsex.com",REJECT
 proxy,"DOMAIN-SUFFIX,dartsearch.net",PROXY,"DOMAIN-SUFFIX,dartsearch.net",REJECT
+proxy,"DOMAIN-SUFFIX,data-vocabulary.org",PROXY,"DOMAIN-SUFFIX,data-vocabulary.org",REJECT
 proxy,"DOMAIN-SUFFIX,ddex.io",PROXY,"DOMAIN-SUFFIX,ddex.io",REJECT
 proxy,"DOMAIN-SUFFIX,deja.com",PROXY,"DOMAIN-SUFFIX,deja.com",REJECT
 proxy,"DOMAIN-SUFFIX,digitaldesire.com",PROXY,"DOMAIN-SUFFIX,digitaldesire.com",REJECT
@@ -208,6 +214,7 @@ proxy,"DOMAIN-SUFFIX,pornomasse.com",PROXY,"DOMAIN-SUFFIX,pornomasse.com",REJECT
 proxy,"DOMAIN-SUFFIX,pornvideos.casa",PROXY,"DOMAIN-SUFFIX,pornvideos.casa",REJECT
 proxy,"DOMAIN-SUFFIX,prpops.com",PROXY,"DOMAIN-SUFFIX,prpops.com",REJECT
 proxy,"DOMAIN-SUFFIX,ptapjmp.com",PROXY,"DOMAIN-SUFFIX,ptapjmp.com",REJECT
+proxy,"DOMAIN-SUFFIX,pubmatic.co.jp",PROXY,"DOMAIN-SUFFIX,pubmatic.co.jp",REJECT
 proxy,"DOMAIN-SUFFIX,pubmatic.com",PROXY,"DOMAIN-SUFFIX,pubmatic.com",REJECT
 proxy,"DOMAIN-SUFFIX,pussy-pics.net",PROXY,"DOMAIN-SUFFIX,pussy-pics.net",REJECT
 proxy,"DOMAIN-SUFFIX,rakutenadvertising.com",PROXY,"DOMAIN-SUFFIX,rakutenadvertising.com",REJECT
@@ -246,6 +253,7 @@ proxy,"DOMAIN-SUFFIX,usocial.pro",PROXY,"DOMAIN-SUFFIX,usocial.pro",REJECT
 proxy,"DOMAIN-SUFFIX,verizonmedia.com",PROXY,"DOMAIN-SUFFIX,verizonmedia.com",REJECT
 proxy,"DOMAIN-SUFFIX,vid.me",PROXY,"DOMAIN-SUFFIX,vid.me",REJECT
 proxy,"DOMAIN-SUFFIX,vkcdnservice.com",PROXY,"DOMAIN-SUFFIX,vkcdnservice.com",REJECT
+proxy,"DOMAIN-SUFFIX,watchmygf.net",PROXY,"DOMAIN-SUFFIX,watchmygf.net",REJECT
 proxy,"DOMAIN-SUFFIX,watchmygf.to",PROXY,"DOMAIN-SUFFIX,watchmygf.to",REJECT
 proxy,"DOMAIN-SUFFIX,whitesaas.com",PROXY,"DOMAIN-SUFFIX,whitesaas.com",REJECT
 proxy,"DOMAIN-SUFFIX,wo.tc",PROXY,"DOMAIN-SUFFIX,wo.tc",REJECT
@@ -417,7 +425,9 @@ direct,"DOMAIN-SUFFIX,attribuly.com",DIRECT,"DOMAIN-SUFFIX,attribuly.com",REJECT
 direct,"DOMAIN-SUFFIX,baidustatic.com",DIRECT,"DOMAIN-SUFFIX,baidustatic.com",REJECT
 direct,"DOMAIN-SUFFIX,baifendian.com",DIRECT,"DOMAIN-SUFFIX,baifendian.com",REJECT
 direct,"DOMAIN-SUFFIX,baixing.com",DIRECT,"DOMAIN-SUFFIX,baixing.com",REJECT
+direct,"DOMAIN-SUFFIX,bakbitionb.com",DIRECT,"DOMAIN-SUFFIX,bakbitionb.com",REJECT
 direct,"DOMAIN-SUFFIX,bartender.cc",DIRECT,"DOMAIN-SUFFIX,bartender.cc",REJECT
+direct,"DOMAIN-SUFFIX,bayescom.com",DIRECT,"DOMAIN-SUFFIX,bayescom.com",REJECT
 direct,"DOMAIN-SUFFIX,beizi.biz",DIRECT,"DOMAIN-SUFFIX,beizi.biz",REJECT
 direct,"DOMAIN-SUFFIX,bengbeng.com",DIRECT,"DOMAIN-SUFFIX,bengbeng.com",REJECT
 direct,"DOMAIN-SUFFIX,betterzipcn.com",DIRECT,"DOMAIN-SUFFIX,betterzipcn.com",REJECT
@@ -497,6 +507,7 @@ direct,"DOMAIN-SUFFIX,easou.com",DIRECT,"DOMAIN-SUFFIX,easou.com",REJECT
 direct,"DOMAIN-SUFFIX,easyliao.com",DIRECT,"DOMAIN-SUFFIX,easyliao.com",REJECT
 direct,"DOMAIN-SUFFIX,easyrecoverychina.com",DIRECT,"DOMAIN-SUFFIX,easyrecoverychina.com",REJECT
 direct,"DOMAIN-SUFFIX,easytomessage.com",DIRECT,"DOMAIN-SUFFIX,easytomessage.com",REJECT
+direct,"DOMAIN-SUFFIX,edgeone.app",DIRECT,"DOMAIN-SUFFIX,edgeone.app",REJECT
 direct,"DOMAIN-SUFFIX,effirst.com",DIRECT,"DOMAIN-SUFFIX,effirst.com",REJECT
 direct,"DOMAIN-SUFFIX,efusc.com",DIRECT,"DOMAIN-SUFFIX,efusc.com",REJECT
 direct,"DOMAIN-SUFFIX,evyy.net",DIRECT,"DOMAIN-SUFFIX,evyy.net",REJECT
@@ -582,6 +593,7 @@ direct,"DOMAIN-SUFFIX,jesgoo.com",DIRECT,"DOMAIN-SUFFIX,jesgoo.com",REJECT
 direct,"DOMAIN-SUFFIX,jiankongbao.com",DIRECT,"DOMAIN-SUFFIX,jiankongbao.com",REJECT
 direct,"DOMAIN-SUFFIX,jiaopei.com",DIRECT,"DOMAIN-SUFFIX,jiaopei.com",REJECT
 direct,"DOMAIN-SUFFIX,jiedaibao.com",DIRECT,"DOMAIN-SUFFIX,jiedaibao.com",REJECT
+direct,"DOMAIN-SUFFIX,jm3uvitq0.com",DIRECT,"DOMAIN-SUFFIX,jm3uvitq0.com",REJECT
 direct,"DOMAIN-SUFFIX,jmlk.co",DIRECT,"DOMAIN-SUFFIX,jmlk.co",REJECT
 direct,"DOMAIN-SUFFIX,joi09110pt.com",DIRECT,"DOMAIN-SUFFIX,joi09110pt.com",REJECT
 direct,"DOMAIN-SUFFIX,jollyspring.com",DIRECT,"DOMAIN-SUFFIX,jollyspring.com",REJECT
@@ -674,6 +686,7 @@ direct,"DOMAIN-SUFFIX,onezapp.com",DIRECT,"DOMAIN-SUFFIX,onezapp.com",REJECT
 direct,"DOMAIN-SUFFIX,ooniu.com",DIRECT,"DOMAIN-SUFFIX,ooniu.com",REJECT
 direct,"DOMAIN-SUFFIX,openinstall.io",DIRECT,"DOMAIN-SUFFIX,openinstall.io",REJECT
 direct,"DOMAIN-SUFFIX,optimix.asia",DIRECT,"DOMAIN-SUFFIX,optimix.asia",REJECT
+direct,"DOMAIN-SUFFIX,oshoplive.com",DIRECT,"DOMAIN-SUFFIX,oshoplive.com",REJECT
 direct,"DOMAIN-SUFFIX,ouyaoxiazai.com",DIRECT,"DOMAIN-SUFFIX,ouyaoxiazai.com",REJECT
 direct,"DOMAIN-SUFFIX,oyz61nhz8.com",DIRECT,"DOMAIN-SUFFIX,oyz61nhz8.com",REJECT
 direct,"DOMAIN-SUFFIX,p2cdn.com",DIRECT,"DOMAIN-SUFFIX,p2cdn.com",REJECT
@@ -721,6 +734,7 @@ direct,"DOMAIN-SUFFIX,shuiguo.com",DIRECT,"DOMAIN-SUFFIX,shuiguo.com",REJECT
 direct,"DOMAIN-SUFFIX,shujupie.com",DIRECT,"DOMAIN-SUFFIX,shujupie.com",REJECT
 direct,"DOMAIN-SUFFIX,shuqistat.com",DIRECT,"DOMAIN-SUFFIX,shuqistat.com",REJECT
 direct,"DOMAIN-SUFFIX,sigmob.com",DIRECT,"DOMAIN-SUFFIX,sigmob.com",REJECT
+direct,"DOMAIN-SUFFIX,simicloud.com",DIRECT,"DOMAIN-SUFFIX,simicloud.com",REJECT
 direct,"DOMAIN-SUFFIX,sinawap.com",DIRECT,"DOMAIN-SUFFIX,sinawap.com",REJECT
 direct,"DOMAIN-SUFFIX,sirweara.com",DIRECT,"DOMAIN-SUFFIX,sirweara.com",REJECT
 direct,"DOMAIN-SUFFIX,smucdn.com",DIRECT,"DOMAIN-SUFFIX,smucdn.com",REJECT
@@ -759,6 +773,7 @@ direct,"DOMAIN-SUFFIX,tjfytech.com",DIRECT,"DOMAIN-SUFFIX,tjfytech.com",REJECT
 direct,"DOMAIN-SUFFIX,tjsptech.com",DIRECT,"DOMAIN-SUFFIX,tjsptech.com",REJECT
 direct,"DOMAIN-SUFFIX,tk.anythinktech.com",DIRECT,"DOMAIN-SUFFIX,anythinktech.com",REJECT
 direct,"DOMAIN-SUFFIX,tobsnssdk.com",DIRECT,"DOMAIN-SUFFIX,tobsnssdk.com",REJECT
+direct,"DOMAIN-SUFFIX,tongdun.net",DIRECT,"DOMAIN-SUFFIX,tongdun.net",REJECT
 direct,"DOMAIN-SUFFIX,touch-moblie.com",DIRECT,"DOMAIN-SUFFIX,touch-moblie.com",REJECT
 direct,"DOMAIN-SUFFIX,touclick.com",DIRECT,"DOMAIN-SUFFIX,touclick.com",REJECT
 direct,"DOMAIN-SUFFIX,toushibao.com",DIRECT,"DOMAIN-SUFFIX,toushibao.com",REJECT
@@ -779,6 +794,7 @@ direct,"DOMAIN-SUFFIX,ujian.cc",DIRECT,"DOMAIN-SUFFIX,ujian.cc",REJECT
 direct,"DOMAIN-SUFFIX,ultrapay.net",DIRECT,"DOMAIN-SUFFIX,ultrapay.net",REJECT
 direct,"DOMAIN-SUFFIX,umeng.com",DIRECT,"DOMAIN-SUFFIX,umeng.com",REJECT
 direct,"DOMAIN-SUFFIX,umengcloud.com",DIRECT,"DOMAIN-SUFFIX,umengcloud.com",REJECT
+direct,"DOMAIN-SUFFIX,umiwi.com",DIRECT,"DOMAIN-SUFFIX,umiwi.com",REJECT
 direct,"DOMAIN-SUFFIX,umsns.com",DIRECT,"DOMAIN-SUFFIX,umsns.com",REJECT
 direct,"DOMAIN-SUFFIX,umtrack.com",DIRECT,"DOMAIN-SUFFIX,umtrack.com",REJECT
 direct,"DOMAIN-SUFFIX,unionli.com",DIRECT,"DOMAIN-SUFFIX,unionli.com",REJECT
@@ -786,6 +802,7 @@ direct,"DOMAIN-SUFFIX,unionsy.com",DIRECT,"DOMAIN-SUFFIX,unionsy.com",REJECT
 direct,"DOMAIN-SUFFIX,ups.ksmobile.net",DIRECT,"DOMAIN-SUFFIX,ups.ksmobile.net",REJECT
 direct,"DOMAIN-SUFFIX,uqz.com",DIRECT,"DOMAIN-SUFFIX,uqz.com",REJECT
 direct,"DOMAIN-SUFFIX,uri6.com",DIRECT,"DOMAIN-SUFFIX,uri6.com",REJECT
+direct,"DOMAIN-SUFFIX,ushaqi.com",DIRECT,"DOMAIN-SUFFIX,ushaqi.com",REJECT
 direct,"DOMAIN-SUFFIX,uulucky.com",DIRECT,"DOMAIN-SUFFIX,uulucky.com",REJECT
 direct,"DOMAIN-SUFFIX,uusee.com",DIRECT,"DOMAIN-SUFFIX,uusee.com",REJECT
 direct,"DOMAIN-SUFFIX,uyunad.com",DIRECT,"DOMAIN-SUFFIX,uyunad.com",REJECT
@@ -857,6 +874,7 @@ direct,"DOMAIN-SUFFIX,youxiaoad.com",DIRECT,"DOMAIN-SUFFIX,youxiaoad.com",REJECT
 direct,"DOMAIN-SUFFIX,yoyi.tv",DIRECT,"DOMAIN-SUFFIX,yoyi.tv",REJECT
 direct,"DOMAIN-SUFFIX,ys630.com",DIRECT,"DOMAIN-SUFFIX,ys630.com",REJECT
 direct,"DOMAIN-SUFFIX,ysjwj.com",DIRECT,"DOMAIN-SUFFIX,ysjwj.com",REJECT
+direct,"DOMAIN-SUFFIX,yumimobi.com",DIRECT,"DOMAIN-SUFFIX,yumimobi.com",REJECT
 direct,"DOMAIN-SUFFIX,yunqishi8.com",DIRECT,"DOMAIN-SUFFIX,yunqishi8.com",REJECT
 direct,"DOMAIN-SUFFIX,yunshipei.com",DIRECT,"DOMAIN-SUFFIX,yunshipei.com",REJECT
 direct,"DOMAIN-SUFFIX,yunxish.com",DIRECT,"DOMAIN-SUFFIX,yunxish.com",REJECT
