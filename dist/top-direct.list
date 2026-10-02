@@ -655,6 +655,7 @@ DOMAIN-SUFFIX,xboxstudios.com
 DOMAIN-SUFFIX,xbx.lv
 DOMAIN-SUFFIX,yammer.com
 DOMAIN-SUFFIX,yammerusercontent.com
+DOMAIN-KEYWORD,microsoft
 IP-CIDR,0.0.0.0/8,no-resolve
 IP-CIDR,10.0.0.0/8,no-resolve
 IP-CIDR,127.0.0.0/8,no-resolve

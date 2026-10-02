@@ -36,12 +36,14 @@ sources:
     section: top-proxy
     parser: classical_payload
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.yaml
+    max_rules: 54
     min_rules: 10
 
   - name: bm7_microsoft
     section: top-direct
     parser: classical_payload
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml
+    max_rules: 2010
     min_rules: 500
 
   - name: private_ranges
@@ -63,106 +65,154 @@ sources:
     section: apple-proxy
     parser: classical_payload
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleTV/AppleTV.yaml
+    min_rules: 4
+    max_rules: 24
 
   - name: bm7_appleproxy
     section: apple-proxy
     parser: classical_payload
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleProxy/AppleProxy.yaml
+    min_rules: 24
+    max_rules: 120
 
   - name: bm7_applemedia
     section: apple-proxy
     parser: classical_payload
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleMedia/AppleMedia.yaml
+    min_rules: 31
+    max_rules: 156
 
   - name: bm7_appstore
     section: apple-direct
     parser: classical_payload
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppStore/AppStore.yaml
+    min_rules: 1
+    max_rules: 20
 
   - name: bm7_testflight
     section: apple-direct
     parser: classical_payload
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TestFlight/TestFlight.yaml
+    min_rules: 1
+    max_rules: 20
 
   - name: bm7_systemota
     section: apple-direct
     parser: classical_payload
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SystemOTA/SystemOTA.yaml
+    min_rules: 46
+    max_rules: 234
 
   - name: bm7_apple
     section: apple-direct
     parser: classical_payload
-    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Classical.yaml
+    min_rules: 955
+    max_rules: 4779
+    required_types: [DOMAIN-SUFFIX]
+    required_rules: ["DOMAIN-SUFFIX,apple.com"]
 
   - name: bm7_icloud
     section: apple-direct
     parser: classical_payload
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/iCloud/iCloud.yaml
+    min_rules: 36
+    max_rules: 183
 
   - name: loyal_apple
     section: apple-direct
     parser: domain_payload
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/apple.txt
+    min_rules: 99
+    max_rules: 495
+    required_types: [DOMAIN-SUFFIX]
 
   - name: loyal_private
     section: direct
     parser: domain_payload
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt
+    min_rules: 78
+    max_rules: 390
+    required_types: [DOMAIN-SUFFIX]
 
   - name: loyal_direct
     section: direct
     parser: domain_payload
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
+    max_rules: 334059
+    required_types: [DOMAIN-SUFFIX]
     min_rules: 80000
 
   - name: loyal_applications
     section: direct
     parser: classical_payload
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt
+    min_rules: 58
+    max_rules: 294
 
   - name: loyal_lancidr
     section: direct
     parser: cidr_payload
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt
+    min_rules: 10
+    max_rules: 54
+    required_types: [IP-CIDR]
 
   - name: loyal_cncidr
     section: direct
     parser: cidr_payload
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt
+    max_rules: 28944
+    required_types: [IP-CIDR]
     min_rules: 4000
 
   - name: bm7_telegram
     section: proxy
     parser: classical_payload
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml
+    min_rules: 27
+    max_rules: 138
 
   - name: loyal_telegramcidr
     section: proxy
     parser: cidr_payload
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt
+    min_rules: 7
+    max_rules: 36
+    required_types: [IP-CIDR]
 
   - name: bm7_openai
     section: proxy
     parser: classical_payload
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml
+    min_rules: 21
+    max_rules: 105
 
   - name: bm7_google
     section: proxy
     parser: classical_payload
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml
+    min_rules: 420
+    max_rules: 2103
 
   - name: bm7_youtube
     section: proxy
     parser: classical_payload
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml
+    min_rules: 109
+    max_rules: 549
 
   - name: bm7_github
     section: proxy
     parser: classical_payload
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml
+    min_rules: 18
+    max_rules: 93
 
   - name: loyal_proxy
     section: proxy
     parser: domain_payload
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt
+    max_rules: 81327
+    required_types: [DOMAIN-SUFFIX]
     min_rules: 20000

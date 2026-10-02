@@ -6,7 +6,7 @@ on:
   pull_request:
   workflow_dispatch:
   schedule:
-    - cron: "23 20 * * *"
+    - cron: "23 4,12,20 * * *"
 
 permissions:
   contents: write
@@ -38,6 +38,13 @@ jobs:
       - name: Run tests
         run: python -m unittest discover -v
 
+      - name: Restore validated source snapshots
+        uses: actions/cache@caa296126883cff596d87d8935842f9db880ef25 # v5
+        with:
+          path: .cache/sources
+          key: sources-v2-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: sources-v2-
+
       - name: Build rule providers
         run: python -m routing_merge.builder
 
@@ -57,12 +64,21 @@ jobs:
           ./mihomo convert-ruleset ipcidr text dist/direct-cidr.list dist/direct-cidr.mrs
           ./mihomo convert-ruleset ipcidr text dist/proxy-cidr.list dist/proxy-cidr.mrs
 
+          ./mihomo convert-ruleset domain text dist/apple-direct-domains.list dist/apple-direct-domains.mrs
+          ./mihomo convert-ruleset ipcidr text dist/apple-direct-cidr.list dist/apple-direct-cidr.mrs
+
+      - name: Report adblock overlap
+        run: python -m routing_merge.overlap
+
+      - name: Validate consumer limits and Mihomo; write verified manifest
+        run: python -m routing_merge.publish --core ./mihomo
+
       - name: Commit generated rules
         if: github.event_name != 'pull_request'
         run: |
           git config user.name "kamisu"
           git config user.email "152141084+paulgeorge66@users.noreply.github.com"
-          git add dist/*.list dist/*.yaml dist/*.mrs dist/build-report.json
+          git add dist/
           if git diff --cached --quiet; then
             echo "No generated rule changes."
           else

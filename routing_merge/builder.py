@@ -3,13 +3,9 @@ from __future__ import annotations
 import argparse
 import json
 import math
-import os
-import re
-import shutil
-import subprocess
 import sys
-import time
-import urllib.request
+from concurrent.futures import ThreadPoolExecutor
+from .source_io import SourceFetcher, normalize_domain, normalize_cidr, payload_items, previous_counts, validate_rules
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
@@ -22,9 +18,6 @@ DEFAULT_SOURCES = ROOT / "sources.yaml"
 DEFAULT_OUTPUT_DIR = ROOT / "dist"
 DEFAULT_REPORT = DEFAULT_OUTPUT_DIR / "build-report.json"
 DEFAULT_EXPANDED_RULES = DEFAULT_OUTPUT_DIR / "routing-expanded-rules.yaml"
-
-CIDR_V4_RE = re.compile(r"^\d+\.\d+\.\d+\.\d+/\d+$")
-CIDR_V6_RE = re.compile(r"^[0-9a-fA-F:]+/\d+$")
 
 TYPE_ORDER = {
     "DOMAIN": 1,
@@ -61,12 +54,8 @@ SECTION_ACTION = {
     "direct": "DIRECT",
 }
 
-# These two sections are large enough (tens to hundreds of thousands of rules)
-# that mihomo's linear "classical" rule-provider scan becomes a real per-connection
-# cost. Splitting them by rule type lets mihomo use its trie-based "domain" and
-# "ipcidr" rule-provider behaviors instead. The remaining sections stay well under
-# a thousand rules each, so a single classical file is not worth the extra files.
-SPLIT_BEHAVIOR_SECTIONS = {"direct", "proxy"}
+# Compile large general sections and the complete Apple domain collection to MRS.
+SPLIT_BEHAVIOR_SECTIONS = {"direct", "proxy", "apple-direct"}
 DOMAIN_TYPES = {"DOMAIN", "DOMAIN-SUFFIX"}
 CIDR_TYPES = {"IP-CIDR", "IP-CIDR6"}
 
@@ -87,43 +76,6 @@ class ParsedRule:
         return base
 
 
-def fetch_text(url: str, retries: int = 3) -> str:
-    last_error: Exception | None = None
-    for attempt in range(1, retries + 1):
-        try:
-            request = urllib.request.Request(
-                url,
-                headers={
-                    "User-Agent": "routing-rule-merge/0.1 (+https://github.com/paulgeorge66/routing-rule-merge)",
-                    "Connection": "close",
-                },
-            )
-            with urllib.request.urlopen(request, timeout=60) as response:
-                return response.read().decode("utf-8", errors="replace")
-        except Exception as exc:
-            last_error = exc
-            if attempt == retries:
-                break
-            time.sleep(attempt)
-    curl = shutil.which("curl") or shutil.which("curl.exe")
-    if curl:
-        try:
-            curl_command = [curl, "-L", "--fail", "--retry", "3", "--retry-delay", "2", url]
-            if os.name == "nt":
-                curl_command.insert(1, "--ssl-no-revoke")
-            result = subprocess.run(
-                curl_command,
-                check=True,
-                capture_output=True,
-                timeout=90,
-            )
-            return result.stdout.decode("utf-8", errors="replace")
-        except Exception as exc:
-            last_error = exc
-    assert last_error is not None
-    raise last_error
-
-
 def load_sources(path: Path) -> dict:
     data = yaml.safe_load(path.read_text(encoding="utf-8"))
     if not isinstance(data, dict) or not isinstance(data.get("sources"), list):
@@ -131,20 +83,6 @@ def load_sources(path: Path) -> dict:
     if not isinstance(data.get("source_order"), list):
         raise ValueError(f"{path} must contain source_order")
     return data
-
-
-def load_previous_source_counts(report_path: Path) -> dict[str, int]:
-    if not report_path.exists():
-        return {}
-    try:
-        report = json.loads(report_path.read_text(encoding="utf-8"))
-        return {
-            name: int(details["parsed_rules"])
-            for name, details in report.get("sources", {}).items()
-            if isinstance(details, dict) and isinstance(details.get("parsed_rules"), int)
-        }
-    except (OSError, ValueError, TypeError):
-        return {}
 
 
 def validate_source_count(source: dict, parsed_count: int, previous_count: int | None = None) -> None:
@@ -167,27 +105,7 @@ def validate_source_count(source: dict, parsed_count: int, previous_count: int |
 
 
 def extract_payload_lines(text: str) -> list[str]:
-    payload: list[str] = []
-    in_payload = False
-    for raw_line in text.splitlines():
-        stripped = raw_line.strip()
-        if not stripped:
-            continue
-        if not in_payload:
-            if stripped == "payload:":
-                in_payload = True
-                continue
-            payload.append(_unquote(stripped))
-            continue
-        if stripped.startswith("- "):
-            payload.append(_unquote(stripped[2:].strip()))
-    return payload
-
-
-def _unquote(item: str) -> str:
-    if (item.startswith("'") and item.endswith("'")) or (item.startswith('"') and item.endswith('"')):
-        return item[1:-1]
-    return item
+    return payload_items(text, "auto")
 
 
 def normalize_rule_line(item: str, source: str, section: str, source_index: int) -> ParsedRule | None:
@@ -195,46 +113,43 @@ def normalize_rule_line(item: str, source: str, section: str, source_index: int)
     if not item or item.startswith(("#", "!", "[")):
         return None
     if item.startswith("+."):
-        return ParsedRule("DOMAIN-SUFFIX", item[2:].strip(), source, section, source_index)
-    if CIDR_V4_RE.match(item):
-        return ParsedRule("IP-CIDR", item, source, section, source_index, True)
-    if CIDR_V6_RE.match(item):
-        return ParsedRule("IP-CIDR6", item, source, section, source_index, True)
-
-    parts = [part.strip() for part in item.split(",") if part.strip()]
-    if not parts:
-        return None
-    rule_type = parts[0].upper()
+        return ParsedRule("DOMAIN-SUFFIX", normalize_domain(item[2:]), source, section, source_index)
+    if "/" in item and "," not in item:
+        cidr = normalize_cidr(item)
+        return ParsedRule("IP-CIDR6" if ":" in cidr else "IP-CIDR", cidr, source, section, source_index, True)
+    parts = [part.strip() for part in item.split(",")]
     if len(parts) == 1:
-        return ParsedRule("DOMAIN-SUFFIX", parts[0], source, section, source_index)
-    value = parts[1]
-    no_resolve = any(part == "no-resolve" for part in parts[2:])
-    if rule_type in TYPE_ORDER:
-        if rule_type in {"IP-CIDR", "IP-CIDR6"}:
-            no_resolve = True if no_resolve or len(parts) == 2 else no_resolve
-        return ParsedRule(rule_type, value, source, section, source_index, no_resolve)
-    return None
+        return ParsedRule("DOMAIN-SUFFIX", normalize_domain(parts[0]), source, section, source_index)
+    rule_type, value = parts[:2]
+    rule_type = rule_type.upper()
+    if rule_type not in TYPE_ORDER or not value or any(p not in {"no-resolve"} for p in parts[2:]):
+        raise ValueError("unsupported or malformed classical rule")
+    if rule_type in DOMAIN_TYPES:
+        value = normalize_domain(value)
+    elif rule_type in CIDR_TYPES:
+        value = normalize_cidr(value, 4 if rule_type == "IP-CIDR" else 6)
+    elif rule_type == "IP-ASN":
+        if not value.isdigit() or not 0 < int(value) <= 4294967295:
+            raise ValueError("invalid ASN")
+    elif any(c in value for c in ("\r", "\n", ",", chr(34), chr(39))):
+        raise ValueError("invalid rule value")
+    elif rule_type == "DOMAIN-KEYWORD":
+        value = value.lower()
+    return ParsedRule(rule_type, value, source, section, source_index, rule_type in CIDR_TYPES)
 
 
-def parse_source(source: dict, source_index: int) -> list[ParsedRule]:
-    parser = source.get("parser")
-    section = source["section"]
-    name = source["name"]
-    if parser == "inline":
-        items = source.get("rules", [])
-    else:
-        try:
-            text = fetch_text(source["url"])
-        except Exception as exc:
-            raise RuntimeError(f"failed to fetch source {name}: {source['url']}") from exc
-        items = extract_payload_lines(text)
-
-    rules: list[ParsedRule] = []
-    for item in items:
-        rule = normalize_rule_line(str(item), name, section, source_index)
-        if rule is not None:
-            rules.append(rule)
-    return rules
+def parse_source(source: dict, source_index: int, fetcher=None, previous=None) -> tuple[list[ParsedRule], dict]:
+    def parse(text):
+        items = payload_items(text, source.get("parser", "auto"))
+        return [r for item in items if (r := normalize_rule_line(item, source["name"], source["section"], source_index)) is not None]
+    def validate(rules):
+        validate_rules(source, rules, previous)
+    if source.get("parser") == "inline":
+        rules = [normalize_rule_line(item, source["name"], source["section"], source_index) for item in source["rules"]]
+        validate(rules)
+        return rules, {"fetch_status": "inline"}
+    fetcher = fetcher or SourceFetcher(ROOT / ".cache" / "sources")
+    return fetcher.load(source, parse, validate)
 
 
 def better_rule(candidate: ParsedRule, current: ParsedRule) -> bool:
@@ -248,25 +163,13 @@ def better_rule(candidate: ParsedRule, current: ParsedRule) -> bool:
 def dedupe_rules(rules: Iterable[ParsedRule]) -> list[ParsedRule]:
     by_exact: dict[tuple[str, str], ParsedRule] = {}
     for rule in rules:
-        key = (rule.rule_type, rule.value.lower())
+        key = (rule.rule_type, rule.value if rule.rule_type == "PROCESS-NAME" else rule.value.lower())
         current = by_exact.get(key)
         if current is None or better_rule(rule, current):
             by_exact[key] = rule
 
-    by_value: dict[str, ParsedRule] = {}
-    for rule in by_exact.values():
-        key = rule.value.lower()
-        current = by_value.get(key)
-        if current is None or better_rule(rule, current):
-            by_value[key] = rule
-
-    return sorted(
-        by_value.values(),
-        key=lambda rule: (
-            TYPE_ORDER.get(rule.rule_type, 99),
-            rule.value.lower(),
-        ),
-    )
+    # Different rule types have different match semantics; never merge by value alone.
+    return sorted(by_exact.values(), key=lambda rule: (TYPE_ORDER.get(rule.rule_type, 99), rule.value.lower(), rule.value))
 
 
 def prune_shadowed_rules_with_stats(
@@ -276,7 +179,7 @@ def prune_shadowed_rules_with_stats(
     baseline = list(baseline_rules or [])
     current = list(rules)
     reference = current + baseline
-    baseline_exact = {(rule.rule_type, rule.value.lower()): rule for rule in baseline}
+    baseline_exact = {(rule.rule_type, rule.value if rule.rule_type == "PROCESS-NAME" else rule.value.lower()): rule for rule in baseline}
     suffix_rules = {
         rule.value.lower(): rule
         for rule in reversed(reference)
@@ -286,7 +189,7 @@ def prune_shadowed_rules_with_stats(
     stats = {"same_action": 0, "opposite_action": 0}
 
     for rule in current:
-        value = rule.value.lower()
+        value = rule.value if rule.rule_type == "PROCESS-NAME" else rule.value.lower()
         shadower = baseline_exact.get((rule.rule_type, value))
         if shadower is None and rule.rule_type == "DOMAIN":
             labels = value.split(".")
@@ -320,22 +223,23 @@ def prune_shadowed_rules(rules: Iterable[ParsedRule], baseline_rules: Iterable[P
 def build_sections(
     config: dict,
     previous_source_counts: dict[str, int] | None = None,
+    cache_dir: Path | None = None,
 ) -> tuple[dict[str, list[ParsedRule]], dict]:
     section_order = config["source_order"]
     by_section: dict[str, list[ParsedRule]] = {section: [] for section in section_order}
     source_report: dict[str, dict] = {}
     previous_source_counts = previous_source_counts or {}
 
-    for index, source in enumerate(config["sources"], start=1):
-        parsed = parse_source(source, index)
-        validate_source_count(source, len(parsed), previous_source_counts.get(source["name"]))
+    fetcher = SourceFetcher(cache_dir or ROOT / ".cache" / "sources")
+    def load(index_source):
+        index, source = index_source
+        return parse_source(source, index, fetcher, previous_source_counts.get(source["name"]))
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        results = list(pool.map(load, enumerate(config["sources"], start=1)))
+    # Merge in configured order, independent of download completion order.
+    for source, (parsed, metadata) in zip(config["sources"], results):
         by_section[source["section"]].extend(parsed)
-        source_report[source["name"]] = {
-            "section": source["section"],
-            "parser": source["parser"],
-            "url": source.get("url"),
-            "parsed_rules": len(parsed),
-        }
+        source_report[source["name"]] = {"section": source["section"], "parser": source["parser"], "url": source.get("url"), "parsed_rules": len(parsed), **metadata}
 
     rendered_sections: dict[str, list[ParsedRule]] = {}
     cumulative: list[ParsedRule] = []
@@ -449,6 +353,8 @@ def write_outputs(
             (output_dir / f"{section}.list").write_text(render_text(rules), encoding="utf-8", newline="\n")
             continue
 
+        if section == "apple-direct":
+            (output_dir / "apple-direct.list").write_text(render_text(rules), encoding="utf-8", newline="\n")
         domains, cidrs, misc = split_rules_by_behavior(rules)
         (output_dir / f"{section}-domains.list").write_text(
             render_domain_behavior_text(domains), encoding="utf-8", newline="\n"
@@ -468,6 +374,10 @@ def write_outputs(
         report["behavior_split"] = behavior_report
     expanded_rules_text = render_expanded_rules_yaml(sections)
     expanded_rules_path.write_text(expanded_rules_text, encoding="utf-8", newline="\n")
+    (output_dir / "routing-expanded-fragment.yaml").write_text(expanded_rules_text.removesuffix("  - MATCH,PROXY\n"), encoding="utf-8", newline="\n")
+    dns_rules = [rule for section in ("top-proxy", "apple-proxy", "proxy") for rule in sections.get(section, []) if rule.rule_type in DOMAIN_TYPES]
+    dns_lines = render_domain_behavior_text(prune_shadowed_rules(dedupe_rules(dns_rules))).splitlines()
+    (output_dir / "proxy-dns-domains.yaml").write_text("".join(f"      - {item}\n" for item in dns_lines), encoding="utf-8", newline="\n")
     report["expanded_rules"] = {
         "path": str(expanded_rules_path.relative_to(ROOT)),
         "rules": expanded_rules_text.count("\n"),
@@ -481,11 +391,12 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     parser.add_argument("--report", type=Path, default=DEFAULT_REPORT)
     parser.add_argument("--expanded-rules", type=Path, default=DEFAULT_EXPANDED_RULES)
+    parser.add_argument("--cache-dir", type=Path, default=ROOT / ".cache" / "sources")
     args = parser.parse_args(argv)
 
     config = load_sources(args.sources)
-    previous_source_counts = load_previous_source_counts(args.report)
-    sections, report = build_sections(config, previous_source_counts)
+    previous_source_counts = previous_counts(args.report, config["sources"])
+    sections, report = build_sections(config, previous_source_counts, args.cache_dir)
     write_outputs(sections, report, args.output_dir, args.report, args.expanded_rules)
     print(f"Wrote {args.output_dir}")
     print(f"Wrote {args.report}")

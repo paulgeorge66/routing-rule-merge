@@ -54,7 +54,9 @@ PROCESS-NAME,Surge 4
 PROCESS-NAME,Surge%202
 PROCESS-NAME,Surge%203
 PROCESS-NAME,Surge%204
+PROCESS-NAME,Tailscale
 PROCESS-NAME,tailscale
+PROCESS-NAME,Tailscale.exe
 PROCESS-NAME,tailscale.exe
 PROCESS-NAME,tailscaled
 PROCESS-NAME,tailscaled.exe

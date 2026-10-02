@@ -147447,4 +147447,3 @@
   - IP-CIDR6,2620:120:e000::/40,PROXY,no-resolve
   - IP-CIDR6,2a0a:f280::/29,PROXY,no-resolve
   - IP-CIDR6,2a0a:f280::/32,PROXY,no-resolve
-  - MATCH,PROXY

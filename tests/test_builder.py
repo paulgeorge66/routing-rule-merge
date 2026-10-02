@@ -26,7 +26,7 @@ class BuilderTests(unittest.TestCase):
     def test_dedupe_prefers_suffix_to_preserve_subdomain_coverage(self):
         suffix = ParsedRule("DOMAIN-SUFFIX", "example.com", "a", "direct", 1)
         exact = ParsedRule("DOMAIN", "example.com", "b", "direct", 2)
-        self.assertEqual(dedupe_rules([suffix, exact])[0].rule_type, "DOMAIN-SUFFIX")
+        self.assertEqual(prune_shadowed_rules(dedupe_rules([suffix, exact])), [suffix])
 
     def test_prune_removes_domain_shadowed_by_suffix_baseline(self):
         baseline = [ParsedRule("DOMAIN-SUFFIX", "example.com", "a", "top-proxy", 1)]
