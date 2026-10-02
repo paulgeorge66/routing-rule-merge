@@ -127864,6 +127864,7 @@
   - DOMAIN-SUFFIX,clau.de,PROXY
   - DOMAIN-SUFFIX,claude.ai,PROXY
   - DOMAIN-SUFFIX,claude.com,PROXY
+  - DOMAIN-SUFFIX,claude.dev,PROXY
   - DOMAIN-SUFFIX,claudemcpclient.com,PROXY
   - DOMAIN-SUFFIX,claudemcpcontent.com,PROXY
   - DOMAIN-SUFFIX,claudeusercontent.com,PROXY
