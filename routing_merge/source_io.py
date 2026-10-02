@@ -39,6 +39,14 @@ def normalize_cidr(value: str, version: int | None = None) -> str:
 
 
 def payload_items(text: str, parser: str) -> list[str]:
+    if parser in {'classical_text', 'cidr_text'}:
+        items = [line.strip() for line in text.splitlines() if line.strip() and not line.lstrip().startswith(('#', '!'))]
+        for item in items:
+            if parser == 'classical_text' and ',' not in item:
+                raise ValueError('classical text contains an untyped rule')
+            if parser == 'cidr_text':
+                normalize_cidr(item)
+        return items
     if parser == 'auto':
         if not re.search(r'^payload\s*:', text, re.M):
             return [line.strip() for line in text.splitlines() if line.strip()]

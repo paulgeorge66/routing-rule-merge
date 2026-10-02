@@ -3,9 +3,11 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import re
 import sys
 from concurrent.futures import ThreadPoolExecutor
 from .source_io import SourceFetcher, normalize_domain, normalize_cidr, payload_items, previous_counts, validate_rules
+from .cohorts import CohortFetcher, github_group
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
@@ -23,15 +25,17 @@ TYPE_ORDER = {
     "DOMAIN": 1,
     "DOMAIN-SUFFIX": 2,
     "DOMAIN-KEYWORD": 3,
-    "PROCESS-NAME": 4,
-    "IP-ASN": 5,
-    "IP-CIDR": 6,
-    "IP-CIDR6": 7,
+    "DOMAIN-REGEX": 4,
+    "PROCESS-NAME": 5,
+    "IP-ASN": 6,
+    "IP-CIDR": 7,
+    "IP-CIDR6": 8,
 }
 TYPE_PRIORITY = {
     "DOMAIN-SUFFIX": 7,
     "DOMAIN": 6,
     "DOMAIN-KEYWORD": 5,
+    "DOMAIN-REGEX": 5,
     "PROCESS-NAME": 4,
     "IP-ASN": 3,
     "IP-CIDR": 2,
@@ -119,7 +123,7 @@ def normalize_rule_line(item: str, source: str, section: str, source_index: int)
         return ParsedRule("IP-CIDR6" if ":" in cidr else "IP-CIDR", cidr, source, section, source_index, True)
     parts = [part.strip() for part in item.split(",")]
     if len(parts) == 1:
-        return ParsedRule("DOMAIN-SUFFIX", normalize_domain(parts[0]), source, section, source_index)
+        return ParsedRule("DOMAIN", normalize_domain(parts[0]), source, section, source_index)
     rule_type, value = parts[:2]
     rule_type = rule_type.upper()
     if rule_type not in TYPE_ORDER or not value or any(p not in {"no-resolve"} for p in parts[2:]):
@@ -135,13 +139,19 @@ def normalize_rule_line(item: str, source: str, section: str, source_index: int)
         raise ValueError("invalid rule value")
     elif rule_type == "DOMAIN-KEYWORD":
         value = value.lower()
+    elif rule_type == "DOMAIN-REGEX":
+        re.compile(value)
     return ParsedRule(rule_type, value, source, section, source_index, rule_type in CIDR_TYPES)
+
+
+def parse_source_text(source: dict, source_index: int, text: str) -> list[ParsedRule]:
+    items = payload_items(text, source.get("parser", "auto"))
+    return [r for item in items if (r := normalize_rule_line(item, source["name"], source["section"], source_index)) is not None]
 
 
 def parse_source(source: dict, source_index: int, fetcher=None, previous=None) -> tuple[list[ParsedRule], dict]:
     def parse(text):
-        items = payload_items(text, source.get("parser", "auto"))
-        return [r for item in items if (r := normalize_rule_line(item, source["name"], source["section"], source_index)) is not None]
+        return parse_source_text(source, source_index, text)
     def validate(rules):
         validate_rules(source, rules, previous)
     if source.get("parser") == "inline":
@@ -163,7 +173,7 @@ def better_rule(candidate: ParsedRule, current: ParsedRule) -> bool:
 def dedupe_rules(rules: Iterable[ParsedRule]) -> list[ParsedRule]:
     by_exact: dict[tuple[str, str], ParsedRule] = {}
     for rule in rules:
-        key = (rule.rule_type, rule.value if rule.rule_type == "PROCESS-NAME" else rule.value.lower())
+        key = (rule.rule_type, rule.value if rule.rule_type in {"PROCESS-NAME", "DOMAIN-REGEX"} else rule.value.lower())
         current = by_exact.get(key)
         if current is None or better_rule(rule, current):
             by_exact[key] = rule
@@ -179,7 +189,7 @@ def prune_shadowed_rules_with_stats(
     baseline = list(baseline_rules or [])
     current = list(rules)
     reference = current + baseline
-    baseline_exact = {(rule.rule_type, rule.value if rule.rule_type == "PROCESS-NAME" else rule.value.lower()): rule for rule in baseline}
+    baseline_exact = {(rule.rule_type, rule.value if rule.rule_type in {"PROCESS-NAME", "DOMAIN-REGEX"} else rule.value.lower()): rule for rule in baseline}
     suffix_rules = {
         rule.value.lower(): rule
         for rule in reversed(reference)
@@ -189,7 +199,7 @@ def prune_shadowed_rules_with_stats(
     stats = {"same_action": 0, "opposite_action": 0}
 
     for rule in current:
-        value = rule.value if rule.rule_type == "PROCESS-NAME" else rule.value.lower()
+        value = rule.value if rule.rule_type in {"PROCESS-NAME", "DOMAIN-REGEX"} else rule.value.lower()
         shadower = baseline_exact.get((rule.rule_type, value))
         if shadower is None and rule.rule_type == "DOMAIN":
             labels = value.split(".")
@@ -230,16 +240,34 @@ def build_sections(
     source_report: dict[str, dict] = {}
     previous_source_counts = previous_source_counts or {}
 
-    fetcher = SourceFetcher(cache_dir or ROOT / ".cache" / "sources")
+    cache_dir = cache_dir or ROOT / ".cache" / "sources"
+    fetcher = SourceFetcher(cache_dir)
     def load(index_source):
         index, source = index_source
         return parse_source(source, index, fetcher, previous_source_counts.get(source["name"]))
+    indexed = list(enumerate(config['sources'], start=1))
+    groups, results_by_index = {}, {}
+    singles = []
+    for index, source in indexed:
+        group = github_group(source.get('url', '')) if config.get('pin_github_revisions') else None
+        if group:
+            groups.setdefault(group, []).append((index,source))
+        else:
+            singles.append((index,source))
+    # Cohorts run sequentially, with at most four downloads inside each cohort.
+    cohort_fetcher = CohortFetcher(cache_dir / 'cohorts')
+    for entries in groups.values():
+        values = cohort_fetcher.load(entries, parse_source_text, lambda source,rules:validate_rules(source,rules,previous_source_counts.get(source['name'])))
+        results_by_index.update({index:value for (index,_),value in zip(entries,values)})
     with ThreadPoolExecutor(max_workers=4) as pool:
-        results = list(pool.map(load, enumerate(config["sources"], start=1)))
+        results_by_index.update({index:value for (index,_),value in zip(singles,pool.map(load,singles))})
+    results = [results_by_index[index] for index,_ in indexed]
     # Merge in configured order, independent of download completion order.
     for source, (parsed, metadata) in zip(config["sources"], results):
-        by_section[source["section"]].extend(parsed)
-        source_report[source["name"]] = {"section": source["section"], "parser": source["parser"], "url": source.get("url"), "parsed_rules": len(parsed), **metadata}
+        excluded_types = set(source.get('exclude_types', []))
+        kept = [rule for rule in parsed if rule.rule_type not in excluded_types]
+        by_section[source["section"]].extend(kept)
+        source_report[source["name"]] = {"section": source["section"], "parser": source["parser"], "url": source.get("url"), "parsed_rules": len(parsed), 'included_rules':len(kept), 'excluded_rules':len(parsed)-len(kept), **metadata}
 
     rendered_sections: dict[str, list[ParsedRule]] = {}
     cumulative: list[ParsedRule] = []
@@ -261,7 +289,24 @@ def build_sections(
         "sections": section_report,
         "total_rules": sum(len(rules) for rules in rendered_sections.values()),
     }
+    report['behavior_checks'] = validate_behavior_checks(config,rendered_sections)
     return rendered_sections, report
+
+
+def validate_behavior_checks(config: dict, sections: dict) -> list[dict]:
+    checks=[]
+    for check in config.get('behavior_checks', []):
+        host = normalize_domain(check['domain'])
+        winner = next((rule for section in config['source_order'] for rule in sections[section] if
+            (rule.rule_type=='DOMAIN' and host==rule.value) or
+            (rule.rule_type=='DOMAIN-SUFFIX' and (host==rule.value or host.endswith('.'+rule.value))) or
+            (rule.rule_type=='DOMAIN-KEYWORD' and rule.value in host) or
+            (rule.rule_type=='DOMAIN-REGEX' and re.search(rule.value,host))),None)
+        action = SECTION_ACTION[winner.section] if winner else 'PROXY'
+        if action != check['action']:
+            raise RuntimeError(f"behavior check {host}: expected {check['action']}, got {action}")
+        checks.append({**check,'status':'passed','matched_rule':winner.render() if winner else 'MATCH,PROXY'})
+    return checks
 
 
 def render_text(rules: Iterable[ParsedRule]) -> str:

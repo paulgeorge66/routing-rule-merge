@@ -8,7 +8,15 @@
 
 Apple 使用 BlackMatrix7 `Apple_Classical.yaml` 完整源。上游普通 `Apple.yaml` 与 `Apple_Domain.yaml` 是有意拆分，单独普通文件不是完整域名集合。AppleTV/AppleProxy/AppleMedia 的代理规则仍先于 Apple 直连规则；不另加手写 Apple 覆盖。
 
+已移除被完整 Apple 源覆盖的 AppStore、TestFlight、SystemOTA、iCloud 与 Loyalsoldier Apple 下载来源。YouTube 与 GitHub 的域名已被总集覆盖，仅有贡献的关键词显式保存在本地规则中。远程来源共 17 个。
+
+OpenAI 和 GitHub Copilot 使用 MetaCubeX 的完整 Classical 服务规则，微软 Copilot 的专用域名同样位于 `top-proxy`，先于 Microsoft 总集。保留 OpenAI 动态 WebPubSub 的正则匹配，避免 Azure 资源被厂商总集提前直连；其他微软服务与国内 AI 的原有策略继续生效。
+
+Telegram 的 IP 使用官方 CIDR；BlackMatrix7 Telegram 仅提供域名、关键词与进程规则，过滤其 IP/ASN 部分。当前输出无 IP-ASN，不依赖 ASN 数据库。applications 仍采用现有进程直连策略，涵盖代理软件防环路和下载客户端；需要修改下载器策略时，可调整该来源。
+
 不同类型的同名规则分别保留，例如 `DOMAIN-KEYWORD,onedrive` 与 `PROCESS-NAME,OneDrive`。仅删除相同类型、值的重复项，以及被前置规则或同动作父域后缀完整覆盖的规则。
+
+domain payload 的普通域名保留为 DOMAIN 精确匹配，`+.` 才转为 DOMAIN-SUFFIX。正则表达式的大小写和转义保持原样，不与不同语义的表达式合并。
 
 ## 公开输出
 
@@ -67,7 +75,9 @@ GitHub Actions 在 push、PR、手动触发和每天三次（间隔八小时）�
 
 - 按声明的 domain/classical/ipcidr payload 格式解析，检查域名、CIDR 地址族、最低/最高条目数、异常跌幅和增长、关键类型。
 - 最多四个源并行下载，按配置顺序合并，避免网络完成顺序影响优先级。
+- 同一个 GitHub 仓库及分支先解析一个 SHA，再从该固定版本下载全部文件。整组格式、数量和关键规则通过后才替换快照；任何文件失败时整组回退到 24 小时内的已验证版本，避免新旧文件混用。SHA 未变化时复用校验过的文件。版本和正文哈希写入构建报告。
 - 使用 ETag/Last-Modified 条件请求；只有成功解析、校验的快照才写入 `.cache/sources`。上游异常时最多使用 24 小时内的同 URL 已验证快照，报告标记 `stale`；没有合格快照就停止发布。
+- 发布前执行来源配置中的 21 个域名去向检查，覆盖 OpenAI Azure 资源、Copilot、动态 WebPubSub、国内 AI、Microsoft、Apple 和精确域名的子域行为。策略回归会停止发布。
 - 发布前检查每个文件的消费者大小上限、LF、重复条目、展开片段和最终 MATCH；对 MRS 做反向转换并核对匹配范围，再运行 Mihomo 配置检查。
 - Mihomo 固定 v1.19.29，下载校验 SHA-256。所有检查成功后才写 `manifest.json` 并提交整套产物。manifest 记录文件字节数、SHA-256、条目数和是否降级。
 

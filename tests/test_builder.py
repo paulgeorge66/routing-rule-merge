@@ -11,10 +11,37 @@ from routing_merge.builder import (
     render_text,
     split_rules_by_behavior,
     validate_source_count,
+    parse_source_text,
+    validate_behavior_checks,
 )
 
 
 class BuilderTests(unittest.TestCase):
+    def test_domain_payload_preserves_exact_and_suffix_scope(self):
+        source={'name':'fixture','section':'direct','parser':'domain_payload'}
+        rules=parse_source_text(source,1,"payload:\n  - exact.example.test\n  - '+.suffix.example.test'\n")
+        self.assertEqual([r.render() for r in rules],['DOMAIN,exact.example.test','DOMAIN-SUFFIX,suffix.example.test'])
+        config={'source_order':['direct','proxy'],'behavior_checks':[
+            {'domain':'exact.example.test','action':'DIRECT'},
+            {'domain':'child.exact.example.test','action':'PROXY'},
+            {'domain':'child.suffix.example.test','action':'DIRECT'}]}
+        self.assertEqual(len(validate_behavior_checks(config,{'direct':rules,'proxy':[]})),3)
+
+    def test_ai_service_exception_precedes_vendor_and_checks_fail_on_regression(self):
+        source={'name':'fixture','section':'top-proxy','parser':'classical_text'}
+        rules=parse_source_text(source,1,'DOMAIN,assets.blob.core.windows.net\nDOMAIN-REGEX,^service-\\S+\\.azure\\.com$\n')
+        vendor=[ParsedRule('DOMAIN-SUFFIX','windows.net','vendor','top-direct',2),ParsedRule('DOMAIN-SUFFIX','azure.com','vendor','top-direct',2)]
+        config={'source_order':['top-proxy','top-direct'],'behavior_checks':[
+            {'domain':'assets.blob.core.windows.net','action':'PROXY'},
+            {'domain':'service-live.azure.com','action':'PROXY'},
+            {'domain':'other.azure.com','action':'DIRECT'}]}
+        self.assertEqual(len(validate_behavior_checks(config,{'top-proxy':rules,'top-direct':vendor})),3)
+        with self.assertRaisesRegex(RuntimeError,'expected PROXY'):
+            validate_behavior_checks(config,{'top-proxy':[],'top-direct':vendor})
+
+    def test_regex_case_and_escape_semantics_are_not_merged(self):
+        rules=[normalize_rule_line('DOMAIN-REGEX,'+v,'a','proxy',1) for v in [r'^host-\S+$',r'^host-\s+$']]
+        self.assertEqual(len(prune_shadowed_rules(dedupe_rules(rules))),2)
     def test_normalize_cidr_adds_no_resolve(self):
         rule = normalize_rule_line("1.2.3.0/24", "test", "proxy", 1)
         self.assertEqual(rule, ParsedRule("IP-CIDR", "1.2.3.0/24", "test", "proxy", 1, True))

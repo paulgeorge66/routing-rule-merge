@@ -9,6 +9,10 @@ from routing_merge.source_io import SourceFetcher, payload_items, normalize_cidr
 from routing_merge.builder import normalize_rule_line, ParsedRule
 
 class SourceValidationTests(unittest.TestCase):
+    def test_plain_text_contracts_reject_html_and_wrong_behavior(self):
+        self.assertEqual(payload_items('# Official\n91.108.4.0/22\n2001:b28:f23d::/48\n','cidr_text'),['91.108.4.0/22','2001:b28:f23d::/48'])
+        for text,parser in [('<html>error</html>','cidr_text'),('DOMAIN,a.test\n','cidr_text'),('a.test\n','classical_text')]:
+            with self.assertRaises(ValueError):payload_items(text,parser)
     def test_html_and_behavior_mismatch_fail(self):
         for text, parser in [("<html>error</html>", "domain_payload"), ("payload:\n  - DOMAIN,a.test\n", "domain_payload"), ("payload:\n  - a.test\n", "classical_payload")]:
             with self.subTest(parser=parser), self.assertRaises(ValueError):
