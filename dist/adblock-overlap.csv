@@ -336,6 +336,7 @@ direct,"DOMAIN-SUFFIX,39jz.com",DIRECT,"DOMAIN-SUFFIX,39jz.com",REJECT
 direct,"DOMAIN-SUFFIX,3p8801.co",DIRECT,"DOMAIN-SUFFIX,3p8801.co",REJECT
 direct,"DOMAIN-SUFFIX,51.la",DIRECT,"DOMAIN-SUFFIX,51.la",REJECT
 direct,"DOMAIN-SUFFIX,51240.com",DIRECT,"DOMAIN-SUFFIX,51240.com",REJECT
+direct,"DOMAIN-SUFFIX,5166.info",DIRECT,"DOMAIN-SUFFIX,5166.info",REJECT
 direct,"DOMAIN-SUFFIX,518ad.com",DIRECT,"DOMAIN-SUFFIX,518ad.com",REJECT
 direct,"DOMAIN-SUFFIX,51link.com",DIRECT,"DOMAIN-SUFFIX,51link.com",REJECT
 direct,"DOMAIN-SUFFIX,51taifu.com",DIRECT,"DOMAIN-SUFFIX,51taifu.com",REJECT
@@ -708,7 +709,6 @@ direct,"DOMAIN-SUFFIX,pop800.com",DIRECT,"DOMAIN-SUFFIX,pop800.com",REJECT
 direct,"DOMAIN-SUFFIX,ptmind.com",DIRECT,"DOMAIN-SUFFIX,ptmind.com",REJECT
 direct,"DOMAIN-SUFFIX,puata.info",DIRECT,"DOMAIN-SUFFIX,puata.info",REJECT
 direct,"DOMAIN-SUFFIX,pushauction.com",DIRECT,"DOMAIN-SUFFIX,pushauction.com",REJECT
-direct,"DOMAIN-SUFFIX,q1.com",DIRECT,"DOMAIN-SUFFIX,q1.com",REJECT
 direct,"DOMAIN-SUFFIX,qcjslm.com",DIRECT,"DOMAIN-SUFFIX,qcjslm.com",REJECT
 direct,"DOMAIN-SUFFIX,qfihdr.com",DIRECT,"DOMAIN-SUFFIX,qfihdr.com",REJECT
 direct,"DOMAIN-SUFFIX,qhupdate.com",DIRECT,"DOMAIN-SUFFIX,qhupdate.com",REJECT
@@ -889,7 +889,6 @@ direct,"DOMAIN-SUFFIX,zazhipu.com",DIRECT,"DOMAIN-SUFFIX,zazhipu.com",REJECT
 direct,"DOMAIN-SUFFIX,zhantai.com",DIRECT,"DOMAIN-SUFFIX,zhantai.com",REJECT
 direct,"DOMAIN-SUFFIX,zhanzhang.net",DIRECT,"DOMAIN-SUFFIX,zhanzhang.net",REJECT
 direct,"DOMAIN-SUFFIX,zhiziyun.com",DIRECT,"DOMAIN-SUFFIX,zhiziyun.com",REJECT
-direct,"DOMAIN-SUFFIX,zhongguociwang.com",DIRECT,"DOMAIN-SUFFIX,zhongguociwang.com",REJECT
 direct,"DOMAIN-SUFFIX,zhongkaowu.com",DIRECT,"DOMAIN-SUFFIX,zhongkaowu.com",REJECT
 direct,"DOMAIN-SUFFIX,zhugeapi.com",DIRECT,"DOMAIN-SUFFIX,zhugeapi.com",REJECT
 direct,"DOMAIN-SUFFIX,zhugeapi.net",DIRECT,"DOMAIN-SUFFIX,zhugeapi.net",REJECT
