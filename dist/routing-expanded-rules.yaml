@@ -132524,6 +132524,7 @@
   - DOMAIN-SUFFIX,googlepagecreator.com,PROXY
   - DOMAIN-SUFFIX,googlephotos.com,PROXY
   - DOMAIN-SUFFIX,googleplay.com,PROXY
+  - DOMAIN-SUFFIX,googleplaycensorship.com,PROXY
   - DOMAIN-SUFFIX,googleplus.com,PROXY
   - DOMAIN-SUFFIX,googlescholar.com,PROXY
   - DOMAIN-SUFFIX,googlesource.com,PROXY
