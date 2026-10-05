@@ -113,7 +113,6 @@ proxy,"DOMAIN-SUFFIX,digitaldesire.com",PROXY,"DOMAIN-SUFFIX,digitaldesire.com",
 proxy,"DOMAIN-SUFFIX,dirty.games",PROXY,"DOMAIN-SUFFIX,dirty.games",REJECT
 proxy,"DOMAIN-SUFFIX,disneyplus.bn5x.net",PROXY,"DOMAIN-SUFFIX,bn5x.net",REJECT
 proxy,"DOMAIN-SUFFIX,dm-event.net",PROXY,"DOMAIN-SUFFIX,dm-event.net",REJECT
-proxy,"DOMAIN-SUFFIX,dnvod.tv",PROXY,"DOMAIN-SUFFIX,dnvod.tv",REJECT
 proxy,"DOMAIN-SUFFIX,doubleclick-cn.net",PROXY,"DOMAIN-SUFFIX,doubleclick-cn.net",REJECT
 proxy,"DOMAIN-SUFFIX,doubleclick.com",PROXY,"DOMAIN-SUFFIX,doubleclick.com",REJECT
 proxy,"DOMAIN-SUFFIX,doubleclick.net",PROXY,"DOMAIN-SUFFIX,doubleclick.net",REJECT
@@ -365,7 +364,6 @@ direct,"DOMAIN-SUFFIX,6pctuhriw.com",DIRECT,"DOMAIN-SUFFIX,6pctuhriw.com",REJECT
 direct,"DOMAIN-SUFFIX,6v6.work",DIRECT,"DOMAIN-SUFFIX,6v6.work",REJECT
 direct,"DOMAIN-SUFFIX,6xigema.com",DIRECT,"DOMAIN-SUFFIX,6xigema.com",REJECT
 direct,"DOMAIN-SUFFIX,73336zubo25326.com",DIRECT,"DOMAIN-SUFFIX,73336zubo25326.com",REJECT
-direct,"DOMAIN-SUFFIX,75ww.com",DIRECT,"DOMAIN-SUFFIX,75ww.com",REJECT
 direct,"DOMAIN-SUFFIX,7moor.com",DIRECT,"DOMAIN-SUFFIX,7moor.com",REJECT
 direct,"DOMAIN-SUFFIX,8181zx.com",DIRECT,"DOMAIN-SUFFIX,8181zx.com",REJECT
 direct,"DOMAIN-SUFFIX,866.com",DIRECT,"DOMAIN-SUFFIX,866.com",REJECT
