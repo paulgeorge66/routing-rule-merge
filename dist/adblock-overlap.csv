@@ -2,6 +2,7 @@ section,routing_rule,routing_action,reject_rule,effective_action
 top-proxy,"DOMAIN,browser-intake-datadoghq.com",PROXY,"DOMAIN-SUFFIX,browser-intake-datadoghq.com",REJECT
 top-proxy,"DOMAIN,copilot-telemetry-service.githubusercontent.com",PROXY,"DOMAIN-SUFFIX,copilot-telemetry-service.githubusercontent.com",REJECT
 top-proxy,"DOMAIN,copilot-telemetry.githubusercontent.com",PROXY,"DOMAIN-SUFFIX,copilot-telemetry.githubusercontent.com",REJECT
+top-proxy,"DOMAIN,openai.qualtrics.com",PROXY,"DOMAIN-SUFFIX,openai.qualtrics.com",REJECT
 top-proxy,"DOMAIN-SUFFIX,gvt2.com",PROXY,"DOMAIN-SUFFIX,gvt2.com",REJECT
 top-direct,"DOMAIN-SUFFIX,bingads.com",DIRECT,"DOMAIN-SUFFIX,bingads.com",REJECT
 top-direct,"DOMAIN-SUFFIX,fabric.io",DIRECT,"DOMAIN-SUFFIX,fabric.io",REJECT
@@ -335,7 +336,6 @@ direct,"DOMAIN-SUFFIX,39jz.com",DIRECT,"DOMAIN-SUFFIX,39jz.com",REJECT
 direct,"DOMAIN-SUFFIX,3p8801.co",DIRECT,"DOMAIN-SUFFIX,3p8801.co",REJECT
 direct,"DOMAIN-SUFFIX,51.la",DIRECT,"DOMAIN-SUFFIX,51.la",REJECT
 direct,"DOMAIN-SUFFIX,51240.com",DIRECT,"DOMAIN-SUFFIX,51240.com",REJECT
-direct,"DOMAIN-SUFFIX,5166.info",DIRECT,"DOMAIN-SUFFIX,5166.info",REJECT
 direct,"DOMAIN-SUFFIX,518ad.com",DIRECT,"DOMAIN-SUFFIX,518ad.com",REJECT
 direct,"DOMAIN-SUFFIX,51link.com",DIRECT,"DOMAIN-SUFFIX,51link.com",REJECT
 direct,"DOMAIN-SUFFIX,51taifu.com",DIRECT,"DOMAIN-SUFFIX,51taifu.com",REJECT
@@ -364,7 +364,6 @@ direct,"DOMAIN-SUFFIX,6pctuhriw.com",DIRECT,"DOMAIN-SUFFIX,6pctuhriw.com",REJECT
 direct,"DOMAIN-SUFFIX,6v6.work",DIRECT,"DOMAIN-SUFFIX,6v6.work",REJECT
 direct,"DOMAIN-SUFFIX,6xigema.com",DIRECT,"DOMAIN-SUFFIX,6xigema.com",REJECT
 direct,"DOMAIN-SUFFIX,73336zubo25326.com",DIRECT,"DOMAIN-SUFFIX,73336zubo25326.com",REJECT
-direct,"DOMAIN-SUFFIX,75ww.com",DIRECT,"DOMAIN-SUFFIX,75ww.com",REJECT
 direct,"DOMAIN-SUFFIX,7moor.com",DIRECT,"DOMAIN-SUFFIX,7moor.com",REJECT
 direct,"DOMAIN-SUFFIX,8181zx.com",DIRECT,"DOMAIN-SUFFIX,8181zx.com",REJECT
 direct,"DOMAIN-SUFFIX,866.com",DIRECT,"DOMAIN-SUFFIX,866.com",REJECT
