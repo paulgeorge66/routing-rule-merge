@@ -364,6 +364,7 @@ direct,"DOMAIN-SUFFIX,6pctuhriw.com",DIRECT,"DOMAIN-SUFFIX,6pctuhriw.com",REJECT
 direct,"DOMAIN-SUFFIX,6v6.work",DIRECT,"DOMAIN-SUFFIX,6v6.work",REJECT
 direct,"DOMAIN-SUFFIX,6xigema.com",DIRECT,"DOMAIN-SUFFIX,6xigema.com",REJECT
 direct,"DOMAIN-SUFFIX,73336zubo25326.com",DIRECT,"DOMAIN-SUFFIX,73336zubo25326.com",REJECT
+direct,"DOMAIN-SUFFIX,75ww.com",DIRECT,"DOMAIN-SUFFIX,75ww.com",REJECT
 direct,"DOMAIN-SUFFIX,7moor.com",DIRECT,"DOMAIN-SUFFIX,7moor.com",REJECT
 direct,"DOMAIN-SUFFIX,8181zx.com",DIRECT,"DOMAIN-SUFFIX,8181zx.com",REJECT
 direct,"DOMAIN-SUFFIX,866.com",DIRECT,"DOMAIN-SUFFIX,866.com",REJECT
@@ -708,6 +709,7 @@ direct,"DOMAIN-SUFFIX,pop800.com",DIRECT,"DOMAIN-SUFFIX,pop800.com",REJECT
 direct,"DOMAIN-SUFFIX,ptmind.com",DIRECT,"DOMAIN-SUFFIX,ptmind.com",REJECT
 direct,"DOMAIN-SUFFIX,puata.info",DIRECT,"DOMAIN-SUFFIX,puata.info",REJECT
 direct,"DOMAIN-SUFFIX,pushauction.com",DIRECT,"DOMAIN-SUFFIX,pushauction.com",REJECT
+direct,"DOMAIN-SUFFIX,q1.com",DIRECT,"DOMAIN-SUFFIX,q1.com",REJECT
 direct,"DOMAIN-SUFFIX,qcjslm.com",DIRECT,"DOMAIN-SUFFIX,qcjslm.com",REJECT
 direct,"DOMAIN-SUFFIX,qfihdr.com",DIRECT,"DOMAIN-SUFFIX,qfihdr.com",REJECT
 direct,"DOMAIN-SUFFIX,qhupdate.com",DIRECT,"DOMAIN-SUFFIX,qhupdate.com",REJECT
@@ -888,6 +890,7 @@ direct,"DOMAIN-SUFFIX,zazhipu.com",DIRECT,"DOMAIN-SUFFIX,zazhipu.com",REJECT
 direct,"DOMAIN-SUFFIX,zhantai.com",DIRECT,"DOMAIN-SUFFIX,zhantai.com",REJECT
 direct,"DOMAIN-SUFFIX,zhanzhang.net",DIRECT,"DOMAIN-SUFFIX,zhanzhang.net",REJECT
 direct,"DOMAIN-SUFFIX,zhiziyun.com",DIRECT,"DOMAIN-SUFFIX,zhiziyun.com",REJECT
+direct,"DOMAIN-SUFFIX,zhongguociwang.com",DIRECT,"DOMAIN-SUFFIX,zhongguociwang.com",REJECT
 direct,"DOMAIN-SUFFIX,zhongkaowu.com",DIRECT,"DOMAIN-SUFFIX,zhongkaowu.com",REJECT
 direct,"DOMAIN-SUFFIX,zhugeapi.com",DIRECT,"DOMAIN-SUFFIX,zhugeapi.com",REJECT
 direct,"DOMAIN-SUFFIX,zhugeapi.net",DIRECT,"DOMAIN-SUFFIX,zhugeapi.net",REJECT
