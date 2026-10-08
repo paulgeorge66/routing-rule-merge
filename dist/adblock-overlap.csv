@@ -114,6 +114,7 @@ proxy,"DOMAIN-SUFFIX,digitaldesire.com",PROXY,"DOMAIN-SUFFIX,digitaldesire.com",
 proxy,"DOMAIN-SUFFIX,dirty.games",PROXY,"DOMAIN-SUFFIX,dirty.games",REJECT
 proxy,"DOMAIN-SUFFIX,disneyplus.bn5x.net",PROXY,"DOMAIN-SUFFIX,bn5x.net",REJECT
 proxy,"DOMAIN-SUFFIX,dm-event.net",PROXY,"DOMAIN-SUFFIX,dm-event.net",REJECT
+proxy,"DOMAIN-SUFFIX,dobbyporn.com",PROXY,"DOMAIN-SUFFIX,dobbyporn.com",REJECT
 proxy,"DOMAIN-SUFFIX,doubleclick-cn.net",PROXY,"DOMAIN-SUFFIX,doubleclick-cn.net",REJECT
 proxy,"DOMAIN-SUFFIX,doubleclick.com",PROXY,"DOMAIN-SUFFIX,doubleclick.com",REJECT
 proxy,"DOMAIN-SUFFIX,doubleclick.net",PROXY,"DOMAIN-SUFFIX,doubleclick.net",REJECT
