@@ -338,6 +338,7 @@ direct,"DOMAIN-SUFFIX,39jz.com",DIRECT,"DOMAIN-SUFFIX,39jz.com",REJECT
 direct,"DOMAIN-SUFFIX,3p8801.co",DIRECT,"DOMAIN-SUFFIX,3p8801.co",REJECT
 direct,"DOMAIN-SUFFIX,51.la",DIRECT,"DOMAIN-SUFFIX,51.la",REJECT
 direct,"DOMAIN-SUFFIX,51240.com",DIRECT,"DOMAIN-SUFFIX,51240.com",REJECT
+direct,"DOMAIN-SUFFIX,5166.info",DIRECT,"DOMAIN-SUFFIX,5166.info",REJECT
 direct,"DOMAIN-SUFFIX,518ad.com",DIRECT,"DOMAIN-SUFFIX,518ad.com",REJECT
 direct,"DOMAIN-SUFFIX,51link.com",DIRECT,"DOMAIN-SUFFIX,51link.com",REJECT
 direct,"DOMAIN-SUFFIX,51taifu.com",DIRECT,"DOMAIN-SUFFIX,51taifu.com",REJECT
@@ -523,7 +524,6 @@ direct,"DOMAIN-SUFFIX,feitian001.com",DIRECT,"DOMAIN-SUFFIX,feitian001.com",REJE
 direct,"DOMAIN-SUFFIX,fengyixin.com",DIRECT,"DOMAIN-SUFFIX,fengyixin.com",REJECT
 direct,"DOMAIN-SUFFIX,fenxi.com",DIRECT,"DOMAIN-SUFFIX,fenxi.com",REJECT
 direct,"DOMAIN-SUFFIX,fiehff.com",DIRECT,"DOMAIN-SUFFIX,fiehff.com",REJECT
-direct,"DOMAIN-SUFFIX,fkesfg.com",DIRECT,"DOMAIN-SUFFIX,fkesfg.com",REJECT
 direct,"DOMAIN-SUFFIX,flstudiochina.com",DIRECT,"DOMAIN-SUFFIX,flstudiochina.com",REJECT
 direct,"DOMAIN-SUFFIX,foisonad.com",DIRECT,"DOMAIN-SUFFIX,foisonad.com",REJECT
 direct,"DOMAIN-SUFFIX,formysql.com",DIRECT,"DOMAIN-SUFFIX,formysql.com",REJECT
@@ -848,7 +848,6 @@ direct,"DOMAIN-SUFFIX,xiaoxiuapp.com",DIRECT,"DOMAIN-SUFFIX,xiaoxiuapp.com",REJE
 direct,"DOMAIN-SUFFIX,xiaozhen.com",DIRECT,"DOMAIN-SUFFIX,xiaozhen.com",REJECT
 direct,"DOMAIN-SUFFIX,xibao100.com",DIRECT,"DOMAIN-SUFFIX,xibao100.com",REJECT
 direct,"DOMAIN-SUFFIX,xiyouence.com",DIRECT,"DOMAIN-SUFFIX,xiyouence.com",REJECT
-direct,"DOMAIN-SUFFIX,xn--w9q675dm1p7em.net",DIRECT,"DOMAIN-SUFFIX,xn--w9q675dm1p7em.net",REJECT
 direct,"DOMAIN-SUFFIX,xshellcn.com",DIRECT,"DOMAIN-SUFFIX,xshellcn.com",REJECT
 direct,"DOMAIN-SUFFIX,xuan5.com",DIRECT,"DOMAIN-SUFFIX,xuan5.com",REJECT
 direct,"DOMAIN-SUFFIX,xukou.net",DIRECT,"DOMAIN-SUFFIX,xukou.net",REJECT
