@@ -47,13 +47,13 @@
       "rules": null
     },
     "direct-domains.list": {
-      "bytes": 1630766,
-      "sha256": "f1e64f772cc741a16546f21b20c0196f93ab835558b5838264181de23e6bc7aa",
-      "rules": 111356
+      "bytes": 1618299,
+      "sha256": "be2f5e860017505a05cf5a5a0d8db626a59de2be7ba64fd0c977ec35ee54a5af",
+      "rules": 110557
     },
     "direct-domains.mrs": {
-      "bytes": 538176,
-      "sha256": "b68a070a3c999d90619215313528bd6f49f6ca7016b4fb84035607b0f4d000c0",
+      "bytes": 533438,
+      "sha256": "a7028e92d1c934de79c5f647581cccdb6d0234b870979229b64d7be6463b9022",
       "rules": null
     },
     "direct-misc.list": {
@@ -72,18 +72,18 @@
       "rules": null
     },
     "proxy-dns-domains.yaml": {
-      "bytes": 598241,
-      "sha256": "2d4e70d00a93e6c56680061830e5cba5e5e61598ac759f93dfba195220ead49e",
-      "rules": 24590
+      "bytes": 598263,
+      "sha256": "38e92b94b05fcba2a54da2d73ecd93441e6a8c618633c23c234d06b62700ff35",
+      "rules": 24591
     },
     "proxy-domains.list": {
-      "bytes": 399104,
-      "sha256": "3a163373f3c0157165578d9042e013c0b2c8a0345fc4cb96d78dc8f00e949ca3",
-      "rules": 24471
+      "bytes": 399118,
+      "sha256": "1d393e28711a6eff8526d4a2658bda8a32318ea0d9d63b90fa96070e7d3c34e7",
+      "rules": 24472
     },
     "proxy-domains.mrs": {
-      "bytes": 177390,
-      "sha256": "707ef269a61daab2863eaccb9475c04b183ef7cd44b7aa253d0fb0008f0f1949",
+      "bytes": 177427,
+      "sha256": "ef5dc8d255014e397c7bd3c846f8af63a458dc4bada3bb0f2b00dbf7b9fec82b",
       "rules": null
     },
     "proxy-misc.list": {
@@ -92,14 +92,14 @@
       "rules": 20
     },
     "routing-expanded-fragment.yaml": {
-      "bytes": 5678499,
-      "sha256": "574daca5df07713066331b216b839a820fb0e48396a8c1a1429992bb96e47f61",
-      "rules": 147939
+      "bytes": 5647686,
+      "sha256": "8efbcab922fa5a25812a47c2efb60076fb957bbbb47541acf7a345019863aeb6",
+      "rules": 147141
     },
     "routing-expanded-rules.yaml": {
-      "bytes": 5678515,
-      "sha256": "a931883cf94c7e6ac7257a3270b810e4eb0b0f35591ce7da0a1a192a4fca3de8",
-      "rules": 147940
+      "bytes": 5647702,
+      "sha256": "ae66e6bf9fdafbb5fbf3aad1190170203d51d5048ffc55561d5a9a640534c290",
+      "rules": 147142
     },
     "top-direct.list": {
       "bytes": 20273,
