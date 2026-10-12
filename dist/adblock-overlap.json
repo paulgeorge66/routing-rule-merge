@@ -1,6 +1,6 @@
 {
   "status": "verified",
-  "adblock_sha256": "ad31ec6fd03a121982738a1c10bc16f23bfbcdaff33ed7b0f275b1daf33d9841",
+  "adblock_sha256": "0b2198a759af690157afa662b392b9dc0452c333dee2edd16e8e102cf4cdfda0",
   "overlaps": 895,
   "top_override_overlaps": 12,
   "policy": "REJECT remains first; diagnostic does not add exceptions"
