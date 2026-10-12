@@ -353,3 +353,15 @@ behavior_checks:
   action: PROXY
 - domain: fonts.gstatic.com
   action: PROXY
+- domain: other.blob.core.windows.net
+  action: DIRECT
+- domain: other.azure.com
+  action: DIRECT
+- domain: my1drv.blob.core.windows.net
+  action: DIRECT
+- domain: myonedrive-tools.azure.com
+  action: DIRECT
+forbid_proxy_types:
+- DOMAIN-KEYWORD
+- PROCESS-NAME
+- IP-ASN

@@ -314,6 +314,12 @@ def build_sections(
         "sections": section_report,
         "total_rules": sum(len(rules) for rules in rendered_sections.values()),
     }
+    forbidden = set(config.get('forbid_proxy_types', []))
+    if forbidden - TYPE_ORDER.keys():
+        raise ValueError('unknown forbidden proxy rule type')
+    for section, rules in rendered_sections.items():
+        if SECTION_ACTION.get(section) == 'PROXY' and any(rule.rule_type in forbidden for rule in rules):
+            raise RuntimeError(f'proxy scope guard failed in {section}')
     report['behavior_checks'] = validate_behavior_checks(config,rendered_sections)
     return rendered_sections, report
 

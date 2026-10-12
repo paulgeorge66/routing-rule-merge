@@ -11,6 +11,14 @@ from routing_merge.builder import (
 
 
 class DnsPolicyTests(unittest.TestCase):
+    def test_proxy_scope_guard_stops_new_keyword_process_or_asn_rules(self):
+        for rule in ['DOMAIN-KEYWORD,shared','PROCESS-NAME,TV','IP-ASN,12345']:
+            config={'source_order':['proxy'], 'forbid_proxy_types':['DOMAIN-KEYWORD','PROCESS-NAME','IP-ASN'],
+                    'sources':[{'name':'future','section':'proxy','parser':'inline','rules':[rule]}]}
+            with tempfile.TemporaryDirectory() as tmp:
+                with self.assertRaisesRegex(RuntimeError,'proxy scope guard'):
+                    build_sections(config,cache_dir=Path(tmp))
+
     def test_mixed_upstream_keeps_only_specific_overseas_services_in_proxy(self):
         config = {
             'source_order': ['apple-proxy', 'apple-direct'],
