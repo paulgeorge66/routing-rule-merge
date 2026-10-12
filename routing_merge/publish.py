@@ -9,6 +9,7 @@ import subprocess
 import tempfile
 from pathlib import Path
 import yaml
+from .builder import DNS_PROVIDER_SPECS
 
 ROOT = Path(__file__).resolve().parent.parent
 LIMITS = {"reject-domains.mrs": 4_000_000, "direct-domains.mrs": 2_000_000, "proxy-domains.mrs": 1_000_000}
@@ -28,9 +29,20 @@ def validate_artifacts(dist: Path) -> dict:
             if "\r" in text or (text and not text.endswith("\n")):
                 raise ValueError(f"{path.name} must use complete LF lines")
             lines = text.splitlines()
-            if len(lines) != len(set(lines)):
+            if path.name != 'routing-dns-providers.yaml' and len(lines) != len(set(lines)):
                 raise ValueError(f"{path.name} contains duplicate rules")
-            if path.suffix == ".yaml":
+            if path.name == 'routing-dns-providers.yaml':
+                providers = yaml.safe_load('rule-providers:\n' + text)['rule-providers']
+                expected = {'dns-routing-' + name:behavior for name,_,behavior in DNS_PROVIDER_SPECS}
+                if list(providers) != list(expected):
+                    raise ValueError('DNS provider order differs from routing')
+                for name, provider in providers.items():
+                    payload = provider.get('payload')
+                    if provider.get('type') != 'inline' or provider.get('behavior') != expected[name] or provider.get('format') != 'yaml':
+                        raise ValueError('invalid DNS provider contract')
+                    if not isinstance(payload, list) or not all(isinstance(rule,str) for rule in payload) or len(payload) != len(set(payload)):
+                        raise ValueError('invalid DNS provider payload')
+            elif path.suffix == ".yaml":
                 dns = path.name == "proxy-dns-domains.yaml"
                 prefix = "      - " if dns else "  - "
                 if not lines or any(not line.startswith(prefix) for line in lines):
@@ -82,7 +94,13 @@ def validate_core(core: Path, dist: Path) -> None:
         providers[path.stem] = {"type": "file", "behavior": behavior, "format": "mrs" if artifact.suffix == ".mrs" else "text", "path": str(artifact)}
         rules.append(f"RULE-SET,{path.stem},DIRECT")
     rules.append("MATCH,DIRECT")
-    config = {"mode": "rule", "rules": rules, "rule-providers": providers, "dns": {"enable": False}}
+    dns = {"enable": False}
+    dns_fragment = dist / 'routing-dns-providers.yaml'
+    if dns_fragment.exists():
+        inline = yaml.safe_load('rule-providers:\n' + dns_fragment.read_text())['rule-providers']
+        providers.update(inline)
+        dns = {'enable':True, 'nameserver':['127.0.0.1:53536'], 'nameserver-policy':{'rule-set:' + name:['127.0.0.1:53536'] for name in inline}}
+    config = {"mode": "rule", "rules": rules, "rule-providers": providers, "dns": dns}
     cache = ROOT / ".cache"
     cache.mkdir(exist_ok=True)
     check = cache / "core-check.yaml"

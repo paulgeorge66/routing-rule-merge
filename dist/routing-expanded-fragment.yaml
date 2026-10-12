@@ -5,6 +5,7 @@
   - DOMAIN,copilot-workspace.githubnext.com,PROXY
   - DOMAIN,copilotprodattachments.blob.core.windows.net,PROXY
   - DOMAIN,fonts.googleapis.com,PROXY
+  - DOMAIN,fonts.gstatic.com,PROXY
   - DOMAIN,o33249.ingest.sentry.io,PROXY
   - DOMAIN,openai.qualtrics.com,PROXY
   - DOMAIN,openaiapi-site.azureedge.net,PROXY
@@ -13,6 +14,7 @@
   - DOMAIN,openaicom.imgix.net,PROXY
   - DOMAIN,openaicomproductionae4b.blob.core.windows.net,PROXY
   - DOMAIN,production-openaicom-storage.azureedge.net,PROXY
+  - DOMAIN,www.gstatic.com,PROXY
   - DOMAIN-SUFFIX,1drv.com,PROXY
   - DOMAIN-SUFFIX,android.clients.google.com,PROXY
   - DOMAIN-SUFFIX,android.googleapis.com,PROXY
@@ -24,14 +26,8 @@
   - DOMAIN-SUFFIX,copilot.microsoft.com,PROXY
   - DOMAIN-SUFFIX,crixet.com,PROXY
   - DOMAIN-SUFFIX,dl.google.com,PROXY
-  - DOMAIN-SUFFIX,ggpht.com,PROXY
   - DOMAIN-SUFFIX,githubcopilot.com,PROXY
-  - DOMAIN-SUFFIX,googleapis.cn,PROXY
-  - DOMAIN-SUFFIX,googleusercontent.com,PROXY
-  - DOMAIN-SUFFIX,gstatic.com,PROXY
   - DOMAIN-SUFFIX,gvt1.com,PROXY
-  - DOMAIN-SUFFIX,gvt2.com,PROXY
-  - DOMAIN-SUFFIX,gvt3.com,PROXY
   - DOMAIN-SUFFIX,host.livekit.cloud,PROXY
   - DOMAIN-SUFFIX,livefilestore.com,PROXY
   - DOMAIN-SUFFIX,microsoftpersonalcontent.com,PROXY
@@ -44,23 +40,17 @@
   - DOMAIN-SUFFIX,openai.com,PROXY
   - DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net,PROXY
   - DOMAIN-SUFFIX,photos.live.com,PROXY
+  - DOMAIN-SUFFIX,play-apps-features.googleusercontent.com,PROXY
   - DOMAIN-SUFFIX,play-fe.googleapis.com,PROXY
+  - DOMAIN-SUFFIX,play-lh.googleusercontent.com,PROXY
   - DOMAIN-SUFFIX,play.google.com,PROXY
   - DOMAIN-SUFFIX,play.googleapis.com,PROXY
-  - DOMAIN-SUFFIX,sharepoint.com,PROXY
-  - DOMAIN-SUFFIX,sharepointonline.com,PROXY
   - DOMAIN-SUFFIX,skydrive.wns.windows.com,PROXY
   - DOMAIN-SUFFIX,sora.com,PROXY
-  - DOMAIN-SUFFIX,spoprod-a.akamaihd.net,PROXY
   - DOMAIN-SUFFIX,storage.live.com,PROXY
   - DOMAIN-SUFFIX,storage.msn.com,PROXY
   - DOMAIN-SUFFIX,turn.livekit.cloud,PROXY
-  - DOMAIN-KEYWORD,1drv,PROXY
-  - DOMAIN-KEYWORD,onedrive,PROXY
-  - DOMAIN-KEYWORD,skydrive,PROXY
   - DOMAIN-REGEX,^chatgpt-async-webps-prod-\S+-\d+\.webpubsub\.azure\.com$,PROXY
-  - PROCESS-NAME,OneDrive,PROXY
-  - PROCESS-NAME,OneDriveUpdater,PROXY
   - DOMAIN,vsmarketplacebadge.apphb.com,DIRECT
   - DOMAIN-SUFFIX,1drv.ms,DIRECT
   - DOMAIN-SUFFIX,21vbc.com,DIRECT
@@ -613,6 +603,8 @@
   - DOMAIN-SUFFIX,sfbassets.net,DIRECT
   - DOMAIN-SUFFIX,sfx.ms,DIRECT
   - DOMAIN-SUFFIX,sharepoint.cn,DIRECT
+  - DOMAIN-SUFFIX,sharepoint.com,DIRECT
+  - DOMAIN-SUFFIX,sharepointonline.com,DIRECT
   - DOMAIN-SUFFIX,signalr.net,DIRECT
   - DOMAIN-SUFFIX,skype,DIRECT
   - DOMAIN-SUFFIX,skype.com,DIRECT
@@ -620,6 +612,7 @@
   - DOMAIN-SUFFIX,skypeassets.com,DIRECT
   - DOMAIN-SUFFIX,skypeassets.net,DIRECT
   - DOMAIN-SUFFIX,skypeforbusiness.com,DIRECT
+  - DOMAIN-SUFFIX,spoprod-a.akamaihd.net,DIRECT
   - DOMAIN-SUFFIX,sprinklesapp.com,DIRECT
   - DOMAIN-SUFFIX,sqlserveronlinux.com,DIRECT
   - DOMAIN-SUFFIX,staffhub.ms,DIRECT
@@ -718,7 +711,12 @@
   - DOMAIN-SUFFIX,xbx.lv,DIRECT
   - DOMAIN-SUFFIX,yammer.com,DIRECT
   - DOMAIN-SUFFIX,yammerusercontent.com,DIRECT
+  - DOMAIN-KEYWORD,1drv,DIRECT
   - DOMAIN-KEYWORD,microsoft,DIRECT
+  - DOMAIN-KEYWORD,onedrive,DIRECT
+  - DOMAIN-KEYWORD,skydrive,DIRECT
+  - PROCESS-NAME,OneDrive,DIRECT
+  - PROCESS-NAME,OneDriveUpdater,DIRECT
   - IP-CIDR,0.0.0.0/8,DIRECT,no-resolve
   - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
   - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
@@ -729,86 +727,20 @@
   - IP-CIDR6,::1/128,DIRECT,no-resolve
   - IP-CIDR6,fc00::/7,DIRECT,no-resolve
   - IP-CIDR6,fe80::/10,DIRECT,no-resolve
-  - DOMAIN,api-glb-sea.smoot.apple.com,PROXY
-  - DOMAIN,books.itunes.apple.com,PROXY
-  - DOMAIN,cdn.apple-cloudkit.com,PROXY
-  - DOMAIN,cvws.icloud-content.com,PROXY
-  - DOMAIN,developer.apple.com,PROXY
-  - DOMAIN,devimages-cdn.apple.com,PROXY
-  - DOMAIN,devstreaming-cdn.apple.com,PROXY
-  - DOMAIN,docs-assets.developer.apple.com,PROXY
   - DOMAIN,gspe1-ssl.ls.apple.com,PROXY
-  - DOMAIN,hls-svod.itunes.apple.com,PROXY
-  - DOMAIN,itunes.apple.com,PROXY
-  - DOMAIN,js-cdn.music.apple.com,PROXY
-  - DOMAIN,lookup-api.apple.com,PROXY
-  - DOMAIN,mask-api.icloud.com,PROXY
-  - DOMAIN,mask-h2.icloud.com,PROXY
-  - DOMAIN,mask.icloud.com,PROXY
+  - DOMAIN,hls-amt.itunes.apple.com,PROXY
+  - DOMAIN,hls.itunes.apple.com,PROXY
+  - DOMAIN,news-client-search.apple.com,PROXY
   - DOMAIN,np-edge.itunes.apple.com,PROXY
-  - DOMAIN,sandbox.itunes.apple.com,PROXY
-  - DOMAIN,testflight.apple.com,PROXY
+  - DOMAIN,play-edge.itunes.apple.com,PROXY
+  - DOMAIN,tv.applemusic.com,PROXY
   - DOMAIN,uts-api.itunes.apple.com,PROXY
-  - DOMAIN-SUFFIX,aod.itunes.apple.com,PROXY
-  - DOMAIN-SUFFIX,apple-dns.net,PROXY
-  - DOMAIN-SUFFIX,apple.comscoreresearch.com,PROXY
   - DOMAIN-SUFFIX,apple.news,PROXY
-  - DOMAIN-SUFFIX,appleenews.com,PROXY
-  - DOMAIN-SUFFIX,applemusic.berlin,PROXY
-  - DOMAIN-SUFFIX,applemusic.co,PROXY
-  - DOMAIN-SUFFIX,applemusic.com,PROXY
-  - DOMAIN-SUFFIX,applemusic.com.au,PROXY
-  - DOMAIN-SUFFIX,applemusic.hamburg,PROXY
-  - DOMAIN-SUFFIX,applemusic.wang,PROXY
-  - DOMAIN-SUFFIX,applemusicconnect.com,PROXY
-  - DOMAIN-SUFFIX,applemusicfestival.com,PROXY
-  - DOMAIN-SUFFIX,applenews.berlin,PROXY
-  - DOMAIN-SUFFIX,applenews.hamburg,PROXY
-  - DOMAIN-SUFFIX,applenews.tv,PROXY
-  - DOMAIN-SUFFIX,applenewsformat.com,PROXY
-  - DOMAIN-SUFFIX,appletv.com,PROXY
-  - DOMAIN-SUFFIX,appletv.fr,PROXY
-  - DOMAIN-SUFFIX,appletv.wang,PROXY
-  - DOMAIN-SUFFIX,appletv4.cn,PROXY
-  - DOMAIN-SUFFIX,appletv4.com.cn,PROXY
-  - DOMAIN-SUFFIX,appletvapp.apple,PROXY
-  - DOMAIN-SUFFIX,apps.apple.com,PROXY
-  - DOMAIN-SUFFIX,appsto.re,PROXY
-  - DOMAIN-SUFFIX,audio-ssl.itunes.apple.com,PROXY
-  - DOMAIN-SUFFIX,audio.itunes.apple.com,PROXY
-  - DOMAIN-SUFFIX,blobstore.apple.com,PROXY
-  - DOMAIN-SUFFIX,cdn-apple.com,PROXY
-  - DOMAIN-SUFFIX,digicert.com,PROXY
-  - DOMAIN-SUFFIX,hls-amt.itunes.apple.com,PROXY
-  - DOMAIN-SUFFIX,hls.itunes.apple.com,PROXY
-  - DOMAIN-SUFFIX,i-book.com,PROXY
-  - DOMAIN-SUFFIX,i-book.net,PROXY
-  - DOMAIN-SUFFIX,ibook.co.nz,PROXY
-  - DOMAIN-SUFFIX,ibook.com,PROXY
-  - DOMAIN-SUFFIX,ibook.eu,PROXY
-  - DOMAIN-SUFFIX,ibook.net,PROXY
-  - DOMAIN-SUFFIX,ibookpartner.com,PROXY
-  - DOMAIN-SUFFIX,ibooksauthor.com,PROXY
-  - DOMAIN-SUFFIX,imovie.eu,PROXY
-  - DOMAIN-SUFFIX,imoviegallery.com,PROXY
-  - DOMAIN-SUFFIX,imoviestage.com,PROXY
-  - DOMAIN-SUFFIX,iphoto.eu,PROXY
-  - DOMAIN-SUFFIX,iphoto.no,PROXY
-  - DOMAIN-SUFFIX,iphoto.se,PROXY
-  - DOMAIN-SUFFIX,iphoto.wang,PROXY
-  - DOMAIN-SUFFIX,musickit.net,PROXY
-  - DOMAIN-SUFFIX,mvod.itunes.apple.com,PROXY
   - DOMAIN-SUFFIX,news-assets.apple.com,PROXY
   - DOMAIN-SUFFIX,news-client.apple.com,PROXY
   - DOMAIN-SUFFIX,news-edge.apple.com,PROXY
   - DOMAIN-SUFFIX,news-events.apple.com,PROXY
-  - DOMAIN-SUFFIX,ocsp.apple.com,PROXY
-  - DOMAIN-SUFFIX,play-edge.itunes.apple.com,PROXY
-  - DOMAIN-SUFFIX,streamingaudio.itunes.apple.com,PROXY
   - DOMAIN-SUFFIX,tv.apple.com,PROXY
-  - DOMAIN-SUFFIX,wwwapplemusic.com,PROXY
-  - PROCESS-NAME,LookupViewService,PROXY
-  - PROCESS-NAME,TV,PROXY
   - DOMAIN,apple-events.akamaized.net,DIRECT
   - DOMAIN,appleworldwidedeveloper.hb-api.omtrdc.net,DIRECT
   - DOMAIN,appleworldwidedeveloper.sc.omtrdc.net,DIRECT
@@ -893,6 +825,7 @@
   - DOMAIN-SUFFIX,apple-dns.cn,DIRECT
   - DOMAIN-SUFFIX,apple-dns.com,DIRECT
   - DOMAIN-SUFFIX,apple-dns.com.cn,DIRECT
+  - DOMAIN-SUFFIX,apple-dns.net,DIRECT
   - DOMAIN-SUFFIX,apple-enews.com,DIRECT
   - DOMAIN-SUFFIX,apple-expo.com,DIRECT
   - DOMAIN-SUFFIX,apple-expo.eu,DIRECT
@@ -963,6 +896,7 @@
   - DOMAIN-SUFFIX,apple.com.tr,DIRECT
   - DOMAIN-SUFFIX,apple.com.tw,DIRECT
   - DOMAIN-SUFFIX,apple.com.uy,DIRECT
+  - DOMAIN-SUFFIX,apple.comscoreresearch.com,DIRECT
   - DOMAIN-SUFFIX,apple.cz,DIRECT
   - DOMAIN-SUFFIX,apple.de,DIRECT
   - DOMAIN-SUFFIX,apple.dk,DIRECT
@@ -1054,6 +988,7 @@
   - DOMAIN-SUFFIX,appledarwin.net,DIRECT
   - DOMAIN-SUFFIX,appledns.cn,DIRECT
   - DOMAIN-SUFFIX,appledns.com.cn,DIRECT
+  - DOMAIN-SUFFIX,appleenews.com,DIRECT
   - DOMAIN-SUFFIX,appleexpo.eu,DIRECT
   - DOMAIN-SUFFIX,appleexpo.info,DIRECT
   - DOMAIN-SUFFIX,applefilmaker.com,DIRECT
@@ -1083,7 +1018,19 @@
   - DOMAIN-SUFFIX,applemagickeyboard.com,DIRECT
   - DOMAIN-SUFFIX,applemalaysia.com.my,DIRECT
   - DOMAIN-SUFFIX,applemasters.info,DIRECT
+  - DOMAIN-SUFFIX,applemusic.berlin,DIRECT
+  - DOMAIN-SUFFIX,applemusic.co,DIRECT
+  - DOMAIN-SUFFIX,applemusic.com,DIRECT
+  - DOMAIN-SUFFIX,applemusic.com.au,DIRECT
+  - DOMAIN-SUFFIX,applemusic.hamburg,DIRECT
+  - DOMAIN-SUFFIX,applemusic.wang,DIRECT
+  - DOMAIN-SUFFIX,applemusicconnect.com,DIRECT
+  - DOMAIN-SUFFIX,applemusicfestival.com,DIRECT
   - DOMAIN-SUFFIX,applemx-icloud.com,DIRECT
+  - DOMAIN-SUFFIX,applenews.berlin,DIRECT
+  - DOMAIN-SUFFIX,applenews.hamburg,DIRECT
+  - DOMAIN-SUFFIX,applenews.tv,DIRECT
+  - DOMAIN-SUFFIX,applenewsformat.com,DIRECT
   - DOMAIN-SUFFIX,appleone.audio,DIRECT
   - DOMAIN-SUFFIX,appleone.blog,DIRECT
   - DOMAIN-SUFFIX,appleone.chat,DIRECT
@@ -1178,6 +1125,12 @@
   - DOMAIN-SUFFIX,appleswift.com,DIRECT
   - DOMAIN-SUFFIX,appletaiwan.com,DIRECT
   - DOMAIN-SUFFIX,appletips.net,DIRECT
+  - DOMAIN-SUFFIX,appletv.com,DIRECT
+  - DOMAIN-SUFFIX,appletv.fr,DIRECT
+  - DOMAIN-SUFFIX,appletv.wang,DIRECT
+  - DOMAIN-SUFFIX,appletv4.cn,DIRECT
+  - DOMAIN-SUFFIX,appletv4.com.cn,DIRECT
+  - DOMAIN-SUFFIX,appletvapp.apple,DIRECT
   - DOMAIN-SUFFIX,applewallet.com,DIRECT
   - DOMAIN-SUFFIX,applewallet.tv,DIRECT
   - DOMAIN-SUFFIX,applewatch.hk,DIRECT
@@ -1195,6 +1148,7 @@
   - DOMAIN-SUFFIX,applle.com,DIRECT
   - DOMAIN-SUFFIX,applw.com,DIRECT
   - DOMAIN-SUFFIX,appmediagroup.com,DIRECT
+  - DOMAIN-SUFFIX,appsto.re,DIRECT
   - DOMAIN-SUFFIX,appstore.co.id,DIRECT
   - DOMAIN-SUFFIX,appstore.com,DIRECT
   - DOMAIN-SUFFIX,appstore.hk,DIRECT
@@ -1541,6 +1495,7 @@
   - DOMAIN-SUFFIX,casquesbeatsaudio.com,DIRECT
   - DOMAIN-SUFFIX,catalina.hk,DIRECT
   - DOMAIN-SUFFIX,cdn-apple-mapkit.com,DIRECT
+  - DOMAIN-SUFFIX,cdn-apple.com,DIRECT
   - DOMAIN-SUFFIX,cheap-beats-by-dre.net,DIRECT
   - DOMAIN-SUFFIX,cheap-beatsbydre.com,DIRECT
   - DOMAIN-SUFFIX,cheapbagshoes.com,DIRECT
@@ -1636,6 +1591,7 @@
   - DOMAIN-SUFFIX,detaliczny.com,DIRECT
   - DOMAIN-SUFFIX,developer-advisor.com,DIRECT
   - DOMAIN-SUFFIX,device-manager.us,DIRECT
+  - DOMAIN-SUFFIX,digicert.com,DIRECT
   - DOMAIN-SUFFIX,digitalhub.com,DIRECT
   - DOMAIN-SUFFIX,discountbeatsbydre-us.com,DIRECT
   - DOMAIN-SUFFIX,discountbeatsstore.com,DIRECT
@@ -1774,9 +1730,17 @@
   - DOMAIN-SUFFIX,hotmonsterbeats.com,DIRECT
   - DOMAIN-SUFFIX,hottestheadphonesonline.com,DIRECT
   - DOMAIN-SUFFIX,hrsaz.com,DIRECT
+  - DOMAIN-SUFFIX,i-book.com,DIRECT
+  - DOMAIN-SUFFIX,i-book.net,DIRECT
   - DOMAIN-SUFFIX,ibeats-uk.com,DIRECT
   - DOMAIN-SUFFIX,ibeatsbydre.cc,DIRECT
   - DOMAIN-SUFFIX,ibeatsbydre.com,DIRECT
+  - DOMAIN-SUFFIX,ibook.co.nz,DIRECT
+  - DOMAIN-SUFFIX,ibook.com,DIRECT
+  - DOMAIN-SUFFIX,ibook.eu,DIRECT
+  - DOMAIN-SUFFIX,ibook.net,DIRECT
+  - DOMAIN-SUFFIX,ibookpartner.com,DIRECT
+  - DOMAIN-SUFFIX,ibooksauthor.com,DIRECT
   - DOMAIN-SUFFIX,ichat.co.in,DIRECT
   - DOMAIN-SUFFIX,icloud-apple.cn,DIRECT
   - DOMAIN-SUFFIX,icloud-content.com,DIRECT
@@ -1845,6 +1809,9 @@
   - DOMAIN-SUFFIX,imacsources.com,DIRECT
   - DOMAIN-SUFFIX,imessage.tv,DIRECT
   - DOMAIN-SUFFIX,imonsterbeats.com,DIRECT
+  - DOMAIN-SUFFIX,imovie.eu,DIRECT
+  - DOMAIN-SUFFIX,imoviegallery.com,DIRECT
+  - DOMAIN-SUFFIX,imoviestage.com,DIRECT
   - DOMAIN-SUFFIX,incentivetravelgifts.com,DIRECT
   - DOMAIN-SUFFIX,indiaipad.com,DIRECT
   - DOMAIN-SUFFIX,insidear.cn,DIRECT
@@ -1918,6 +1885,10 @@
   - DOMAIN-SUFFIX,iphonese.tv,DIRECT
   - DOMAIN-SUFFIX,iphoneunlockimei.com,DIRECT
   - DOMAIN-SUFFIX,iphonexs.tv,DIRECT
+  - DOMAIN-SUFFIX,iphoto.eu,DIRECT
+  - DOMAIN-SUFFIX,iphoto.no,DIRECT
+  - DOMAIN-SUFFIX,iphoto.se,DIRECT
+  - DOMAIN-SUFFIX,iphoto.wang,DIRECT
   - DOMAIN-SUFFIX,ipod.ca,DIRECT
   - DOMAIN-SUFFIX,ipod.ch,DIRECT
   - DOMAIN-SUFFIX,ipod.cm,DIRECT
@@ -2139,6 +2110,7 @@
   - DOMAIN-SUFFIX,moreheadphones.com,DIRECT
   - DOMAIN-SUFFIX,mr-apple.com.tw,DIRECT
   - DOMAIN-SUFFIX,ms4dre.com,DIRECT
+  - DOMAIN-SUFFIX,musickit.net,DIRECT
   - DOMAIN-SUFFIX,myappleid.com,DIRECT
   - DOMAIN-SUFFIX,mybeatsbydrestudio.com,DIRECT
   - DOMAIN-SUFFIX,mybeatsbydreuk.com,DIRECT
@@ -2307,6 +2279,7 @@
   - DOMAIN-SUFFIX,www.apple.com.edgekey.net,DIRECT
   - DOMAIN-SUFFIX,wwwapple.com,DIRECT
   - DOMAIN-SUFFIX,wwwapple.net,DIRECT
+  - DOMAIN-SUFFIX,wwwapplemusic.com,DIRECT
   - DOMAIN-SUFFIX,wwwicloud.com,DIRECT
   - DOMAIN-SUFFIX,wwwipodlounge.com,DIRECT
   - DOMAIN-SUFFIX,wwwitunes.com,DIRECT
@@ -2336,10 +2309,12 @@
   - PROCESS-NAME,CoreLocationAgent,DIRECT
   - PROCESS-NAME,findmydevice-user-agent,DIRECT
   - PROCESS-NAME,fmfd,DIRECT
+  - PROCESS-NAME,LookupViewService,DIRECT
   - PROCESS-NAME,mapspushd,DIRECT
   - PROCESS-NAME,Music,DIRECT
   - PROCESS-NAME,netbiosd,DIRECT
   - PROCESS-NAME,trustd,DIRECT
+  - PROCESS-NAME,TV,DIRECT
   - PROCESS-NAME,WeatherWidget,DIRECT
   - IP-CIDR,139.178.128.0/18,DIRECT,no-resolve
   - IP-CIDR,144.178.0.0/19,DIRECT,no-resolve
@@ -2368,21 +2343,28 @@
   - DOMAIN,apps5.oingo.com,DIRECT
   - DOMAIN,asusrouter.com,DIRECT
   - DOMAIN,avail.googleflights.net,DIRECT
+  - DOMAIN,beacons.gcp.gvt2.com,DIRECT
+  - DOMAIN,beacons.gvt2.com,DIRECT
+  - DOMAIN,beacons2.gvt2.com,DIRECT
+  - DOMAIN,beacons3.gvt2.com,DIRECT
   - DOMAIN,c.admob.com,DIRECT
   - DOMAIN,c.pki.goog,DIRECT
   - DOMAIN,cache-management-prod.google.com,DIRECT
   - DOMAIN,cache.pack.google.com,DIRECT
   - DOMAIN,cdn.ampproject.org,DIRECT
   - DOMAIN,cdn.globalsigncdn.com.cdn.cloudflare.net,DIRECT
+  - DOMAIN,checkin.gstatic.com,DIRECT
   - DOMAIN,clickserve.cc-dt.com,DIRECT
   - DOMAIN,clickserve.dartsearch.net,DIRECT
   - DOMAIN,clickserver.googleads.com,DIRECT
   - DOMAIN,clientservices.googleapis.com,DIRECT
   - DOMAIN,cn.download.nvidia.com,DIRECT
   - DOMAIN,cn.widevine.com,DIRECT
+  - DOMAIN,connectivitycheck.gstatic.com,DIRECT
   - DOMAIN,crashlyticsreports-pa.googleapis.com,DIRECT
   - DOMAIN,crl.pki.goog,DIRECT
   - DOMAIN,crls.pki.goog,DIRECT
+  - DOMAIN,csi.gstatic.com,DIRECT
   - DOMAIN,dartsearch-cn.net,DIRECT
   - DOMAIN,dc1-cert.ksn.kaspersky-labs.com,DIRECT
   - DOMAIN,dc1-file.ksn.kaspersky-labs.com,DIRECT
@@ -2398,6 +2380,10 @@
   - DOMAIN,end-api.shallow.ink,DIRECT
   - DOMAIN,end.shallow.ink,DIRECT
   - DOMAIN,fontfiles.googleapis.com,DIRECT
+  - DOMAIN,g0.gstatic.com,DIRECT
+  - DOMAIN,g1.gstatic.com,DIRECT
+  - DOMAIN,g2.gstatic.com,DIRECT
+  - DOMAIN,g3.gstatic.com,DIRECT
   - DOMAIN,gonglchuangl.net,DIRECT
   - DOMAIN,gongyichuangyi.net,DIRECT
   - DOMAIN,google-analytics-cn.com,DIRECT
@@ -2479,6 +2465,7 @@
   - DOMAIN,service.urchin.com,DIRECT
   - DOMAIN,setmeup.arubanetworks.com,DIRECT
   - DOMAIN,ssl-google-analytics.l.google.com,DIRECT
+  - DOMAIN,ssl.gstatic.com,DIRECT
   - DOMAIN,staging-controlbe.floonet.goog,DIRECT
   - DOMAIN,staging-databe.floonet.goog,DIRECT
   - DOMAIN,staging.databe.floonet.goog,DIRECT
@@ -131569,6 +131556,7 @@
   - DOMAIN-SUFFIX,ggjav.com,PROXY
   - DOMAIN-SUFFIX,ggoogle.com,PROXY
   - DOMAIN-SUFFIX,ggpds.com,PROXY
+  - DOMAIN-SUFFIX,ggpht.com,PROXY
   - DOMAIN-SUFFIX,ggsel.com,PROXY
   - DOMAIN-SUFFIX,ggsel.net,PROXY
   - DOMAIN-SUFFIX,ggsrv.com,PROXY
@@ -132115,6 +132103,7 @@
   - DOMAIN-SUFFIX,googletagservices.com,PROXY
   - DOMAIN-SUFFIX,googletraveladservices-cn.com,PROXY
   - DOMAIN-SUFFIX,googletraveladservices.com,PROXY
+  - DOMAIN-SUFFIX,googleusercontent.com,PROXY
   - DOMAIN-SUFFIX,googlevads-cn.com,PROXY
   - DOMAIN-SUFFIX,googleventures.com,PROXY
   - DOMAIN-SUFFIX,googlevideo.com,PROXY
@@ -132256,6 +132245,7 @@
   - DOMAIN-SUFFIX,gslink.us,PROXY
   - DOMAIN-SUFFIX,gsrc.io,PROXY
   - DOMAIN-SUFFIX,gstatic-cn.com,PROXY
+  - DOMAIN-SUFFIX,gstatic.com,PROXY
   - DOMAIN-SUFFIX,gsuite.com,PROXY
   - DOMAIN-SUFFIX,gt536.top,PROXY
   - DOMAIN-SUFFIX,gtricks.com,PROXY
@@ -132296,6 +132286,8 @@
   - DOMAIN-SUFFIX,gvlib.com,PROXY
   - DOMAIN-SUFFIX,gvm.com.tw,PROXY
   - DOMAIN-SUFFIX,gvt0.com,PROXY
+  - DOMAIN-SUFFIX,gvt2.com,PROXY
+  - DOMAIN-SUFFIX,gvt3.com,PROXY
   - DOMAIN-SUFFIX,gvt5.com,PROXY
   - DOMAIN-SUFFIX,gvt6.com,PROXY
   - DOMAIN-SUFFIX,gvt7.com,PROXY
@@ -147100,26 +147092,6 @@
   - DOMAIN-SUFFIX,zzdh99.com,PROXY
   - DOMAIN-SUFFIX,zzgays.com,PROXY
   - DOMAIN-SUFFIX,zzycdz.com,PROXY
-  - DOMAIN-KEYWORD,appspot,PROXY
-  - DOMAIN-KEYWORD,blogspot,PROXY
-  - DOMAIN-KEYWORD,github,PROXY
-  - DOMAIN-KEYWORD,gmail,PROXY
-  - DOMAIN-KEYWORD,google,PROXY
-  - DOMAIN-KEYWORD,nicegram,PROXY
-  - DOMAIN-KEYWORD,recaptcha,PROXY
-  - DOMAIN-KEYWORD,youtube,PROXY
-  - PROCESS-NAME,BackupandSync,PROXY
-  - PROCESS-NAME,com.android.vending,PROXY
-  - PROCESS-NAME,com.google.android.gms,PROXY
-  - PROCESS-NAME,com.google.android.gsf,PROXY
-  - PROCESS-NAME,com.google.android.play.games,PROXY
-  - PROCESS-NAME,GoogleDriveFS.exe,PROXY
-  - PROCESS-NAME,nekox.messenger,PROXY
-  - PROCESS-NAME,org.telegram.messenger,PROXY
-  - PROCESS-NAME,telegram-desktop,PROXY
-  - PROCESS-NAME,Telegram.exe,PROXY
-  - PROCESS-NAME,tw.nekomimi.nekogram,PROXY
-  - PROCESS-NAME,xyz.nextalone.nagram,PROXY
   - IP-CIDR,149.154.160.0/20,PROXY,no-resolve
   - IP-CIDR,172.110.32.0/21,PROXY,no-resolve
   - IP-CIDR,173.194.0.0/16,PROXY,no-resolve

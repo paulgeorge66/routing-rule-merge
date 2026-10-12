@@ -11,8 +11,10 @@ PROCESS-NAME,com.apple.Maps
 PROCESS-NAME,CoreLocationAgent
 PROCESS-NAME,findmydevice-user-agent
 PROCESS-NAME,fmfd
+PROCESS-NAME,LookupViewService
 PROCESS-NAME,mapspushd
 PROCESS-NAME,Music
 PROCESS-NAME,netbiosd
 PROCESS-NAME,trustd
+PROCESS-NAME,TV
 PROCESS-NAME,WeatherWidget

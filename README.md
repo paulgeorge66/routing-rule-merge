@@ -6,15 +6,15 @@
 
 `top-proxy → top-direct → apple-proxy → apple-direct → direct → proxy → MATCH`。具体来源与所属 section 见 [sources.yaml](sources.yaml)。先匹配的规则生效；配合去广告时，REJECT 放在这些分流规则之前。
 
-Apple 使用 BlackMatrix7 `Apple_Classical.yaml` 完整源。上游普通 `Apple.yaml` 与 `Apple_Domain.yaml` 是有意拆分，单独普通文件不是完整域名集合。AppleTV/AppleProxy/AppleMedia 的代理规则仍先于 Apple 直连规则；不另加手写 Apple 覆盖。
+Apple 使用 BlackMatrix7 `Apple_Classical.yaml` 完整源。AppleProxy/AppleMedia 的数据保留并默认用于直连，覆盖 Apple CDN、TestFlight、iCloud、Apple Music 和公共开发者资源；只将明确的 TV/News 服务放在前置代理集合。AppleMedia 的 News 传输域名通过精确 `section_overrides` 分类，另用维护中的 AppleNews 小清单补充入口。营销别名不强制代理。
 
-已移除被完整 Apple 源覆盖的 AppStore、TestFlight、SystemOTA、iCloud 与 Loyalsoldier Apple 下载来源。YouTube 与 GitHub 的域名已被总集覆盖，仅有贡献的关键词显式保存在本地规则中。远程来源共 17 个。
+已移除被完整 Apple 源覆盖的 AppStore、TestFlight、SystemOTA、iCloud 与 Loyalsoldier Apple 下载来源。YouTube/GitHub 补充规则使用有域名边界的后缀，不采用无边界关键词。远程来源共 18 个，新增的 AppleNews 与其他 BM7 文件使用同一 SHA 和整组恢复保障。
 
 OpenAI 和 GitHub Copilot 使用 MetaCubeX 的完整 Classical 服务规则，微软 Copilot 的专用域名同样位于 `top-proxy`，先于 Microsoft 总集。保留 OpenAI 动态 WebPubSub 的正则匹配，避免 Azure 资源被厂商总集提前直连；其他微软服务与国内 AI 的原有策略继续生效。
 
-Telegram 的 IP 使用官方 CIDR；BlackMatrix7 Telegram 仅提供域名、关键词与进程规则，过滤其 IP/ASN 部分。当前输出无 IP-ASN，不依赖 ASN 数据库。applications 仍采用现有进程直连策略，涵盖代理软件防环路和下载客户端；需要修改下载器策略时，可调整该来源。
+Telegram 的 IP 使用官方 CIDR；BlackMatrix7 Telegram 仅提供域名，过滤其 IP/ASN 与进程/关键词部分。当前输出无 IP-ASN，不依赖 ASN 数据库。applications 保留现有进程直连策略，涵盖代理软件防环路和下载客户端。
 
-不同类型的同名规则分别保留，例如 `DOMAIN-KEYWORD,onedrive` 与 `PROCESS-NAME,OneDrive`。仅删除相同类型、值的重复项，以及被前置规则或同动作父域后缀完整覆盖的规则。
+代理来源中的无边界关键词和整进程匹配已移除，防止将类似 `51drv.com` 或程序的辅助请求扩大到代理。OneDrive 保留明确服务域名；SharePoint/Office 共用域名按 Microsoft 维护清单直连。Google Play 保留明确下载入口，不在最高优先级覆盖整个 googleusercontent/gstatic 厂商集合。不同规则类型的语义仍独立保留，OpenAI 必要的动态正则不被删除。
 
 domain payload 的普通域名保留为 DOMAIN 精确匹配，`+.` 才转为 DOMAIN-SUFFIX。正则表达式的大小写和转义保持原样，不与不同语义的表达式合并。
 
@@ -37,7 +37,8 @@ domain payload 的普通域名保留为 DOMAIN 精确匹配，`+.` 才转为 DOM
 
 - `routing-expanded-rules.yaml`：带两个空格列表缩进，末尾有且仅有 `MATCH,PROXY`，供历史消费者使用。
 - `routing-expanded-fragment.yaml`：相同路由内容，不包含 MATCH，供 Worker 流式拼接。
-- `proxy-dns-domains.yaml`：代理 section 的域名/域名后缀，六个空格列表缩进，供展开模式的 `dns.fallback-filter.domain` 使用。不含 PROCESS-NAME、IP、关键词规则。
+- `routing-dns-providers.yaml`：九个有序的内联 DNS 集合，供展开模式的 `nameserver-policy` 使用。大域名集合使用 domain trie，较小集合保留精确/后缀/正则/关键词语义；无远程下载依赖。
+- `proxy-dns-domains.yaml`：仅为旧消费者保留的代理域名片段；新的 Worker 不再用它配置 GeoIP fallback。
 - `manifest.json`、`build-report.json`：文件完整性、源状态、剪枝与构建校验结果。
 - `adblock-overlap.csv/json`：与已验证去广告快照的覆盖诊断，包含手写优先规则冲突。诊断不添加放行例外；不可用时 JSON 明确标记 unavailable。
 
@@ -77,7 +78,7 @@ GitHub Actions 在 push、PR、手动触发和每天三次（间隔八小时）�
 - 最多四个源并行下载，按配置顺序合并，避免网络完成顺序影响优先级。
 - 同一个 GitHub 仓库及分支先解析一个 SHA，再从该固定版本下载全部文件。整组格式、数量和关键规则通过后才替换快照；任何文件失败时整组回退到 24 小时内的已验证版本，避免新旧文件混用。SHA 未变化时复用校验过的文件。版本和正文哈希写入构建报告。
 - 使用 ETag/Last-Modified 条件请求；只有成功解析、校验的快照才写入 `.cache/sources`。上游异常时最多使用 24 小时内的同 URL 已验证快照，报告标记 `stale`；没有合格快照就停止发布。
-- 发布前执行来源配置中的 21 个域名去向检查，覆盖 OpenAI Azure 资源、Copilot、动态 WebPubSub、国内 AI、Microsoft、Apple 和精确域名的子域行为。策略回归会停止发布。
+- 发布前执行来源配置中的 56 个域名去向检查，覆盖 Apple 国内服务直连、TV/News 代理、OpenAI/Copilot 动态资源、Google Play、OneDrive、Microsoft 和精确域名的子域行为。策略回归会停止发布。
 - 发布前检查每个文件的消费者大小上限、LF、重复条目、展开片段和最终 MATCH；对 MRS 做反向转换并核对匹配范围，再运行 Mihomo 配置检查。
 - Mihomo 固定 v1.19.29，下载校验 SHA-256。所有检查成功后才写 `manifest.json` 并提交整套产物。manifest 记录文件字节数、SHA-256、条目数和是否降级。
 

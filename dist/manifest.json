@@ -12,29 +12,29 @@
       "rules": null
     },
     "apple-direct-domains.list": {
-      "bytes": 30125,
-      "sha256": "49466798476468356ec87db3d0a88b577fe498103a27c702f6b0f4fa3b67cab7",
-      "rules": 1514
+      "bytes": 30808,
+      "sha256": "92b770746082ac5a5e226122bd6e8b9f7cb945eebea49b081493f3ad1667ce4c",
+      "rules": 1555
     },
     "apple-direct-domains.mrs": {
-      "bytes": 15863,
-      "sha256": "6d44cf56ea37efacfcd69fa8967834a685af6441a90272128869b22600812df7",
+      "bytes": 16181,
+      "sha256": "0f7425d6bebe44d88ac5fe1522973cb01b41c77f074f1fe01160102005c08d15",
       "rules": null
     },
     "apple-direct-misc.list": {
-      "bytes": 509,
-      "sha256": "2c51298ada6480313c26a886c3b0ac375d4e68ca4b86488b2ff36f3b40e7e950",
-      "rules": 18
+      "bytes": 556,
+      "sha256": "3fb0a708d82dabec5988eafabecf8402a2b18bf5ff1e4b27cffa586c05605225",
+      "rules": 20
     },
     "apple-direct.list": {
-      "bytes": 49208,
-      "sha256": "bb3ea15192a1571dae5e6c1444dfe2fc97f2e4b59e9ffcaf530f6a5fb9194ac5",
-      "rules": 1545
+      "bytes": 50430,
+      "sha256": "e1dee91434fa05d0ac47ca8f03ec88b45b9363bc1a045de97f3e60468c6c066f",
+      "rules": 1588
     },
     "apple-proxy.list": {
-      "bytes": 2420,
-      "sha256": "c37ad5148b8467ea44d49df630231c9a55fbdb33e8e68eed5ab33e55a068978e",
-      "rules": 80
+      "bytes": 443,
+      "sha256": "8dc18883228e29ae035ba06d8a725b3d13380de45cbdee69e44c58db16fbe832",
+      "rules": 14
     },
     "direct-cidr.list": {
       "bytes": 153290,
@@ -47,13 +47,13 @@
       "rules": null
     },
     "direct-domains.list": {
-      "bytes": 1618299,
-      "sha256": "be2f5e860017505a05cf5a5a0d8db626a59de2be7ba64fd0c977ec35ee54a5af",
-      "rules": 110557
+      "bytes": 1618515,
+      "sha256": "f8790bf353874c83bffb1e7cf35702292867bf04c9f1fc62dbb5c1c0d654be7b",
+      "rules": 110569
     },
     "direct-domains.mrs": {
-      "bytes": 533438,
-      "sha256": "a7028e92d1c934de79c5f647581cccdb6d0234b870979229b64d7be6463b9022",
+      "bytes": 533610,
+      "sha256": "784064808282b46217c9bdcff486e5eef3f13d74607fc6396900c922e50440b7",
       "rules": null
     },
     "direct-misc.list": {
@@ -72,44 +72,49 @@
       "rules": null
     },
     "proxy-dns-domains.yaml": {
-      "bytes": 598263,
-      "sha256": "38e92b94b05fcba2a54da2d73ecd93441e6a8c618633c23c234d06b62700ff35",
-      "rules": 24591
+      "bytes": 596476,
+      "sha256": "80c6c0491e0def3da888313b92b3214a13a0488866b09ea022663d0eab0772b4",
+      "rules": 24525
     },
     "proxy-domains.list": {
-      "bytes": 399118,
-      "sha256": "1d393e28711a6eff8526d4a2658bda8a32318ea0d9d63b90fa96070e7d3c34e7",
-      "rules": 24472
+      "bytes": 399190,
+      "sha256": "458bb34abb6e76b2c25b41f9f9b366b248983787f5b86058972d10b0cce00bd8",
+      "rules": 24477
     },
     "proxy-domains.mrs": {
-      "bytes": 177427,
-      "sha256": "ef5dc8d255014e397c7bd3c846f8af63a458dc4bada3bb0f2b00dbf7b9fec82b",
+      "bytes": 177329,
+      "sha256": "565e19f7cc989f4d1dab31528da11997487f1fb16a3a430a5a49e100f05081b5",
       "rules": null
     },
     "proxy-misc.list": {
-      "bytes": 579,
-      "sha256": "aa45fcf05bb2714c4140cda844d2f43c07bfc0531863090434d658c38c5f9bca",
-      "rules": 20
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rules": 0
+    },
+    "routing-dns-providers.yaml": {
+      "bytes": 3445494,
+      "sha256": "3a67eed55cd21f8aa1d86ace1d861e8f4cbad925d0dc469e67c36efcc5123526",
+      "rules": 137384
     },
     "routing-expanded-fragment.yaml": {
-      "bytes": 5647686,
-      "sha256": "8efbcab922fa5a25812a47c2efb60076fb957bbbb47541acf7a345019863aeb6",
-      "rules": 147141
+      "bytes": 5646554,
+      "sha256": "1464e509faffdca760c8135e37a9536d70af44485e37aa955d3d976c8557914e",
+      "rules": 147113
     },
     "routing-expanded-rules.yaml": {
-      "bytes": 5647702,
-      "sha256": "ae66e6bf9fdafbb5fbf3aad1190170203d51d5048ffc55561d5a9a640534c290",
-      "rules": 147142
+      "bytes": 5646570,
+      "sha256": "78b8d46773d20c933f8478bc55af1f6b464e9b9b42bdfd653cb9abb335a14158",
+      "rules": 147114
     },
     "top-direct.list": {
-      "bytes": 20273,
-      "sha256": "ac340fdbbe75213f422fa57a3c993c73183df2936f07904b36dec0a703e3ac2f",
-      "rules": 668
+      "bytes": 20493,
+      "sha256": "d37b4c34cd8cc30cda06c26c0ce47259e0e1d6aae18989d2bccf0b150411af13",
+      "rules": 676
     },
     "top-proxy.list": {
-      "bytes": 2112,
-      "sha256": "c58ed13f4925fd81eb06e9efdbad17e6643e751d9fa05881457c07f8d2ebbf33",
-      "rules": 63
+      "bytes": 1879,
+      "sha256": "7d3f41d073cec56c0c3a0ff92189b3945bd56b34ca5718ce33a7c1bddcc3aa47",
+      "rules": 53
     }
   },
   "degraded": false

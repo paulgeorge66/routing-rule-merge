@@ -1,5 +1,5 @@
-# Public routing sources; service exceptions precede vendor-wide rules.
-# GitHub files are pinned and recovered as complete repository cohorts.
+# Maintained upstream rules with narrow service exceptions; raw sources remain validated.
+# DNS follows the exact same section order as routing.
 pin_github_revisions: true
 source_order:
 - top-proxy
@@ -21,22 +21,23 @@ sources:
   - DOMAIN-SUFFIX,play-lh.googleusercontent.com
   - DOMAIN-SUFFIX,play-apps-features.googleusercontent.com
   - DOMAIN-SUFFIX,gvt1.com
-  - DOMAIN-SUFFIX,gvt2.com
-  - DOMAIN-SUFFIX,gvt3.com
   - DOMAIN-SUFFIX,dl.google.com
-  - DOMAIN-SUFFIX,ggpht.com
-  - DOMAIN-SUFFIX,googleusercontent.com
-  - DOMAIN-SUFFIX,googleapis.cn
   - DOMAIN,fonts.gstatic.com
   - DOMAIN,fonts.googleapis.com
   - DOMAIN,www.gstatic.com
-  - DOMAIN-SUFFIX,gstatic.com
 - name: bm7_onedrive
   section: top-proxy
   parser: classical_payload
   url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.yaml
   max_rules: 54
   min_rules: 10
+  exclude_types:
+  - DOMAIN-KEYWORD
+  - PROCESS-NAME
+  exclude_rules:
+  - DOMAIN-SUFFIX,sharepoint.com
+  - DOMAIN-SUFFIX,sharepointonline.com
+  - DOMAIN-SUFFIX,spoprod-a.akamaihd.net
 - name: meta_openai
   section: top-proxy
   parser: classical_text
@@ -93,18 +94,45 @@ sources:
   url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleTV/AppleTV.yaml
   min_rules: 4
   max_rules: 24
-- name: bm7_appleproxy
+  exclude_types:
+  - PROCESS-NAME
+- name: bm7_applenews
   section: apple-proxy
+  parser: classical_payload
+  url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleNews/AppleNews.yaml
+  min_rules: 2
+  max_rules: 12
+- name: bm7_appleproxy
+  section: apple-direct
   parser: classical_payload
   url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleProxy/AppleProxy.yaml
   min_rules: 24
   max_rules: 120
+  exclude_types:
+  - PROCESS-NAME
+  exclude_rules:
+  - DOMAIN-SUFFIX,digicert.com
 - name: bm7_applemedia
-  section: apple-proxy
+  section: apple-direct
   parser: classical_payload
   url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleMedia/AppleMedia.yaml
   min_rules: 31
   max_rules: 156
+  exclude_types:
+  - PROCESS-NAME
+  section_overrides:
+    DOMAIN-SUFFIX,apple.news: apple-proxy
+    DOMAIN-SUFFIX,news-assets.apple.com: apple-proxy
+    DOMAIN-SUFFIX,news-client.apple.com: apple-proxy
+    DOMAIN-SUFFIX,news-edge.apple.com: apple-proxy
+    DOMAIN-SUFFIX,news-events.apple.com: apple-proxy
+- name: certificate_validation
+  section: apple-direct
+  parser: inline
+  rules:
+  - DOMAIN,ocsp.digicert.com
+  - DOMAIN,crl3.digicert.com
+  - DOMAIN,crl4.digicert.com
 - name: bm7_apple
   section: apple-direct
   parser: classical_payload
@@ -163,6 +191,8 @@ sources:
   - IP-ASN
   - IP-CIDR
   - IP-CIDR6
+  - DOMAIN-KEYWORD
+  - PROCESS-NAME
   required_types:
   - DOMAIN-SUFFIX
   - PROCESS-NAME
@@ -172,6 +202,10 @@ sources:
   url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml
   min_rules: 420
   max_rules: 2103
+  exclude_types:
+  - DOMAIN-KEYWORD
+  - PROCESS-NAME
+  - IP-ASN
 - name: loyal_proxy
   section: proxy
   parser: domain_payload
@@ -192,12 +226,20 @@ sources:
   - IP-CIDR6
   required_rules:
   - IP-CIDR,149.154.160.0/20,no-resolve
-- name: service_keywords
+- name: service_domains
   section: proxy
   parser: inline
   rules:
-  - DOMAIN-KEYWORD,youtube
-  - DOMAIN-KEYWORD,github
+  - DOMAIN-SUFFIX,youtube.com
+  - DOMAIN-SUFFIX,youtu.be
+  - DOMAIN-SUFFIX,youtube-nocookie.com
+  - DOMAIN-SUFFIX,ytimg.com
+  - DOMAIN-SUFFIX,googlevideo.com
+  - DOMAIN-SUFFIX,github.com
+  - DOMAIN-SUFFIX,github.io
+  - DOMAIN-SUFFIX,githubassets.com
+  - DOMAIN-SUFFIX,githubusercontent.com
+  - DOMAIN-SUFFIX,githubapp.com
 behavior_checks:
 - domain: chatgpt.com
   action: PROXY
@@ -236,8 +278,78 @@ behavior_checks:
 - domain: child.router.asus.com
   action: PROXY
 - domain: testflight.apple.com
-  action: PROXY
+  action: DIRECT
 - domain: updates.cdn-apple.com
-  action: PROXY
+  action: DIRECT
 - domain: dl.google.com
+  action: PROXY
+- domain: updates-http.cdn-apple.com
+  action: DIRECT
+- domain: app-site-association.cdn-apple.com
+  action: DIRECT
+- domain: appleid.cdn-apple.com
+  action: DIRECT
+- domain: publicassets.cdn-apple.com
+  action: DIRECT
+- domain: store.storeimages.cdn-apple.com
+  action: DIRECT
+- domain: devimages-cdn.apple.com
+  action: DIRECT
+- domain: devstreaming-cdn.apple.com
+  action: DIRECT
+- domain: developer.apple.com
+  action: DIRECT
+- domain: apps.apple.com
+  action: DIRECT
+- domain: itunes.apple.com
+  action: DIRECT
+- domain: icloud.com
+  action: DIRECT
+- domain: icloud.com.cn
+  action: DIRECT
+- domain: cdn.apple-cloudkit.com
+  action: DIRECT
+- domain: cvws.icloud-content.com
+  action: DIRECT
+- domain: music.apple.com
+  action: DIRECT
+- domain: js-cdn.music.apple.com
+  action: DIRECT
+- domain: aod.itunes.apple.com
+  action: DIRECT
+- domain: audio-ssl.itunes.apple.com
+  action: DIRECT
+- domain: streamingaudio.itunes.apple.com
+  action: DIRECT
+- domain: ocsp.apple.com
+  action: DIRECT
+- domain: ocsp.digicert.com
+  action: DIRECT
+- domain: crl3.digicert.com
+  action: DIRECT
+- domain: crl4.digicert.com
+  action: DIRECT
+- domain: example.sharepoint.com
+  action: DIRECT
+- domain: spoprod-a.akamaihd.net
+  action: DIRECT
+- domain: tv.apple.com
+  action: PROXY
+- domain: hls.itunes.apple.com
+  action: PROXY
+- domain: news-client.apple.com
+  action: PROXY
+- domain: news-client-search.apple.com
+  action: PROXY
+- domain: apple.news
+  action: PROXY
+- domain: onedrive.live.com
+  action: PROXY
+- domain: youtube.com
+  action: PROXY
+- domain: www.github.com
+  action: PROXY
+- domain: fonts.googleapis.com
+  action: PROXY
+- domain: fonts.gstatic.com
   action: PROXY

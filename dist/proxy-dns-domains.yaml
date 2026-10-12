@@ -3,35 +3,27 @@
       - adobeereg.com
       - agb9r0ad.qllfkl.com
       - angle.com.tw
-      - api-glb-sea.smoot.apple.com
       - api-p.videomarket.jp
       - api.imem.app
       - api.swiftgram.app
       - bbs.boingboing.net
       - beck-online.beck.de
       - blizzard.nefficient.co.kr
-      - books.itunes.apple.com
       - browser-intake-datadoghq.com
       - bybit.ada.support
       - cbsi.live.ott.irdeto.com
       - cbsplaylistserver.aws.syncbak.com
       - cbsservice.aws.syncbak.com
       - cdn-spotify-experiments.conductrics.com
-      - cdn.apple-cloudkit.com
       - cdn.js7k.com
       - cisco.evergage.com
       - copilotprodattachments.blob.core.windows.net
       - crl.versign.net
-      - cvws.icloud-content.com
       - databank.worldbank.org
       - datarouter.apps.netherrealm.com
       - deribit.cdn.prismic.io
       - deutschewelle.h-cdn.com
-      - developer.apple.com
-      - devimages-cdn.apple.com
-      - devstreaming-cdn.apple.com
       - dl.begellhouse.com
-      - docs-assets.developer.apple.com
       - elib.maruzen.co.jp
       - f3b7q2p3.ssl.hwcdn.net
       - faronics.kayako.com
@@ -40,23 +32,19 @@
       - gog-cdn-lumen.secure2.footprint.net
       - gspe1-ssl.ls.apple.com
       - hb4bbbbb.pmhcjk.com
-      - hls-svod.itunes.apple.com
+      - hls-amt.itunes.apple.com
+      - hls.itunes.apple.com
       - holoxx.f5.si
       - hpstore.corpmerchandise.com
       - hub.slarker.me
       - i.jeded.com
       - imperial.insendi.com
-      - itunes.apple.com
-      - js-cdn.music.apple.com
       - link.theplatform.com
       - live-patreon-marketing.pantheonsite.io
-      - lookup-api.apple.com
-      - mask-api.icloud.com
-      - mask-h2.icloud.com
-      - mask.icloud.com
       - medone-education.thieme.com
       - muse.jhu.edu
       - nbbb1bb7.pmhcjk.com
+      - news-client-search.apple.com
       - np-edge.itunes.apple.com
       - ntp-c.colorado.edu
       - ntp.time.nl
@@ -79,6 +67,7 @@
       - openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
       - openaicomproductionae4b.blob.core.windows.net
       - p16-tiktok-dm-sticker-sign-sg.ibyteimg.com
+      - play-edge.itunes.apple.com
       - production-openaicom-storage.azureedge.net
       - public-us-pingsx.api.clonoth.com
       - q676790b.pmhcjk.com
@@ -101,9 +90,8 @@
       - rsshub.umzzz.com
       - rsshub.woodland.cafe
       - rsshub2.asailor.org
-      - sandbox.itunes.apple.com
       - straitsx-826709081262441084-b790f87a2ae6fd417434295.freshchat.com
-      - testflight.apple.com
+      - tv.applemusic.com
       - ubisoft.siteintercept.qualtrics.com
       - ut1-time.colorado.edu
       - utcnist.colorado.edu
@@ -1853,7 +1841,6 @@
       - +.aoaou.iillii.net
       - +.aobo.com.au
       - +.aoc.cat
-      - +.aod.itunes.apple.com
       - +.aodahl.com
       - +.aofriend.com
       - +.aolcdn.com
@@ -1922,39 +1909,18 @@
       - +.appexchange.com
       - +.appget.com
       - +.apple
-      - +.apple-dns.net
       - +.apple-studies.com
-      - +.apple.comscoreresearch.com
       - +.apple.news
       - +.applecensorship.com
       - +.appledaily.com
       - +.appledaily.com.hk
       - +.appledaily.com.tw
       - +.appledaily.hk
-      - +.appleenews.com
       - +.applefruity.com
       - +.applehealth.com.hk
       - +.appleinsider.com
-      - +.applemusic.berlin
-      - +.applemusic.co
-      - +.applemusic.com
-      - +.applemusic.com.au
-      - +.applemusic.hamburg
-      - +.applemusic.wang
-      - +.applemusicconnect.com
-      - +.applemusicfestival.com
-      - +.applenews.berlin
-      - +.applenews.hamburg
-      - +.applenews.tv
-      - +.applenewsformat.com
-      - +.appletv.com
-      - +.appletv.fr
-      - +.appletv.wang
-      - +.appletv4.cn
-      - +.appletv4.com.cn
       - +.appmedia.jp
       - +.approvedusedbmw.com
-      - +.apps.apple.com
       - +.apps.evozi.com
       - +.apps5.oingo.com
       - +.appshopper.com
@@ -1962,7 +1928,6 @@
       - +.appsocks.net
       - +.appsonebay.net
       - +.appspot.com
-      - +.appsto.re
       - +.appyq.com
       - +.apress.com
       - +.aps.org
@@ -2214,8 +2179,6 @@
       - +.audible.com
       - +.audiencenetwork.com
       - +.audiencenetwork.tv
-      - +.audio-ssl.itunes.apple.com
-      - +.audio.itunes.apple.com
       - +.auntymaza.com
       - +.auroraoss.com
       - +.auth0.com
@@ -3144,7 +3107,6 @@
       - +.blizzak-juken.jp
       - +.blizzard.com
       - +.blizzardgearstore.com
-      - +.blobstore.apple.com
       - +.blockcast.it
       - +.blockchain.com
       - +.blockcn.com
@@ -4471,7 +4433,6 @@
       - +.cdjp.org
       - +.cdkworkshop.com
       - +.cdmatech.com
-      - +.cdn-apple.com
       - +.cdn-cookieyes.com
       - +.cdn-telegram.org
       - +.cdn-terapeak.com
@@ -5944,7 +5905,6 @@
       - +.digicert-cn.com
       - +.digicert-validation.com
       - +.digicert.co.jp
-      - +.digicert.com
       - +.digicert.eu
       - +.digiland.tw
       - +.digisfera.com
@@ -9503,7 +9463,6 @@
       - +.googleadservices.com
       - +.googleanalytics.com
       - +.googleapis-cn.com
-      - +.googleapis.cn
       - +.googleapis.com
       - +.googleapps-cn.com
       - +.googleapps.com
@@ -10304,8 +10263,6 @@
       - +.hku.hk
       - +.hkust.hk
       - +.hlbelygl.com
-      - +.hls-amt.itunes.apple.com
-      - +.hls.itunes.apple.com
       - +.hlsp1.pw
       - +.hm.com
       - +.hmd.site
@@ -10828,8 +10785,6 @@
       - +.hyprsense.com
       - +.hzmn.net
       - +.i-123-hp.com
-      - +.i-book.com
-      - +.i-book.net
       - +.i-cable.com
       - +.i-cablecomm.com
       - +.i-o-u.info
@@ -10871,12 +10826,6 @@
       - +.ibm.net
       - +.ibm.us
       - +.ibonedyourmom.com
-      - +.ibook.co.nz
-      - +.ibook.com
-      - +.ibook.eu
-      - +.ibook.net
-      - +.ibookpartner.com
-      - +.ibooksauthor.com
       - +.ibradome.com
       - +.ibvpn.com
       - +.icashpassport.com.mx
@@ -11212,9 +11161,6 @@
       - +.immoral.jp
       - +.immxd.com
       - +.imod.com
-      - +.imovie.eu
-      - +.imoviegallery.com
-      - +.imoviestage.com
       - +.impactdesignhub.com
       - +.imperialbusiness.school
       - +.imperiodefamosas.com
@@ -11654,10 +11600,6 @@
       - +.iphone4hongkong.com
       - +.iphonetaiwan.org
       - +.iphonix.fr
-      - +.iphoto.eu
-      - +.iphoto.no
-      - +.iphoto.se
-      - +.iphoto.wang
       - +.ipicture.ru
       - +.ipify.org
       - +.ipjetable.net
@@ -14463,7 +14405,6 @@
       - +.musical.ly
       - +.musicbay.net
       - +.musicbrainz.org
-      - +.musickit.net
       - +.musixmatch.com
       - +.mut.ch
       - +.muthead.com
@@ -14477,7 +14418,6 @@
       - +.mvg.jp
       - +.mvideoporno.xxx
       - +.mvk.com
-      - +.mvod.itunes.apple.com
       - +.mvs-bank.ru
       - +.mwcu00.com
       - +.mwdbank.com
@@ -15665,7 +15605,6 @@
       - +.ocourier.ru
       - +.ocsp-certum.com
       - +.ocsp-responder.com
-      - +.ocsp.apple.com
       - +.october-review.org
       - +.octocaptcha.com
       - +.ocul.us
@@ -16685,7 +16624,6 @@
       - +.play-asia.com
       - +.play-bmm.shop
       - +.play-bmmer.buzz
-      - +.play-edge.itunes.apple.com
       - +.play4free.com
       - +.playads.jp
       - +.playapex.com
@@ -18832,8 +18770,6 @@
       - +.share.america.gov
       - +.sharecool.org
       - +.sharefile.com
-      - +.sharepoint.com
-      - +.sharepointonline.com
       - +.sharethis.com
       - +.sharif.edu
       - +.sharif.ir
@@ -19814,7 +19750,6 @@
       - +.stream-mydirtyhobby.biz
       - +.streamable.com
       - +.streamate.com
-      - +.streamingaudio.itunes.apple.com
       - +.streamingdisney.net
       - +.streamingporn.xyz
       - +.streamingthe.net
@@ -23139,7 +23074,6 @@
       - +.www.xicons.org
       - +.www.zensur.freerk.com
       - +.www8-hp.com
-      - +.wwwapplemusic.com
       - +.wwwdecide.com
       - +.wwwebay.com
       - +.wwwebay.net

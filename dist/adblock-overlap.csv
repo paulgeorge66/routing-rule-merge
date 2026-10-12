@@ -3,7 +3,6 @@ top-proxy,"DOMAIN,browser-intake-datadoghq.com",PROXY,"DOMAIN-SUFFIX,browser-int
 top-proxy,"DOMAIN,copilot-telemetry-service.githubusercontent.com",PROXY,"DOMAIN-SUFFIX,copilot-telemetry-service.githubusercontent.com",REJECT
 top-proxy,"DOMAIN,copilot-telemetry.githubusercontent.com",PROXY,"DOMAIN-SUFFIX,copilot-telemetry.githubusercontent.com",REJECT
 top-proxy,"DOMAIN,openai.qualtrics.com",PROXY,"DOMAIN-SUFFIX,openai.qualtrics.com",REJECT
-top-proxy,"DOMAIN-SUFFIX,gvt2.com",PROXY,"DOMAIN-SUFFIX,gvt2.com",REJECT
 top-direct,"DOMAIN-SUFFIX,bingads.com",DIRECT,"DOMAIN-SUFFIX,bingads.com",REJECT
 top-direct,"DOMAIN-SUFFIX,fabric.io",DIRECT,"DOMAIN-SUFFIX,fabric.io",REJECT
 top-direct,"DOMAIN-SUFFIX,localytics.com",DIRECT,"DOMAIN-SUFFIX,localytics.com",REJECT
@@ -161,6 +160,7 @@ proxy,"DOMAIN-SUFFIX,googletraveladservices.com",PROXY,"DOMAIN-SUFFIX,googletrav
 proxy,"DOMAIN-SUFFIX,googlevads-cn.com",PROXY,"DOMAIN-SUFFIX,googlevads-cn.com",REJECT
 proxy,"DOMAIN-SUFFIX,gotraffic.net",PROXY,"DOMAIN-SUFFIX,gotraffic.net",REJECT
 proxy,"DOMAIN-SUFFIX,guardianapps.co.uk",PROXY,"DOMAIN-SUFFIX,guardianapps.co.uk",REJECT
+proxy,"DOMAIN-SUFFIX,gvt2.com",PROXY,"DOMAIN-SUFFIX,gvt2.com",REJECT
 proxy,"DOMAIN-SUFFIX,hentaibaka.one",PROXY,"DOMAIN-SUFFIX,hentaibaka.one",REJECT
 proxy,"DOMAIN-SUFFIX,heywire.com",PROXY,"DOMAIN-SUFFIX,heywire.com",REJECT
 proxy,"DOMAIN-SUFFIX,hooligapps.com",PROXY,"DOMAIN-SUFFIX,hooligapps.com",REJECT
@@ -276,11 +276,16 @@ direct,"DOMAIN,app-analytics-services.com",DIRECT,"DOMAIN-SUFFIX,app-analytics-s
 direct,"DOMAIN,app-measurement-cn.com",DIRECT,"DOMAIN-SUFFIX,app-measurement-cn.com",REJECT
 direct,"DOMAIN,app-measurement.com",DIRECT,"DOMAIN-SUFFIX,app-measurement.com",REJECT
 direct,"DOMAIN,apps5.oingo.com",DIRECT,"DOMAIN-SUFFIX,apps5.oingo.com",REJECT
+direct,"DOMAIN,beacons.gcp.gvt2.com",DIRECT,"DOMAIN-SUFFIX,gvt2.com",REJECT
+direct,"DOMAIN,beacons.gvt2.com",DIRECT,"DOMAIN-SUFFIX,gvt2.com",REJECT
+direct,"DOMAIN,beacons2.gvt2.com",DIRECT,"DOMAIN-SUFFIX,gvt2.com",REJECT
+direct,"DOMAIN,beacons3.gvt2.com",DIRECT,"DOMAIN-SUFFIX,gvt2.com",REJECT
 direct,"DOMAIN,c.admob.com",DIRECT,"DOMAIN-SUFFIX,admob.com",REJECT
 direct,"DOMAIN,clickserve.cc-dt.com",DIRECT,"DOMAIN-SUFFIX,cc-dt.com",REJECT
 direct,"DOMAIN,clickserve.dartsearch.net",DIRECT,"DOMAIN-SUFFIX,dartsearch.net",REJECT
 direct,"DOMAIN,clickserver.googleads.com",DIRECT,"DOMAIN-SUFFIX,googleads.com",REJECT
 direct,"DOMAIN,crashlyticsreports-pa.googleapis.com",DIRECT,"DOMAIN-SUFFIX,crashlyticsreports-pa.googleapis.com",REJECT
+direct,"DOMAIN,csi.gstatic.com",DIRECT,"DOMAIN-SUFFIX,csi.gstatic.com",REJECT
 direct,"DOMAIN,doubleclick-cn.net",DIRECT,"DOMAIN-SUFFIX,doubleclick-cn.net",REJECT
 direct,"DOMAIN,doubleclick.net",DIRECT,"DOMAIN-SUFFIX,doubleclick.net",REJECT
 direct,"DOMAIN,google-analytics-cn.com",DIRECT,"DOMAIN-SUFFIX,google-analytics-cn.com",REJECT

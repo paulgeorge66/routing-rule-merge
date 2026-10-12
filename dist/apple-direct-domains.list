@@ -82,6 +82,7 @@ p-events-delivery.akamaized.net
 +.apple-dns.cn
 +.apple-dns.com
 +.apple-dns.com.cn
++.apple-dns.net
 +.apple-enews.com
 +.apple-expo.com
 +.apple-expo.eu
@@ -152,6 +153,7 @@ p-events-delivery.akamaized.net
 +.apple.com.tr
 +.apple.com.tw
 +.apple.com.uy
++.apple.comscoreresearch.com
 +.apple.cz
 +.apple.de
 +.apple.dk
@@ -243,6 +245,7 @@ p-events-delivery.akamaized.net
 +.appledarwin.net
 +.appledns.cn
 +.appledns.com.cn
++.appleenews.com
 +.appleexpo.eu
 +.appleexpo.info
 +.applefilmaker.com
@@ -272,7 +275,19 @@ p-events-delivery.akamaized.net
 +.applemagickeyboard.com
 +.applemalaysia.com.my
 +.applemasters.info
++.applemusic.berlin
++.applemusic.co
++.applemusic.com
++.applemusic.com.au
++.applemusic.hamburg
++.applemusic.wang
++.applemusicconnect.com
++.applemusicfestival.com
 +.applemx-icloud.com
++.applenews.berlin
++.applenews.hamburg
++.applenews.tv
++.applenewsformat.com
 +.appleone.audio
 +.appleone.blog
 +.appleone.chat
@@ -367,6 +382,12 @@ p-events-delivery.akamaized.net
 +.appleswift.com
 +.appletaiwan.com
 +.appletips.net
++.appletv.com
++.appletv.fr
++.appletv.wang
++.appletv4.cn
++.appletv4.com.cn
++.appletvapp.apple
 +.applewallet.com
 +.applewallet.tv
 +.applewatch.hk
@@ -384,6 +405,7 @@ p-events-delivery.akamaized.net
 +.applle.com
 +.applw.com
 +.appmediagroup.com
++.appsto.re
 +.appstore.co.id
 +.appstore.com
 +.appstore.hk
@@ -730,6 +752,7 @@ p-events-delivery.akamaized.net
 +.casquesbeatsaudio.com
 +.catalina.hk
 +.cdn-apple-mapkit.com
++.cdn-apple.com
 +.cheap-beats-by-dre.net
 +.cheap-beatsbydre.com
 +.cheapbagshoes.com
@@ -825,6 +848,7 @@ p-events-delivery.akamaized.net
 +.detaliczny.com
 +.developer-advisor.com
 +.device-manager.us
++.digicert.com
 +.digitalhub.com
 +.discountbeatsbydre-us.com
 +.discountbeatsstore.com
@@ -963,9 +987,17 @@ p-events-delivery.akamaized.net
 +.hotmonsterbeats.com
 +.hottestheadphonesonline.com
 +.hrsaz.com
++.i-book.com
++.i-book.net
 +.ibeats-uk.com
 +.ibeatsbydre.cc
 +.ibeatsbydre.com
++.ibook.co.nz
++.ibook.com
++.ibook.eu
++.ibook.net
++.ibookpartner.com
++.ibooksauthor.com
 +.ichat.co.in
 +.icloud-apple.cn
 +.icloud-content.com
@@ -1034,6 +1066,9 @@ p-events-delivery.akamaized.net
 +.imacsources.com
 +.imessage.tv
 +.imonsterbeats.com
++.imovie.eu
++.imoviegallery.com
++.imoviestage.com
 +.incentivetravelgifts.com
 +.indiaipad.com
 +.insidear.cn
@@ -1107,6 +1142,10 @@ p-events-delivery.akamaized.net
 +.iphonese.tv
 +.iphoneunlockimei.com
 +.iphonexs.tv
++.iphoto.eu
++.iphoto.no
++.iphoto.se
++.iphoto.wang
 +.ipod.ca
 +.ipod.ch
 +.ipod.cm
@@ -1328,6 +1367,7 @@ p-events-delivery.akamaized.net
 +.moreheadphones.com
 +.mr-apple.com.tw
 +.ms4dre.com
++.musickit.net
 +.myappleid.com
 +.mybeatsbydrestudio.com
 +.mybeatsbydreuk.com
@@ -1496,6 +1536,7 @@ p-events-delivery.akamaized.net
 +.www.apple.com.edgekey.net
 +.wwwapple.com
 +.wwwapple.net
++.wwwapplemusic.com
 +.wwwicloud.com
 +.wwwipodlounge.com
 +.wwwitunes.com

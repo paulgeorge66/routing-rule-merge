@@ -8,7 +8,7 @@ import sys
 from concurrent.futures import ThreadPoolExecutor
 from .source_io import SourceFetcher, normalize_domain, normalize_cidr, payload_items, previous_counts, validate_rules
 from .cohorts import CohortFetcher, github_group
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from pathlib import Path
 from typing import Iterable
 
@@ -62,6 +62,18 @@ SECTION_ACTION = {
 SPLIT_BEHAVIOR_SECTIONS = {"direct", "proxy", "apple-direct"}
 DOMAIN_TYPES = {"DOMAIN", "DOMAIN-SUFFIX"}
 CIDR_TYPES = {"IP-CIDR", "IP-CIDR6"}
+DNS_TYPES = DOMAIN_TYPES | {"DOMAIN-KEYWORD", "DOMAIN-REGEX"}
+DNS_PROVIDER_SPECS = [
+    ('top-proxy', 'top-proxy', 'classical'),
+    ('top-direct', 'top-direct', 'classical'),
+    ('apple-proxy', 'apple-proxy', 'classical'),
+    ('apple-direct-domains', 'apple-direct', 'domain'),
+    ('apple-direct-misc', 'apple-direct', 'classical'),
+    ('direct-domains', 'direct', 'domain'),
+    ('direct-misc', 'direct', 'classical'),
+    ('proxy-domains', 'proxy', 'domain'),
+    ('proxy-misc', 'proxy', 'classical'),
+]
 
 
 @dataclass(frozen=True)
@@ -265,9 +277,22 @@ def build_sections(
     # Merge in configured order, independent of download completion order.
     for source, (parsed, metadata) in zip(config["sources"], results):
         excluded_types = set(source.get('exclude_types', []))
-        kept = [rule for rule in parsed if rule.rule_type not in excluded_types]
-        by_section[source["section"]].extend(kept)
-        source_report[source["name"]] = {"section": source["section"], "parser": source["parser"], "url": source.get("url"), "parsed_rules": len(parsed), 'included_rules':len(kept), 'excluded_rules':len(parsed)-len(kept), **metadata}
+        def configured_rule(item):
+            rule = normalize_rule_line(item, source['name'], source['section'], 0)
+            if rule is None:
+                raise ValueError('empty configured rule')
+            return rule.render()
+        excluded_rules = {configured_rule(item) for item in source.get('exclude_rules', [])}
+        overrides = {configured_rule(item):section for item,section in source.get('section_overrides', {}).items()}
+        if any(section not in by_section for section in overrides.values()):
+            raise ValueError(f"invalid section override in {source['name']}")
+        kept = [replace(rule, section=overrides.get(rule.render(), rule.section)) for rule in parsed
+                if rule.rule_type not in excluded_types and rule.render() not in excluded_rules]
+        routed_sections = {}
+        for rule in kept:
+            by_section[rule.section].append(rule)
+            routed_sections[rule.section] = routed_sections.get(rule.section, 0) + 1
+        source_report[source["name"]] = {"section": source["section"], "parser": source["parser"], "url": source.get("url"), "parsed_rules": len(parsed), 'included_rules':len(kept), 'excluded_rules':len(parsed)-len(kept), 'routed_sections':routed_sections, **metadata}
 
     rendered_sections: dict[str, list[ParsedRule]] = {}
     cumulative: list[ParsedRule] = []
@@ -384,6 +409,36 @@ def render_expanded_rules_yaml(sections: dict[str, list[ParsedRule]]) -> str:
     return "\n".join(lines) + "\n"
 
 
+def dns_inline_providers(sections: dict[str, list[ParsedRule]]) -> dict:
+    """Preserve routing order and exact/suffix/regex semantics for DNS.
+
+    Large collections use the core's domain trie, not a linear classical list.
+    Inline providers keep expanded subscriptions self-contained.
+    """
+    providers = {}
+    for name, section, behavior in DNS_PROVIDER_SPECS:
+        rules = [rule for rule in sections.get(section, []) if rule.rule_type in DNS_TYPES]
+        if behavior == 'domain':
+            rules = [rule for rule in rules if rule.rule_type in DOMAIN_TYPES]
+            payload = render_domain_behavior_text(rules).splitlines()
+        else:
+            if section in SPLIT_BEHAVIOR_SECTIONS:
+                rules = [rule for rule in rules if rule.rule_type not in DOMAIN_TYPES]
+            payload = [rule.render() for rule in rules]
+        providers['dns-routing-' + name] = {'type':'inline', 'behavior':behavior, 'format':'yaml', 'payload':payload}
+    return providers
+
+
+def render_dns_providers_fragment(providers: dict) -> str:
+    lines = []
+    for name, provider in providers.items():
+        lines.extend([f'  {name}:', '    type: inline', f"    behavior: {provider['behavior']}", '    format: yaml'])
+        payload = provider['payload']
+        lines.append('    payload:' if payload else '    payload: []')
+        lines.extend('      - ' + json.dumps(item, ensure_ascii=False) for item in payload)
+    return '\n'.join(lines) + '\n'
+
+
 def write_outputs(
     sections: dict[str, list[ParsedRule]],
     report: dict,
@@ -423,6 +478,9 @@ def write_outputs(
     dns_rules = [rule for section in ("top-proxy", "apple-proxy", "proxy") for rule in sections.get(section, []) if rule.rule_type in DOMAIN_TYPES]
     dns_lines = render_domain_behavior_text(prune_shadowed_rules(dedupe_rules(dns_rules))).splitlines()
     (output_dir / "proxy-dns-domains.yaml").write_text("".join(f"      - {item}\n" for item in dns_lines), encoding="utf-8", newline="\n")
+    dns_providers = dns_inline_providers(sections)
+    (output_dir / 'routing-dns-providers.yaml').write_text(render_dns_providers_fragment(dns_providers), encoding='utf-8', newline='\n')
+    report['dns'] = {'mode':'ordered-routing-providers', 'providers':list(dns_providers), 'rules':sum(len(p['payload']) for p in dns_providers.values())}
     report["expanded_rules"] = {
         "path": str(expanded_rules_path.relative_to(ROOT)),
         "rules": expanded_rules_text.count("\n"),
