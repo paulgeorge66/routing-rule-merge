@@ -83,5 +83,15 @@ jobs:
             echo "No generated rule changes."
           else
             git commit -m "chore: update generated routing rules"
-            git push
+            for attempt in 1 2 3; do
+              if git push; then
+                break
+              fi
+              if [ "$attempt" -eq 3 ]; then
+                echo "Generated rule push failed after 3 attempts."
+                exit 1
+              fi
+              echo "Push failed; retrying in $((attempt * 5)) seconds."
+              sleep "$((attempt * 5))"
+            done
           fi
