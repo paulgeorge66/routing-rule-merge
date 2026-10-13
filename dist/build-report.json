@@ -22,11 +22,11 @@
       "routed_sections": {
         "top-proxy": 10
       },
-      "fetch_status": "not_modified",
-      "revision_sha": "19c84682407580056d0ae2f27e406f70db679de1",
-      "resolved_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/19c84682407580056d0ae2f27e406f70db679de1/rule/Clash/OneDrive/OneDrive.yaml",
+      "fetch_status": "validated",
+      "revision_sha": "d8363caa2c1e47fb735615316032bed3f475ee57",
+      "resolved_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/OneDrive/OneDrive.yaml",
       "content_sha256": "6f5902a52d1a0f48b69f7ebe021c4f14361e2c3f5426388923f2034740e60991",
-      "snapshot_validated_at": 1791919402.0694723
+      "snapshot_validated_at": 1791935182.1510222
     },
     "meta_openai": {
       "section": "top-proxy",
@@ -38,11 +38,11 @@
       "routed_sections": {
         "top-proxy": 23
       },
-      "fetch_status": "validated",
+      "fetch_status": "not_modified",
       "revision_sha": "bf52d18cf9f047308cf3b1844e5e9211989d2e03",
       "resolved_url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/bf52d18cf9f047308cf3b1844e5e9211989d2e03/geo/geosite/classical/openai.list",
       "content_sha256": "5aa9a38539026b693135c769f6db10962345ac46860977cb168a52c9d5bfbf6d",
-      "snapshot_validated_at": 1791919402.6170187
+      "snapshot_validated_at": 1791935182.4171576
     },
     "meta_github_copilot": {
       "section": "top-proxy",
@@ -54,11 +54,11 @@
       "routed_sections": {
         "top-proxy": 6
       },
-      "fetch_status": "validated",
+      "fetch_status": "not_modified",
       "revision_sha": "bf52d18cf9f047308cf3b1844e5e9211989d2e03",
       "resolved_url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/bf52d18cf9f047308cf3b1844e5e9211989d2e03/geo/geosite/classical/github-copilot.list",
       "content_sha256": "d3ccb06e2621a53f8f885b44d200d6b1c434df4b3bfa0c933c721b964fda498a",
-      "snapshot_validated_at": 1791919402.6170187
+      "snapshot_validated_at": 1791935182.4171576
     },
     "microsoft_copilot": {
       "section": "top-proxy",
@@ -82,11 +82,11 @@
       "routed_sections": {
         "top-direct": 670
       },
-      "fetch_status": "not_modified",
-      "revision_sha": "19c84682407580056d0ae2f27e406f70db679de1",
-      "resolved_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/19c84682407580056d0ae2f27e406f70db679de1/rule/Clash/Microsoft/Microsoft.yaml",
+      "fetch_status": "validated",
+      "revision_sha": "d8363caa2c1e47fb735615316032bed3f475ee57",
+      "resolved_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Microsoft/Microsoft.yaml",
       "content_sha256": "a289a1d52394e92ceee26a5c83953cd292609717d39fb2970d189dc7877b2a4d",
-      "snapshot_validated_at": 1791919402.0694723
+      "snapshot_validated_at": 1791935182.1510222
     },
     "private_ranges": {
       "section": "top-direct",
@@ -110,11 +110,11 @@
       "routed_sections": {
         "apple-proxy": 7
       },
-      "fetch_status": "not_modified",
-      "revision_sha": "19c84682407580056d0ae2f27e406f70db679de1",
-      "resolved_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/19c84682407580056d0ae2f27e406f70db679de1/rule/Clash/AppleTV/AppleTV.yaml",
+      "fetch_status": "validated",
+      "revision_sha": "d8363caa2c1e47fb735615316032bed3f475ee57",
+      "resolved_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/AppleTV/AppleTV.yaml",
       "content_sha256": "8c82bfeb31a2ce0abd508d07b4fe5f24a54274b53717de0120b46f55ba5fb70a",
-      "snapshot_validated_at": 1791919402.0694723
+      "snapshot_validated_at": 1791935182.1510222
     },
     "bm7_applenews": {
       "section": "apple-proxy",
@@ -126,11 +126,11 @@
       "routed_sections": {
         "apple-proxy": 2
       },
-      "fetch_status": "not_modified",
-      "revision_sha": "19c84682407580056d0ae2f27e406f70db679de1",
-      "resolved_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/19c84682407580056d0ae2f27e406f70db679de1/rule/Clash/AppleNews/AppleNews.yaml",
+      "fetch_status": "validated",
+      "revision_sha": "d8363caa2c1e47fb735615316032bed3f475ee57",
+      "resolved_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/AppleNews/AppleNews.yaml",
       "content_sha256": "f45b1892d69cac07cbf55d3d498fbaebb22eb686e55f5485e4f697c2ed0eeb54",
-      "snapshot_validated_at": 1791919402.0694723
+      "snapshot_validated_at": 1791935182.1510222
     },
     "bm7_appleproxy": {
       "section": "apple-direct",
@@ -142,11 +142,11 @@
       "routed_sections": {
         "apple-direct": 38
       },
-      "fetch_status": "not_modified",
-      "revision_sha": "19c84682407580056d0ae2f27e406f70db679de1",
-      "resolved_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/19c84682407580056d0ae2f27e406f70db679de1/rule/Clash/AppleProxy/AppleProxy.yaml",
+      "fetch_status": "validated",
+      "revision_sha": "d8363caa2c1e47fb735615316032bed3f475ee57",
+      "resolved_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/AppleProxy/AppleProxy.yaml",
       "content_sha256": "683103c41509c1f660c71d39ce5290e1a13a4176ec061822f4e8e83934afba4b",
-      "snapshot_validated_at": 1791919402.0694723
+      "snapshot_validated_at": 1791935182.1510222
     },
     "bm7_applemedia": {
       "section": "apple-direct",
@@ -159,11 +159,11 @@
         "apple-direct": 47,
         "apple-proxy": 5
       },
-      "fetch_status": "not_modified",
-      "revision_sha": "19c84682407580056d0ae2f27e406f70db679de1",
-      "resolved_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/19c84682407580056d0ae2f27e406f70db679de1/rule/Clash/AppleMedia/AppleMedia.yaml",
+      "fetch_status": "validated",
+      "revision_sha": "d8363caa2c1e47fb735615316032bed3f475ee57",
+      "resolved_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/AppleMedia/AppleMedia.yaml",
       "content_sha256": "991459ec6d4672f45251b8d488b6c2798ecb4803616a28be80b23b2cd23183bc",
-      "snapshot_validated_at": 1791919402.0694723
+      "snapshot_validated_at": 1791935182.1510222
     },
     "certificate_validation": {
       "section": "apple-direct",
@@ -187,11 +187,11 @@
       "routed_sections": {
         "apple-direct": 1593
       },
-      "fetch_status": "not_modified",
-      "revision_sha": "19c84682407580056d0ae2f27e406f70db679de1",
-      "resolved_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/19c84682407580056d0ae2f27e406f70db679de1/rule/Clash/Apple/Apple_Classical.yaml",
-      "content_sha256": "dc013bf20851058665d53e8e44907cedffd19ed885fbb78db50f675cf68148ca",
-      "snapshot_validated_at": 1791919402.0694723
+      "fetch_status": "validated",
+      "revision_sha": "d8363caa2c1e47fb735615316032bed3f475ee57",
+      "resolved_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Apple/Apple_Classical.yaml",
+      "content_sha256": "92bc3e53f5f01d70d1a58fe57d1883bea60466856235f91ee857fc993c839189",
+      "snapshot_validated_at": 1791935182.1510222
     },
     "loyal_private": {
       "section": "direct",
@@ -204,26 +204,26 @@
         "direct": 130
       },
       "fetch_status": "validated",
-      "revision_sha": "97528342cf4d3cac0998dd4f2836ef4ee3fbb996",
-      "resolved_url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/97528342cf4d3cac0998dd4f2836ef4ee3fbb996/private.txt",
+      "revision_sha": "650078a2e693f38a3e792b62e1e63d9aa632af2a",
+      "resolved_url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/650078a2e693f38a3e792b62e1e63d9aa632af2a/private.txt",
       "content_sha256": "3a04b128200ef8097d73b1496cbb23d24bc1e05d42fffb09f07c51699efb00b2",
-      "snapshot_validated_at": 1791919403.334555
+      "snapshot_validated_at": 1791935183.2809088
     },
     "loyal_direct": {
       "section": "direct",
       "parser": "domain_payload",
       "url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt",
-      "parsed_rules": 110924,
-      "included_rules": 110924,
+      "parsed_rules": 110614,
+      "included_rules": 110614,
       "excluded_rules": 0,
       "routed_sections": {
-        "direct": 110924
+        "direct": 110614
       },
       "fetch_status": "validated",
-      "revision_sha": "97528342cf4d3cac0998dd4f2836ef4ee3fbb996",
-      "resolved_url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/97528342cf4d3cac0998dd4f2836ef4ee3fbb996/direct.txt",
-      "content_sha256": "c91a00128a071c6a3fa94c11cf7448ed1552a691e84ffb30a43b5838b9e39abc",
-      "snapshot_validated_at": 1791919403.334555
+      "revision_sha": "650078a2e693f38a3e792b62e1e63d9aa632af2a",
+      "resolved_url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/650078a2e693f38a3e792b62e1e63d9aa632af2a/direct.txt",
+      "content_sha256": "8b5a1eb6595bd1c23e39f65df75e2129ca65c0b6273024dcf725ef4d999438fa",
+      "snapshot_validated_at": 1791935183.2809088
     },
     "loyal_applications": {
       "section": "direct",
@@ -236,10 +236,10 @@
         "direct": 98
       },
       "fetch_status": "validated",
-      "revision_sha": "97528342cf4d3cac0998dd4f2836ef4ee3fbb996",
-      "resolved_url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/97528342cf4d3cac0998dd4f2836ef4ee3fbb996/applications.txt",
+      "revision_sha": "650078a2e693f38a3e792b62e1e63d9aa632af2a",
+      "resolved_url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/650078a2e693f38a3e792b62e1e63d9aa632af2a/applications.txt",
       "content_sha256": "33bc8f07bacf74082fcb5f361eded1f6f9d3abcedcbe37ada2eb2ab4ae031732",
-      "snapshot_validated_at": 1791919403.334555
+      "snapshot_validated_at": 1791935183.2809088
     },
     "loyal_lancidr": {
       "section": "direct",
@@ -252,10 +252,10 @@
         "direct": 18
       },
       "fetch_status": "validated",
-      "revision_sha": "97528342cf4d3cac0998dd4f2836ef4ee3fbb996",
-      "resolved_url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/97528342cf4d3cac0998dd4f2836ef4ee3fbb996/lancidr.txt",
+      "revision_sha": "650078a2e693f38a3e792b62e1e63d9aa632af2a",
+      "resolved_url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/650078a2e693f38a3e792b62e1e63d9aa632af2a/lancidr.txt",
       "content_sha256": "82920b241dc328f1dc99849cf733ed8675a00a4ee0bdf64c892b332dfb7e1e2e",
-      "snapshot_validated_at": 1791919403.334555
+      "snapshot_validated_at": 1791935183.2809088
     },
     "loyal_cncidr": {
       "section": "direct",
@@ -268,10 +268,10 @@
         "direct": 9609
       },
       "fetch_status": "validated",
-      "revision_sha": "97528342cf4d3cac0998dd4f2836ef4ee3fbb996",
-      "resolved_url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/97528342cf4d3cac0998dd4f2836ef4ee3fbb996/cncidr.txt",
+      "revision_sha": "650078a2e693f38a3e792b62e1e63d9aa632af2a",
+      "resolved_url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/650078a2e693f38a3e792b62e1e63d9aa632af2a/cncidr.txt",
       "content_sha256": "0db34dd0446a376f5a8a2948b1878acd4a4b697025c7c02df3e56e4fd876c352",
-      "snapshot_validated_at": 1791919403.334555
+      "snapshot_validated_at": 1791935183.2809088
     },
     "bm7_telegram": {
       "section": "proxy",
@@ -283,11 +283,11 @@
       "routed_sections": {
         "proxy": 24
       },
-      "fetch_status": "not_modified",
-      "revision_sha": "19c84682407580056d0ae2f27e406f70db679de1",
-      "resolved_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/19c84682407580056d0ae2f27e406f70db679de1/rule/Clash/Telegram/Telegram.yaml",
+      "fetch_status": "validated",
+      "revision_sha": "d8363caa2c1e47fb735615316032bed3f475ee57",
+      "resolved_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Telegram/Telegram.yaml",
       "content_sha256": "e78efc3f18069f1f1e3f88c15cd55f85424367b58ce8474af08c2fdf054704e0",
-      "snapshot_validated_at": 1791919402.0694723
+      "snapshot_validated_at": 1791935182.1510222
     },
     "bm7_google": {
       "section": "proxy",
@@ -299,11 +299,11 @@
       "routed_sections": {
         "proxy": 690
       },
-      "fetch_status": "not_modified",
-      "revision_sha": "19c84682407580056d0ae2f27e406f70db679de1",
-      "resolved_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/19c84682407580056d0ae2f27e406f70db679de1/rule/Clash/Google/Google.yaml",
+      "fetch_status": "validated",
+      "revision_sha": "d8363caa2c1e47fb735615316032bed3f475ee57",
+      "resolved_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Google/Google.yaml",
       "content_sha256": "dfb4bf0a0095e48f024fbb7c31564a928e6c7d450b662aca9803119489a9237c",
-      "snapshot_validated_at": 1791919402.0694723
+      "snapshot_validated_at": 1791935182.1510222
     },
     "loyal_proxy": {
       "section": "proxy",
@@ -316,10 +316,10 @@
         "proxy": 27233
       },
       "fetch_status": "validated",
-      "revision_sha": "97528342cf4d3cac0998dd4f2836ef4ee3fbb996",
-      "resolved_url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/97528342cf4d3cac0998dd4f2836ef4ee3fbb996/proxy.txt",
+      "revision_sha": "650078a2e693f38a3e792b62e1e63d9aa632af2a",
+      "resolved_url": "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/650078a2e693f38a3e792b62e1e63d9aa632af2a/proxy.txt",
       "content_sha256": "52b3d688fee0baccf4e38513fc0e1fbf8fff26e01e4d728bf7d7614522795763",
-      "snapshot_validated_at": 1791919403.334555
+      "snapshot_validated_at": 1791935183.2809088
     },
     "telegram_official_cidr": {
       "section": "proxy",
@@ -384,9 +384,9 @@
       }
     },
     "direct": {
-      "input_rules": 120779,
-      "deduped_rules": 120775,
-      "output_rules": 120286,
+      "input_rules": 120469,
+      "deduped_rules": 120465,
+      "output_rules": 119976,
       "shadowed_rules": {
         "same_action": 477,
         "opposite_action": 12
@@ -402,7 +402,7 @@
       }
     }
   },
-  "total_rules": 147113,
+  "total_rules": 146803,
   "behavior_checks": [
     {
       "domain": "chatgpt.com",
@@ -772,7 +772,7 @@
       "misc": 20
     },
     "direct": {
-      "domains": 110569,
+      "domains": 110259,
       "cidr": 9619,
       "misc": 98
     },
@@ -795,11 +795,11 @@
       "dns-routing-proxy-domains",
       "dns-routing-proxy-misc"
     ],
-    "rules": 137339
+    "rules": 137029
   },
   "expanded_rules": {
     "path": "dist/routing-expanded-rules.yaml",
-    "rules": 147114
+    "rules": 146804
   },
   "validation": {
     "mihomo": "v1.19.29",

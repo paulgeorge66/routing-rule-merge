@@ -47,13 +47,13 @@
       "rules": null
     },
     "direct-domains.list": {
-      "bytes": 1618515,
-      "sha256": "f8790bf353874c83bffb1e7cf35702292867bf04c9f1fc62dbb5c1c0d654be7b",
-      "rules": 110569
+      "bytes": 1613844,
+      "sha256": "602912050999ed18f78649d6cfee4f3284746ceaa344cd2934e333e1dabf3263",
+      "rules": 110259
     },
     "direct-domains.mrs": {
-      "bytes": 533610,
-      "sha256": "784064808282b46217c9bdcff486e5eef3f13d74607fc6396900c922e50440b7",
+      "bytes": 531706,
+      "sha256": "663f6722a32bb5d38768349987d10dbb593d6fdcc80a2eb39ccc89eb2a48558b",
       "rules": null
     },
     "direct-misc.list": {
@@ -92,19 +92,19 @@
       "rules": 0
     },
     "routing-dns-providers.yaml": {
-      "bytes": 3445494,
-      "sha256": "3a67eed55cd21f8aa1d86ace1d861e8f4cbad925d0dc469e67c36efcc5123526",
-      "rules": 137384
+      "bytes": 3437723,
+      "sha256": "2b7a80731abb3079cdc64e75d8d1b8cae657756d0c1015a464f529ba5d6d5a7d",
+      "rules": 137074
     },
     "routing-expanded-fragment.yaml": {
-      "bytes": 5646554,
-      "sha256": "1464e509faffdca760c8135e37a9536d70af44485e37aa955d3d976c8557914e",
-      "rules": 147113
+      "bytes": 5634753,
+      "sha256": "e16d15302125008c8fa57434edd381f7dea7e9dbeebd4647c2c795022a7733a2",
+      "rules": 146803
     },
     "routing-expanded-rules.yaml": {
-      "bytes": 5646570,
-      "sha256": "78b8d46773d20c933f8478bc55af1f6b464e9b9b42bdfd653cb9abb335a14158",
-      "rules": 147114
+      "bytes": 5634769,
+      "sha256": "d68447c7942d2a19d5800d63dbe232ba2cc9c554fb24f1f14929abca9dbe7d71",
+      "rules": 146804
     },
     "top-direct.list": {
       "bytes": 20493,
