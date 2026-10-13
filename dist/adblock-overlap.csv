@@ -341,7 +341,6 @@ direct,"DOMAIN-SUFFIX,39jz.com",DIRECT,"DOMAIN-SUFFIX,39jz.com",REJECT
 direct,"DOMAIN-SUFFIX,3p8801.co",DIRECT,"DOMAIN-SUFFIX,3p8801.co",REJECT
 direct,"DOMAIN-SUFFIX,51.la",DIRECT,"DOMAIN-SUFFIX,51.la",REJECT
 direct,"DOMAIN-SUFFIX,51240.com",DIRECT,"DOMAIN-SUFFIX,51240.com",REJECT
-direct,"DOMAIN-SUFFIX,5166.info",DIRECT,"DOMAIN-SUFFIX,5166.info",REJECT
 direct,"DOMAIN-SUFFIX,518ad.com",DIRECT,"DOMAIN-SUFFIX,518ad.com",REJECT
 direct,"DOMAIN-SUFFIX,51link.com",DIRECT,"DOMAIN-SUFFIX,51link.com",REJECT
 direct,"DOMAIN-SUFFIX,51taifu.com",DIRECT,"DOMAIN-SUFFIX,51taifu.com",REJECT
@@ -616,7 +615,6 @@ direct,"DOMAIN-SUFFIX,knowsafe.com",DIRECT,"DOMAIN-SUFFIX,knowsafe.com",REJECT
 direct,"DOMAIN-SUFFIX,koebpmhcce.com",DIRECT,"DOMAIN-SUFFIX,koebpmhcce.com",REJECT
 direct,"DOMAIN-SUFFIX,kokojia.com",DIRECT,"DOMAIN-SUFFIX,kokojia.com",REJECT
 direct,"DOMAIN-SUFFIX,koowo.com",DIRECT,"DOMAIN-SUFFIX,koowo.com",REJECT
-direct,"DOMAIN-SUFFIX,kouclo.com",DIRECT,"DOMAIN-SUFFIX,kouclo.com",REJECT
 direct,"DOMAIN-SUFFIX,kuaizip.com",DIRECT,"DOMAIN-SUFFIX,kuaizip.com",REJECT
 direct,"DOMAIN-SUFFIX,kuaizitech.com",DIRECT,"DOMAIN-SUFFIX,kuaizitech.com",REJECT
 direct,"DOMAIN-SUFFIX,kuheju.com",DIRECT,"DOMAIN-SUFFIX,kuheju.com",REJECT
@@ -751,6 +749,7 @@ direct,"DOMAIN-SUFFIX,staticfile.net",DIRECT,"DOMAIN-SUFFIX,staticfile.net",REJE
 direct,"DOMAIN-SUFFIX,staticfile.org",DIRECT,"DOMAIN-SUFFIX,staticfile.org",REJECT
 direct,"DOMAIN-SUFFIX,steamproxy.net",DIRECT,"DOMAIN-SUFFIX,steamproxy.net",REJECT
 direct,"DOMAIN-SUFFIX,stg8.com",DIRECT,"DOMAIN-SUFFIX,stg8.com",REJECT
+direct,"DOMAIN-SUFFIX,sxxjdz.com",DIRECT,"DOMAIN-SUFFIX,sxxjdz.com",REJECT
 direct,"DOMAIN-SUFFIX,synacast.com",DIRECT,"DOMAIN-SUFFIX,synacast.com",REJECT
 direct,"DOMAIN-SUFFIX,szbdyd.com",DIRECT,"DOMAIN-SUFFIX,szbdyd.com",REJECT
 direct,"DOMAIN-SUFFIX,talkingdata.com",DIRECT,"DOMAIN-SUFFIX,talkingdata.com",REJECT
@@ -847,6 +846,7 @@ direct,"DOMAIN-SUFFIX,xiaozhen.com",DIRECT,"DOMAIN-SUFFIX,xiaozhen.com",REJECT
 direct,"DOMAIN-SUFFIX,xibao100.com",DIRECT,"DOMAIN-SUFFIX,xibao100.com",REJECT
 direct,"DOMAIN-SUFFIX,xiyouence.com",DIRECT,"DOMAIN-SUFFIX,xiyouence.com",REJECT
 direct,"DOMAIN-SUFFIX,xshellcn.com",DIRECT,"DOMAIN-SUFFIX,xshellcn.com",REJECT
+direct,"DOMAIN-SUFFIX,xtxbemp.xyz",DIRECT,"DOMAIN-SUFFIX,xtxbemp.xyz",REJECT
 direct,"DOMAIN-SUFFIX,xuan5.com",DIRECT,"DOMAIN-SUFFIX,xuan5.com",REJECT
 direct,"DOMAIN-SUFFIX,xukou.net",DIRECT,"DOMAIN-SUFFIX,xukou.net",REJECT
 direct,"DOMAIN-SUFFIX,xulizui6.com",DIRECT,"DOMAIN-SUFFIX,xulizui6.com",REJECT
