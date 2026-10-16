@@ -123,7 +123,6 @@ proxy,"DOMAIN-SUFFIX,dweb.link",PROXY,"DOMAIN-SUFFIX,dweb.link",REJECT
 proxy,"DOMAIN-SUFFIX,dynatrace.com",PROXY,"DOMAIN-SUFFIX,dynatrace.com",REJECT
 proxy,"DOMAIN-SUFFIX,ebayadvertising.com",PROXY,"DOMAIN-SUFFIX,ebayadvertising.com",REJECT
 proxy,"DOMAIN-SUFFIX,ebayclassifiedsgroup.com",PROXY,"DOMAIN-SUFFIX,ebayclassifiedsgroup.com",REJECT
-proxy,"DOMAIN-SUFFIX,envybox.io",PROXY,"DOMAIN-SUFFIX,envybox.io",REJECT
 proxy,"DOMAIN-SUFFIX,erabaru.net",PROXY,"DOMAIN-SUFFIX,erabaru.net",REJECT
 proxy,"DOMAIN-SUFFIX,erogazopple.com",PROXY,"DOMAIN-SUFFIX,erogazopple.com",REJECT
 proxy,"DOMAIN-SUFFIX,expekt.com",PROXY,"DOMAIN-SUFFIX,expekt.com",REJECT
