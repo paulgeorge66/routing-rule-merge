@@ -62,7 +62,6 @@ proxy,"DOMAIN-SUFFIX,akstat.io",PROXY,"DOMAIN-SUFFIX,akstat.io",REJECT
 proxy,"DOMAIN-SUFFIX,altmetric.com",PROXY,"DOMAIN-SUFFIX,altmetric.com",REJECT
 proxy,"DOMAIN-SUFFIX,aoxx69.net",PROXY,"DOMAIN-SUFFIX,aoxx69.net",REJECT
 proxy,"DOMAIN-SUFFIX,app-analytics-services.com",PROXY,"DOMAIN-SUFFIX,app-analytics-services.com",REJECT
-proxy,"DOMAIN-SUFFIX,app-measurement-cn.com",PROXY,"DOMAIN-SUFFIX,app-measurement-cn.com",REJECT
 proxy,"DOMAIN-SUFFIX,app-measurement.com",PROXY,"DOMAIN-SUFFIX,app-measurement.com",REJECT
 proxy,"DOMAIN-SUFFIX,appconsent.io",PROXY,"DOMAIN-SUFFIX,appconsent.io",REJECT
 proxy,"DOMAIN-SUFFIX,apps5.oingo.com",PROXY,"DOMAIN-SUFFIX,apps5.oingo.com",REJECT
@@ -102,7 +101,6 @@ proxy,"DOMAIN-SUFFIX,clickserve.cc-dt.com",PROXY,"DOMAIN-SUFFIX,cc-dt.com",REJEC
 proxy,"DOMAIN-SUFFIX,clickserver.googleads.com",PROXY,"DOMAIN-SUFFIX,googleads.com",REJECT
 proxy,"DOMAIN-SUFFIX,cloudflareinsights.com",PROXY,"DOMAIN-SUFFIX,cloudflareinsights.com",REJECT
 proxy,"DOMAIN-SUFFIX,cs.co",PROXY,"DOMAIN-SUFFIX,cs.co",REJECT
-proxy,"DOMAIN-SUFFIX,cuntempire.com",PROXY,"DOMAIN-SUFFIX,cuntempire.com",REJECT
 proxy,"DOMAIN-SUFFIX,cuntwars.com",PROXY,"DOMAIN-SUFFIX,cuntwars.com",REJECT
 proxy,"DOMAIN-SUFFIX,daftsex.com",PROXY,"DOMAIN-SUFFIX,daftsex.com",REJECT
 proxy,"DOMAIN-SUFFIX,dartsearch.net",PROXY,"DOMAIN-SUFFIX,dartsearch.net",REJECT
@@ -273,7 +271,6 @@ direct,"DOMAIN,2mdn.net",DIRECT,"DOMAIN-SUFFIX,2mdn.net",REJECT
 direct,"DOMAIN,admob-cn.com",DIRECT,"DOMAIN-SUFFIX,admob-cn.com",REJECT
 direct,"DOMAIN,adservice.google.com",DIRECT,"DOMAIN-SUFFIX,adservice.google.com",REJECT
 direct,"DOMAIN,app-analytics-services.com",DIRECT,"DOMAIN-SUFFIX,app-analytics-services.com",REJECT
-direct,"DOMAIN,app-measurement-cn.com",DIRECT,"DOMAIN-SUFFIX,app-measurement-cn.com",REJECT
 direct,"DOMAIN,app-measurement.com",DIRECT,"DOMAIN-SUFFIX,app-measurement.com",REJECT
 direct,"DOMAIN,apps5.oingo.com",DIRECT,"DOMAIN-SUFFIX,apps5.oingo.com",REJECT
 direct,"DOMAIN,beacons.gcp.gvt2.com",DIRECT,"DOMAIN-SUFFIX,gvt2.com",REJECT
@@ -451,6 +448,7 @@ direct,"DOMAIN-SUFFIX,bxsnews.com",DIRECT,"DOMAIN-SUFFIX,bxsnews.com",REJECT
 direct,"DOMAIN-SUFFIX,caomeixz7.xyz",DIRECT,"DOMAIN-SUFFIX,caomeixz7.xyz",REJECT
 direct,"DOMAIN-SUFFIX,cartx.cloud",DIRECT,"DOMAIN-SUFFIX,cartx.cloud",REJECT
 direct,"DOMAIN-SUFFIX,cdnmaster.com",DIRECT,"DOMAIN-SUFFIX,cdnmaster.com",REJECT
+direct,"DOMAIN-SUFFIX,cdu.cc",DIRECT,"DOMAIN-SUFFIX,cdu.cc",REJECT
 direct,"DOMAIN-SUFFIX,chance-ad.com",DIRECT,"DOMAIN-SUFFIX,chance-ad.com",REJECT
 direct,"DOMAIN-SUFFIX,chinaciaf.org",DIRECT,"DOMAIN-SUFFIX,chinaciaf.org",REJECT
 direct,"DOMAIN-SUFFIX,chiq-cloud.com",DIRECT,"DOMAIN-SUFFIX,chiq-cloud.com",REJECT
@@ -690,7 +688,6 @@ direct,"DOMAIN-SUFFIX,peiyou.com",DIRECT,"DOMAIN-SUFFIX,peiyou.com",REJECT
 direct,"DOMAIN-SUFFIX,penxiangge.com",DIRECT,"DOMAIN-SUFFIX,penxiangge.com",REJECT
 direct,"DOMAIN-SUFFIX,pglstatp-toutiao.com",DIRECT,"DOMAIN-SUFFIX,pglstatp-toutiao.com",REJECT
 direct,"DOMAIN-SUFFIX,photozoomchina.com",DIRECT,"DOMAIN-SUFFIX,photozoomchina.com",REJECT
-direct,"DOMAIN-SUFFIX,pikacn.com",DIRECT,"DOMAIN-SUFFIX,pikacn.com",REJECT
 direct,"DOMAIN-SUFFIX,play-analytics.com",DIRECT,"DOMAIN-SUFFIX,play-analytics.com",REJECT
 direct,"DOMAIN-SUFFIX,pop800.com",DIRECT,"DOMAIN-SUFFIX,pop800.com",REJECT
 direct,"DOMAIN-SUFFIX,ptmind.com",DIRECT,"DOMAIN-SUFFIX,ptmind.com",REJECT
@@ -808,7 +805,9 @@ direct,"DOMAIN-SUFFIX,vwe5pjt0jq.com",DIRECT,"DOMAIN-SUFFIX,vwe5pjt0jq.com",REJE
 direct,"DOMAIN-SUFFIX,webdissector.com",DIRECT,"DOMAIN-SUFFIX,webdissector.com",REJECT
 direct,"DOMAIN-SUFFIX,webterren.com",DIRECT,"DOMAIN-SUFFIX,webterren.com",REJECT
 direct,"DOMAIN-SUFFIX,wedolook.com",DIRECT,"DOMAIN-SUFFIX,wedolook.com",REJECT
+direct,"DOMAIN-SUFFIX,weidianyuedu.com",DIRECT,"DOMAIN-SUFFIX,weidianyuedu.com",REJECT
 direct,"DOMAIN-SUFFIX,winbaicai.com",DIRECT,"DOMAIN-SUFFIX,winbaicai.com",REJECT
+direct,"DOMAIN-SUFFIX,winvvv.com",DIRECT,"DOMAIN-SUFFIX,winvvv.com",REJECT
 direct,"DOMAIN-SUFFIX,wiyun.com",DIRECT,"DOMAIN-SUFFIX,wiyun.com",REJECT
 direct,"DOMAIN-SUFFIX,wkanx.com",DIRECT,"DOMAIN-SUFFIX,wkanx.com",REJECT
 direct,"DOMAIN-SUFFIX,wkzw.me",DIRECT,"DOMAIN-SUFFIX,wkzw.me",REJECT
