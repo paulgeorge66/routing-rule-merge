@@ -39,6 +39,7 @@
   - DOMAIN-SUFFIX,onedrive.live.com,PROXY
   - DOMAIN-SUFFIX,openai.com,PROXY
   - DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net,PROXY
+  - DOMAIN-SUFFIX,openai.org,PROXY
   - DOMAIN-SUFFIX,photos.live.com,PROXY
   - DOMAIN-SUFFIX,play-apps-features.googleusercontent.com,PROXY
   - DOMAIN-SUFFIX,play-fe.googleapis.com,PROXY
@@ -127942,6 +127943,7 @@
   - DOMAIN-SUFFIX,cursor.com,PROXY
   - DOMAIN-SUFFIX,cursor.sh,PROXY
   - DOMAIN-SUFFIX,cursorapi.com,PROXY
+  - DOMAIN-SUFFIX,cursorvm.com,PROXY
   - DOMAIN-SUFFIX,curve.fi,PROXY
   - DOMAIN-SUFFIX,curvefish.com,PROXY
   - DOMAIN-SUFFIX,curvybbwwives.com,PROXY
@@ -140948,6 +140950,7 @@
   - DOMAIN-SUFFIX,schwab.com.hk,PROXY
   - DOMAIN-SUFFIX,schwab.com.sg,PROXY
   - DOMAIN-SUFFIX,schwabassetmanagement.com,PROXY
+  - DOMAIN-SUFFIX,schwabcdn.com,PROXY
   - DOMAIN-SUFFIX,schwabplan.com,PROXY
   - DOMAIN-SUFFIX,sci-hub.it.nf,PROXY
   - DOMAIN-SUFFIX,sci-hub.mksa.top,PROXY
@@ -143215,6 +143218,8 @@
   - DOMAIN-SUFFIX,timestalks.com,PROXY
   - DOMAIN-SUFFIX,timeweb.cloud,PROXY
   - DOMAIN-SUFFIX,timeweb.com,PROXY
+  - DOMAIN-SUFFIX,timeweb.tech,PROXY
+  - DOMAIN-SUFFIX,timewebcloud.kz,PROXY
   - DOMAIN-SUFFIX,timi1.me,PROXY
   - DOMAIN-SUFFIX,timo0.com,PROXY
   - DOMAIN-SUFFIX,timtales.com,PROXY
@@ -143775,6 +143780,7 @@
   - DOMAIN-SUFFIX,typekit.net,PROXY
   - DOMAIN-SUFFIX,typenetwork.com,PROXY
   - DOMAIN-SUFFIX,typepad.com,PROXY
+  - DOMAIN-SUFFIX,typesafe.ai,PROXY
   - DOMAIN-SUFFIX,typeset.io,PROXY
   - DOMAIN-SUFFIX,typesquare.com,PROXY
   - DOMAIN-SUFFIX,typography.com,PROXY

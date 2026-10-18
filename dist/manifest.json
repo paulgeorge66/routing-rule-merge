@@ -72,18 +72,18 @@
       "rules": null
     },
     "proxy-dns-domains.yaml": {
-      "bytes": 596674,
-      "sha256": "980cf51231890dba096592c37a069c72d1bc32b50692898b26fcd7553cc2fcbd",
-      "rules": 24533
+      "bytes": 596813,
+      "sha256": "232c9ebe82524180beecd9b903880f04bcc4836e80e58ebda6bdd7092c33ce6d",
+      "rules": 24539
     },
     "proxy-domains.list": {
-      "bytes": 399324,
-      "sha256": "0a4178abe996d4c795583190ab78897c9bbb11fc2e2507551f13d5971a5fb07d",
-      "rules": 24485
+      "bytes": 399402,
+      "sha256": "7c1925e833baab75d250446d138e0485a4a462248ade66af9e3daf1c78d86316",
+      "rules": 24490
     },
     "proxy-domains.mrs": {
-      "bytes": 177776,
-      "sha256": "6e10d5e6f4d8412a5a9dcbeb39b24f3b3f956023de18f4e737a994a4c4ffa215",
+      "bytes": 177423,
+      "sha256": "43cba22ac911e4b116ad40f0df94fb3bfefbfc3541f797250422d824ffc01ebf",
       "rules": null
     },
     "proxy-misc.list": {
@@ -92,19 +92,19 @@
       "rules": 0
     },
     "routing-dns-providers.yaml": {
-      "bytes": 3435527,
-      "sha256": "b6b864fce40cc88ba518460cca4f7a8929c3ca072f5d5798824ad31b2c877056",
-      "rules": 136985
+      "bytes": 3435690,
+      "sha256": "56f6f343d7449837f8930d67156ef7356490a1a834308f437d0196c634fbb6b6",
+      "rules": 136991
     },
     "routing-expanded-fragment.yaml": {
-      "bytes": 5649479,
-      "sha256": "e2a02952afe7cde763e1f5645a914dc5eb9c0a081eae86b977857904f5073ae3",
-      "rules": 147114
+      "bytes": 5649702,
+      "sha256": "30a39466168a1dc343e0c402c124352fc84242dbcf9a1b0e54f5109943fda004",
+      "rules": 147120
     },
     "routing-expanded-rules.yaml": {
-      "bytes": 5649495,
-      "sha256": "e9b42cd53c74ff6e6f1bfbcb4df2df5c488b11509caff336ccc3f307d9b7482a",
-      "rules": 147115
+      "bytes": 5649718,
+      "sha256": "6755b0ca9cae52c8921cf69a69f1622c524897c780ee08f581ff2d7dcd6d9d3b",
+      "rules": 147121
     },
     "top-direct.list": {
       "bytes": 20493,
@@ -112,9 +112,9 @@
       "rules": 676
     },
     "top-proxy.list": {
-      "bytes": 1879,
-      "sha256": "7d3f41d073cec56c0c3a0ff92189b3945bd56b34ca5718ce33a7c1bddcc3aa47",
-      "rules": 53
+      "bytes": 1904,
+      "sha256": "51022625691ebd2aa482d77571e4fe1795c04a1bfd3a9f4d1531226361c2f836",
+      "rules": 54
     }
   },
   "degraded": false
