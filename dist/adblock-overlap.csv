@@ -71,6 +71,7 @@ proxy,"DOMAIN-SUFFIX,awempire.com",PROXY,"DOMAIN-SUFFIX,awempire.com",REJECT
 proxy,"DOMAIN-SUFFIX,awstrack.me",PROXY,"DOMAIN-SUFFIX,awstrack.me",REJECT
 proxy,"DOMAIN-SUFFIX,bbc-reporting-api.app",PROXY,"DOMAIN-SUFFIX,bbc-reporting-api.app",REJECT
 proxy,"DOMAIN-SUFFIX,bbthat.com",PROXY,"DOMAIN-SUFFIX,bbthat.com",REJECT
+proxy,"DOMAIN-SUFFIX,beget.tech",PROXY,"DOMAIN-SUFFIX,beget.tech",REJECT
 proxy,"DOMAIN-SUFFIX,bestsrv.de",PROXY,"DOMAIN-SUFFIX,bestsrv.de",REJECT
 proxy,"DOMAIN-SUFFIX,bizographics.com",PROXY,"DOMAIN-SUFFIX,bizographics.com",REJECT
 proxy,"DOMAIN-SUFFIX,blogcatalog.com",PROXY,"DOMAIN-SUFFIX,blogcatalog.com",REJECT
