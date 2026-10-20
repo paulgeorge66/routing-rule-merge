@@ -87775,6 +87775,8 @@
   - DOMAIN-SUFFIX,szty56.com,DIRECT
   - DOMAIN-SUFFIX,sztz.org,DIRECT
   - DOMAIN-SUFFIX,sztzzs.com,DIRECT
+  - DOMAIN-SUFFIX,szu.app,DIRECT
+  - DOMAIN-SUFFIX,szu.moe,DIRECT
   - DOMAIN-SUFFIX,szuavia.org,DIRECT
   - DOMAIN-SUFFIX,szudad.com,DIRECT
   - DOMAIN-SUFFIX,szunionlab.com,DIRECT
@@ -124976,8 +124978,10 @@
   - DOMAIN-SUFFIX,avinin.com,PROXY
   - DOMAIN-SUFFIX,avira.com,PROXY
   - DOMAIN-SUFFIX,avistaz.to,PROXY
+  - DOMAIN-SUFFIX,avito.com,PROXY
   - DOMAIN-SUFFIX,avito.ru,PROXY
   - DOMAIN-SUFFIX,avito.st,PROXY
+  - DOMAIN-SUFFIX,avito.tech,PROXY
   - DOMAIN-SUFFIX,avizoon.site,PROXY
   - DOMAIN-SUFFIX,avizoone.com,PROXY
   - DOMAIN-SUFFIX,avjb.com,PROXY
