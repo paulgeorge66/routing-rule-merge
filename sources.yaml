@@ -89,13 +89,21 @@ sources:
   - IP-CIDR6,fc00::/7,no-resolve
   - IP-CIDR6,fe80::/10,no-resolve
 - name: bm7_appletv
-  section: apple-proxy
+  section: apple-direct
   parser: classical_payload
   url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleTV/AppleTV.yaml
   min_rules: 4
   max_rules: 24
   exclude_types:
   - PROCESS-NAME
+- name: apple_f1_candidates
+  section: apple-proxy
+  parser: inline
+  rules:
+  - DOMAIN,play-edge.itunes.apple.com
+  - DOMAIN,known-issues.apple.com
+  - DOMAIN,hls-amt.itunes.apple.com
+  - DOMAIN,linear.tv.apple.com
 - name: bm7_applenews
   section: apple-proxy
   parser: classical_payload
@@ -334,8 +342,24 @@ behavior_checks:
 - domain: spoprod-a.akamaihd.net
   action: DIRECT
 - domain: tv.apple.com
-  action: PROXY
+  action: DIRECT
 - domain: hls.itunes.apple.com
+  action: DIRECT
+- domain: hls-svod.itunes.apple.com
+  action: DIRECT
+- domain: np-edge.itunes.apple.com
+  action: DIRECT
+- domain: uts-api.itunes.apple.com
+  action: DIRECT
+- domain: tv.applemusic.com
+  action: DIRECT
+- domain: play-edge.itunes.apple.com
+  action: PROXY
+- domain: known-issues.apple.com
+  action: PROXY
+- domain: hls-amt.itunes.apple.com
+  action: PROXY
+- domain: linear.tv.apple.com
   action: PROXY
 - domain: news-client.apple.com
   action: PROXY

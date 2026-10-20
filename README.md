@@ -6,7 +6,7 @@
 
 `top-proxy → top-direct → apple-proxy → apple-direct → direct → proxy → MATCH`。具体来源与所属 section 见 [sources.yaml](sources.yaml)。先匹配的规则生效；配合去广告时，REJECT 放在这些分流规则之前。
 
-Apple 使用 BlackMatrix7 `Apple_Classical.yaml` 完整源。AppleProxy/AppleMedia 的数据保留并默认用于直连，覆盖 Apple CDN、TestFlight、iCloud、Apple Music 和公共开发者资源；只将明确的 TV/News 服务放在前置代理集合。AppleMedia 的 News 传输域名通过精确 `section_overrides` 分类，另用维护中的 AppleNews 小清单补充入口。营销别名不强制代理。
+Apple 使用 BlackMatrix7 `Apple_Classical.yaml` 完整源。AppleProxy/AppleMedia 的数据保留并默认用于直连，覆盖 Apple CDN、TestFlight、iCloud、Apple Music 和公共开发者资源；Apple TV 普通影视入口改为直连，前置代理仅保留四条 F1 候选精确域名及现有 News 策略。四条候选为 play-edge.itunes.apple.com、known-issues.apple.com、hls-amt.itunes.apple.com、linear.tv.apple.com；仍使用 PROXY，观看 F1 需选择美国节点。此方案尚需实际播放验证，不保证 F1 媒体全部直连。AppleMedia 的 News 传输域名通过精确 `section_overrides` 分类，另用维护中的 AppleNews 小清单补充入口。营销别名不强制代理。
 
 已移除被完整 Apple 源覆盖的 AppStore、TestFlight、SystemOTA、iCloud 与 Loyalsoldier Apple 下载来源。YouTube/GitHub 补充规则使用有域名边界的后缀，不采用无边界关键词。远程来源共 18 个，新增的 AppleNews 与其他 BM7 文件使用同一 SHA 和整组恢复保障。
 
@@ -78,7 +78,7 @@ GitHub Actions 在 push、PR、手动触发和每天三次（间隔八小时）�
 - 最多四个源并行下载，按配置顺序合并，避免网络完成顺序影响优先级。
 - 同一个 GitHub 仓库及分支先解析一个 SHA，再从该固定版本下载全部文件。整组格式、数量和关键规则通过后才替换快照；任何文件失败时整组回退到 24 小时内的已验证版本，避免新旧文件混用。SHA 未变化时复用校验过的文件。版本和正文哈希写入构建报告。
 - 使用 ETag/Last-Modified 条件请求；只有成功解析、校验的快照才写入 `.cache/sources`。上游异常时最多使用 24 小时内的同 URL 已验证快照，报告标记 `stale`；没有合格快照就停止发布。
-- 发布前执行来源配置中的 60 个域名去向检查，覆盖 Apple 国内服务直连、TV/News 代理、OpenAI/Copilot 动态资源、Google Play、OneDrive、Microsoft 和精确域名的子域行为。策略回归会停止发布。
+- 发布前执行来源配置中的 68 个域名去向检查，覆盖 Apple 国内服务直连、TV 普通入口直连、F1 候选和 News 代理、OpenAI/Copilot 动态资源、Google Play、OneDrive、Microsoft 和精确域名的子域行为。策略回归会停止发布。
 - 发布前检查每个文件的消费者大小上限、LF、重复条目、展开片段和最终 MATCH；对 MRS 做反向转换并核对匹配范围，再运行 Mihomo 配置检查。
 - Mihomo 固定 v1.19.29，下载校验 SHA-256。所有检查成功后才写 `manifest.json` 并提交整套产物。manifest 记录文件字节数、SHA-256、条目数和是否降级。
 
