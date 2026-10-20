@@ -730,18 +730,15 @@
   - IP-CIDR6,fe80::/10,DIRECT,no-resolve
   - DOMAIN,gspe1-ssl.ls.apple.com,PROXY
   - DOMAIN,hls-amt.itunes.apple.com,PROXY
-  - DOMAIN,hls.itunes.apple.com,PROXY
+  - DOMAIN,known-issues.apple.com,PROXY
+  - DOMAIN,linear.tv.apple.com,PROXY
   - DOMAIN,news-client-search.apple.com,PROXY
-  - DOMAIN,np-edge.itunes.apple.com,PROXY
   - DOMAIN,play-edge.itunes.apple.com,PROXY
-  - DOMAIN,tv.applemusic.com,PROXY
-  - DOMAIN,uts-api.itunes.apple.com,PROXY
   - DOMAIN-SUFFIX,apple.news,PROXY
   - DOMAIN-SUFFIX,news-assets.apple.com,PROXY
   - DOMAIN-SUFFIX,news-client.apple.com,PROXY
   - DOMAIN-SUFFIX,news-edge.apple.com,PROXY
   - DOMAIN-SUFFIX,news-events.apple.com,PROXY
-  - DOMAIN-SUFFIX,tv.apple.com,PROXY
   - DOMAIN,apple-events.akamaized.net,DIRECT
   - DOMAIN,appleworldwidedeveloper.hb-api.omtrdc.net,DIRECT
   - DOMAIN,appleworldwidedeveloper.sc.omtrdc.net,DIRECT

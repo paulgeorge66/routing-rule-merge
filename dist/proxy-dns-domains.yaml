@@ -33,19 +33,19 @@
       - gspe1-ssl.ls.apple.com
       - hb4bbbbb.pmhcjk.com
       - hls-amt.itunes.apple.com
-      - hls.itunes.apple.com
       - holoxx.f5.si
       - hpstore.corpmerchandise.com
       - hub.slarker.me
       - i.jeded.com
       - imperial.insendi.com
+      - known-issues.apple.com
+      - linear.tv.apple.com
       - link.theplatform.com
       - live-patreon-marketing.pantheonsite.io
       - medone-education.thieme.com
       - muse.jhu.edu
       - nbbb1bb7.pmhcjk.com
       - news-client-search.apple.com
-      - np-edge.itunes.apple.com
       - ntp-c.colorado.edu
       - ntp.time.nl
       - ntp0.ntp-servers.net
@@ -91,13 +91,11 @@
       - rsshub.woodland.cafe
       - rsshub2.asailor.org
       - straitsx-826709081262441084-b790f87a2ae6fd417434295.freshchat.com
-      - tv.applemusic.com
       - ubisoft.siteintercept.qualtrics.com
       - ut1-time.colorado.edu
       - utcnist.colorado.edu
       - utcnist2.colorado.edu
       - utcnist3.colorado.edu
-      - uts-api.itunes.apple.com
       - widgets.stripst.com
       - wrds-www.wharton.upenn.edu
       - ws.audioscrobbler.com
@@ -21090,7 +21088,6 @@
       - +.tutanota.de
       - +.tuvpn.com
       - +.tuzaijidi.com
-      - +.tv.apple.com
       - +.tv.com
       - +.tv.jtbc.joins.com
       - +.tvb.com

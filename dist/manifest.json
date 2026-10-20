@@ -32,9 +32,9 @@
       "rules": 1588
     },
     "apple-proxy.list": {
-      "bytes": 443,
-      "sha256": "8dc18883228e29ae035ba06d8a725b3d13380de45cbdee69e44c58db16fbe832",
-      "rules": 14
+      "bytes": 356,
+      "sha256": "194d18ee2a0da7e2a6e569c28904761af60e5da061c89be2cad3790b6abc9799",
+      "rules": 11
     },
     "direct-cidr.list": {
       "bytes": 159453,
@@ -72,9 +72,9 @@
       "rules": null
     },
     "proxy-dns-domains.yaml": {
-      "bytes": 597087,
-      "sha256": "e7146567b14ec17942d9f414ad200257d5358f0d04ad943a13422e74a2ab0616",
-      "rules": 24552
+      "bytes": 597002,
+      "sha256": "6334c2f1457bd838b015d06250fbb509728cea79b15934bd7521d973ce2b9fa9",
+      "rules": 24549
     },
     "proxy-domains.list": {
       "bytes": 399572,
@@ -92,19 +92,19 @@
       "rules": 0
     },
     "routing-dns-providers.yaml": {
-      "bytes": 3435990,
-      "sha256": "a8bede4a8292404e7c37d0f5652ff46d973c12766e7726d133311362a8109b5f",
-      "rules": 137004
+      "bytes": 3435873,
+      "sha256": "5af8f32cdee33ea92305f32f5ddbd0b075a18a2f3efe0a4aab0eae1842d851b1",
+      "rules": 137001
     },
     "routing-expanded-fragment.yaml": {
-      "bytes": 5650456,
-      "sha256": "292689490839ce09dab81a05d10bd7f64e9a9fef159292400cc93a7dde405e17",
-      "rules": 147139
+      "bytes": 5650339,
+      "sha256": "30a2c39d94aa60b0ff142cd851666a781e86691bb19c39dc8fe5220e18440d9f",
+      "rules": 147136
     },
     "routing-expanded-rules.yaml": {
-      "bytes": 5650472,
-      "sha256": "b1ab18a1634be357fc1ccdee3286d62ead8e7d5748920762d25564aef610f90f",
-      "rules": 147140
+      "bytes": 5650355,
+      "sha256": "6daf1953e9ef11025a8cf7558e82b2ec17a7addef21574abed00428442e319d0",
+      "rules": 147137
     },
     "top-direct.list": {
       "bytes": 20493,
