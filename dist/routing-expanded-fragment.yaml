@@ -124412,6 +124412,7 @@
   - DOMAIN-SUFFIX,anonymouse.org,PROXY
   - DOMAIN-SUFFIX,ansarbank.com,PROXY
   - DOMAIN-SUFFIX,ansin.erodayo.com,PROXY
+  - DOMAIN-SUFFIX,ant.dev,PROXY
   - DOMAIN-SUFFIX,antarvasnaclips.com,PROXY
   - DOMAIN-SUFFIX,antarvasnax.com,PROXY
   - DOMAIN-SUFFIX,antenna.co.kr,PROXY
@@ -124419,10 +124420,12 @@
   - DOMAIN-SUFFIX,anthemthegame.com,PROXY
   - DOMAIN-SUFFIX,anthonycalzadilla.com,PROXY
   - DOMAIN-SUFFIX,anthropic.com,PROXY
+  - DOMAIN-SUFFIX,anthropic.team,PROXY
   - DOMAIN-SUFFIX,antiphishing.nl,PROXY
   - DOMAIN-SUFFIX,antiphishing.ru,PROXY
   - DOMAIN-SUFFIX,antiwave.net,PROXY
   - DOMAIN-SUFFIX,antpool.com,PROXY
+  - DOMAIN-SUFFIX,antspace.dev,PROXY
   - DOMAIN-SUFFIX,anudetube.com,PROXY
   - DOMAIN-SUFFIX,anuneko.com,PROXY
   - DOMAIN-SUFFIX,anxiangxing.com,PROXY
@@ -127159,6 +127162,7 @@
   - DOMAIN-SUFFIX,charmescorts.com,PROXY
   - DOMAIN-SUFFIX,chat.lmsys.org,PROXY
   - DOMAIN-SUFFIX,chatango.com,PROXY
+  - DOMAIN-SUFFIX,chatbotclaude.com,PROXY
   - DOMAIN-SUFFIX,chatgptvideo.xyz,PROXY
   - DOMAIN-SUFFIX,chatgptvideob.buzz,PROXY
   - DOMAIN-SUFFIX,chatpdf.com,PROXY
@@ -127419,10 +127423,16 @@
   - DOMAIN-SUFFIX,classymomsex.com,PROXY
   - DOMAIN-SUFFIX,clau.de,PROXY
   - DOMAIN-SUFFIX,claude.ai,PROXY
+  - DOMAIN-SUFFIX,claude.app,PROXY
   - DOMAIN-SUFFIX,claude.com,PROXY
   - DOMAIN-SUFFIX,claude.dev,PROXY
+  - DOMAIN-SUFFIX,claude.new,PROXY
+  - DOMAIN-SUFFIX,claude.site,PROXY
+  - DOMAIN-SUFFIX,claudeacademy.com,PROXY
   - DOMAIN-SUFFIX,claudemcpclient.com,PROXY
   - DOMAIN-SUFFIX,claudemcpcontent.com,PROXY
+  - DOMAIN-SUFFIX,claudepages.dev,PROXY
+  - DOMAIN-SUFFIX,claudestudio.com,PROXY
   - DOMAIN-SUFFIX,claudeusercontent.com,PROXY
   - DOMAIN-SUFFIX,clawhub.ai,PROXY
   - DOMAIN-SUFFIX,clck.ru,PROXY
@@ -130677,6 +130687,17 @@
   - DOMAIN-SUFFIX,fluidfxapp.com,PROXY
   - DOMAIN-SUFFIX,flutter.dev,PROXY
   - DOMAIN-SUFFIX,flutterapp.com,PROXY
+  - DOMAIN-SUFFIX,fluxer.app,PROXY
+  - DOMAIN-SUFFIX,fluxer.com,PROXY
+  - DOMAIN-SUFFIX,fluxer.dev,PROXY
+  - DOMAIN-SUFFIX,fluxer.gg,PROXY
+  - DOMAIN-SUFFIX,fluxer.gift,PROXY
+  - DOMAIN-SUFFIX,fluxer.media,PROXY
+  - DOMAIN-SUFFIX,fluxer.tools,PROXY
+  - DOMAIN-SUFFIX,fluxerapp.com,PROXY
+  - DOMAIN-SUFFIX,fluxerstatic.com,PROXY
+  - DOMAIN-SUFFIX,fluxerstatus.com,PROXY
+  - DOMAIN-SUFFIX,fluxerusercontent.com,PROXY
   - DOMAIN-SUFFIX,fly.dev,PROXY
   - DOMAIN-SUFFIX,fly.io,PROXY
   - DOMAIN-SUFFIX,flyflv.com,PROXY
