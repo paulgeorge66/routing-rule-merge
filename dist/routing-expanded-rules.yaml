@@ -7,6 +7,7 @@
   - DOMAIN,fonts.googleapis.com,PROXY
   - DOMAIN,fonts.gstatic.com,PROXY
   - DOMAIN,o33249.ingest.sentry.io,PROXY
+  - DOMAIN,o33249.ingest.us.sentry.io,PROXY
   - DOMAIN,openai.qualtrics.com,PROXY
   - DOMAIN,openaiapi-site.azureedge.net,PROXY
   - DOMAIN,openaiassets.blob.core.windows.net,PROXY
