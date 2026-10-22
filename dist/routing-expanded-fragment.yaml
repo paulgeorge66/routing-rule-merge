@@ -114452,7 +114452,6 @@
   - IP-CIDR,103.90.176.0/22,DIRECT,no-resolve
   - IP-CIDR,103.90.188.0/22,DIRECT,no-resolve
   - IP-CIDR,103.90.192.0/22,DIRECT,no-resolve
-  - IP-CIDR,103.90.51.0/24,DIRECT,no-resolve
   - IP-CIDR,103.90.52.0/22,DIRECT,no-resolve
   - IP-CIDR,103.90.56.0/23,DIRECT,no-resolve
   - IP-CIDR,103.90.92.0/22,DIRECT,no-resolve
@@ -115430,10 +115429,6 @@
   - IP-CIDR,124.66.0.0/17,DIRECT,no-resolve
   - IP-CIDR,124.67.0.0/16,DIRECT,no-resolve
   - IP-CIDR,124.68.16.0/20,DIRECT,no-resolve
-  - IP-CIDR,124.68.176.0/20,DIRECT,no-resolve
-  - IP-CIDR,124.68.224.0/20,DIRECT,no-resolve
-  - IP-CIDR,124.68.244.0/22,DIRECT,no-resolve
-  - IP-CIDR,124.68.248.0/21,DIRECT,no-resolve
   - IP-CIDR,124.68.64.0/18,DIRECT,no-resolve
   - IP-CIDR,124.69.0.0/16,DIRECT,no-resolve
   - IP-CIDR,124.70.0.0/16,DIRECT,no-resolve
@@ -115915,13 +115910,15 @@
   - IP-CIDR,170.33.130.0/23,DIRECT,no-resolve
   - IP-CIDR,170.33.136.0/23,DIRECT,no-resolve
   - IP-CIDR,170.33.138.0/24,DIRECT,no-resolve
-  - IP-CIDR,170.33.169.0/24,DIRECT,no-resolve
+  - IP-CIDR,170.33.15.0/24,DIRECT,no-resolve
+  - IP-CIDR,170.33.168.0/23,DIRECT,no-resolve
   - IP-CIDR,170.33.192.0/23,DIRECT,no-resolve
   - IP-CIDR,170.33.20.0/22,DIRECT,no-resolve
   - IP-CIDR,170.33.24.0/24,DIRECT,no-resolve
   - IP-CIDR,170.33.29.0/24,DIRECT,no-resolve
   - IP-CIDR,170.33.30.0/23,DIRECT,no-resolve
   - IP-CIDR,170.33.32.0/22,DIRECT,no-resolve
+  - IP-CIDR,170.33.41.0/24,DIRECT,no-resolve
   - IP-CIDR,170.33.64.0/23,DIRECT,no-resolve
   - IP-CIDR,170.33.66.0/24,DIRECT,no-resolve
   - IP-CIDR,170.33.68.0/23,DIRECT,no-resolve
@@ -118506,6 +118503,7 @@
   - IP-CIDR,45.119.104.0/22,DIRECT,no-resolve
   - IP-CIDR,45.119.116.0/22,DIRECT,no-resolve
   - IP-CIDR,45.119.232.0/22,DIRECT,no-resolve
+  - IP-CIDR,45.119.42.0/23,DIRECT,no-resolve
   - IP-CIDR,45.119.60.0/22,DIRECT,no-resolve
   - IP-CIDR,45.119.64.0/21,DIRECT,no-resolve
   - IP-CIDR,45.119.72.0/22,DIRECT,no-resolve
@@ -121491,6 +121489,7 @@
   - IP-CIDR6,2406:840:9900::/42,DIRECT,no-resolve
   - IP-CIDR6,2406:840:9940::/43,DIRECT,no-resolve
   - IP-CIDR6,2406:840:9960::/47,DIRECT,no-resolve
+  - IP-CIDR6,2406:840:9963::/48,DIRECT,no-resolve
   - IP-CIDR6,2406:840:9965::/48,DIRECT,no-resolve
   - IP-CIDR6,2406:840:9968::/46,DIRECT,no-resolve
   - IP-CIDR6,2406:840:996d::/48,DIRECT,no-resolve
@@ -122192,6 +122191,7 @@
   - IP-CIDR6,2408:4016:1000::/36,DIRECT,no-resolve
   - IP-CIDR6,2408:4016:100::/40,DIRECT,no-resolve
   - IP-CIDR6,2408:4016:10::/44,DIRECT,no-resolve
+  - IP-CIDR6,2408:4016:1::/48,DIRECT,no-resolve
   - IP-CIDR6,2408:4016:2000::/35,DIRECT,no-resolve
   - IP-CIDR6,2408:4016:200::/39,DIRECT,no-resolve
   - IP-CIDR6,2408:4016:20::/43,DIRECT,no-resolve
@@ -122388,8 +122388,6 @@
   - IP-CIDR6,2605:9d80:9042::/48,DIRECT,no-resolve
   - IP-CIDR6,2605:9d80:9071::/48,DIRECT,no-resolve
   - IP-CIDR6,2605:9d80:9092::/48,DIRECT,no-resolve
-  - IP-CIDR6,2620:57:4004::/47,DIRECT,no-resolve
-  - IP-CIDR6,2804:1e48:9002::/48,DIRECT,no-resolve
   - IP-CIDR6,2a03:f900::/29,DIRECT,no-resolve
   - IP-CIDR6,2a04:3e00:1001::/48,DIRECT,no-resolve
   - IP-CIDR6,2a04:3e00:1002::/47,DIRECT,no-resolve
@@ -122898,6 +122896,7 @@
   - DOMAIN-SUFFIX,22112211.xyz,PROXY
   - DOMAIN-SUFFIX,233abc.com,PROXY
   - DOMAIN-SUFFIX,2371tom.com,PROXY
+  - DOMAIN-SUFFIX,24.place,PROXY
   - DOMAIN-SUFFIX,24h.tv,PROXY
   - DOMAIN-SUFFIX,24hbook.com,PROXY
   - DOMAIN-SUFFIX,24hjav.com,PROXY
@@ -125722,6 +125721,8 @@
   - DOMAIN-SUFFIX,blizzardgearstore.com,PROXY
   - DOMAIN-SUFFIX,blockcast.it,PROXY
   - DOMAIN-SUFFIX,blockchain.com,PROXY
+  - DOMAIN-SUFFIX,blockchair.com,PROXY
+  - DOMAIN-SUFFIX,blockchair.net,PROXY
   - DOMAIN-SUFFIX,blockcn.com,PROXY
   - DOMAIN-SUFFIX,blockedbyhk.com,PROXY
   - DOMAIN-SUFFIX,blockfrost.io,PROXY
@@ -127822,6 +127823,7 @@
   - DOMAIN-SUFFIX,cq99.us,PROXY
   - DOMAIN-SUFFIX,crabporn.com,PROXY
   - DOMAIN-SUFFIX,crackle.com,PROXY
+  - DOMAIN-SUFFIX,craftifyx.com,PROXY
   - DOMAIN-SUFFIX,craigslist.org,PROXY
   - DOMAIN-SUFFIX,crankplayer.com,PROXY
   - DOMAIN-SUFFIX,crashbandicoot.com,PROXY
@@ -127890,6 +127892,7 @@
   - DOMAIN-SUFFIX,cruxpool.com,PROXY
   - DOMAIN-SUFFIX,crypto.com,PROXY
   - DOMAIN-SUFFIX,cryptocompare.com,PROXY
+  - DOMAIN-SUFFIX,cryptoid.info,PROXY
   - DOMAIN-SUFFIX,cryptomus.com,PROXY
   - DOMAIN-SUFFIX,crypton.co.jp,PROXY
   - DOMAIN-SUFFIX,crysis.jp,PROXY
@@ -128213,6 +128216,7 @@
   - DOMAIN-SUFFIX,delcamtv.com,PROXY
   - DOMAIN-SUFFIX,delcamuniversity.com,PROXY
   - DOMAIN-SUFFIX,delcamusa.com,PROXY
+  - DOMAIN-SUFFIX,delets.cash,PROXY
   - DOMAIN-SUFFIX,delets.online,PROXY
   - DOMAIN-SUFFIX,delicious.com.au,PROXY
   - DOMAIN-SUFFIX,delivery-club.ru,PROXY
@@ -130251,6 +130255,7 @@
   - DOMAIN-SUFFIX,fanbox.cc,PROXY
   - DOMAIN-SUFFIX,fandango.com,PROXY
   - DOMAIN-SUFFIX,fandom.com,PROXY
+  - DOMAIN-SUFFIX,fanfiction.net,PROXY
   - DOMAIN-SUFFIX,fanfictionero.com,PROXY
   - DOMAIN-SUFFIX,fanfox.net,PROXY
   - DOMAIN-SUFFIX,fangeqiang.com,PROXY
@@ -131186,6 +131191,7 @@
   - DOMAIN-SUFFIX,fundraisingwithfacebook.com,PROXY
   - DOMAIN-SUFFIX,fundsupermart.com,PROXY
   - DOMAIN-SUFFIX,funimation.com,PROXY
+  - DOMAIN-SUFFIX,funko.com,PROXY
   - DOMAIN-SUFFIX,funkyimg.com,PROXY
   - DOMAIN-SUFFIX,funnyfacebook.org,PROXY
   - DOMAIN-SUFFIX,funnyordie.com,PROXY
@@ -131288,6 +131294,7 @@
   - DOMAIN-SUFFIX,game-repack.site,PROXY
   - DOMAIN-SUFFIX,game735.com,PROXY
   - DOMAIN-SUFFIX,gameapps.hk,PROXY
+  - DOMAIN-SUFFIX,gamebanana.com,PROXY
   - DOMAIN-SUFFIX,gamebase.com.tw,PROXY
   - DOMAIN-SUFFIX,gamebiz.jp,PROXY
   - DOMAIN-SUFFIX,gamebusiness.jp,PROXY
@@ -131529,6 +131536,7 @@
   - DOMAIN-SUFFIX,getpocket.com,PROXY
   - DOMAIN-SUFFIX,getporn.tv,PROXY
   - DOMAIN-SUFFIX,getprintersupports.com,PROXY
+  - DOMAIN-SUFFIX,getsafety.com,PROXY
   - DOMAIN-SUFFIX,getscorecash.com,PROXY
   - DOMAIN-SUFFIX,getsentry.com,PROXY
   - DOMAIN-SUFFIX,getsession.org,PROXY
@@ -131694,6 +131702,8 @@
   - DOMAIN-SUFFIX,glass8.eu,PROXY
   - DOMAIN-SUFFIX,gle,PROXY
   - DOMAIN-SUFFIX,gleline.com,PROXY
+  - DOMAIN-SUFFIX,glitchprod.com,PROXY
+  - DOMAIN-SUFFIX,glitchproductions.store,PROXY
   - DOMAIN-SUFFIX,glitchwave.com,PROXY
   - DOMAIN-SUFFIX,global-sci.org,PROXY
   - DOMAIN-SUFFIX,globaledu.org,PROXY
@@ -135164,6 +135174,7 @@
   - DOMAIN-SUFFIX,kumapon.jp,PROXY
   - DOMAIN-SUFFIX,kun66.xyz,PROXY
   - DOMAIN-SUFFIX,kundun1069.com,PROXY
+  - DOMAIN-SUFFIX,kurs.expert,PROXY
   - DOMAIN-SUFFIX,kurtmunger.com,PROXY
   - DOMAIN-SUFFIX,kusugurizanmai.com,PROXY
   - DOMAIN-SUFFIX,kutjeporno.com,PROXY
@@ -135769,6 +135780,7 @@
   - DOMAIN-SUFFIX,makemymood.com,PROXY
   - DOMAIN-SUFFIX,makerepeater.jp,PROXY
   - DOMAIN-SUFFIX,makesenseofdata.com,PROXY
+  - DOMAIN-SUFFIX,makeship.com,PROXY
   - DOMAIN-SUFFIX,makeshop.jp,PROXY
   - DOMAIN-SUFFIX,makingstartshere.com,PROXY
   - DOMAIN-SUFFIX,maktoob.com,PROXY
@@ -138572,6 +138584,7 @@
   - DOMAIN-SUFFIX,ow.ly,PROXY
   - DOMAIN-SUFFIX,owl.li,PROXY
   - DOMAIN-SUFFIX,owltail.com,PROXY
+  - DOMAIN-SUFFIX,ownaj.com,PROXY
   - DOMAIN-SUFFIX,owxd.xyz,PROXY
   - DOMAIN-SUFFIX,oxfordaasc.com,PROXY
   - DOMAIN-SUFFIX,oxfordartonline.com,PROXY
@@ -140011,6 +140024,7 @@
   - DOMAIN-SUFFIX,python.com.tw,PROXY
   - DOMAIN-SUFFIX,python.org,PROXY
   - DOMAIN-SUFFIX,pythonhosted.org,PROXY
+  - DOMAIN-SUFFIX,pyup.io,PROXY
   - DOMAIN-SUFFIX,pzforever.skin,PROXY
   - DOMAIN-SUFFIX,pzforever01.homes,PROXY
   - DOMAIN-SUFFIX,pzhanfor.today,PROXY
@@ -140149,6 +140163,7 @@
   - DOMAIN-SUFFIX,r18lu-avi.shop,PROXY
   - DOMAIN-SUFFIX,r18lu.com,PROXY
   - DOMAIN-SUFFIX,r2.dev,PROXY
+  - DOMAIN-SUFFIX,r2modman.com,PROXY
   - DOMAIN-SUFFIX,r34porn.net,PROXY
   - DOMAIN-SUFFIX,rabbitcounter.com,PROXY
   - DOMAIN-SUFFIX,rabbitscams.com,PROXY
@@ -140827,6 +140842,7 @@
   - DOMAIN-SUFFIX,safeliner.tech,PROXY
   - DOMAIN-SUFFIX,safepal.com,PROXY
   - DOMAIN-SUFFIX,safervpn.com,PROXY
+  - DOMAIN-SUFFIX,safetycli.com,PROXY
   - DOMAIN-SUFFIX,saffrontech.com,PROXY
   - DOMAIN-SUFFIX,sagabank.co.jp,PROXY
   - DOMAIN-SUFFIX,sage-observability.tech,PROXY
@@ -142313,6 +142329,7 @@
   - DOMAIN-SUFFIX,steaminventoryhelper.com,PROXY
   - DOMAIN-SUFFIX,steamladder.com,PROXY
   - DOMAIN-SUFFIX,steamofporn.com,PROXY
+  - DOMAIN-SUFFIX,steamos.cloud,PROXY
   - DOMAIN-SUFFIX,steampowered.com,PROXY
   - DOMAIN-SUFFIX,steamserver.net,PROXY
   - DOMAIN-SUFFIX,steamstatic.com,PROXY
@@ -142925,6 +142942,7 @@
   - DOMAIN-SUFFIX,tgirlpostop.com,PROXY
   - DOMAIN-SUFFIX,tgp6.com,PROXY
   - DOMAIN-SUFFIX,tgstat.com,PROXY
+  - DOMAIN-SUFFIX,tgtime.store,PROXY
   - DOMAIN-SUFFIX,tgtube.com,PROXY
   - DOMAIN-SUFFIX,tgutube.com,PROXY
   - DOMAIN-SUFFIX,thai-xxx.com,PROXY
@@ -143154,6 +143172,8 @@
   - DOMAIN-SUFFIX,thunderbird.net,PROXY
   - DOMAIN-SUFFIX,thunderbolttechnology.net,PROXY
   - DOMAIN-SUFFIX,thundermail.com,PROXY
+  - DOMAIN-SUFFIX,thunderstore.io,PROXY
+  - DOMAIN-SUFFIX,thunderstore.org,PROXY
   - DOMAIN-SUFFIX,thywords.com,PROXY
   - DOMAIN-SUFFIX,thz7.net,PROXY
   - DOMAIN-SUFFIX,tiananmenduizhi.com,PROXY
@@ -143313,6 +143333,7 @@
   - DOMAIN-SUFFIX,tmei-taoyuan.com,PROXY
   - DOMAIN-SUFFIX,tmi.me,PROXY
   - DOMAIN-SUFFIX,tmiaf.ru,PROXY
+  - DOMAIN-SUFFIX,tmimgcdn.com,PROXY
   - DOMAIN-SUFFIX,tmpp.org,PROXY
   - DOMAIN-SUFFIX,tmsnrt.rs,PROXY
   - DOMAIN-SUFFIX,tnaflix.com,PROXY
@@ -145604,6 +145625,7 @@
   - DOMAIN-SUFFIX,worldoftanks.eu,PROXY
   - DOMAIN-SUFFIX,worldofwarcraft.com,PROXY
   - DOMAIN-SUFFIX,worldofwarplanes.com,PROXY
+  - DOMAIN-SUFFIX,worldofwarships.asia,PROXY
   - DOMAIN-SUFFIX,worldofwarships.com,PROXY
   - DOMAIN-SUFFIX,worldpornvideos.com,PROXY
   - DOMAIN-SUFFIX,worldscientific.com,PROXY
@@ -146705,6 +146727,7 @@
   - DOMAIN-SUFFIX,yourxxxvideos.pro,PROXY
   - DOMAIN-SUFFIX,yousendit.com,PROXY
   - DOMAIN-SUFFIX,youskbe.com,PROXY
+  - DOMAIN-SUFFIX,youtooz.com,PROXY
   - DOMAIN-SUFFIX,youtrack.cloud,PROXY
   - DOMAIN-SUFFIX,youtrannytube.com,PROXY
   - DOMAIN-SUFFIX,youtu.be,PROXY
