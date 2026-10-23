@@ -233,6 +233,7 @@ proxy,"DOMAIN-SUFFIX,taboola.com",PROXY,"DOMAIN-SUFFIX,taboola.com",REJECT
 proxy,"DOMAIN-SUFFIX,telega.me",PROXY,"DOMAIN-SUFFIX,telega.me",REJECT
 proxy,"DOMAIN-SUFFIX,tellapart.com",PROXY,"DOMAIN-SUFFIX,tellapart.com",REJECT
 proxy,"DOMAIN-SUFFIX,thri.xxx",PROXY,"DOMAIN-SUFFIX,thri.xxx",REJECT
+proxy,"DOMAIN-SUFFIX,tubxporn.xxx",PROXY,"DOMAIN-SUFFIX,tubxporn.xxx",REJECT
 proxy,"DOMAIN-SUFFIX,twittercounter.com",PROXY,"DOMAIN-SUFFIX,twittercounter.com",REJECT
 proxy,"DOMAIN-SUFFIX,twttr.com",PROXY,"DOMAIN-SUFFIX,twttr.com",REJECT
 proxy,"DOMAIN-SUFFIX,uimserv.net",PROXY,"DOMAIN-SUFFIX,uimserv.net",REJECT
@@ -311,6 +312,7 @@ direct,"DOMAIN-SUFFIX,165tchuang.com",DIRECT,"DOMAIN-SUFFIX,165tchuang.com",REJE
 direct,"DOMAIN-SUFFIX,198game.com",DIRECT,"DOMAIN-SUFFIX,198game.com",REJECT
 direct,"DOMAIN-SUFFIX,1l1.cc",DIRECT,"DOMAIN-SUFFIX,1l1.cc",REJECT
 direct,"DOMAIN-SUFFIX,1mpi.com",DIRECT,"DOMAIN-SUFFIX,1mpi.com",REJECT
+direct,"DOMAIN-SUFFIX,1qwe3r.com",DIRECT,"DOMAIN-SUFFIX,1qwe3r.com",REJECT
 direct,"DOMAIN-SUFFIX,1rtb.com",DIRECT,"DOMAIN-SUFFIX,1rtb.com",REJECT
 direct,"DOMAIN-SUFFIX,1rtb.net",DIRECT,"DOMAIN-SUFFIX,1rtb.net",REJECT
 direct,"DOMAIN-SUFFIX,1sapp.com",DIRECT,"DOMAIN-SUFFIX,1sapp.com",REJECT
@@ -444,7 +446,6 @@ direct,"DOMAIN-SUFFIX,cartx.cloud",DIRECT,"DOMAIN-SUFFIX,cartx.cloud",REJECT
 direct,"DOMAIN-SUFFIX,cdnmaster.com",DIRECT,"DOMAIN-SUFFIX,cdnmaster.com",REJECT
 direct,"DOMAIN-SUFFIX,cdu.cc",DIRECT,"DOMAIN-SUFFIX,cdu.cc",REJECT
 direct,"DOMAIN-SUFFIX,chance-ad.com",DIRECT,"DOMAIN-SUFFIX,chance-ad.com",REJECT
-direct,"DOMAIN-SUFFIX,che.com",DIRECT,"DOMAIN-SUFFIX,che.com",REJECT
 direct,"DOMAIN-SUFFIX,chinaciaf.org",DIRECT,"DOMAIN-SUFFIX,chinaciaf.org",REJECT
 direct,"DOMAIN-SUFFIX,chiq-cloud.com",DIRECT,"DOMAIN-SUFFIX,chiq-cloud.com",REJECT
 direct,"DOMAIN-SUFFIX,chshcms.net",DIRECT,"DOMAIN-SUFFIX,chshcms.net",REJECT
