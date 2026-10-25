@@ -12,13 +12,13 @@
       "rules": null
     },
     "apple-direct-domains.list": {
-      "bytes": 30808,
-      "sha256": "92b770746082ac5a5e226122bd6e8b9f7cb945eebea49b081493f3ad1667ce4c",
-      "rules": 1555
+      "bytes": 30796,
+      "sha256": "20ad72b5154fd8713d7917163464b8623c1a6b9d9010446b7153bc09157af05c",
+      "rules": 1554
     },
     "apple-direct-domains.mrs": {
-      "bytes": 16181,
-      "sha256": "0f7425d6bebe44d88ac5fe1522973cb01b41c77f074f1fe01160102005c08d15",
+      "bytes": 16152,
+      "sha256": "5f118e723bf3fa8409e811306992bbab5e1baedeb8be6b8e03c490b64513d591",
       "rules": null
     },
     "apple-direct-misc.list": {
@@ -27,9 +27,9 @@
       "rules": 20
     },
     "apple-direct.list": {
-      "bytes": 50430,
-      "sha256": "e1dee91434fa05d0ac47ca8f03ec88b45b9363bc1a045de97f3e60468c6c066f",
-      "rules": 1588
+      "bytes": 50406,
+      "sha256": "cb03e035fe136ce1302ae46e5db206abbd36f6eddc217b0c49e98b990c51b67d",
+      "rules": 1587
     },
     "apple-proxy.list": {
       "bytes": 356,
@@ -92,19 +92,19 @@
       "rules": 0
     },
     "routing-dns-providers.yaml": {
-      "bytes": 3429600,
-      "sha256": "75250f0ebc18118478d32b3a4508a2758148ac6fd8f9c7607c4fd6020378ca8f",
-      "rules": 136779
+      "bytes": 3429578,
+      "sha256": "c169f58383b8ff9d3678ca71af756b10abb7383b458aba233aaf52f5930221a1",
+      "rules": 136778
     },
     "routing-expanded-fragment.yaml": {
-      "bytes": 5641370,
-      "sha256": "a9032926b6e2d52a979dda4396455b4a97f75a2992e8436212adb3b0dd880f0b",
-      "rules": 146920
+      "bytes": 5641335,
+      "sha256": "f45121a652963c74e5f0accc2dc6b4a985651d958555ef9858e844b02bfbc547",
+      "rules": 146919
     },
     "routing-expanded-rules.yaml": {
-      "bytes": 5641386,
-      "sha256": "99288bb6d44ad30228aac9e4e4eed7c748d5eb9bf556303ebb39c92a1e4031a9",
-      "rules": 146921
+      "bytes": 5641351,
+      "sha256": "7eb3535c4cbb8c7960f4c667bf01dc4e0cae49bd35785e5e1c77720b760e975d",
+      "rules": 146920
     },
     "top-direct.list": {
       "bytes": 20493,
