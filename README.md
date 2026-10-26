@@ -14,7 +14,7 @@ OpenAI 和 GitHub Copilot 使用 MetaCubeX 的完整 Classical 服务规则，�
 
 Telegram 的 IP 使用官方 CIDR；BlackMatrix7 Telegram 仅提供域名，过滤其 IP/ASN 与进程/关键词部分。当前输出无 IP-ASN，不依赖 ASN 数据库。applications 保留现有进程直连策略，涵盖代理软件防环路和下载客户端。
 
-发布保护禁止代理侧重新出现关键词、进程和 ASN 类型，违规会停止发布；共享 Azure 云域名另有直连反例检查。代理来源中的无边界关键词和整进程匹配已移除，防止将类似 `51drv.com` 或程序的辅助请求扩大到代理。OneDrive 保留明确服务域名；SharePoint/Office 共用域名按 Microsoft 维护清单直连。Google Play 保留明确下载入口，不在最高优先级覆盖整个 googleusercontent/gstatic 厂商集合。不同规则类型的语义仍独立保留，OpenAI 必要的动态正则不被删除。
+发布保护禁止代理侧重新出现关键词、进程和 ASN 类型，违规会停止发布；共享 Azure 云域名另有直连反例检查。代理来源中的无边界关键词和整进程匹配已移除，防止将类似 `51drv.com` 或程序的辅助请求扩大到代理。OneDrive 保留明确服务域名；SharePoint/Office 共用域名按 Microsoft 维护清单直连。Google Play 保留明确下载入口，2026-10-26 恢复 googleapis.cn 前置代理以避免被 .cn 直连覆盖，不在最高优先级覆盖整个 googleusercontent/gstatic 厂商集合。不同规则类型的语义仍独立保留，OpenAI 必要的动态正则不被删除。
 
 domain payload 的普通域名保留为 DOMAIN 精确匹配，`+.` 才转为 DOMAIN-SUFFIX。正则表达式的大小写和转义保持原样，不与不同语义的表达式合并。
 
@@ -78,7 +78,7 @@ GitHub Actions 在 push、PR、手动触发和每天三次（间隔八小时）�
 - 最多四个源并行下载，按配置顺序合并，避免网络完成顺序影响优先级。
 - 同一个 GitHub 仓库及分支先解析一个 SHA，再从该固定版本下载全部文件。整组格式、数量和关键规则通过后才替换快照；任何文件失败时整组回退到 24 小时内的已验证版本，避免新旧文件混用。SHA 未变化时复用校验过的文件。版本和正文哈希写入构建报告。
 - 使用 ETag/Last-Modified 条件请求；只有成功解析、校验的快照才写入 `.cache/sources`。上游异常时最多使用 24 小时内的同 URL 已验证快照，报告标记 `stale`；没有合格快照就停止发布。
-- 发布前执行来源配置中的 68 个域名去向检查，覆盖 Apple 国内服务直连、TV 普通入口直连、F1 候选和 News 代理、OpenAI/Copilot 动态资源、Google Play、OneDrive、Microsoft 和精确域名的子域行为。策略回归会停止发布。
+- 发布前执行来源配置中的 70 个域名去向检查，覆盖 Apple 国内服务直连、TV 普通入口直连、F1 候选和 News 代理、OpenAI/Copilot 动态资源、Google Play、OneDrive、Microsoft 和精确域名的子域行为。策略回归会停止发布。
 - 发布前检查每个文件的消费者大小上限、LF、重复条目、展开片段和最终 MATCH；对 MRS 做反向转换并核对匹配范围，再运行 Mihomo 配置检查。
 - Mihomo 固定 v1.19.29，下载校验 SHA-256。所有检查成功后才写 `manifest.json` 并提交整套产物。manifest 记录文件字节数、SHA-256、条目数和是否降级。
 
