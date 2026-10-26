@@ -22,6 +22,7 @@ sources:
   - DOMAIN-SUFFIX,play-apps-features.googleusercontent.com
   - DOMAIN-SUFFIX,gvt1.com
   - DOMAIN-SUFFIX,dl.google.com
+  - DOMAIN-SUFFIX,googleapis.cn
   - DOMAIN,fonts.gstatic.com
   - DOMAIN,fonts.googleapis.com
   - DOMAIN,www.gstatic.com
@@ -290,6 +291,10 @@ behavior_checks:
 - domain: updates.cdn-apple.com
   action: DIRECT
 - domain: dl.google.com
+  action: PROXY
+- domain: services.googleapis.cn
+  action: PROXY
+- domain: googleapis.cn
   action: PROXY
 - domain: updates-http.cdn-apple.com
   action: DIRECT
