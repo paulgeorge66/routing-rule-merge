@@ -33,6 +33,7 @@
       - "DOMAIN-SUFFIX,crixet.com"
       - "DOMAIN-SUFFIX,dl.google.com"
       - "DOMAIN-SUFFIX,githubcopilot.com"
+      - "DOMAIN-SUFFIX,googleapis.cn"
       - "DOMAIN-SUFFIX,gvt1.com"
       - "DOMAIN-SUFFIX,host.livekit.cloud"
       - "DOMAIN-SUFFIX,livefilestore.com"

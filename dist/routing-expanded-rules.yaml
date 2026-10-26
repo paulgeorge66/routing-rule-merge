@@ -28,6 +28,7 @@
   - DOMAIN-SUFFIX,crixet.com,PROXY
   - DOMAIN-SUFFIX,dl.google.com,PROXY
   - DOMAIN-SUFFIX,githubcopilot.com,PROXY
+  - DOMAIN-SUFFIX,googleapis.cn,PROXY
   - DOMAIN-SUFFIX,gvt1.com,PROXY
   - DOMAIN-SUFFIX,host.livekit.cloud,PROXY
   - DOMAIN-SUFFIX,livefilestore.com,PROXY
