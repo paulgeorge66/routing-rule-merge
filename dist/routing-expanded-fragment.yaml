@@ -63409,8 +63409,6 @@
   - DOMAIN-SUFFIX,longanlaw.com,DIRECT
   - DOMAIN-SUFFIX,longau.com,DIRECT
   - DOMAIN-SUFFIX,longbenren.com,DIRECT
-  - DOMAIN-SUFFIX,longbridgeapp.com,DIRECT
-  - DOMAIN-SUFFIX,longbridgehk.com,DIRECT
   - DOMAIN-SUFFIX,longcai.com,DIRECT
   - DOMAIN-SUFFIX,longcai027.com,DIRECT
   - DOMAIN-SUFFIX,longcat.chat,DIRECT
@@ -124335,6 +124333,7 @@
   - DOMAIN-SUFFIX,artel.watch,PROXY
   - DOMAIN-SUFFIX,arteldoc.com,PROXY
   - DOMAIN-SUFFIX,arteldoc.tv,PROXY
+  - DOMAIN-SUFFIX,artificialanalysis.ai,PROXY
   - DOMAIN-SUFFIX,artixlinux.org,PROXY
   - DOMAIN-SUFFIX,artnudegalleries.com,PROXY
   - DOMAIN-SUFFIX,artoferotica.info,PROXY
@@ -127188,6 +127187,7 @@
   - DOMAIN-SUFFIX,clickserve.cc-dt.com,PROXY
   - DOMAIN-SUFFIX,clickserver.googleads.com,PROXY
   - DOMAIN-SUFFIX,climate-server.com,PROXY
+  - DOMAIN-SUFFIX,cline.bot,PROXY
   - DOMAIN-SUFFIX,clinica-tibet.ru,PROXY
   - DOMAIN-SUFFIX,clinical-videos.com,PROXY
   - DOMAIN-SUFFIX,clinicalkey.com,PROXY
@@ -127425,6 +127425,7 @@
   - DOMAIN-SUFFIX,comixzilla.com,PROXY
   - DOMAIN-SUFFIX,comm-verse.com,PROXY
   - DOMAIN-SUFFIX,commandandconquer.com,PROXY
+  - DOMAIN-SUFFIX,commandcode.ai,PROXY
   - DOMAIN-SUFFIX,comments.app,PROXY
   - DOMAIN-SUFFIX,commentshk.com,PROXY
   - DOMAIN-SUFFIX,commerceos.com,PROXY
@@ -127477,6 +127478,7 @@
   - DOMAIN-SUFFIX,contechacademy.com,PROXY
   - DOMAIN-SUFFIX,contentful.com,PROXY
   - DOMAIN-SUFFIX,contest.com,PROXY
+  - DOMAIN-SUFFIX,context7.com,PROXY
   - DOMAIN-SUFFIX,convrgencegame.com,PROXY
   - DOMAIN-SUFFIX,cookiebot.com,PROXY
   - DOMAIN-SUFFIX,cookiechoices.org,PROXY
@@ -135328,6 +135330,8 @@
   - DOMAIN-SUFFIX,longbridge.global,PROXY
   - DOMAIN-SUFFIX,longbridge.hk,PROXY
   - DOMAIN-SUFFIX,longbridge.sg,PROXY
+  - DOMAIN-SUFFIX,longbridgeapp.com,PROXY
+  - DOMAIN-SUFFIX,longbridgehk.com,PROXY
   - DOMAIN-SUFFIX,longmabook.com,PROXY
   - DOMAIN-SUFFIX,longmabookcn.com,PROXY
   - DOMAIN-SUFFIX,longman.ch,PROXY
@@ -135985,6 +135989,7 @@
   - DOMAIN-SUFFIX,met-nude.com,PROXY
   - DOMAIN-SUFFIX,meta.ai,PROXY
   - DOMAIN-SUFFIX,meta.com,PROXY
+  - DOMAIN-SUFFIX,metaaiusercontent.com,PROXY
   - DOMAIN-SUFFIX,metaaivm.com,PROXY
   - DOMAIN-SUFFIX,metabora.io,PROXY
   - DOMAIN-SUFFIX,metabrainz.org,PROXY
@@ -137695,6 +137700,7 @@
   - DOMAIN-SUFFIX,notion.so,PROXY
   - DOMAIN-SUFFIX,notionusercontent.com,PROXY
   - DOMAIN-SUFFIX,nottinghampost.com,PROXY
+  - DOMAIN-SUFFIX,nousresearch.com,PROXY
   - DOMAIN-SUFFIX,novelai.net,PROXY
   - DOMAIN-SUFFIX,noveltrove.com,PROXY
   - DOMAIN-SUFFIX,novids.com,PROXY
@@ -142851,6 +142857,7 @@
   - DOMAIN-SUFFIX,thinkgeek.com,PROXY
   - DOMAIN-SUFFIX,thinkingtaiwan.com,PROXY
   - DOMAIN-SUFFIX,thinkofliving.com,PROXY
+  - DOMAIN-SUFFIX,thinkorswim.com,PROXY
   - DOMAIN-SUFFIX,thinkquarterly.co.uk,PROXY
   - DOMAIN-SUFFIX,thinkquarterly.com,PROXY
   - DOMAIN-SUFFIX,thinkwithgoogle.com,PROXY
