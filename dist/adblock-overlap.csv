@@ -497,6 +497,7 @@ direct,"DOMAIN-SUFFIX,easyliao.com",DIRECT,"DOMAIN-SUFFIX,easyliao.com",REJECT
 direct,"DOMAIN-SUFFIX,easyrecoverychina.com",DIRECT,"DOMAIN-SUFFIX,easyrecoverychina.com",REJECT
 direct,"DOMAIN-SUFFIX,easytomessage.com",DIRECT,"DOMAIN-SUFFIX,easytomessage.com",REJECT
 direct,"DOMAIN-SUFFIX,edgeone.app",DIRECT,"DOMAIN-SUFFIX,edgeone.app",REJECT
+direct,"DOMAIN-SUFFIX,ediuschina.com",DIRECT,"DOMAIN-SUFFIX,ediuschina.com",REJECT
 direct,"DOMAIN-SUFFIX,effirst.com",DIRECT,"DOMAIN-SUFFIX,effirst.com",REJECT
 direct,"DOMAIN-SUFFIX,efusc.com",DIRECT,"DOMAIN-SUFFIX,efusc.com",REJECT
 direct,"DOMAIN-SUFFIX,evyy.net",DIRECT,"DOMAIN-SUFFIX,evyy.net",REJECT
@@ -643,7 +644,6 @@ direct,"DOMAIN-SUFFIX,moquanad.com",DIRECT,"DOMAIN-SUFFIX,moquanad.com",REJECT
 direct,"DOMAIN-SUFFIX,mstatik.com",DIRECT,"DOMAIN-SUFFIX,mstatik.com",REJECT
 direct,"DOMAIN-SUFFIX,muidar.com",DIRECT,"DOMAIN-SUFFIX,muidar.com",REJECT
 direct,"DOMAIN-SUFFIX,mycleanmymac.com",DIRECT,"DOMAIN-SUFFIX,mycleanmymac.com",REJECT
-direct,"DOMAIN-SUFFIX,myhard.com",DIRECT,"DOMAIN-SUFFIX,myhard.com",REJECT
 direct,"DOMAIN-SUFFIX,n69.com",DIRECT,"DOMAIN-SUFFIX,n69.com",REJECT
 direct,"DOMAIN-SUFFIX,nalook.com",DIRECT,"DOMAIN-SUFFIX,nalook.com",REJECT
 direct,"DOMAIN-SUFFIX,nasimobi.com",DIRECT,"DOMAIN-SUFFIX,nasimobi.com",REJECT
@@ -743,6 +743,7 @@ direct,"DOMAIN-SUFFIX,tiexing.com",DIRECT,"DOMAIN-SUFFIX,tiexing.com",REJECT
 direct,"DOMAIN-SUFFIX,tingyun.com",DIRECT,"DOMAIN-SUFFIX,tingyun.com",REJECT
 direct,"DOMAIN-SUFFIX,tiqcdn.com",DIRECT,"DOMAIN-SUFFIX,tiqcdn.com",REJECT
 direct,"DOMAIN-SUFFIX,tjfytech.com",DIRECT,"DOMAIN-SUFFIX,tjfytech.com",REJECT
+direct,"DOMAIN-SUFFIX,tjsptech.com",DIRECT,"DOMAIN-SUFFIX,tjsptech.com",REJECT
 direct,"DOMAIN-SUFFIX,tk.anythinktech.com",DIRECT,"DOMAIN-SUFFIX,anythinktech.com",REJECT
 direct,"DOMAIN-SUFFIX,tobsnssdk.com",DIRECT,"DOMAIN-SUFFIX,tobsnssdk.com",REJECT
 direct,"DOMAIN-SUFFIX,tongdun.net",DIRECT,"DOMAIN-SUFFIX,tongdun.net",REJECT
