@@ -163,7 +163,6 @@ proxy,"DOMAIN-SUFFIX,htanime.epizy.com",PROXY,"DOMAIN-SUFFIX,epizy.com",REJECT
 proxy,"DOMAIN-SUFFIX,igetnaughty.com",PROXY,"DOMAIN-SUFFIX,igetnaughty.com",REJECT
 proxy,"DOMAIN-SUFFIX,imlive.com",PROXY,"DOMAIN-SUFFIX,imlive.com",REJECT
 proxy,"DOMAIN-SUFFIX,incloak.com",PROXY,"DOMAIN-SUFFIX,incloak.com",REJECT
-proxy,"DOMAIN-SUFFIX,indiansexstories.net",PROXY,"DOMAIN-SUFFIX,indiansexstories.net",REJECT
 proxy,"DOMAIN-SUFFIX,jasmin.com",PROXY,"DOMAIN-SUFFIX,jasmin.com",REJECT
 proxy,"DOMAIN-SUFFIX,joyourself.com",PROXY,"DOMAIN-SUFFIX,joyourself.com",REJECT
 proxy,"DOMAIN-SUFFIX,jwpltx.com",PROXY,"DOMAIN-SUFFIX,jwpltx.com",REJECT
@@ -547,7 +546,6 @@ direct,"DOMAIN-SUFFIX,hlstlyy.com",DIRECT,"DOMAIN-SUFFIX,hlstlyy.com",REJECT
 direct,"DOMAIN-SUFFIX,hly.com",DIRECT,"DOMAIN-SUFFIX,hly.com",REJECT
 direct,"DOMAIN-SUFFIX,hnltcw.com",DIRECT,"DOMAIN-SUFFIX,hnltcw.com",REJECT
 direct,"DOMAIN-SUFFIX,hnol.net",DIRECT,"DOMAIN-SUFFIX,hnol.net",REJECT
-direct,"DOMAIN-SUFFIX,hseda.com",DIRECT,"DOMAIN-SUFFIX,hseda.com",REJECT
 direct,"DOMAIN-SUFFIX,httpdns.pro",DIRECT,"DOMAIN-SUFFIX,httpdns.pro",REJECT
 direct,"DOMAIN-SUFFIX,huabian.com",DIRECT,"DOMAIN-SUFFIX,huabian.com",REJECT
 direct,"DOMAIN-SUFFIX,hungfei.com",DIRECT,"DOMAIN-SUFFIX,hungfei.com",REJECT
@@ -732,7 +730,6 @@ direct,"DOMAIN-SUFFIX,tapdb.com",DIRECT,"DOMAIN-SUFFIX,tapdb.com",REJECT
 direct,"DOMAIN-SUFFIX,tapdb.net",DIRECT,"DOMAIN-SUFFIX,tapdb.net",REJECT
 direct,"DOMAIN-SUFFIX,tb4gv2cp5z.com",DIRECT,"DOMAIN-SUFFIX,tb4gv2cp5z.com",REJECT
 direct,"DOMAIN-SUFFIX,tdataspace.com",DIRECT,"DOMAIN-SUFFIX,tdataspace.com",REJECT
-direct,"DOMAIN-SUFFIX,tecunonline.com",DIRECT,"DOMAIN-SUFFIX,tecunonline.com",REJECT
 direct,"DOMAIN-SUFFIX,tencentapigw.com",DIRECT,"DOMAIN-SUFFIX,tencentapigw.com",REJECT
 direct,"DOMAIN-SUFFIX,tencentmind.com",DIRECT,"DOMAIN-SUFFIX,tencentmind.com",REJECT
 direct,"DOMAIN-SUFFIX,tianjimedia.com",DIRECT,"DOMAIN-SUFFIX,tianjimedia.com",REJECT
