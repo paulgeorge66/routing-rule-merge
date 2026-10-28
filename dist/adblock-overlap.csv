@@ -642,6 +642,7 @@ direct,"DOMAIN-SUFFIX,moquanad.com",DIRECT,"DOMAIN-SUFFIX,moquanad.com",REJECT
 direct,"DOMAIN-SUFFIX,mstatik.com",DIRECT,"DOMAIN-SUFFIX,mstatik.com",REJECT
 direct,"DOMAIN-SUFFIX,muidar.com",DIRECT,"DOMAIN-SUFFIX,muidar.com",REJECT
 direct,"DOMAIN-SUFFIX,mycleanmymac.com",DIRECT,"DOMAIN-SUFFIX,mycleanmymac.com",REJECT
+direct,"DOMAIN-SUFFIX,myhard.com",DIRECT,"DOMAIN-SUFFIX,myhard.com",REJECT
 direct,"DOMAIN-SUFFIX,n69.com",DIRECT,"DOMAIN-SUFFIX,n69.com",REJECT
 direct,"DOMAIN-SUFFIX,nalook.com",DIRECT,"DOMAIN-SUFFIX,nalook.com",REJECT
 direct,"DOMAIN-SUFFIX,nasimobi.com",DIRECT,"DOMAIN-SUFFIX,nasimobi.com",REJECT
