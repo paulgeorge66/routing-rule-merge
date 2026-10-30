@@ -75,6 +75,12 @@ sources:
   url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml
   max_rules: 2010
   min_rules: 500
+- name: battlenet_cn
+  section: top-direct
+  parser: inline
+  rules:
+  - DOMAIN-SUFFIX,battlenet.com.cn
+  - DOMAIN,distribution.version.battle.net
 - name: private_ranges
   section: top-direct
   parser: inline
@@ -293,6 +299,14 @@ behavior_checks:
 - domain: dl.google.com
   action: PROXY
 - domain: services.googleapis.cn
+  action: PROXY
+- domain: cn.actual.battlenet.com.cn
+  action: DIRECT
+- domain: oauth.battlenet.com.cn
+  action: DIRECT
+- domain: distribution.version.battle.net
+  action: DIRECT
+- domain: unrelated.battle.net
   action: PROXY
 - domain: googleapis.cn
   action: PROXY
