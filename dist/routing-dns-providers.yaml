@@ -64,6 +64,7 @@
     behavior: classical
     format: yaml
     payload:
+      - "DOMAIN,distribution.version.battle.net"
       - "DOMAIN,vsmarketplacebadge.apphb.com"
       - "DOMAIN-SUFFIX,1drv.ms"
       - "DOMAIN-SUFFIX,21vbc.com"
@@ -160,6 +161,7 @@
       - "DOMAIN-SUFFIX,b.akamaiedge.net"
       - "DOMAIN-SUFFIX,b2clogin.cn"
       - "DOMAIN-SUFFIX,b3itech.cn"
+      - "DOMAIN-SUFFIX,battlenet.com.cn"
       - "DOMAIN-SUFFIX,bbing.com"
       - "DOMAIN-SUFFIX,beth.games"
       - "DOMAIN-SUFFIX,bethesda.net"

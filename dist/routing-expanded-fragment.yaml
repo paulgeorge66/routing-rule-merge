@@ -54,6 +54,7 @@
   - DOMAIN-SUFFIX,storage.msn.com,PROXY
   - DOMAIN-SUFFIX,turn.livekit.cloud,PROXY
   - DOMAIN-REGEX,^chatgpt-async-webps-prod-\S+-\d+\.webpubsub\.azure\.com$,PROXY
+  - DOMAIN,distribution.version.battle.net,DIRECT
   - DOMAIN,vsmarketplacebadge.apphb.com,DIRECT
   - DOMAIN-SUFFIX,1drv.ms,DIRECT
   - DOMAIN-SUFFIX,21vbc.com,DIRECT
@@ -150,6 +151,7 @@
   - DOMAIN-SUFFIX,b.akamaiedge.net,DIRECT
   - DOMAIN-SUFFIX,b2clogin.cn,DIRECT
   - DOMAIN-SUFFIX,b3itech.cn,DIRECT
+  - DOMAIN-SUFFIX,battlenet.com.cn,DIRECT
   - DOMAIN-SUFFIX,bbing.com,DIRECT
   - DOMAIN-SUFFIX,beth.games,DIRECT
   - DOMAIN-SUFFIX,bethesda.net,DIRECT
