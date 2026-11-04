@@ -124686,6 +124686,7 @@
   - DOMAIN-SUFFIX,beget.cloud,PROXY
   - DOMAIN-SUFFIX,beget.com,PROXY
   - DOMAIN-SUFFIX,beget.de,PROXY
+  - DOMAIN-SUFFIX,beget.email,PROXY
   - DOMAIN-SUFFIX,beget.hosting,PROXY
   - DOMAIN-SUFFIX,beget.pro,PROXY
   - DOMAIN-SUFFIX,beget.ru,PROXY
@@ -124900,6 +124901,7 @@
   - DOMAIN-SUFFIX,bili2.cc,PROXY
   - DOMAIN-SUFFIX,bili888.com,PROXY
   - DOMAIN-SUFFIX,bili999.com,PROXY
+  - DOMAIN-SUFFIX,bilibili.tv,PROXY
   - DOMAIN-SUFFIX,biliplus.com,PROXY
   - DOMAIN-SUFFIX,biliworld.com,PROXY
   - DOMAIN-SUFFIX,bill-safe.com,PROXY
