@@ -121957,6 +121957,7 @@
   - DOMAIN,hb4bbbbb.pmhcjk.com,PROXY
   - DOMAIN,holoxx.f5.si,PROXY
   - DOMAIN,hpstore.corpmerchandise.com,PROXY
+  - DOMAIN,http-intake.logs.us5.datadoghq.com,PROXY
   - DOMAIN,hub.slarker.me,PROXY
   - DOMAIN,i.jeded.com,PROXY
   - DOMAIN,imperial.insendi.com,PROXY
@@ -131600,6 +131601,7 @@
   - DOMAIN-SUFFIX,gridaware.app,PROXY
   - DOMAIN-SUFFIX,grindr.com,PROXY
   - DOMAIN-SUFFIX,grok.com,PROXY
+  - DOMAIN-SUFFIX,grokbot.com,PROXY
   - DOMAIN-SUFFIX,grokipedia.com,PROXY
   - DOMAIN-SUFFIX,grooby.com,PROXY
   - DOMAIN-SUFFIX,groq.com,PROXY
