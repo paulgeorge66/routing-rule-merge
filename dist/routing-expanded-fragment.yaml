@@ -69639,6 +69639,7 @@
   - DOMAIN-SUFFIX,nhzs.com,DIRECT
   - DOMAIN-SUFFIX,ni8.com,DIRECT
   - DOMAIN-SUFFIX,ni93.com,DIRECT
+  - DOMAIN-SUFFIX,nia-teams.com,DIRECT
   - DOMAIN-SUFFIX,nianchu.net,DIRECT
   - DOMAIN-SUFFIX,nianhuawan.com,DIRECT
   - DOMAIN-SUFFIX,niankawang.com,DIRECT
@@ -131550,6 +131551,8 @@
   - DOMAIN-SUFFIX,grabhentai.com,PROXY
   - DOMAIN-SUFFIX,grabpussy.com,PROXY
   - DOMAIN-SUFFIX,gradeuptube.com,PROXY
+  - DOMAIN-SUFFIX,grafana.com,PROXY
+  - DOMAIN-SUFFIX,grafana.net,PROXY
   - DOMAIN-SUFFIX,grafolio.com,PROXY
   - DOMAIN-SUFFIX,graias.com,PROXY
   - DOMAIN-SUFFIX,graiasmovies.com,PROXY
@@ -139467,6 +139470,7 @@
   - DOMAIN-SUFFIX,quanben.io,PROXY
   - DOMAIN-SUFFIX,quatrum.com.br,PROXY
   - DOMAIN-SUFFIX,quay.io,PROXY
+  - DOMAIN-SUFFIX,questionablequesting.com,PROXY
   - DOMAIN-SUFFIX,questvisual.com,PROXY
   - DOMAIN-SUFFIX,quicinc.com,PROXY
   - DOMAIN-SUFFIX,quickbook.com.br,PROXY
@@ -141381,6 +141385,7 @@
   - DOMAIN-SUFFIX,soyjak.party,PROXY
   - DOMAIN-SUFFIX,soyjak.st,PROXY
   - DOMAIN-SUFFIX,sp.cool,PROXY
+  - DOMAIN-SUFFIX,spacebattles.com,PROXY
   - DOMAIN-SUFFIX,spaceexplored.com,PROXY
   - DOMAIN-SUFFIX,spaceforce.mil,PROXY
   - DOMAIN-SUFFIX,spacely.com.au,PROXY
@@ -143473,6 +143478,7 @@
   - DOMAIN-SUFFIX,v.recipes,PROXY
   - DOMAIN-SUFFIX,v2.help,PROXY
   - DOMAIN-SUFFIX,v2.hysteria.network,PROXY
+  - DOMAIN-SUFFIX,v2ex.co,PROXY
   - DOMAIN-SUFFIX,v2ex.com,PROXY
   - DOMAIN-SUFFIX,v2fly.org,PROXY
   - DOMAIN-SUFFIX,v2ph.com,PROXY
