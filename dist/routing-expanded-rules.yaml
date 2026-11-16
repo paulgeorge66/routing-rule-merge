@@ -127551,6 +127551,7 @@
   - DOMAIN-SUFFIX,deasians.com,PROXY
   - DOMAIN-SUFFIX,debank.com,PROXY
   - DOMAIN-SUFFIX,debian.org,PROXY
+  - DOMAIN-SUFFIX,debot.ai,PROXY
   - DOMAIN-SUFFIX,debug.com,PROXY
   - DOMAIN-SUFFIX,debugproject.com,PROXY
   - DOMAIN-SUFFIX,decentr.net,PROXY
@@ -139864,6 +139865,7 @@
   - DOMAIN-SUFFIX,relateiq.com,PROXY
   - DOMAIN-SUFFIX,religionnews.com,PROXY
   - DOMAIN-SUFFIX,remirepo.net,PROXY
+  - DOMAIN-SUFFIX,remna.dev,PROXY
   - DOMAIN-SUFFIX,remna.st,PROXY
   - DOMAIN-SUFFIX,rencapbank.ru,PROXY
   - DOMAIN-SUFFIX,renchead.com,PROXY
