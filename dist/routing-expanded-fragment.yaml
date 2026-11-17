@@ -127377,6 +127377,7 @@
   - DOMAIN-SUFFIX,cybertrust.ne.jp,PROXY
   - DOMAIN-SUFFIX,cyberx.com,PROXY
   - DOMAIN-SUFFIX,cygames.co.jp,PROXY
+  - DOMAIN-SUFFIX,cygames.com,PROXY
   - DOMAIN-SUFFIX,cygames.jp,PROXY
   - DOMAIN-SUFFIX,cygwin.com,PROXY
   - DOMAIN-SUFFIX,cylink.pro,PROXY
@@ -145966,6 +145967,7 @@
   - DOMAIN-SUFFIX,yaya.cyou,PROXY
   - DOMAIN-SUFFIX,yayadizhi.xyz,PROXY
   - DOMAIN-SUFFIX,yazhouse8.com,PROXY
+  - DOMAIN-SUFFIX,yb-payment.ru,PROXY
   - DOMAIN-SUFFIX,yccdn.ru,PROXY
   - DOMAIN-SUFFIX,yclients.com,PROXY
   - DOMAIN-SUFFIX,ycombinator.com,PROXY
