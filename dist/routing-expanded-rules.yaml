@@ -61569,6 +61569,7 @@
   - DOMAIN-SUFFIX,lenovoconnect.com,DIRECT
   - DOMAIN-SUFFIX,lenovoeservice.com,DIRECT
   - DOMAIN-SUFFIX,lenovofile.com,DIRECT
+  - DOMAIN-SUFFIX,lenovofuturecenter.com,DIRECT
   - DOMAIN-SUFFIX,lenovogame.com,DIRECT
   - DOMAIN-SUFFIX,lenovohci.com,DIRECT
   - DOMAIN-SUFFIX,lenovohuishang.com,DIRECT
@@ -76222,6 +76223,7 @@
   - DOMAIN-SUFFIX,qpkaifa.com,DIRECT
   - DOMAIN-SUFFIX,qplus.com,DIRECT
   - DOMAIN-SUFFIX,qplusstatic.com,DIRECT
+  - DOMAIN-SUFFIX,qpmcn.com,DIRECT
   - DOMAIN-SUFFIX,qpoc.com,DIRECT
   - DOMAIN-SUFFIX,qpstar.com,DIRECT
   - DOMAIN-SUFFIX,qpwater.com,DIRECT
@@ -91000,6 +91002,7 @@
   - DOMAIN-SUFFIX,trpc.center,DIRECT
   - DOMAIN-SUFFIX,trpc.group,DIRECT
   - DOMAIN-SUFFIX,trpc.tech,DIRECT
+  - DOMAIN-SUFFIX,trpcdn.com,DIRECT
   - DOMAIN-SUFFIX,trpcdn.net,DIRECT
   - DOMAIN-SUFFIX,trs-logistics.com,DIRECT
   - DOMAIN-SUFFIX,trsoft.vip,DIRECT
@@ -108597,6 +108600,7 @@
   - DOMAIN-SUFFIX,zhaokuaizhao.com,DIRECT
   - DOMAIN-SUFFIX,zhaolaobanla.com,DIRECT
   - DOMAIN-SUFFIX,zhaoliangji.com,DIRECT
+  - DOMAIN-SUFFIX,zhaoliangjipc.com,DIRECT
   - DOMAIN-SUFFIX,zhaoliming.net,DIRECT
   - DOMAIN-SUFFIX,zhaoming.biz,DIRECT
   - DOMAIN-SUFFIX,zhaomishijie.com,DIRECT
@@ -128871,6 +128875,7 @@
   - DOMAIN-SUFFIX,elephanttubenew.com,PROXY
   - DOMAIN-SUFFIX,elevenlabs.com,PROXY
   - DOMAIN-SUFFIX,elevenlabs.io,PROXY
+  - DOMAIN-SUFFIX,elevenlabsusercontent.com,PROXY
   - DOMAIN-SUFFIX,elgaronline.com,PROXY
   - DOMAIN-SUFFIX,elgoog.im,PROXY
   - DOMAIN-SUFFIX,elifesciences.org,PROXY
@@ -145933,7 +145938,6 @@
   - DOMAIN-SUFFIX,yandexgo.com,PROXY
   - DOMAIN-SUFFIX,yandexlyceum.ru,PROXY
   - DOMAIN-SUFFIX,yandexwebcache.net,PROXY
-  - DOMAIN-SUFFIX,yandexwebcache.org,PROXY
   - DOMAIN-SUFFIX,yango-b2b.com,PROXY
   - DOMAIN-SUFFIX,yango-team.com,PROXY
   - DOMAIN-SUFFIX,yango-tech.com,PROXY
