@@ -33226,6 +33226,7 @@
   - DOMAIN-SUFFIX,echo-isoftstone.com,DIRECT
   - DOMAIN-SUFFIX,echo188.com,DIRECT
   - DOMAIN-SUFFIX,echoing.tech,DIRECT
+  - DOMAIN-SUFFIX,echooai.com,DIRECT
   - DOMAIN-SUFFIX,echoteen.com,DIRECT
   - DOMAIN-SUFFIX,echovelle.com,DIRECT
   - DOMAIN-SUFFIX,echu-cable.com,DIRECT
@@ -35472,6 +35473,7 @@
   - DOMAIN-SUFFIX,fayufaguo.com,DIRECT
   - DOMAIN-SUFFIX,fazhi12368.com,DIRECT
   - DOMAIN-SUFFIX,fazhijx.com,DIRECT
+  - DOMAIN-SUFFIX,fazhipro.com,DIRECT
   - DOMAIN-SUFFIX,fazz.fun,DIRECT
   - DOMAIN-SUFFIX,fb32dc52302e6b9b.com,DIRECT
   - DOMAIN-SUFFIX,fb46cd5483f029aa.com,DIRECT
@@ -79082,6 +79084,7 @@
   - DOMAIN-SUFFIX,saaas.com,DIRECT
   - DOMAIN-SUFFIX,saagasports.com,DIRECT
   - DOMAIN-SUFFIX,saasddos.com,DIRECT
+  - DOMAIN-SUFFIX,saasfz.com,DIRECT
   - DOMAIN-SUFFIX,saaslb.com,DIRECT
   - DOMAIN-SUFFIX,saasops.tech,DIRECT
   - DOMAIN-SUFFIX,saasruanjian.com,DIRECT
@@ -126952,6 +126955,7 @@
   - DOMAIN-SUFFIX,cmegroup.com,PROXY
   - DOMAIN-SUFFIX,cmi.org.tw,PROXY
   - DOMAIN-SUFFIX,cmmedia.com.tw,PROXY
+  - DOMAIN-SUFFIX,cmoney.tw,PROXY
   - DOMAIN-SUFFIX,cmpaas.com,PROXY
   - DOMAIN-SUFFIX,cmrbank.ru,PROXY
   - DOMAIN-SUFFIX,cms-twdigitalassets.com,PROXY
@@ -128574,6 +128578,7 @@
   - DOMAIN-SUFFIX,e-goods.ru,PROXY
   - DOMAIN-SUFFIX,e-hentai.org,PROXY
   - DOMAIN-SUFFIX,e-hentaidb.com,PROXY
+  - DOMAIN-SUFFIX,e-info.org.tw,PROXY
   - DOMAIN-SUFFIX,e-szigno.hu,PROXY
   - DOMAIN-SUFFIX,e-tugra.com,PROXY
   - DOMAIN-SUFFIX,e-zone.com.hk,PROXY
@@ -130709,7 +130714,6 @@
   - DOMAIN-SUFFIX,gamcore.com,PROXY
   - DOMAIN-SUFFIX,game-platform.net,PROXY
   - DOMAIN-SUFFIX,game-repack.site,PROXY
-  - DOMAIN-SUFFIX,game735.com,PROXY
   - DOMAIN-SUFFIX,gameapps.hk,PROXY
   - DOMAIN-SUFFIX,gamebanana.com,PROXY
   - DOMAIN-SUFFIX,gamebase.com.tw,PROXY
@@ -130735,6 +130739,7 @@
   - DOMAIN-SUFFIX,gamewtb.com,PROXY
   - DOMAIN-SUFFIX,gamez.com.tw,PROXY
   - DOMAIN-SUFFIX,gaming-notebooks.com,PROXY
+  - DOMAIN-SUFFIX,gamma.app,PROXY
   - DOMAIN-SUFFIX,gandhara.ru,PROXY
   - DOMAIN-SUFFIX,gandi.net,PROXY
   - DOMAIN-SUFFIX,ganjing.com,PROXY
@@ -131670,6 +131675,7 @@
   - DOMAIN-SUFFIX,greatgame.asia,PROXY
   - DOMAIN-SUFFIX,greatretroporn.com,PROXY
   - DOMAIN-SUFFIX,green-box-tv.com,PROXY
+  - DOMAIN-SUFFIX,greenbean.media,PROXY
   - DOMAIN-SUFFIX,greenbuildingstudio.com,PROXY
   - DOMAIN-SUFFIX,greenend.org.uk,PROXY
   - DOMAIN-SUFFIX,greenlakeaas.com,PROXY
@@ -132284,9 +132290,11 @@
   - DOMAIN-SUFFIX,hkchronicles.com,PROXY
   - DOMAIN-SUFFIX,hkcircleapp.com,PROXY
   - DOMAIN-SUFFIX,hkcitizenmedia.com,PROXY
+  - DOMAIN-SUFFIX,hkcitycreation.com,PROXY
   - DOMAIN-SUFFIX,hkcnews.com,PROXY
   - DOMAIN-SUFFIX,hkcoc.com,PROXY
   - DOMAIN-SUFFIX,hkcoc.weather.com.hk,PROXY
+  - DOMAIN-SUFFIX,hkcourtnews.com,PROXY
   - DOMAIN-SUFFIX,hkcsl.com,PROXY
   - DOMAIN-SUFFIX,hkdc.us,PROXY
   - DOMAIN-SUFFIX,hkedcity.net,PROXY
@@ -132297,6 +132305,7 @@
   - DOMAIN-SUFFIX,hkf202311.site,PROXY
   - DOMAIN-SUFFIX,hkf202312.shop,PROXY
   - DOMAIN-SUFFIX,hkfaa.com,PROXY
+  - DOMAIN-SUFFIX,hkfeature.com,PROXY
   - DOMAIN-SUFFIX,hkgalden.com,PROXY
   - DOMAIN-SUFFIX,hkgolden.com,PROXY
   - DOMAIN-SUFFIX,hkgolden.media,PROXY
@@ -134809,6 +134818,7 @@
   - DOMAIN-SUFFIX,lifeatspotify.com,PROXY
   - DOMAIN-SUFFIX,lifemiles.com,PROXY
   - DOMAIN-SUFFIX,lifeselector.com,PROXY
+  - DOMAIN-SUFFIX,lifesitenews.com,PROXY
   - DOMAIN-SUFFIX,lifestyle-tec.ru,PROXY
   - DOMAIN-SUFFIX,lifewire.com,PROXY
   - DOMAIN-SUFFIX,lightbridge.com,PROXY
@@ -135328,6 +135338,7 @@
   - DOMAIN-SUFFIX,massagerepublic.com,PROXY
   - DOMAIN-SUFFIX,masseffect.com,PROXY
   - DOMAIN-SUFFIX,masseffectarchives.com,PROXY
+  - DOMAIN-SUFFIX,master-insight.com,PROXY
   - DOMAIN-SUFFIX,mastercad.com,PROXY
   - DOMAIN-SUFFIX,mastercard-email.com,PROXY
   - DOMAIN-SUFFIX,mastercard.ae,PROXY
@@ -136253,6 +136264,7 @@
   - DOMAIN-SUFFIX,moneta.ru,PROXY
   - DOMAIN-SUFFIX,money-link.com.tw,PROXY
   - DOMAIN-SUFFIX,moneydj.com,PROXY
+  - DOMAIN-SUFFIX,moneynet.com.tw,PROXY
   - DOMAIN-SUFFIX,moneywithfacebook.com,PROXY
   - DOMAIN-SUFFIX,mongodb.com,PROXY
   - DOMAIN-SUFFIX,mongodb.org,PROXY
@@ -136500,6 +136512,7 @@
   - DOMAIN-SUFFIX,mxshm.site,PROXY
   - DOMAIN-SUFFIX,my-enema.com,PROXY
   - DOMAIN-SUFFIX,my-formosa.com,PROXY
+  - DOMAIN-SUFFIX,my-formosa.com.tw,PROXY
   - DOMAIN-SUFFIX,my-magazine.me,PROXY
   - DOMAIN-SUFFIX,my-manager-account.com,PROXY
   - DOMAIN-SUFFIX,my-private-network.co.uk,PROXY
@@ -139412,6 +139425,7 @@
   - DOMAIN-SUFFIX,pugpig.com,PROXY
   - DOMAIN-SUFFIX,pullfolio.co,PROXY
   - DOMAIN-SUFFIX,pulsebrowser.app,PROXY
+  - DOMAIN-SUFFIX,pulsehknews.com,PROXY
   - DOMAIN-SUFFIX,punishbang.com,PROXY
   - DOMAIN-SUFFIX,punishworld.com,PROXY
   - DOMAIN-SUFFIX,pure18.com,PROXY
@@ -140837,6 +140851,7 @@
   - DOMAIN-SUFFIX,shahvani.site,PROXY
   - DOMAIN-SUFFIX,shakethesnake.com,PROXY
   - DOMAIN-SUFFIX,shameless.com,PROXY
+  - DOMAIN-SUFFIX,shanghainationalparty.com,PROXY
   - DOMAIN-SUFFIX,shaparak.ir,PROXY
   - DOMAIN-SUFFIX,shapelcounset.xyz,PROXY
   - DOMAIN-SUFFIX,share-videos.se,PROXY
@@ -141435,6 +141450,7 @@
   - DOMAIN-SUFFIX,soubory.com,PROXY
   - DOMAIN-SUFFIX,souka.xyz,PROXY
   - DOMAIN-SUFFIX,soulcaliburhentai.net,PROXY
+  - DOMAIN-SUFFIX,soulogic.com,PROXY
   - DOMAIN-SUFFIX,soundcloud.cloud,PROXY
   - DOMAIN-SUFFIX,soundcloud.com,PROXY
   - DOMAIN-SUFFIX,soundofhope.eu,PROXY
@@ -142138,6 +142154,7 @@
   - DOMAIN-SUFFIX,taiwanncf.org.tw,PROXY
   - DOMAIN-SUFFIX,taiwannews.com.tw,PROXY
   - DOMAIN-SUFFIX,taiwansex.tw,PROXY
+  - DOMAIN-SUFFIX,taiwantoday.tw,PROXY
   - DOMAIN-SUFFIX,taiwantt.org.tw,PROXY
   - DOMAIN-SUFFIX,tajimabank.co.jp,PROXY
   - DOMAIN-SUFFIX,take2games.com,PROXY
@@ -142410,6 +142427,7 @@
   - DOMAIN-SUFFIX,thecleversense.com,PROXY
   - DOMAIN-SUFFIX,theclub.com.hk,PROXY
   - DOMAIN-SUFFIX,theclubprive.com,PROXY
+  - DOMAIN-SUFFIX,thecollectivehk.com,PROXY
   - DOMAIN-SUFFIX,thecompaqstore.com,PROXY
   - DOMAIN-SUFFIX,theconversation.com,PROXY
   - DOMAIN-SUFFIX,thecuckold.com,PROXY
@@ -142473,6 +142491,7 @@
   - DOMAIN-SUFFIX,thenewslens.com,PROXY
   - DOMAIN-SUFFIX,thenextweb.com,PROXY
   - DOMAIN-SUFFIX,thenipslip.com,PROXY
+  - DOMAIN-SUFFIX,theonlinecitizen.com,PROXY
   - DOMAIN-SUFFIX,theopportunityproject.org,PROXY
   - DOMAIN-SUFFIX,thepaypalshop.com,PROXY
   - DOMAIN-SUFFIX,thepervs.com,PROXY
@@ -142509,6 +142528,7 @@
   - DOMAIN-SUFFIX,thesimssocial.com,PROXY
   - DOMAIN-SUFFIX,thestandard.com.hk,PROXY
   - DOMAIN-SUFFIX,thestandnews.com,PROXY
+  - DOMAIN-SUFFIX,thestar.com,PROXY
   - DOMAIN-SUFFIX,thestationbymaker.com,PROXY
   - DOMAIN-SUFFIX,thesun.co.uk,PROXY
   - DOMAIN-SUFFIX,thesun.ie,PROXY
@@ -142531,6 +142551,7 @@
   - DOMAIN-SUFFIX,thewgo.org,PROXY
   - DOMAIN-SUFFIX,thewirechina.com,PROXY
   - DOMAIN-SUFFIX,thewitcher.com,PROXY
+  - DOMAIN-SUFFIX,thewitnesshk.com,PROXY
   - DOMAIN-SUFFIX,thewonderful101.com,PROXY
   - DOMAIN-SUFFIX,theync.com,PROXY
   - DOMAIN-SUFFIX,theyxxx.com,PROXY
@@ -145010,6 +145031,7 @@
   - DOMAIN-SUFFIX,wolframalpha.com,PROXY
   - DOMAIN-SUFFIX,wolfsex-me.sbs,PROXY
   - DOMAIN-SUFFIX,wolterskluwer.com,PROXY
+  - DOMAIN-SUFFIX,womany.net,PROXY
   - DOMAIN-SUFFIX,wombo.ai,PROXY
   - DOMAIN-SUFFIX,womensnikeshox.com,PROXY
   - DOMAIN-SUFFIX,womenwill.com,PROXY
