@@ -122019,6 +122019,7 @@
   - DOMAIN,cdn-spotify-experiments.conductrics.com,PROXY
   - DOMAIN,cdn.js7k.com,PROXY
   - DOMAIN,cisco.evergage.com,PROXY
+  - DOMAIN,courses.myecnu.org,PROXY
   - DOMAIN,crl.versign.net,PROXY
   - DOMAIN,databank.worldbank.org,PROXY
   - DOMAIN,datarouter.apps.netherrealm.com,PROXY
@@ -126147,6 +126148,7 @@
   - DOMAIN-SUFFIX,cabletvdirectv.com,PROXY
   - DOMAIN-SUFFIX,cachefly.com,PROXY
   - DOMAIN-SUFFIX,cachefly.net,PROXY
+  - DOMAIN-SUFFIX,cachix.org,PROXY
   - DOMAIN-SUFFIX,cacnw.com,PROXY
   - DOMAIN-SUFFIX,cactusvpn.com,PROXY
   - DOMAIN-SUFFIX,cad-mep.com,PROXY
@@ -129766,10 +129768,12 @@
   - DOMAIN-SUFFIX,fastlane.ci,PROXY
   - DOMAIN-SUFFIX,fastlane.tools,PROXY
   - DOMAIN-SUFFIX,fastly-edge.com,PROXY
+  - DOMAIN-SUFFIX,fastly-insights.com,PROXY
   - DOMAIN-SUFFIX,fastly-terrarium.com,PROXY
   - DOMAIN-SUFFIX,fastly.com,PROXY
   - DOMAIN-SUFFIX,fastly.io,PROXY
   - DOMAIN-SUFFIX,fastly.net,PROXY
+  - DOMAIN-SUFFIX,fastlydns.net,PROXY
   - DOMAIN-SUFFIX,fastlylabs.com,PROXY
   - DOMAIN-SUFFIX,fastlylb.net,PROXY
   - DOMAIN-SUFFIX,fastpic.ru,PROXY
@@ -144140,6 +144144,7 @@
   - DOMAIN-SUFFIX,viu.tv,PROXY
   - DOMAIN-SUFFIX,vivaldi.com,PROXY
   - DOMAIN-SUFFIX,vivaxnxx.com,PROXY
+  - DOMAIN-SUFFIX,vivox.com,PROXY
   - DOMAIN-SUFFIX,vivthomas.com,PROXY
   - DOMAIN-SUFFIX,vixen.com,PROXY
   - DOMAIN-SUFFIX,vixengroup.com,PROXY

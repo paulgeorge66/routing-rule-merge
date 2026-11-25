@@ -126,6 +126,7 @@ proxy,"DOMAIN-SUFFIX,erabaru.net",PROXY,"DOMAIN-SUFFIX,erabaru.net",REJECT
 proxy,"DOMAIN-SUFFIX,erogazopple.com",PROXY,"DOMAIN-SUFFIX,erogazopple.com",REJECT
 proxy,"DOMAIN-SUFFIX,expekt.com",PROXY,"DOMAIN-SUFFIX,expekt.com",REJECT
 proxy,"DOMAIN-SUFFIX,fapcat.com",PROXY,"DOMAIN-SUFFIX,fapcat.com",REJECT
+proxy,"DOMAIN-SUFFIX,fastly-insights.com",PROXY,"DOMAIN-SUFFIX,fastly-insights.com",REJECT
 proxy,"DOMAIN-SUFFIX,fbthirdpartypixel.com",PROXY,"DOMAIN-SUFFIX,fbthirdpartypixel.com",REJECT
 proxy,"DOMAIN-SUFFIX,filmsexeporno.com",PROXY,"DOMAIN-SUFFIX,filmsexeporno.com",REJECT
 proxy,"DOMAIN-SUFFIX,flirt4free.com",PROXY,"DOMAIN-SUFFIX,flirt4free.com",REJECT

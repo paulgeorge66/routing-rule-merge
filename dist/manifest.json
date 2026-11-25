@@ -72,18 +72,18 @@
       "rules": null
     },
     "proxy-dns-domains.yaml": {
-      "bytes": 600155,
-      "sha256": "f5b416cf02b8dd74342906647cf3118936421806297f6a3995a0aa26542bbdd6",
-      "rules": 24682
+      "bytes": 600277,
+      "sha256": "004a1002ac874ce1b878552af7755afec81a8f594db4ae9273f5bcb0df54f791",
+      "rules": 24687
     },
     "proxy-domains.list": {
-      "bytes": 401594,
-      "sha256": "b541069c6262d9ca7cf703d2a0a2879d47f4bc6ad6dd7f35b330efd41c49dd3f",
-      "rules": 24634
+      "bytes": 401676,
+      "sha256": "a4311dc00f2ee29372481b94f0af6100fc9daf0c22529803f43ca789399a6cee",
+      "rules": 24639
     },
     "proxy-domains.mrs": {
-      "bytes": 178115,
-      "sha256": "09f317e1f9c1920c7759a15ce3226751ae4556ea20f8641cc1aad4e50670c904",
+      "bytes": 178164,
+      "sha256": "06926cbbaf176bcdce93b49a8fea4c3cd09577158a6b1fe3547f3e37916c1b15",
       "rules": null
     },
     "proxy-misc.list": {
@@ -92,19 +92,19 @@
       "rules": 0
     },
     "routing-dns-providers.yaml": {
-      "bytes": 3430627,
-      "sha256": "a1c2e8cebd4fd59b4d513d8cd6eff66cb871582da11af461153627834b1a1b5a",
-      "rules": 136861
+      "bytes": 3430759,
+      "sha256": "84fa31f1363310e047355ea43b35e0ddcce36b83e0da0ae80e31cf2d21abf670",
+      "rules": 136866
     },
     "routing-expanded-fragment.yaml": {
-      "bytes": 5627745,
-      "sha256": "93f4b6211fa048dea0ee4a6c2307c4842a3af9b91db7c1a7977bfb4bc621d629",
-      "rules": 146656
+      "bytes": 5627932,
+      "sha256": "c36cfc97023fdb2ff62e9ad38549fea4d76e8d7d83fdfdd214f36e76aca9ec8d",
+      "rules": 146661
     },
     "routing-expanded-rules.yaml": {
-      "bytes": 5627761,
-      "sha256": "0519acc262259ae1a78222a886a14508b6273acea058fbe0d0911bfc8139d9c3",
-      "rules": 146657
+      "bytes": 5627948,
+      "sha256": "5b933e59aeb74dec826ff40335c70c18dd22766105146155381d83eab73dc100",
+      "rules": 146662
     },
     "top-direct.list": {
       "bytes": 20563,
@@ -117,5 +117,5 @@
       "rules": 57
     }
   },
-  "degraded": true
+  "degraded": false
 }
