@@ -72,18 +72,18 @@
       "rules": null
     },
     "proxy-dns-domains.yaml": {
-      "bytes": 600277,
-      "sha256": "004a1002ac874ce1b878552af7755afec81a8f594db4ae9273f5bcb0df54f791",
-      "rules": 24687
+      "bytes": 600531,
+      "sha256": "9f29c1fbf79894b53a59fe1d6924a63b3a1faf6939698691dd6292edd43e6c88",
+      "rules": 24698
     },
     "proxy-domains.list": {
-      "bytes": 401676,
-      "sha256": "a4311dc00f2ee29372481b94f0af6100fc9daf0c22529803f43ca789399a6cee",
-      "rules": 24639
+      "bytes": 401842,
+      "sha256": "551217e3f3992ae98ad0fdc2dbb865b7079c76b9a91e3883b7f77b30adcb78e2",
+      "rules": 24650
     },
     "proxy-domains.mrs": {
-      "bytes": 178164,
-      "sha256": "06926cbbaf176bcdce93b49a8fea4c3cd09577158a6b1fe3547f3e37916c1b15",
+      "bytes": 178151,
+      "sha256": "743f8f7cce3530e264cd4e2d55d2d5a6174f351b3f73209e4c6d515307270942",
       "rules": null
     },
     "proxy-misc.list": {
@@ -92,19 +92,19 @@
       "rules": 0
     },
     "routing-dns-providers.yaml": {
-      "bytes": 3430759,
-      "sha256": "84fa31f1363310e047355ea43b35e0ddcce36b83e0da0ae80e31cf2d21abf670",
-      "rules": 136866
+      "bytes": 3431035,
+      "sha256": "5719825b4946bf847cf209fb4b137ba8819570174706acb6413e8700d9a091e8",
+      "rules": 136877
     },
     "routing-expanded-fragment.yaml": {
-      "bytes": 5627932,
-      "sha256": "c36cfc97023fdb2ff62e9ad38549fea4d76e8d7d83fdfdd214f36e76aca9ec8d",
-      "rules": 146661
+      "bytes": 5628340,
+      "sha256": "328a54aaea16e4cf42f471562c66c7ac55b624b23679ebc001b2dab3d0c792af",
+      "rules": 146672
     },
     "routing-expanded-rules.yaml": {
-      "bytes": 5627948,
-      "sha256": "5b933e59aeb74dec826ff40335c70c18dd22766105146155381d83eab73dc100",
-      "rules": 146662
+      "bytes": 5628356,
+      "sha256": "8330e71cb1405c73da87d153c66fd98690529d8c6b4e90072776a18e2b8a1157",
+      "rules": 146673
     },
     "top-direct.list": {
       "bytes": 20563,
